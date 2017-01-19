@@ -1,0 +1,9 @@
+/* CSS Document */
+
+.box_141218{position: absolute;left:0;top:0;bottom:0;right: 0;background:url("../images/girl1.jpg") no-repeat;background-size: 100% 100%;backface-visibility: hidden;overflow: hidden;}
+.dibutu_141218{width: 100%;height: 100%;opacity: 1;
+-webkit-transition:opacity .5s;
+-ms-transition:opacity .5s;
+-moz-transition:opacity .5s;
+}
+.noOp{opacity: 0 !important;}		

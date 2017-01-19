@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="auctionDrawService" class="com.huiyee.interact.auction.service.AuctionDrawService">
+		<property name="auctionRecordMgr" ref="auctionRecordMgr"></property>
+	</bean>
+	
+	<!--处理竞拍结果 -->
+	<bean id="auctionResultJob" class="com.huiyee.interact.auction.service.AuctionResultJob">
+	<property name="auctionMgr"><ref bean="auctionMgr"/></property>
+	<property name="auctionRecordMgr"><ref bean="auctionRecordMgr"/></property>
+	</bean>
+	
+	<bean id="auctionResultTask"
+		class="org.springframework.scheduling.timer.MethodInvokingTimerTaskFactoryBean">
+		<property name="targetObject">
+			<ref local="auctionResultJob" />
+		</property>
+		<property name="targetMethod">
+			<value>dowork</value>
+		</property>
+	</bean>
+
+	<bean id="auctionResultRunner"
+		class="org.springframework.scheduling.timer.ScheduledTimerTask">
+		<property name="timerTask">
+			<ref local="auctionResultTask" />
+		</property>
+		<property name="period">
+			<value>5000</value>
+		</property>
+		<property name="delay">
+			<value>5000</value>
+		</property>
+	</bean>
+
+	<bean id="timerFactoryScheduled"
+		class="org.springframework.scheduling.timer.TimerFactoryBean">
+		<property name="scheduledTimerTasks">
+			<list>
+				  <ref bean="auctionResultRunner"/>
+			</list>
+		</property>
+	</bean>
+</beans>

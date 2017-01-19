@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="yuyueAction" class="com.huiyee.interact.yuyue.action.YuYueAction" scope="prototype" parent="abstractAction">
+		<property name="yuYueMgr" ref="yuYueMgrImpl"></property>
+		<property name="interactAptManager" ref="interactAptManagerImpl"></property>
+		<property name="wxTemplateMgr" ref="wxTemplateMgr"></property>
+	</bean>
+	
+	<bean id="yuyueFormAction" class="com.huiyee.interact.yuyue.action.YuYueFormAction" scope="prototype" parent="abstractAction">
+		<property name="yuYueFormMgr" ref="yuYueFormMgrImpl"></property>
+	</bean>
+
+	<bean id="yuyueRecordAction" class="com.huiyee.interact.yuyue.action.YuYueRecordAction" scope="prototype" parent="abstractAction">
+		<property name="yuYueRecordMgr" ref="yuYueRecordMgrImpl"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,13 @@
+/* CSS Document */
+
+
+
+.tuwendh_141118_box_1{ width:100%; margin:0 auto;}
+
+.tuwendh_141118_box_1_telnav {display:block; width:90%; margin-left:5%; position:absolute; top:45%; line-height:28px;}
+.tuwendh_141118_box_1_telnav p{font-family: "Microsoft Yahei", Arial; font-weight:bold; color:#fcf900; text-align:center;}
+.zxf_span{ width:90%; margin:0 auto; text-align:left;font-family: "Microsoft Yahei", Arial; font-size:0.9em;}
+
+
+.tuwendh_141118_box_1_telbtn01{display:block; position:relative; float:left; width:100%;padding:5% 0; background:rgba(0,0,0,0.5); font-size:1rem; color:#fff;
+}

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="interactAptManagerImpl" class="com.huiyee.interact.appointment.mgr.InteractAptManagerImpl" parent="abstractMgr">
+		<property name="interactAptDao" ref="interactAptDaoImpl"></property>
+		<property name="sinaUserDao" ref="sinaUserDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="categoryDao" ref="contentCategoryDaoImpl"></property>
+		<property name="contentFormDao" ref="contentFormDaoImpl"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+	</bean>
+</beans>

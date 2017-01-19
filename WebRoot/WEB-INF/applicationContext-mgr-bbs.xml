@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="bbsTopicMgr" class="com.huiyee.interact.bbs.mgr.BBSTopicMgrImpl" parent="abstractMgr">
+		<property name="bbsTopicDao" ref="bbsTopicDao"></property>
+		<property name="bbsForumDao" ref="bbsForumDao"></property>
+	</bean>
+	<bean id="bbsForumMgr" class="com.huiyee.interact.bbs.mgr.BBSForumMgrImpl">
+		<property name="bbsForumDao" ref="bbsForumDao"></property>
+	</bean>
+	<bean id="bbsCommentMgr" class="com.huiyee.interact.bbs.mgr.BBSCommentMgrImpl" parent="abstractMgr">
+		<property name="bbsCommentDao" ref="bbsCommentDao"></property>
+		<property name="bbsForumDao" ref="bbsForumDao"></property>
+	</bean>
+	<bean id="bbsLikeMgr" class="com.huiyee.interact.bbs.mgr.BBSLikeMgrImpl" parent="abstractMgr">
+		<property name="bbsLikeDao" ref="bbsLikeDao"></property>
+	</bean>
+	<bean id="bbsUserMgrImpl" class="com.huiyee.interact.bbs.mgr.BBSUserMgrImpl">
+		<property name="bbsUserDao" ref="bbsUserDaoImpl"></property>
+	</bean>
+	<bean id="bbsUserLoginMgr" class="com.huiyee.interact.bbs.mgr.BbsUserLoginMgr">
+		<property name="bbsUserLoginDao" ref="bbsUserLoginDao"></property>
+	</bean>
+	<bean id="bbsUserCenterMgrImpl" class="com.huiyee.interact.bbs.mgr.BBSUserCenterMgrImpl">
+		<property name="bbsUserCenterDao" ref="bbsUserCenterDaoImpl"></property>
+	</bean>
+	<bean id="bbsMgr" class="com.huiyee.interact.bbs.mgr.BBSMgr">
+		<property name="bbsDao" ref="bbsDao"></property>
+		<property name="bbsUserDao" ref="bbsUserDaoImpl"></property>
+		<property name="bbsTopicDao" ref="bbsTopicDao"></property>
+		<property name="contentProductDao" ref="contentProductDaoImpl"></property>
+		<property name="contentPictureDao" ref="contentPictureDaoImpl"></property>
+		<property name="contentNewDao" ref="contentNewDaoImpl"></property>
+		<property name="contentVideoDao" ref="contentVideoDaoImpl"></property>
+	</bean>
+</beans>

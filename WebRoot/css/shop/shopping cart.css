@@ -1,0 +1,95 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+ul, ol{list-style: none; }
+a{text-decoration:none;color:#646464;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+body{font-family:"Microsoft Yahei",Tahoma,Arial,Helvetica,STHeiti;width:100%;color:#646464;font-size:13px;background:#F1F1F1;}
+/****************my orders*******************/
+.top{height:44px;width:100%;background:#353535;text-align:center;font-size:17px;color:#FFF;line-height:44px;display:inline-block;z-index:1000;position:fixed;top:0;}
+.top a.left{float:left;display:inline-block;height:44px;font-size:14px;color:#FFF;margin-left:3%;}
+.top a.left img{height:16px;width:10px;vertical-align:-3px;}
+.top a.right{float:right;display:inline-block;height:44px;color:#FFF;margin-right:3%;width:20px;}
+.top a.right img{width:25px;vertical-align:4px;}
+.main{width:100%;margin-bottom:100px;}
+.main ul{width:100%;}
+.main ul li{margin-top:10px;width:100%;padding:10px 0;background:#FFFDFD;position:relative;}
+.main ul li p.eighthn,p.seventhn{width:80%;margin-left:4%;line-height:20px;}
+.main ul li p.seventhn em{color:#;margin-right:10px;}
+.main ul li p.eighthn i{color:#E71162;display:none;}
+.main ul li a.check{display:block;}
+.main ul li em.firm{display:block;height:90px;width:100%;}
+.main ul li a.check img.right{float:right;width:15px;height:15px;margin-right:4%;margin-top:33px;}
+.main ul li a.check p.title{width:92%;margin:0 auto;line-height:20px;font-size:15px;color:#353535;}
+.main ul li em.firm img.pic{width:88px;height:88px;margin-bottom:-2px;float:left;border:1px solid #D6D7DC;}
+.main ul li em.firm p.ninth,.main ul li em.firm p.tenth,.main ul li em.firm p.num{display:inline-block;margin-left:15px;margin-right:4%;width:45%;}
+.main ul li em.firm p.ninth{font-size:15px;line-height:16px;color:#323232;overflow: hidden;display: -webkit-box;-webkit-line-clamp: 2;-webkit-box-orient: vertical;
+                                word-break: break-all;margin-left:155px;margin-bottom:-17px;height:16px;overflow:hidden;}
+ .main ul li em.firm p.num,.main ul li em.firm p.tenth{margin-top:7px;}
+.main ul li em.firm p.tenth i{font-size:15px;color:#E71062;margin-right:5px;line-height:28px;}
+.main ul li em.firm p.tenth span{font-size:12px;color:#999999;text-decoration:line-through;line-height:28px;}
+.main ul li em.firm p.num i,.main ul li em.firm p.num span{border:1px solid #999999;display:inline-block;text-align:center;width:25px;height:25px;background:#FAFAFA;}
+.main ul li em.firm p.num span{vertical-align:8px;font-size:16px;line-height:24px;width:40px;border-left:none;border-right:none;color:#404040;}
+.main ul li em.firm p.num i img{width:25px;height:25px;}
+
+.main ul li em.firm p.num i.jia{border-radius: 0 3px 3px 0;}
+.main ul li em.firm p.num i.jian{border-radius:3px 0 0 3px;}
+.choi{background:url(/images/shop/choice.png) no-repeat;background-size:22px 22px;width:22px;height:22px;display:inline-block;float:left;margin-left:4%;margin-top:35px;border-radius:10px;}
+.main ul li b.border{width:20px;height:20px;display:inline-block;margin-right:4%;margin-left:4%;margin-top:35px;border-radius:50%;border:1px solid #999999;float:left;background:none;}
+.main ul li em.firm img.del{position:absolute;right:4%;bottom:11px;width:15px;}
+.bottom{width:100%;background:#FAFAFA;height:50px;position:fixed;bottom:50px;left:0;line-height:50px;border-top:1px solid #D6D7DC;
+        box-shadow:-10px -8px 16px 1px #ECECED inset;}
+.bottom i b.border{background:none;width:20px;height:20px;display:inline-block;margin-left:4%;margin-top:15px;border-radius:50%;border:1px solid #999999;float:left;margin-right:10px;}
+.choice{background:url(/images/shop/choice.png) no-repeat;background-size:22px 22px;width:22px;height:22px;display:inline-block;float:left;margin-left:4%;margin-top:14px;
+                   margin-right:10px;border-radius:10px;}
+.bottom i{font-size:17px;}
+.bottom a,.bottom span{float:right;}
+.bottom a{display:inline-block;padding:0 10px;color:#FFF;background:#FC5354;font-size:17px;}
+.bottom span{color:#E71062;margin-right:10px;font-size:16px;}
+.black_overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:black;z-index:1001;-moz-opacity:0.4;opacity:.40;filter:alpha(opacity=40);}
+.white_overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:white;z-index:1901;-moz-opacity:0.0;opacity:.00;filter:alpha(opacity=00);}
+.tanchu{position:fixed;top:35vh;left:10%;display:none;width:80%;background:#FFF;text-align:center;border-radius:5px;z-index:1009;overflow:auto;}
+.tanchu p.two em{color:#0190DA;display:inline-block;width:49%;font-size:16px;}
+.tanchu p.two em.del{border-right:1px solid #DBDCE0;}
+.tanchu p.one{border-bottom:1px solid #DBDCE0;line-height:80px;font-size:16px;height:80px;}
+.tanchu p.two{height:50px;line-height:50px;}
+#delected{width:60%;height:50px;line-height:50px;background:#363636;color:#FFF;position:fixed;top:40vh;left:20%;font-size:16px;border-radius:5px;z-index:1001;
+           -moz-opacity:0.9;opacity:.90;filter:alpha(opacity=90);text-align:center;display:none;}
+.main ul li p.add{background:#e71162;width:70%;margin:0 auto;line-height:32px;text-align:center;}
+.main ul li p.add a{color:#FFF;display:block;font-size:15px;}
+.main ul li p.add a em{font-size:30px;margin-right:5px;vertical-align:-4px;}
+input{display:none;}
+.bottom2{position:fixed;z-index:10;width:100%;background:#FAFAFA;bottom:0;left:0;height:50px;line-height:50px;border-top:1px solid #D6D7DC}
+.bottom2 p{line-height:68px;}
+.bottom2 p a{display:inline-block;width:25%;text-align:center;font-size:10px;letter-spacing:2px;text-indent:1px;}
+.bottom2 p a.shouye{background:url(/images/shop/shouye.png) no-repeat center 5px;background-size:25px auto;}
+.bottom2 p a.fenlei{background:url(/images/shop/fenlei.png) no-repeat center 5px;background-size:25px auto}
+.bottom2 p a.car{background:url(/images/shop/car.png) no-repeat center 5px;background-size:25px auto}
+.bottom2 p a.mine{background:url(/images/shop/mine.png) no-repeat center 5px;background-size:25px auto}
+.bottom2 p a.fenlei2{background:url(/images/shop/fenlei2.png) no-repeat center 5px;background-size:25px auto;color:#e71162;}
+.bottom2 p a.mine2{background:url(/images/shop/mine2.png) no-repeat center 5px;background-size:25px auto;color:#e71162;}
+.bottom2 p a.shouye2{background:url(/images/shop/shouye2.png) no-repeat center 5px;background-size:25px auto;color:#e71162;}
+.bottom2 p a.car2{background:url(/images/shop/car2.png) no-repeat center 5px;background-size:25px auto;color:#e71162;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

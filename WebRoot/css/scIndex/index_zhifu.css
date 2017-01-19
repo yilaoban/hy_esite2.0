@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+body{color:#323232;width:100%;font-size:13px;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;}
+.box0511{background:#f2f2f2;position:fixed;height:100vh;left:0;top:0;width:100%;overflow-x:scroll; }
+.box0511 .top05112{background:#0bb928;padding:5vh 0;}
+.box0511 .top05112 p{height:98px;width:98px;border-radius: 50%;margin:0 auto;border:2px solid #fff}
+.box0511 .top05112 p img{width:100%;height:100%;border-radius: 50%;}
+.box0511 .middle05112{background:#FFF; }
+.box0511 .middle05112 p{border-bottom:1px solid #d6d7dc;height:40px;line-height: 40px;font-size: 17px;padding:0 4%;}
+.box0511 .middle05112 p a{float:right;color:#FFF;background:#ffb61e;height:30px;margin-top:5px;line-height:30px;padding:0 10px;border-radius: 2px;}
+.box0511 .bottom0511{width:78%;margin:90px auto 0;}
+.box0511 .bottom0511 p{height:40px;line-height: 40px;font-size: 17px;text-align: center;margin-bottom:10px;border-radius: 5px;}
+.box0511 .bottom0511 p a{color:#FFF;display:block;}
+.box0511 .bottom0511 p.two{margin-bottom:0;background: #909090;}
+.box0511 .bottom0511 p.one{background:#0bb928;}
+
+
+

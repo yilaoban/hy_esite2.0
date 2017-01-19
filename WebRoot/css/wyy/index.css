@@ -1,0 +1,48 @@
+/* CSS Document */
+.header{height: 44px;width:100%;background: #ef1b56;z-index: 999;}
+.home {width: 20%; position: absolute;left: 10px;top: 7px;}
+.column {width: 100%;float: left; text-align: center;line-height: 45px; color: #fff;font-family: "Microsoft Yahei", Arial;font-size: 1em;}
+.home img { max-width: 100%;height: auto;width: auto\9; width: 40%;float: left;}
+
+.main_160229{ width:100%; float:left;top:44px; position: absolute;}
+.main_160229_top {width:100%; float:left; background:#fff; border-bottom:1px #dfdfdf solid; padding-bottom:10px;}
+.main_160229_top img{max-width: 100%;height: 120px;width: auto\9; width: 40%;float: left; margin:10px; border:1px #dfdfdf solid;}
+.main_160229_top span{ width:50%; float:left;font-family: "Microsoft Yahei", Arial;font-size: 1em;  line-height:26px; margin-top:10px;}
+.main_160229_top span a{ color:#000; text-decoration:none;}
+.main_160229_top p{ width:50%; float:left;font-family: "Microsoft Yahei", Arial;font-size:.8em;  line-height:20px;0}
+
+.yuyue_button{ width:30%; float:right; height:30px; line-height:30px; text-align:center;font-family: "Microsoft Yahei", Arial;font-size: 1em; border:1px #e5004f solid;border-radius:5px; margin-top:5%; margin-right:5%;}
+.yuyue_button a{ color:#e5004f; text-decoration:none;}
+.content_160229{width:100%; float:left;background:#fff; margin-top:10px; margin-bottom:20px;}
+.content_160229 h1{width:90%; float:left;font-family: "Microsoft Yahei", Arial;font-size: 1em;  line-height:26px; margin-left:5%;margin-top:10px; margin-bottom:10px;}
+.content_160229 p{width:90%; float:left;font-family: "Microsoft Yahei", Arial;font-size: .8em;  line-height:26px;margin-left:5%; padding-bottom:10px;}
+.content_160229 p img{max-width: 100%;height: auto;width: auto\9; margin:10px 0;}
+
+
+.main_160229_top_tgz {width:100%; float:left; background:#fff; border-bottom:1px #dfdfdf solid; padding-bottom:10px;}
+.main_160229_top_tgz img{max-width: 100%;height: 120px;width: auto\9;float: left; margin:10px; border:1px #dfdfdf solid;}
+.main_160229_top_tgz span{ width:50%;float:left; font-family: "Microsoft Yahei", Arial;font-size: 1em;  line-height:24px; margin-top:10px;}
+.main_160229_top_tgz span a{color:#000; text-decoration:none;}
+.main_160229_top_tgz p{ width:50%; float:left;font-family: "Microsoft Yahei", Arial;font-size:.8em;  line-height:20px; }
+
+.tab_160229_list{width:100%; float:left; background:#fff; border-bottom:1px #dfdfdf solid;}
+.tab_160229_list li{width:50%; float:left; text-align:center; line-height:35px;font-family: "Microsoft Yahei", Arial;font-size: 1em;}
+.tab_160229_list li a{color:#e5004f; text-decoration:none;}
+.tab_160229_l_bottom{ border-bottom:3px #fe4662 solid;}
+
+.yuyue_160229{ width:70%; margin:0 auto; text-align:center;left:15%;}
+.yuyue_160229 img{max-width: 100%;height: auto;width: auto\9;}
+.yuyue_160229_button{ width:100%; margin:0 auto; background:#ef1b56; color:#fff; line-height:35px; text-align:center;font-family: "Microsoft Yahei", Arial;font-size:1em;border-radius:5px; margin-top:10px;}
+.yuyue_160229_button a{text-decoration:none; color:#fff;}
+
+
+.yuyue_box{width:90%; margin:0 auto; font-family: "Microsoft Yahei", Arial; font-size:.9em; margin-top:20px; line-height:24px;color:#666666; }
+.yuyue_input{ width:100%; float:left; background:#fff; border:1px #dfdfdf solid; height:35px; line-height:35px; text-indent:5px;}
+.yuyue_box tr{ margin-top:5px; width:100%; float:left;}
+.yuyue_box td{width:100%; float:left;}
+.yuyue_bd_160229{width:100%; float:left; margin-top:20px;}
+.yuyue_bd_160229 li{width:50%; float:left;}
+.yuyue_bd_160229 a{ width:80%;float:left; text-align:center; line-height:30px;border-radius:5px; background:#ef1b56; margin-left:10%;font-family: "Microsoft Yahei", Arial; font-size:1em; color:#fff; text-decoration:none;}
+.yuyue_reurn{ width:60%;float:left; text-align:center; line-height:30px;border-radius:5px; background:#ef1b56; margin:0 40px;font-family: "Microsoft Yahei", Arial; font-size:1em; color:#fff; text-decoration:none;}
+.yuyue0309_select{width:100%; float:left; background:#fff; border:1px #dfdfdf solid; height:35px; line-height:35px;}
+.yuyue0309_textarea{width:100%; float:left; background:#fff; border:1px #dfdfdf solid; height:100px; margin-bottom:20px;}

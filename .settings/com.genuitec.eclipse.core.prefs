@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+validator.Checked=src/struts4hy.xml,WebRoot/images,WebRoot/ckeditor,WebRoot/js,src/struts.xml,WebRoot/WEB-INF
+validator.Unchecked=

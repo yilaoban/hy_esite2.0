@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="xcMgr" class="com.huiyee.interact.xc.mgr.XcMgr">
+		<property name="xcDao" ref="xcDao"></property>
+		<property name="xcMcDao" ref="xcMcDao"></property>
+		<property name="xcSendRecordDao" ref="xcSendRecordDao"></property>
+		<property name="voteDao" ref="voteDaoImpl"></property>
+		<property name="lotteryDao" ref="lotteryDao"></property>
+		<property name="xcfeatureDao" ref="xcfeatureDaoImpl"></property>
+		<property name="featureDao" ref="featureDaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="managers" ref="managers"></property>
+		<property name="pageManager" ref="pageManagerImpl"></property>
+		<property name="pageFeatureDao" ref="pageFeatureDaoImpl"></property>
+		<property name="interactAptDao" ref="interactAptDaoImpl"></property>
+		<property name="xcLotteryDao" ref="xcLotteryDao"></property>
+	</bean>
+	<bean id="xcSendMgr" class="com.huiyee.interact.xc.mgr.XCSendMgr">
+		<property name="xcSendRecordDao" ref="xcSendRecordDao"></property>
+	</bean>
+	<bean id="xcLotteryMgr" class="com.huiyee.interact.xc.mgr.XcLotteryMgr">
+		<property name="xcLotteryDao" ref="xcLotteryDao"></property>
+		<property name="xcSendRecordDao" ref="xcSendRecordDao"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="sinaUserDao" ref="sinaUserDaoImpl"></property>
+		<property name="xcfeatureDao" ref="xcfeatureDaoImpl"></property>
+		<property name="interactAptDao" ref="interactAptDaoImpl"></property>
+	</bean>
+	<bean id="commentMgr" class="com.huiyee.interact.xc.mgr.InteractCommentMgrImpl">
+		<property name="commentDao" ref="commentDao"></property>
+		<property name="signinDao" ref="signinDao"></property>
+		<property name="xcDao" ref="xcDao"></property>
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+	</bean>
+	<bean id="signinMgr" class="com.huiyee.interact.xc.mgr.SigninMgr">
+		<property name="signinDao" ref="signinDao"></property>
+		<property name="gzEventDao" ref="gzEventDaoImpl"></property>
+		<property name="xcDao" ref="xcDao"></property>
+	</bean>
+	<bean id="zhuanpanMgr" class="com.huiyee.interact.xc.mgr.ZhuanpanMgr">
+		<property name="zhuanpanDao" ref="zhuanpanDao"></property>
+	</bean>
+	<bean id="xcBigScreenMgr" class="com.huiyee.interact.xc.mgr.XcBigScreenMgr">
+		<property name="xcBigScreenDao" ref="xcBigScreenDao"></property>
+		<property name="xcDao" ref="xcDao"></property>
+	</bean>
+	<bean id="xccleanMgrImpl" class="com.huiyee.interact.xc.mgr.XccleanMgrImpl">
+		<property name="xcLotteryDao" ref="xcLotteryDao"></property>
+		<property name="xcSendRecordDao" ref="xcSendRecordDao"></property>
+		<property name="xcfeatureDao" ref="xcfeatureDaoImpl"></property>
+	</bean>
+</beans>

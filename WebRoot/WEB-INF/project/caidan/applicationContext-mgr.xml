@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="cd-accountManagerImpl" class="project.caidan.mgr.impl.AccountManagerImpl">
+		<property name="accountDao" ref="accountDaoImpl"></property>
+		<property name="accountTypeDao" ref="cd-accountTypeDaoImpl"></property>
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+	</bean>
+
+	<bean id="cd-taskMgr" class="project.caidan.mgr.impl.TaskMgrImpl" parent="abstractMgr">
+		<property name="taskDao" ref="cd-taskDao"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+	</bean>
+	
+	<bean id="cd-kqMgr" class="project.caidan.mgr.impl.KqMgr">
+		<property name="kqDao" ref="cd-kqDao"></property>
+		<property name="wxBuyProductDao" ref="wxBuyProductDaoImpl"></property>
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+
+	<bean id="cd-newsMgr" class="project.caidan.mgr.impl.CDNewsMgrImpl">
+		<property name="newsDao" ref="cd-newsDao"></property>
+		<property name="contentNewDao" ref="contentNewDaoImpl"></property>
+		<property name="userTagDao" ref="userTagDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	
+	<bean id="cd-mediaMgr" class="project.caidan.mgr.impl.CaiDanMediaMgrImpl">
+		<property name="cdMediaDao" ref="cd-mediaDao"></property>
+		<property name="adMediaDao" ref="adMediaDaoImpl"></property>
+		<property name="adwdDao" ref="adwdDaoImpl"></property>
+		<property name="adWayDao" ref="adWayDaoImpl"></property>
+	</bean>
+	<bean id="cd-ggMgrImpl" class="project.caidan.mgr.impl.CaiDanGGMgrImpl">
+		<property name="cdGGDao" ref="cd-ggDao"></property>
+		<property name="adGGDao" ref="adGGDaoImpl"></property>
+	</bean>
+	<bean id="cd-couponMgrImpl" class="project.caidan.mgr.impl.CouponMgrImpl">
+		<property name="couponDao" ref="cd-couponDao"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+		<property name="wayDao" ref="cd-wayDao"></property>
+		<property name="contentProductDao" ref="contentProductDaoImpl"></property>
+		<property name="userTagDao" ref="userTagDaoImpl"></property>
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+	</bean>
+	<bean id="cd-lotteryMgr" class="project.caidan.mgr.impl.CaiDanLotteryMgrImpl">
+		<property name="cdLotteryDao" ref="cd-lotteryDao"></property>
+	</bean>
+	<bean id="cd-rmbMgr" class="project.caidan.mgr.impl.CaiDanRmbMgrImpl">
+		<property name="cdRmbDao" ref="cd-rmbDao"></property>
+	</bean>
+	<bean id="cd-wayMgr" class="project.caidan.mgr.impl.WayMgrImpl">
+		<property name="wayDao" ref="cd-wayDao"></property>
+		<property name="accountDao" ref="accountDaoImpl"></property>
+		<property name="accountTypeDao" ref="cd-accountTypeDaoImpl"></property>
+	</bean>
+	
+	<bean id="cd-productMgr" class="project.caidan.mgr.impl.CaiDanProductMgrImpl" parent="abstractMgr">
+		<property name="cdProductDao" ref="cd-productDao"></property>
+		<property name="cdRmbDao" ref="cd-rmbDao"></property>
+		<property name="wxBuyProductDao" ref="wxBuyProductDaoImpl"></property>
+		<property name="accountTypeDao" ref="cd-accountTypeDaoImpl"></property>
+	</bean>
+	<bean id="cd-userMgr" class="project.caidan.mgr.impl.CaiDanUserMgrImpl" parent="abstractMgr">
+		<property name="cdUserDao" ref="cd-userDao"></property>
+	</bean>
+	<bean id="cd-rmbRecordMgr" class="project.caidan.mgr.impl.CdRmbRecordMgrImpl">
+		<property name="rmbRecordDao" ref="cd-rmbRecordDao"></property>
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+	</bean>
+	
+	<bean id="cd-teamMgr" class="project.caidan.mgr.impl.CaiDanTeamMgrImpl">
+		<property name="cdTeamDao" ref="cd-teamDao"></property>
+		<property name="cdRmbDao" ref="cd-rmbDao"></property>
+		<property name="rmbRecordDao" ref="cd-rmbRecordDao"></property>
+	</bean>
+	<bean id="cd-report" class="project.caidan.mgr.impl.CaiDanReportMgrImpl">
+		<property name="wayDao" ref="cd-wayDao"></property>
+		<property name="accountTypeDao" ref="cd-accountTypeDaoImpl"></property>
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+		<property name="cdTeamDao" ref="cd-teamDao"></property>
+		<property name="cdProductDao" ref="cd-productDao"></property>
+		<property name="taskDao" ref="cd-taskDao"></property>
+	</bean>
+</beans>

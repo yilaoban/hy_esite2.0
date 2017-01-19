@@ -1,0 +1,16 @@
+/* CSS Document */
+
+
+
+.page_cartoon_141225_2{ width:100%; margin:0 auto;font-family: "Microsoft Yahei", Arial;}
+.page_cartoon_141225_2 img{max-width: 100%;height: auto;width: auto\9;}
+
+
+.page_cartoon_141225_2_title{font-size:1.2em;position:absolute; left:5%;top:10%; color:#fff500;}
+.page_cartoon_141225_2_box_jie{ width:8%; height:40%;position:absolute; left:10%;top:20%; text-align:center; padding-top:30px; z-index:0; color:#d34140;font-size:1.0em;Writing-mode:tb-rl;}
+.page_cartoon_141225_2_box_dao{ width:80%; height:5%;position:absolute; left:3%;top:50%;z-index:1; text-align:center; line-height:30px;color:#d34140;font-size:1.0em;}
+.page_cartoon_141225_2_box_dz{ width:40%;position:absolute; right:10%; top:25%; padding:10px 20px; line-height:24px;font-size:1.0em;color:#d34140;}
+.page_cartoon_141225_2_box_zuobiao{ width:20%;position:absolute; top:40%; left:20%;}
+.page_cartoon_141225_2_time{ width:80%;position:absolute; top:70%;line-height:24px; left:5%;}
+.page_cartoon_141225_2_time font{ color:#fff500;font-size:1.0em;}
+.page_cartoon_141225_2_time span{ color:#fff;font-size:0.9em;}

@@ -1,0 +1,13 @@
+##全景
+<div id="container$!pcbid"  hydata="$pcbid" hyct="Y" status="0" class="hyzj $!ctname" style="$hyct;">
+#if($isRun || ${url} == "")
+	<img src="/images/zujian/qjvm/360_o_0.jpg" style="width:100%;height:100%;"/>
+#end
+</div>
+
+#if(!$isRun && ${url} != "")
+	<script type="text/javascript">
+		var pano  = new pano2vrPlayer("container$!pcbid");
+		pano.readConfigUrl("/site${url}");
+	</script>
+#end

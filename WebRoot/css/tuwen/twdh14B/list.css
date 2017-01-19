@@ -1,0 +1,12 @@
+/* CSS Document */
+
+
+
+.tw_150303_page2_left{ width:35%; float:left;}
+.tw_150303_page2_right{ width:62%; float:right;}
+.tw_150303_page2_left1{ width:110px;height:240px;position:absolute;top:10px;left:8px;}
+.tw_150303_page2_left1 img,.tw_150303_page2_left2 img,.tw_150303_page2_right1 img,.tw_150303_page2_right2 img,.tw_150303_page2_right3 img{max-width: 100%;height: auto;width: auto\9; border:1px #f8f8f8 solid;}
+.tw_150303_page2_left2 {width:110px;height:160px;position:absolute;top:260px;left:8px;}
+.tw_150303_page2_right1{width:185px;height:170px;top:10px;position:absolute;left:126px;}
+.tw_150303_page2_right2{width:185px;height:155px;top:265px;position:absolute;left:126px;}
+.tw_150303_page2_right3{width:185px;top:190px;position:absolute;left:126px;}

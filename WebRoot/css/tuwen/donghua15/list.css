@@ -1,0 +1,82 @@
+/* CSS Document */
+
+
+
+
+.tw_150310_page3_zt {
+	width: 95%;
+	float: left;
+	z-index: 0;
+	position: absolute;
+}
+.tw_150310_page3_zt img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+.tw_150310_page3_zi {
+	width: 70%;
+	font-family: "Microsoft Yahei", Arial;
+	font-size: .8em;
+	float: left;
+	line-height: 24px;
+	-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -9deg);
+	transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -9deg);
+	color: #000;
+	margin-top: 20%;
+	margin-left: 10%;
+}
+.tw_150310_page3_zt {
+	opacity: 0;
+	-webkit-animation: 2s move1 forwards;
+	animation: 2s move1 forwards;
+	-webkit-animation-delay: 0;
+	animation-delay: 0;
+}
+.tw_150310_page3_zi {
+	opacity: 0;
+	-webkit-animation: 2s move2 forwards;
+	animation: 2s move2 forwards;
+	-webkit-animation-delay: 0;
+	animation-delay: 0;
+}
+ @-webkit-keyframes move1 {
+ 0% {
+left:-100px;
+opacity: 0;
+}
+ 100% {
+left:0;
+opacity: 1;
+}
+}
+@keyframes move1 {
+ 0% {
+left:-100px;
+opacity: 0;
+}
+ 100% {
+left:0;
+opacity: 1;
+}
+}
+@-webkit-keyframes move2 {
+ 0% {
+ opacity: 0;
+ -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+ transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+}
+ 100% {
+ opacity: 1;
+}
+}
+@keyframes move2 {
+ 0% {
+ opacity: 0;
+ -webkit-transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+ transform: translate3d(100%, 0, 0) rotate3d(0, 0, 1, 120deg);
+}
+ 100% {
+ opacity: 1;
+}
+}

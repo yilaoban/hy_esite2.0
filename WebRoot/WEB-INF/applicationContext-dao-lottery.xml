@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="lotteryDao" class="com.huiyee.interact.lottery.dao.LotteryDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaGroupDao" class="com.huiyee.interact.lottery.dao.SinaGroupDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate2"></property>
+	</bean>
+	<bean id="lotteryAsignUserDao" class="com.huiyee.interact.lottery.dao.LotteryAsignUserDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="lotteryPrizeCodeDao" class="com.huiyee.interact.lottery.dao.LotteryPrizeCodeDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="wxHbSendDaoImpl" class="com.huiyee.interact.lottery.dao.WxHbSendDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="lotteryPrizeDao" class="com.huiyee.interact.lottery.dao.LotteryPrizeDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="lotteryUserDao" class="com.huiyee.interact.lottery.dao.LotteryUserDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="lotteryUserDateDao" class="com.huiyee.interact.lottery.dao.LotteryUserDateDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="lotteryUserRecordDao" class="com.huiyee.interact.lottery.dao.LotteryUserRecordDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="lotteryUserSubDao" class="com.huiyee.interact.lottery.dao.LotteryUserSubDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="lotteryPrizeInfoDao" class="com.huiyee.interact.lottery.dao.LotteryPrizeInfoDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="cacheTime" value="60000"></property>
+	</bean>
+	<bean id="wxHongbaoDaoImpl" class="com.huiyee.interact.lottery.dao.WxHongbaoDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

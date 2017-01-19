@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="offCheckDaoImpl" class="com.huiyee.interact.offcheck.dao.OffCheckDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="offCheckRecordDaoImpl" class="com.huiyee.interact.offcheck.dao.OffCheckRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="offCheckSourceDaoImpl" class="com.huiyee.interact.offcheck.dao.OffCheckSourceDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="offCheckDzWayDao" class="com.huiyee.interact.offcheck.dao.OffCheckDzWayDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

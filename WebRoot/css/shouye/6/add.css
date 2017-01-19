@@ -1,0 +1,79 @@
+.address_add_content{
+	padding: 0 10px;
+	overflow:hidden;
+	margin-bottom:40px;
+	margin-top:40px;
+}
+
+.address_add_content li{
+	position: relative;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    margin: 10px 0;    
+}
+
+/*.address_add_content li:last-child{
+    margin: 20px 0;    
+}
+*/
+.address_add_content input[type=text],
+.address_add_content input[type=tel]{
+	height: 14px;
+	width:100%;
+	line-height: 14px;
+	padding:9px 0  9px 10px; 
+	-webkit-appearance: none;
+	border:1px solid #e5e5e5;
+    display: block;
+ 
+    
+    border-radius: 0;
+}
+
+.address_add_content input[type=text]:focus,.address_add_content input[type=tel]:focus{
+    border:1px solid #aae3fe;
+}
+
+.address_add_content input[type=text]::-webkit-input-placeholder,
+.address_add_content input[type=tel]::-webkit-input-placeholder {
+    padding-top: 2px;
+}
+
+
+
+.address_add_content select{
+	width:100%;
+    -webkit-appearance: none;
+    border-radius: 0;
+    border:1px solid #e5e5e5;
+    height: 34px;
+    line-height: 34px;
+    padding:0 23px 0 10px; 
+    color: #333;
+    background-repeat: no-repeat;
+    background-image:url(/images/shouye/6/index.png);
+    background-position: center right; 
+    background-size: 23px 7px;
+    display: block;
+ 
+}
+
+
+.address_add_content input.save{
+    display: block;
+    -webkit-appearance: none;
+    -webkit-box-flex:1;
+    -webkit-flex:1;
+    flex:1;
+    margin: 0 26px;
+    background:#fe5955;
+    color: #fff; 
+    border:none;
+    height: 40px;
+    border-radius: 3px;
+}
+
+.address_add_content li{width:45%; float:left; height:40px; line-height:40px; }
+.address_add_content li:nth-child(odd){line-height:35px; width:35%;margin-left:10%;}
+textarea{border: 1px solid #E5E5E5;}

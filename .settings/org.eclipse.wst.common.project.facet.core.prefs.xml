@@ -1,0 +1,12 @@
+<root>
+  <facet id="me.spring">
+    <node name="libprov">
+      <attribute name="provider-id" value="spring-no-op-library-provider"/>
+    </node>
+  </facet>
+  <facet id="jst.jaxws">
+    <node name="libprov">
+      <attribute name="provider-id" value="runtime-library-provider"/>
+    </node>
+  </facet>
+</root>

@@ -1,0 +1,2075 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+   <include file="struts4esite.xml"/>
+   <include file="struts4page.xml"/>
+   <include file="project/caidan/struts.xml"/>
+	  <!--Add packages here -->
+	<constant name="struts.devMode" value="false" />
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+	<constant name="struts.action.extension" value="action,html," />
+	<constant name="struts.multipart.maxSize" value="999999999" />
+	<package name="esite" namespace="/user" extends="esite-default">
+		<action name="areaProvince" class="areaAction"></action>
+		<action name="areaCity" class="areaAction" method="city"></action>
+		<action name="showpage*" class="showPageAction">
+			<param name="appid">{1}</param>
+			<result name="success" type="redirect">
+				${refurl}
+			</result>
+			<result name="forward">/WEB-INF/pageshow/test_pc.jsp</result>
+			<result name="forwardPhone">/WEB-INF/pageshow/test_phone.jsp</result>
+			<result name="appPage">/WEB-INF/pageshow/app/app${appid}_pc.jsp</result>
+			<result name="appPagePhone">/WEB-INF/pageshow/app/app${appid}_phone.jsp</result>
+		</action>
+		<action name="crmshow" class="crmShowAction">
+		    <result name="su1">/WEB-INF/pageshow/crm.jsp</result>
+			<result name="su2" type="redirect">
+				${refurl}
+			</result>
+		</action>
+		<action name="wxshowpage" class="wXShowPageAction">
+			<result name="success" type="redirect">
+				${refurl}
+			</result>
+			<result name="success4jsp">/WEB-INF/pageshow/${jsp}.jsp</result>
+			<result name="errclose">/WEB-INF/pageshow/wxclose.jsp</result>
+		</action>
+		<action name="wxoauth" class="wXOAuthAction">
+			<result name="success" type="redirect">
+				${refurl}
+			</result>
+			<result name="success4jsp">/WEB-INF/pageshow/${state}.jsp</result>
+			<result name="errclose">/WEB-INF/pageshow/wxclose.jsp</result>
+		</action>
+		<action name="weixin" class="showPageAction" method="weixin">
+			<result name="success" type="chain">
+				<param name="actionName">show</param>
+				<param name="namespace">/user</param>
+				<param name="pageid">${pageid}</param>
+			</result>
+		</action>
+		<action name="wxmedia" class="wXMediaAction"></action>
+		<action name="cc" class="cacheClearAction" ></action>
+		<action name="ct" class="cache4WxTokenAction"></action>
+		<action name="showlogin" class="showlogin" >
+			<!-- <result name="success">/WEB-INF/page/showlogin.jsp</result> -->
+			<result name="success" type="chain">
+				<param name="actionName">page</param>
+				<param name="namespace">/page</param>
+				<param name="sitegroupid">8</param>
+			</result>
+		</action>
+		<action name="preview" class="pageShowAction" method="preview">
+			<result name="success">/WEB-INF/pageshow/${jspname}</result>
+		</action>
+		<action name="oauthlink" class="oauthForLinkAction">
+			<result name="success" type="redirect">
+				${sinaOauthUrl}
+			</result>
+		</action>
+		<action name="oauth" class="oauthAction">
+			<result name="success" type="redirect">
+				${refUrl}
+			</result>
+		</action>
+		<action name="publishLink" class="publishAction" method="publishLink">
+			<result name="success" type="redirect">
+				${publishUrl}
+			</result>
+		</action>
+		<action name="publish" class="publishAction" method="publish">
+			<result name="success" type="redirect">
+				${refUrl}
+			 </result>
+		</action>
+		<action name="show" class="pageShowAction" method="show">
+			<result name="success">/WEB-INF/pageshow/${jspname}</result>
+		</action>
+		<action name="zan" class="dynamicAction" method="zan"></action>
+		<action name="upload" class="dynamicAction" method="upload">
+			<result name="success" type="tiles">user_upload</result>
+		</action>
+		<action name="emailContract" class="dynamicAction" method="emailContract"></action>
+		<action name="uploadSub" class="userUploadAction">
+			<result name="success" type="tiles">user_upload</result>
+		</action>
+		<action name="unifylogin" class="unifyLoginAction">
+			<result name="failed" type="redirect">
+				${unifyLoginUrl}?msg=${errmsg}
+			</result>
+			<result name="successRedirect" type="redirect">
+				/page/site.action
+			</result>
+			<result name="oldRedirect" type="redirect">${rPath}</result>
+		</action>
+		<action name="logout" class="logoutAction">
+			<result type="redirect" name="successRedirect">
+				${url}
+			</result>
+		</action>
+		<action name="select_zan" class="dynamicAction" method="selectZan">
+		</action>
+		<action name="userOauthlink" class="userOauthForLinkAction">
+			<result name="success" type="redirect">
+				${sinaOauthUrl}
+			</result>
+		</action>
+		<action name="userOauth" class="userOauthAction">
+			<result name="success" type="redirect">
+				${refUrl}
+			</result>
+		</action>
+		<action name="shareUpload" class="sinaPicUploadAction" ></action>
+		<action name="atuser" class="dynamicAction" method="selectFans"></action>
+		<action name="face" class="dynamicAction" method="getFace"></action>
+		<action name="share" class="userSinaShareAction"></action>
+		<action name="forward" class="sinaForwardAction"></action>
+		<action name="comment" class="sinaCommentAction"></action>
+		<action name="weibo" class="dynamicAction" method="selectWeibo"></action>
+		<action name="wtotal" class="dynamicAction" method="weiboTotal"></action>
+		<action name="phonePic" class="sinaPicUploadAction" method="picSubByPhone"></action>
+		<action name="sinaback" class="dynamicAction" method="sinaReturn">
+			<result name="success">/WEB-INF/pagefeature/sina_back.jsp</result>
+		</action>
+		<action name="comment_record" class="customAppointReportAction"></action>
+		<action name="vote" class="voteSubmitAction"></action>
+		<action name="voteOptionCountpc" class="voteRecordDataAction" method="getVoteOptionCountPC"></action>
+		<action name="voteOptionCount" class="voteRecordDataAction" method="getVoteOptionCount"></action>
+		<action name="research" class="researchSubmitAction"></action>
+		<action name="guanzhu" class="featureFriendsShipsAction"></action>
+		<action name="spread" class="spreadSubmitAction"></action>
+		<action name="spread_page_sub" class="spreadSubmitAction" method="pageSub"></action>
+		<action name="lottery_draw" class="lotteryDrawAction"></action>
+		<action name="lotteryJoin" class="lotteryDrawAction" method="getJoinDetail"></action>
+		<action name="rqdraw" class="renQiDrawAction" ></action>
+		<action name="csdraw" class="csDrawAction" ></action>
+		<action name="rqshare" class="renQiDrawAction" method="share"></action>
+		<action name="shareUploadPic" class="userUploadAction" method="shareUploadPic"></action>
+		<action name="showCard" class="cardAction" method="showCard">
+			<result name="success">/WEB-INF/card/${dto.tc.path}</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="newdetails" class="newDetails">
+			<result name="success">/WEB-INF/pageshow/template_news.jsp</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="zhuanpan_winner" class="lotteryWinnerUserAction">
+		</action>
+		<action name="bashare" class="baShareAction"></action>
+		<action name="wxshare" class="spreadSubmitAction" method="pageSub"></action>
+		<action name="saveuser" class="securityCodeRecordAction" method="saveUser"></action>
+		<action name="lottery_prize_winner" class="lotteryInformationAction"></action>
+		<action name="auction_draw" class="auctionDrawAction">
+		</action>
+		<action name="auction_winer_sub" class="auctionDrawAction" method="winnerSub">
+		</action>
+		<action name="checkin_draw" class="checkinDrawAction">
+		</action>
+		<action name="signinlist" class="signinAction" method="signinlist"></action>
+		<action name="commentlist" class="commentSubmitAction" method="commentlist"></action>
+		<action name="winnerlist" class="lotteryWinnerUserAction" method="winnerlist"></action>
+		<action name="wx_comment" class="commentSubmitAction"></action>
+		<action name="saveComment" class="commentSubmitAction" method="saveComment"></action>
+		<action name="checkTeyue" class="xcSendDetailAction" method="checkTeyue">
+		</action>
+		<action name="insetUser" class="signinAction" method="InsetUser"></action>
+		<action name="zhuanpan" class="zhuanpanAction">
+			<result name="success"></result>
+		</action>
+		<action name="updatecheckin" class="signinAction" method="updateCheckin">
+		</action>
+		<action name="findprize" class="signinAction" method="findPrize"></action>
+		<action name="xcStartAction" class="xcAction" method="start"></action>
+		<action name="xcAction" class="xcAction" ></action>
+		<action name="xcResultAction" class="xcAction" method="getResult"></action>
+		<action name="xcSwitchAction" class="xcPageAction" method="pageid"></action>
+		<action name="xcCacheAction" class="xcPageAction" method="cachePageid"></action>
+		
+		<!--BBS -->
+		<action name="bbsforum" class="bbsForumAction" method="findTopList">
+		 	<result name="success" type="tiles">bbsforum</result>
+		</action>
+		<action name="addTopic" class="bbsForumAction" method="addTopic">
+		 	<result name="success" type="tiles">addTopic</result>
+		</action>
+		<action name="saveTopic" class="bbsForumAction" method="saveTopic">
+			<result name="success" type="redirect">
+				<param name="location">/user/bbsforum.action</param>
+				<param name="forumid">${topic.FORUM_ID}</param>
+			</result>
+			<result name="fail" type="redirect">
+				<param name="location">/user/addTopic.action</param>
+				<param name="msg">${msg}</param>
+				<param name="forumid">${topic.FORUM_ID}</param>
+			</result>
+		</action>
+		<action name="bbsregister" class="bbsUserAction" method="register">
+		 	<result name="success" >/WEB-INF/interactpage/bbs/bbsregister.jsp</result>
+		</action>
+		<action name="doregister" class="bbsUserAction" method="doRegister">
+		</action>
+		<action name="bbslogin" class="bbsUserAction" method="login">
+		</action>
+		<action name="bbsexit" class="bbsUserAction" method="bbsexit">
+		</action>
+		<action name="findBBSUserByName" class="bbsUserAction" method="findBBSUserByName">
+		</action>
+		<action name="topicPostInfo" class="bbsPostAction" method="topicPostInfo">
+			<result name="success" type="tiles">topicPostInfo</result>
+		</action>
+		<action name="personalTopicPost" class="bbsPostAction" method="personalTopicPost">
+			<result name="success" type="tiles">topicPostInfo</result>
+		</action>
+		<action name="savetopicReport" class="bbsPostAction" method="savetopicReport">
+		</action>
+		<action name="saveReplyInfo" class="bbsPostAction" method="saveReplyInfo">
+			<result name="success" type="redirect">
+				<param name="location">/user/topicPostInfo.action</param>
+				<param name="topicid">${topic.id}</param>
+				<param name="forumid">${topic.FORUM_ID}</param>
+			</result>
+		</action>
+		<action name="replyAuthor" class="bbsPostAction" method="replyAuthor">
+			<result name="success" type="tiles">replyAuthor</result>
+		</action>
+		<action name="addViewCount" class="bbsPostAction" method="addViewCount">
+		</action>
+		<action name="editContent" class="bbsPostAction" method="editContent">
+			<result name="success" type="tiles">editTopic</result>
+		</action>
+		<action name="updateTopic" class="bbsPostAction" method="updateTopic">
+			<result name="success" type="redirect">
+				<param name="location">/user/topicPostInfo.action</param>
+				<param name="topicid">${topicid}</param>
+				<param name="forumid">${forumid}</param>
+			</result>
+		</action>
+		<action name="saveMessage" class="bbsPostAction" method="saveMessage">
+		</action>
+		<action name="findMessage" class="bbsPostAction" method="findMessage">
+		</action>
+		<action name="messageCenter" class="bbsPostAction" method="messageCenter">
+			<result name="success" type="tiles">myMessage</result>
+		</action>
+		<action name="saveMessagereply" class="bbsPostAction" method="saveMessagereply">
+		</action>
+		<action name="bbsUserCenter" class="bbsUserCenterAction" method="bbsUserCenter">
+			<result name="success" type="tiles">bbsUserCenter</result>
+		</action>
+		<action name="bbsUserInfo" class="bbsUserCenterAction" method="bbsUserCenter">
+			<result name="success" type="tiles">bbsUserInfo</result>
+		</action>
+		<action name="bbsMyTopic" class="bbsUserCenterAction" method="bbsMyTopic">
+			<result name="success" type="tiles">bbsMyTopic</result>
+		</action>
+		<action name="bbsMyReply" class="bbsUserCenterAction" method="bbsMyReply">
+			<result name="success" type="tiles">bbsMyReply</result>
+		</action>
+	</package>
+	<package name="page" namespace="/page" extends="esite-default">
+		<action name="hiddenblk" class="cardAction" method="updatehiddenBlk"></action>
+		<action name="updateisshowmenu" class="cardAction" method="updateisshowMenu"></action>
+		<action name="showblk" class="cardAction" method="updateshowBlk"></action>
+		<action name="pub" class="featureMgrAction" method="pub">
+		</action>
+		<action name="pubBySite" class="featureMgrAction" method="pubPages">
+		</action>
+		<action name="sitegroup" class="siteIndexAction">
+			<result type="tiles" name="success">siteList</result>
+		</action>
+		<action name="createIndex" class="siteIndexAction" method="createIndex">
+			<result type="tiles" name="success">create_site_index</result>
+		</action>
+		<action name="publish_index_sina" class="publishAction">
+			<result type="tiles" name="success">publish_index</result>
+		</action>
+		<action name="findSinaTokenIsExit" class="publishAction" method="findSinaTokenIsExit">
+		</action>
+		<action name="mymap" class="publishAction" method="mymap">
+			<result type="tiles" name="success">mymap</result>
+		</action>
+		<action name="sub_weibo_flow" class="publishAction" method="subWeiBoFlow">
+			<result type="tiles" name="success">sub_weibo_flow</result>
+		</action>
+		<action name="sub_weibo_flow1" class="publishAction" method="subWeiBoFlow1">
+			<result type="tiles" name="success">sub_weibo_flow1</result>
+		</action>
+		<action name="publish_index_qq" class="publishAction" method="qq">
+			<result type="tiles" name="success">publish_index_qq</result>
+		</action>
+		<action name="sitegroupList" class="siteGroupIndexAction">
+			<result type="tiles" name="success">site_group_list</result>
+		</action>
+		<action name="updateGroupName" class="siteGroupIndexAction" method="changeSiteName"></action>
+		<action name="shareGroup" class="siteGroupIndexAction" method="shareGroup"></action>
+		<action name="cancelShare" class="siteGroupIndexAction" method="cancelShare"></action>
+		<action name="deleteSite" class="siteGroupIndexAction" method="deleteSite"></action>
+		<action name="get_site_group" class="siteGroupIndexAction" method="getSiteGroup">
+			<result type="tiles" name="success">site_group</result>
+		</action>
+		<action name="sitegroup_create" class="siteIndexAction"
+			method="sitegroup_create">
+		</action>
+		<action name="site_create" class="siteIndexAction"
+			method="site_create">
+			<result name="success" type="tiles">create_site</result>
+		</action>
+		<action name="site_create_sub" class="siteIndexAction"
+			method="site_create_sub">
+			<result name="success" type="tiles">create_site</result>
+		</action>
+		<action name="site_update" class="siteIndexAction"
+			method="site_update">
+			<result name="success" type="tiles">create_site</result>
+		</action>
+		<action name="site_update_sub" class="siteIndexAction"
+			method="site_update_sub">
+			<result name="success" type="tiles">create_site</result>
+		</action>
+		<action name="del_site" class="siteIndexAction"
+			method="del_site">
+		</action>
+		<action name="del_site_group" class="siteIndexAction"
+			method="delSiteGroup">
+		</action>
+		<action name="update_site_group" class="siteIndexAction"
+			method="updateSiteGroup">
+		</action>
+		<action name="copySite" class="siteIndexAction"
+			method="siteCopy">
+		</action>
+		<action name="sitecount" class="siteCountAction">
+			<result name="success" type="tiles">count_site</result>
+		</action>
+		<action name="siteCountDetail" class="siteVisitLogAction">
+			<result name="success" type="tiles">count_site_detail</result>
+		</action>
+		<action name="exportSiteCountDetail" class="siteVisitLogAction" method="export">
+			<result name="success" type="tiles">count_site_detail</result>
+		</action>
+		<action name="page" class="forwardAction">
+			<result name="success">/WEB-INF/pagechip/forward.jsp</result>
+		</action>
+		<action name="copy_page" class="copyPageAction">
+			<result name="success" type="tiles">copy_page</result>
+		</action>
+		<action name="save_new_page" class="copyPageAction" method="saveNewPage">
+			<result name="success" type="tiles">copy_page</result>
+		</action>
+		<action name="save_new_suit" class="copySuitAction" method="saveNewSuit">
+			<result name="success" type="tiles">choose_templatepage</result>
+		</action>
+		<action name="site" class="pageAction">
+			<result name="success" type="tiles">pageList</result>
+		</action>
+		<action name="site_list" class="pageAction" method="getSites">
+			<result name="success" type="tiles">site_list</result>
+		</action>
+		<action name="site_list_all" class="pageAction" method="getSitesList">
+			<result name="success" type="tiles">site_list_all</result>
+		</action>
+		<action name="page_create" class="pageAction"
+			method="page_create">
+			<result name="success" type="tiles">create_page</result>
+		</action>
+		<action name="upload_page" class="pageAction" method="uploadpage">
+			<result name="success" type="tiles">upload_page</result>
+		</action>
+		<action name="upload_page_html" class="pageAction" method="uploadpagehtml">
+			<result name="success" type="tiles">upload_page_html</result>
+		</action>
+		<action name="fsave" class="pageAction" method="fsave">
+			<result name="success" type="tiles">upload_page</result>
+			<result name="input" type="tiles">upload_page</result>
+		</action>
+		<action name="htmlSave" class="pageAction" method="htmlSave">
+			<result name="success" type="tiles">upload_page_html</result>
+		</action>
+		<action name="page_create_sub" class="pageAction"
+			method="page_create_sub">
+			<result name="success" type="tiles">create_page</result>
+			<result name="fail" type="redirect">/page/page_create.action</result>
+		</action>
+		<action name="page_update" class="pageAction"
+			method="page_update">
+			<result name="success" type="tiles">update_page</result>
+		</action>
+		<action name="updatePageName" class="pageAction" method="updatePageName"></action>
+		<action name="del_page" class="pageAction" method="del_page"></action>
+		<action name="update_site_name" class="pageAction" method="updateSiteName"></action>
+		<action name="update_fname" class="featureAction" method="updateName"></action>
+		<action name="feature" class="featureAction">
+			<result name="success">
+				/WEB-INF/page/feature_list.jsp
+			</result>
+		</action>
+		<action name="feature_list" class="featureAction" method="getFeatures">
+			<result name="success">
+				/WEB-INF/page/feature_list_site.jsp
+			</result>
+		</action>
+		
+		<action name="config" class="featureMgrAction"
+			method="config">
+			<result name="success">
+				/WEB-INF/pagefeature/feature_mgr${featureid}.jsp
+			</result>
+		</action>
+		<action name="configNew" class="featureMgrAction" method="configNew">
+			<result name="success">/WEB-INF/pagefeature/feature_card${featureid}.jsp</result>
+		</action>
+		<action name="config_sub" class="featureMgrAction"
+			method="configSub">
+			<result name="success">
+				/WEB-INF/pagefeature/feature_mgr${featureid}.jsp
+			</result>
+		</action>
+		<action name="config_sub_new" class="featureMgrAction" method="configSubNew"></action>
+		<action name="add" class="featureMgrAction" method="add">
+			<result name="success" type="tiles">
+				add_page_feature
+			</result>
+		</action>
+		<action name="editPageSource" class="featureMgrAction" method="edit_page_source">
+			<result name="success" type="tiles">
+				edit_page_source
+			</result>
+		</action>
+		<action name="savePageSource" class="featureMgrAction" method="save_page_source"></action>
+		<action name="add_sub" class="featureMgrAction"
+			method="addSub">
+			<result name="success" type="tiles">
+				add_page_feature
+			</result>
+		</action>
+		<action name="del_page_feature" class="featureMgrAction"
+			method="delPageFeature">
+		</action>
+		<action name="up_page_feature" class="featureMgrAction" method="up"></action>
+		<action name="down_page_feature" class="featureMgrAction" method="down"></action>
+		<action name="set_home" class="pageAction" method="setHome"></action>
+		<action name="interaction" class="interactionAction">
+			<result name="success" type="tiles">interaction_list</result>
+		</action>
+		<action name="hd_details" class="interactionAction" method="details">
+			<result name="success" type="tiles">hd_details_${featureid}</result>
+		</action>
+		<action name="hd_update" class="interactionAction" method="updateHandler">
+		</action>
+		<action name="preview" class="pageShowAction" method="preview">
+			<result name="success">/WEB-INF/pageshow/${jspname}</result>
+		</action>
+		<action name="hd_export" class="interactionAction" method="export">
+		</action>
+		<action name="hd_report" class="hdReportAction">
+			<result type="tiles" name="success">hd_report</result>
+		</action>
+		<action name="navigate_page" class="startPageAction">
+			<result type="tiles" name="success">navigate_page</result>
+		</action>
+		<action name="create_activity" class="createActivityAction">
+			<result type="tiles" name="success">create_activity</result>
+		</action>
+		<action name="create_activitySub" class="createActivityAction" method="saveActivity">
+			<result type="tiles" name="input">create_activity</result>
+		</action>
+		<action name="activity_list" class="activityListAction">
+			<result name="success">
+				/WEB-INF/page/activity_list.jsp
+			</result>
+		</action>
+		<action name="activity_update" class="updateActivityAction">
+			<result type="tiles" name="success">activity_compile</result>
+		</action>
+		<action name="activity_updateSub" class="updateActivityAction" method="updateActivity">
+			<result type="tiles" name="success">activity_compile</result>		
+		</action>
+		<action name="activity_del" class="delActivityAction">
+			<result type="tiles" name="success">activity_compile</result>	
+		</action>
+		<action name="pageconfig" class="pageConfigAction">
+			<result type="tiles" name="success">page_config</result>
+		</action>
+		<action name="pageconfig_new" class="pageConfigAction" method="pageConfigNew">
+			<result type="tiles" name="success">page_config_new</result>
+		</action>
+		<action name="show_wx_url" class="pageConfigAction" method="showWxUrl">
+			<result type="tiles" name="success">show_wx_url</result>
+		</action>
+		<action name="showAddresslist" class="pageConfigAction" method="showAddresslist">
+			<result type="tiles" name="success">promotion</result>
+		</action>
+		<action name="savePageAddress_pre" class="pageConfigAction" method="findPageSubWeixin">
+			<result type="tiles" name="success">add_promotion</result>
+		</action>
+		<action name="savePageAddress" class="pageConfigAction" method="savePageAddress">
+			<result type="tiles" name="success">add_promotion</result>
+		</action>
+		<action name="sharePre" class="pageConfigAction" method="sharePre">
+			<result type="tiles" name="success">share</result>
+		</action>
+		<action name="shareSub" class="pageConfigAction" method="shareSub">
+			<result type="tiles" name="success">share</result>
+		</action>
+		<action name="chooseTemplatePage" class="pageConfigAction" method="chooseTemplatePage">
+			<result type="tiles" name="success">choose_templatepage</result>
+		</action>
+		<action name="findSourceExit" class="pageConfigAction" method="findSourceExit"></action>
+		<action name="pageOnline" class="pageConfigAction" method="pageOnline"></action>
+		<action name="pageOffline" class="pageConfigAction" method="pageOffline"></action>
+		<action name="updateData" class="pageConfigAction" method="updateData"></action>
+		<action name="visit_report" class="siteVistReportAction">
+			<result type="tiles" name="success">
+				visit_report
+			</result>
+		</action>
+		<action name="visit_fans_level" class="siteVistReportAction" method="getVisitFansLevelData">
+			<result type="tiles" name="success">
+				visit_fans_level
+			</result>
+		</action>
+		<action name="hd_view_report" class="hdReportAction" method="getHdReport">
+			<result type="tiles" name="success">
+				hd_view_report
+			</result>
+		</action>
+		<action name="hd_area_report" class="hdReportAction" method="getAreaReport">
+			<result type="tiles" name="success">
+				hd_area_report
+			</result>
+		</action>
+		<action name="hd_num_report" class="hdReportAction" method="getNumReport">
+			<result type="tiles" name="success">
+				hd_num_report
+			</result>
+		</action>
+		<action name="hd_per_num_report" class="hdReportAction" method="getPerNumReport">
+			<result type="tiles" name="success">
+				hd_per_num_report
+			</result>
+		</action>
+		<action name="hd_gender_report" class="hdReportAction" method="getHdGenderData">
+			<result type="tiles" name="success">
+				hd_gender_report
+			</result>
+		</action>
+		<action name="visit_gender_report" class="siteVistReportAction" method="getGenderData">
+			<result type="tiles" name="success">
+				visit_gender_report
+			</result>
+		</action>
+		<action name="visit_terminal_report" class="siteVistReportAction" method="getTerminalData">
+			<result type="tiles" name="success">
+				visit_terminal_report
+			</result>
+		</action>
+		<action name="hd_terminal_report" class="hdReportAction" method="getHdTerminalData">
+			<result type="tiles" name="success">
+				hd_terminal_report
+			</result>
+		</action>
+		<action name="hd_hour_report" class="hdReportAction" method="getHdHourReportData">
+			<result type="tiles" name="success">
+				hd_hour_report
+			</result>
+		</action>
+		<action name="visit_hour_report" class="siteVistReportAction" method="getHourReportData">
+			<result type="tiles" name="success">
+				visit_hour_report
+			</result>
+		</action>
+		<!-- 区域分析action -->
+		<action name="rg_analysis" class="rgAnalysisAction" method="getVisitReport">
+			<result type="tiles" name="success">rg_analysis</result>
+		</action>
+		<action name="visithighchart_report" class="rgAnalysisAction" method="getVisitData">
+		</action>
+		<action name="hudonghighchart_report" class="hdAnalysisAction" method="getHudongData">
+		</action>
+		<action name="hd_fans_level" class="hdAnalysisAction" method="getHdFansLevelData">
+		    <result type="tiles" name="success">
+				hd_fans_level
+			</result>
+		</action>
+		<action name="hudong_table" class="hdAnalysisAction">
+			<result type="tiles" name="success">hudong_table</result>
+		</action>
+		<action name="area_list" class="hdAreaAction" method="getAreaList">
+			<result type="tiles" name="success">area_list</result>
+		</action>
+		<!-- 访问用户 -->
+		<action name="custom_visitreport" class="customVisitReportAction">
+			<result type="tiles" name="success">custom_visitreport</result>
+		</action>
+		<action name="custom_visitreport_nickname" class="customVisitReportAction" method="getCustomVisitReportListByNickName">
+			<result type="tiles" name="success">custom_visitreport</result>
+		</action>
+		<action name="visti_log_unkown" class="customVisitReportAction" method="getVisitLogsUnkown">
+			<result type="tiles" name="success">visti_log_unkown</result>
+		</action>
+		<!-- 访问用户查看详情 -->
+		<action name="visit_record_detail" class="visitRecordDetail">
+			<result type="tiles" name="success">visit_record_detail</result>
+		</action>
+		<action name="activity_report" class="activityVisitReportAction">
+			<result type="tiles" name="success">
+				activity_visit_data
+			</result>
+		</action>
+		<action name="activity_report_data" class="activityVisitReportAction" method="getAnonVisitData">
+			<result type="tiles" name="success">
+				anonVisit_data
+			</result>
+		</action>
+		<action name="anonActivity_report_data" class="nonAnonVisitReportAction">
+			<result type="tiles" name="success">
+				non_anonVisit_data
+			</result>
+		</action>
+		<action name="ajax_find_activity_data" class="activityVisitReportAction"
+			method="getActivityData">
+		</action>
+		<action name="ajax_find_terminal_data" class="activityVisitReportAction"
+			method="getVisitTermianlCount">
+		</action>
+		<action name="ajax_find_source_data" class="activityVisitReportAction"
+			method="getVisitSourceCount">
+		</action>
+		<action name="activity_participate" class="activityParticipateReportAction">
+			<result type="tiles" name="success">
+				activity_participate
+			</result>
+		</action>
+		<action name="ajax_find_participate_data" class="activityParticipateReportAction"
+			method="getActivityParticipateData">
+		</action>
+		<action name="ajax_find_participatesource_data" class="activityParticipateReportAction"
+			method="getActivityParticipateSourceData">
+		</action>
+		<action name="activity_participate_success" class="activityParticipateSuccessAction">
+			<result type="tiles" name="success">
+				activity_participate_success
+			</result>
+		</action>
+		<action name="ajax_find_participate_success" class="activityParticipateSuccessAction"
+			method="getActivityParticipateSuccessData">
+		</action>
+		<action name="ajax_find_participatesource_success" class="activityParticipateSuccessAction"
+			method="getActivityParticipateSourceSuccessData">
+		</action>
+		<action name="activity_participate_fail" class="activityParticipateSuccessAction" 
+			method="getActivityParticipateFailData">
+			<result type="tiles" name="success">
+				activity_participate_fail
+			</result>
+		</action>
+		<action name="ajax_find_participate_fail" class="activityParticipateSuccessAction"
+			method="getActivityParticipateFail">
+		</action>
+		<action name="ajax_find_participatesource_fail" class="activityParticipateSuccessAction"
+			method="getActivityParticipateFailSource">
+		</action>
+		<action name="danymic_record" class="danymicUserReportAction" method="getDanymicRecordList">
+			<result type="tiles" name="success">
+				danymic_record
+			</result>
+		</action>
+		<action name="danymic_record_nickname" class="danymicUserReportAction" method="getDanymicRecordListNickName">
+			<result type="tiles" name="success">
+				danymic_record
+			</result>
+		</action>
+		<action name="danymic_record_detail" class="danymicUserReportAction" method="getDanymicRecordDetailList">
+			<result type="tiles" name="success">
+				danymic_record_detail
+			</result>
+		</action>
+		<action name="getDanymicRecordDetailData" class="danymicUserReportAction"
+			method="getDanymicRecordDetailData">
+		</action>
+		<action name="hdDetail" class="hdDetailAction">
+			<result type="tiles" name="success">hd_detail_${hdid}</result>
+		</action>
+		<action name="zanDetail" class="zanDetailAction">
+			<result type="tiles" name="success">zan_detail</result>
+		</action>
+		<action name="hdQuery" class="hdDetailAction" method="queryExecute">
+			<result type="tiles" name="success">hd_detail_${hdid}</result>
+		</action>
+		<action name="fans_report" class="fansAnalysisAction">
+			<result type="tiles" name="success">fans_report</result>
+		</action>
+		<action name="hd_fans_report" class="fansHdAnalysisAction">
+			<result type="tiles" name="success">hd_fans_report</result>
+		</action>
+		<action name="non_anonVisit_data_report" class="nonAnonVisitReportAction" method="getNonAnonVisitReportData">
+			<result type="tiles" name="success">
+				non_anonVisit_data
+			</result>
+		</action>
+		<action name="nonAnonVisit_data_report" class="nonAnonVisitReportAction" method="getNonAnonVisitData">
+			<result type="tiles" name="success">
+				non_anonVisit_data
+			</result>
+		</action>
+		<action name="activity_details" class="activityParticipateDetailsAction">
+			<result type="tiles" name="success">
+				activity_participate_details
+			</result>
+		</action>
+		<action name="activity_participate_details" class="activityParticipateDetailsAction" method="getActivityParticipateDetails">
+			<result type="tiles" name="success">
+				activity_participate_details
+			</result>
+		</action>
+		<action name="activity_participate_details_by_nickname" class="activityParticipateDetailsAction" method="getActivityParticipateDetailsByName">
+			<result type="tiles" name="success">
+				activity_participate_details
+			</result>
+		</action>
+		<action name="activity_success_details" class="activityParticipateSuccessDetailsAction">
+			<result type="tiles" name="success">
+				activity_participate_success_details
+			</result>
+		</action>
+		<action name="activity_participate_success_details" class="activityParticipateSuccessDetailsAction" method="getActivityParticipateSuccessDetails">
+			<result type="tiles" name="success">
+				activity_participate_success_details
+			</result>
+		</action>
+		<action name="activity_participate_success_details_by_nickname" class="activityParticipateSuccessDetailsAction" method="getActivityParticipateSuccessDetailsByName">
+			<result type="tiles" name="success">
+				activity_participate_success_details
+			</result>
+		</action>
+		<action name="activity_fail_details" class="activityParticipateFailDetailsAction">
+			<result type="tiles" name="success">
+				activity_participate_fail_details
+			</result>
+		</action>
+		<action name="activity_participate_fail_details" class="activityParticipateFailDetailsAction" method="getActivityParticipateFailDetails">
+			<result type="tiles" name="success">
+				activity_participate_fail_details
+			</result>
+		</action>
+		<action name="activity_participate_fail_details_by_nickname" class="activityParticipateFailDetailsAction" method="getActivityParticipateFailDetailsByName">
+			<result type="tiles" name="success">
+				activity_participate_fail_details
+			</result>
+		</action>
+		<action name="addCard" class="cardAction">
+			<result name="success" >/WEB-INF/page/card_list.jsp</result>
+		</action>
+		<action name="updateCard" class="cardAction" method="updateCard">
+			<result name="success" >/WEB-INF/page/card_list1.jsp</result>
+		</action>
+		<action name="card_reload" class="cardAction">
+			<result name="success" >/WEB-INF/page/card_reload_list.jsp</result>
+		</action>
+		<action name="getCardListData" class="cardAction"
+			method="getCardListData">
+		</action>
+		<action name="addNewCard" class="cardAction" method="submit">
+			<!-- 
+			<result name="success" type="redirectAction">
+				<param name="namespace">page</param>
+				<param name="actionName">editpage</param>
+				<param name="pageid">${pageid}</param>
+				<param name="pcid">${pcid}</param>
+			</result>
+			 -->
+		</action>
+		<action name="updateOldCard" class="cardAction" method="updateOldCard"></action>
+		<action name="selectCard" class="cardAction" method="selectCard">
+			<result name="success" >/WEB-INF/page/card_list_select.jsp</result>
+		</action>
+		<action name="addCardSub" class="cardAction" method="submit">
+			<result name="success" type="redirect">/page/pageProcess.action?pageid=${fartherPageid}</result>
+		</action>
+		<action name="showBlock" class="cardAction" method="showBlock">
+			<result name="commen">/WEB-INF/page/edit_block.jsp</result>
+			<result name="kongjian" type="redirect">
+				<param name="location">/page/configNew.action</param>
+				<param name="featureid">${featureid}</param>
+				<param name="fid">${fid}</param>
+				<param name="relationid">${relationid}</param>
+				<param name="type">${type}</param>
+				<param name="pageid">${pageid}</param>
+			</result>
+			<result name="list">/WEB-INF/page/edit_block_list.jsp</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="blockSub" class="cardAction" method="blockSub"></action>
+		<action name="blockSubC" class="cardAction" method="blockSubC"></action>
+		<action name="editpage" class="cardAction" method="editPage">
+			<result name="success" type="tiles">edit_page</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="edit_kongbaipage" class="pageEditAction" method="editKongBaiPage">
+			<result name="success" type="tiles">
+				edit_kongbaipage
+			</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="editCode" class="pageEditAction" method="editCode">
+			<result name="success" >/WEB-INF/page/edit_code.jsp</result>
+		</action>
+		<action name="updateCode" class="pageEditAction" method="updateCode">
+		</action>
+		<action name="moveCard" class="cardAction" method="moveCard"></action>
+		<action name="cardMoveStyle" class="cardAction" method="cardMoveStyle"></action>
+		<action name="deleteCard" class="cardAction" method="deleteCard"></action>
+		<action name="savePageCardStyle" class="cardAction" method="savePageCardStyle"></action>
+		<action name="savePageCardCss" class="cardAction" method="savePageCardCss"></action>
+		<action name="updateCardName" class="cardAction" method="updateCardName">
+		</action>
+		<action name="picUpload" class="userUploadAction" method="picUpload"></action>
+		<action name="online" class="cardAction" method="online">
+		</action>
+		<action name="pageProcess" class="cardAction" method="pageProcess">
+			<result name="success" >/WEB-INF/page/page_process.jsp</result>
+		</action>
+		<action name="to_page_process" class="cardAction" method="topageProcess">
+			<result name="success" >/WEB-INF/page/page_process_new.jsp</result>
+		</action>
+		<action name="page_process" class="cardAction" method="pageProcessNew">
+			<result name="success" >/WEB-INF/page/page_process_new.jsp</result>
+		</action>
+		<action name="showUrl" class="cardAction" method="showUrl">
+			<result name="success" >/WEB-INF/page/show_qrcode.jsp</result>
+		</action>
+		<action name="editCard" class="cardAction" method="editCard">
+			<result name="success" type="tiles">edit_page_process</result>
+		</action>
+		<action name="selpage" class="cardAction" method="selpage">
+			<result name="success">/WEB-INF/page/selpage.jsp</result>
+		</action>
+		<action name="bgset" class="cardAction" method="bgset">
+			<result name="success">/WEB-INF/page/card_bg_set.jsp</result>
+		</action>
+		<action name="cssset" class="cardAction" method="cssset">
+			<result name="success">/WEB-INF/page/card_css_set.jsp</result>
+		</action>
+		<action name="btset" class="cardAction" method="btset">
+			<result name="success">/WEB-INF/page/page_bt_set.jsp</result>
+		</action>
+		<action name="btsetSub" class="cardAction" method="btsetSub"></action>
+		<action name="img_flash" class="imgFlashAction">
+			<result name="success">/WEB-INF/page/img_flash.jsp</result>
+		</action>
+		<action name="img_flash_sub" class="imgFlashAction" method="img_flash"></action>
+		<action name="sck" class="materialManagerAction" method="sck">
+			<result name="success">/WEB-INF/page/material_list_choose.jsp</result>
+		</action>
+		<action name="ajax_sck" class="materialManagerAction" method="ajax_sck"></action>
+		<!--  <action name="pub_qq" class="publishAction" method="qqSub">
+			<result name="success" type="tiles">sub_weixin_flow</result>
+		</action>-->
+		<action name="pub_qq" class="publishAction" method="weixinSub">
+			<result name="success" type="tiles">sub_weixin_flow</result>
+		</action>
+		<action name="updateStatus" class="securityCodeRecordAction" method="updateStauts"></action>
+		<action name="updatePayed" class="securityCodeRecordAction" method="updatePayed"></action>
+		<action name="selected" class="securityCodeRecordAction" method="selected">
+			<result name="success">/WEB-INF/pagefeature/feature_mgr${featureid}.jsp</result>
+		</action>
+		<action name="readStyleFromFile" class="editUpLoadFileAction" method="readStyleFromFile">
+			<result name="success">/WEB-INF/page/edit_page_style.jsp</result>
+		</action>
+		<action name="writeStyleToFile" class="editUpLoadFileAction" method="writeStyleToFile">
+		</action>
+		<action name="saveposition" class="cardAction" method="savePosition"></action> 
+		<action name="editGp" class="editGPAction">
+			<result>/WEB-INF/page/edit_pg.jsp</result>
+		</action>
+		<action name="editFile" class="editFileAction">
+			<result type="tiles" name="success">edit_file</result>
+		</action>
+		<action name="showEditFile" class="editFileAction" method="edit">
+			<result>/WEB-INF/page/show_edit_file.jsp</result>
+		</action>
+		<action name="subeditFile" class="editFileAction" method="subFile">
+			<result name="success">/WEB-INF/page/show_edit_file.jsp</result>
+		</action>
+		<action name="editGpSub" class="editGPAction" method="save"></action>
+	</package>
+	<package name="loadpage" namespace="/loadpage" extends="esite-default">
+		<action name="loadPageIndex" class="loadPageIndexAction">
+			<result type="tiles" name="success">load_page_index</result>
+		</action>
+		<action name="loadPageSub" class="loadPageIndexAction" method="loadPageSiteSub">
+			<result type="tiles" name="success">create_load_page</result>
+		</action>
+		<action name="loadSiteUpdate" class="loadPageIndexAction" method="loadSiteUpdate">
+			<result type="tiles" name="success">create_load_page</result>
+		</action>
+		<action name="siteLoadPageUpdateSub" class="loadPageIndexAction" method="siteLoadPageUpdateSub">
+			<result type="tiles" name="success">create_load_page</result>
+		</action>
+		<action name="addSite" class="loadPageIndexAction" method="addSite"/>
+		<action name="del_site" class="loadPageIndexAction" method="del_site"/>
+		<action name="loadPage" class="loadPageAction">
+			<result name="success" type="tiles">load_page_list</result>
+		</action>
+		<action name="loagpage_interaction" class="loadPageInteraction">
+			<result name="success" type="tiles">loadpage_interaction_list</result>
+		</action>
+		<action name="loadpage_hd_details" class="loadPageInteraction" method="details">
+			<result name="success" type="tiles">hd_details_${featureid}</result>
+		</action>
+		<action name="loadsitecount" class="loadPageSiteCountAction">
+			<result name="success" type="tiles">loadpage_site_count</result>
+		</action>
+		<action name="loadSiteCountDetail" class="loadSiteVistLogAction">
+			<result name="success">count_site_detaill</result>
+		</action>
+	</package>
+	<package name="content" namespace="/content"
+		extends="esite-default">
+		<action name="content_index" class="contentAction">
+			<result type="tiles" name="success">
+				contentIndexPage
+			</result>
+		</action>
+		<action name="next_category" class="contentAction"
+			method="findNext">
+		</action>
+		<action name="add_product_pre" class="contentAction"
+			method="addProductPre">
+			<result type="tiles" name="success">add_product_pre</result>
+		</action>
+		<action name="add_product_sub" class="contentAction"
+			method="addProductSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				add_product_pre
+			</result>
+		</action>
+		<action name="edit_product_pre" class="contentAction"
+			method="editProductPre">
+			<result type="tiles" name="success">
+				edit_product_pre
+			</result>
+		</action>
+		<action name="edit_product_sub" class="contentAction"
+			method="editProductSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				edit_product_pre
+			</result>
+		</action>
+		<action name="show_product" class="contentAction"
+			method="showProduct">
+			<result type="tiles" name="success">show_product</result>
+		</action>
+		<action name="del_product" class="contentAction"
+			method="delProduct">
+		</action>
+		<action name="shenhe_product" class="contentAction"
+			method="shenhe">
+			<result type="tiles" name="success">shenhe_product</result>
+		</action>
+		<action name="shenhe_product_sub" class="contentAction"
+			method="shenheSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+		</action>
+		<action name="public_product" class="contentAction"
+			method="publicProduct">
+		</action>
+		<action name="updateUpProduct" class="contentAction"
+			method="updateUpProduct">
+		</action>
+		<action name="add_picture_pre" class="contentPictureAction"
+			method="addPicturePre">
+			<result type="tiles" name="success">add_picture_pre</result>
+		</action>
+		<action name="add_picture_sub" class="contentPictureAction"
+			method="addPictureSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				add_picture_pre
+			</result>
+		</action>
+		<action name="show_picture" class="contentPictureAction"
+			method="showPicture">
+			<result type="tiles" name="success">show_picture</result>
+		</action>
+		<action name="edit_picture_pre" class="contentPictureAction"
+			method="editPicturePre">
+			<result type="tiles" name="success">
+				edit_picture_pre
+			</result>
+		</action>
+		<action name="edit_picture_sub" class="contentPictureAction"
+			method="editPictureSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				edit_picture_pre
+			</result>
+		</action>
+		<action name="del_picture" class="contentPictureAction"
+			method="delPicture">
+		</action>
+		<action name="shenhe_picture_pre" class="contentPictureAction"
+			method="shenhePre">
+			<result type="tiles" name="success">shenhe_picture</result>
+		</action>
+		<action name="shenhe_picture_sub" class="contentPictureAction"
+			method="shenheSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+		</action>
+		<action name="public_picture" class="contentPictureAction"
+			method="publicPicture">
+		</action>
+		<action name="add_new_pre" class="contentNewsAction"
+			method="addNewPre">
+			<result type="tiles" name="success">add_new_pre</result>
+		</action>
+		<action name="add_new_sub" class="contentNewsAction"
+			method="addNewSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				add_new_pre
+			</result>
+		</action>
+		<action name="show_new" class="contentNewsAction"
+			method="showNew">
+			<result type="tiles" name="success">show_new</result>
+		</action>
+		<action name="edit_new_pre" class="contentNewsAction"
+			method="editNewPre">
+			<result type="tiles" name="success">edit_new_pre</result>
+		</action>
+		<action name="edit_new_sub" class="contentNewsAction"
+			method="editNewSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				edit_new_pre
+			</result>
+		</action>
+		<action name="shenhe_new_pre" class="contentNewsAction"
+			method="shenhePre">
+			<result type="tiles" name="success">shenhe_new_pre</result>
+		</action>
+		<action name="shenhe_new_sub" class="contentNewsAction"
+			method="shenheSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+		</action>
+		<action name="del_new" class="contentNewsAction"
+			method="delNew">
+		</action>
+		<action name="public_new" class="contentNewsAction"
+			method="publicNew">
+		</action>
+		<action name="add_video_pre" class="contentVideoAction"
+			method="addVideoPre">
+			<result name="success" type="tiles">add_video_pre</result>
+		</action>
+		<action name="add_video_sub" class="contentVideoAction"
+			method="addVideoSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				add_video_pre
+			</result>
+		</action>
+		<action name="show_video" class="contentVideoAction"
+			method="showVideo">
+			<result type="tiles" name="success">show_video</result>
+		</action>
+		<action name="edit_video_pre" class="contentVideoAction"
+			method="editVideoPre">
+			<result type="tiles" name="success">edit_video_pre</result>
+		</action>
+		<action name="edit_video_Sub" class="contentVideoAction"
+			method="editVideoSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+			<result type="tiles" name="fail">
+				edit_video_pre
+			</result>
+		</action>
+		<action name="shenhe_Video_Pre" class="contentVideoAction"
+			method="shenhePre">
+			<result type="tiles" name="success">
+				shenhe_Video_Pre
+			</result>
+		</action>
+		<action name="shenhe_Video_Sub" class="contentVideoAction"
+			method="shenheSub">
+			<result type="redirect" name="success">
+				/${oname}/content/content_index.action?ccid=${ccid}
+			</result>
+		</action>
+		<action name="del_video" class="contentVideoAction"
+			method="delVideo">
+		</action>
+		<action name="public_video" class="contentVideoAction"
+			method="publicVideo">
+		</action>
+		<action name="del_category" class="contentAction"
+			method="delCategory">
+		</action>
+		<action name="add_category" class="contentAction"
+			method="addCategory">
+		</action>
+		<action name="add_content_type" class="contentAction"
+			method="createContentType">
+		</action>
+		<action name="del_content_type" class="contentAction"
+			method="deleteContentType">
+		</action>
+		<action name="updateCategoryName" class="contentAction"
+			method="updateCategoryName">
+		</action>
+		<action name="ajax_find_owner_product" class="contentAction"
+			method="ajaxfindOwnerProduct">
+		</action>
+		<action name="ajax_find_news" class="contentNewsAction"
+			method="ajaxFindNews">
+		</action>
+		<action name="config_type" class="contentAction"
+			method="configTypeIndex">
+			<result type="tiles" name="success">
+				content_type_config
+			</result>
+		</action>
+		<action name="config_type_sub" class="contentAction"
+			method="configTypeSub">
+		</action>
+		<!-- 自定义表单 -->
+		<action name="addcfType" class="contentFormAction" method="addType"></action>
+		<action name="content_form_index" class="contentFormAction" method="index">
+			<result name="success" type="tiles">content_form_index</result>
+		</action>
+		<action name="content_form_update_index" class="contentFormAction" method="updateIndex">
+			<result name="success" type="tiles">content_form_update_index</result>
+		</action>
+		<action name="content_form_update_sub" class="contentFormAction" method="updateSub">
+		</action>
+		<action name="content_form_add_index" class="contentFormAction" method="addFormIndex">
+			<result name="success" type="tiles">content_form_add_index</result>
+		</action>
+		<action name="content_form_add_sub" class="contentFormAction" method="addFormSub">
+			<result name="success" type="redirect">
+				<param name="location">/content/content_form_index.action</param>
+				<param name="ccid">${ccid}</param>
+			</result>
+		</action>
+		<action name="delcfr" class="contentFormAction" method="delRecord">
+		</action>
+		<action name="cfrDetail" class="contentFormAction" method="recordDdetail">
+			<result name="success" type="tiles">content_form_detail</result>
+		</action>
+	</package>
+	<package name="interact" namespace="/interact"
+		extends="esite-default">
+		<action name="config_index" class="configInteractAction" method="index">
+			<result name="success" type="tiles">interact_config_iframe</result>
+		</action>
+		<action name="config_index_page" class="configInteractAction">
+			<result name="success" type="tiles">interact_config_index</result>
+		</action>
+		<action name="config_interact_sub" class="configInteractAction" method="submit">
+		</action>
+		<action name="addOwnerInteract" class="configInteractAction" method="addOwnerInteract">
+		</action>
+		<action name="index" class="interactModelAction">
+			<result name="success" type="chain">
+				<param name="actionName">modelManager${mid}</param>
+				<param name="namespace">/interact</param>
+				<param name="mid">${mid}</param>
+			</result>
+			<result name="failed" type="redirect">
+				/interact/config_index_page.action
+			</result>
+		</action>
+		<action name="addXchd" class="xchdAction">
+		</action>
+		<action name="xchdIndex" class="xchdAction" method="index">
+			<result type="tiles" name="success">xchd_index</result>
+		</action>
+		<action name="modelManager10000" class="orderMesAction">
+			<result type="tiles" name="success">order_message</result>
+		</action>
+		<action name="add_order_pre" class="addOrderAction">
+			<result type="tiles" name="success">add_order_pre</result>
+		</action>
+		<action name="help_appointment" class="addOrderAction" method="helpAppointment">
+			<result type="tiles" name="success">help_appointment</result>
+		</action>
+		<action name="add_order_save" class="addOrderAction" method="addOrder">
+			<result type="redirect" name="success">/interact/index.action?mid=10000</result>
+		</action>
+		<action name="update_order_pre" class="addOrderAction" method="updateOrderPre">
+			<result type="tiles" name="success">update_order_pre</result>
+		</action>
+		<action name="update_order_save" class="addOrderAction" method="updateOrderSave">
+			<result type="redirect" name="success">/interact/index.action?mid=10000</result>
+		</action>
+		<action name="del_order" class="addOrderAction" method="deleteOrderMes"></action>
+		<action name="addAppointment" class="addOrderAction" method="addAppointment"></action>
+		<action name="findMapping" class="addOrderAction" method="findAptMapping"></action>
+		<action name="preview_order" class="orderMesAction" method="previewOrder">
+			<result name="success" type="tiles">apt_preview</result>
+		</action>
+		<action name="appointment_data" class="orderDataAction" method="checkRecord">
+			<result type="tiles" name="success">appointment_data</result>
+		</action>
+		<action name="selected_data" class="orderMesAction" method="selectedData">
+			<result type="tiles" name="success">selected_data</result>
+		</action>
+		<action name="apt_dataShow" class="orderDataAction" method="dataShow">
+			<result type="tiles" name="success">apt_dataShow_iframe</result>
+		</action>
+		<action name="apt_dataShow_sub" class="orderDataAction" method="submit">
+		</action>
+		<action name="email_periodical" class="emailPeriodicalAction" method="saveEmailPeriodical">
+		</action>
+		<action name="email_EditPublish" class="emailPeriodicalAction" method="updateEP">
+			<result name="success" type="tiles">update_Email_P</result>
+		</action>
+		<action name="update_emailPublish" class="emailPeriodicalAction" method="update">
+			<result name="success" type="tiles">update_Email_P</result>
+		</action>
+		
+		<action name="modelManager10001" class="emailPeriodicalAction" method="searchEmailPeriodical">
+			<result type="tiles" name="success">email_periodical</result>
+		</action>
+		<action name="del_periodical" class="emailPeriodicalAction" method="deleteEmailPeriodical"></action>
+		<action name="change_publish" class="emailPeriodicalAction" method="changePublish"></action>
+		<action name="sava_email_periodical_pre" class="emailPeriodicalAction">
+			<result type="tiles" name="success">sava_email_periodical</result>
+		</action>
+		<action name="sava_email_periodical" class="emailPeriodicalAction" method="saveEmailPeriodical">
+		</action>
+		<action name="vote_design" class="voteAction" method="jumpToVoteDesign">
+			<result type="tiles" name="success">vote_design</result>
+		</action>
+		<action name="modelManager10002" class="voteAction">
+			<result type="tiles" name="success">vote_list</result>
+		</action>
+		<action name="help_vote" class="voteAction" method="helpVote">
+			<result type="tiles" name="success">help_vote</result>
+		</action>
+		<action name="save_vote_design" class="voteAction" method="saveVoteDesign">
+			<result type="redirect" name="success">/interact/index.action?mid=10002</result>
+		</action>
+		<action name="to_update_vote_design" class="voteAction" method="toUpdateVoteDesign">
+			<result type="tiles" name="success">update_vote</result>
+			<result type="tiles" name="toxc">update_vote2</result>
+		</action>
+		<action name="update_vote_design" class="voteAction" method="updateVoteDesign">
+			<result type="redirect" name="success">/interact/index.action?mid=10002</result>
+			<result type="redirect" name="toxc">/interact/edit_xcLottery.action?xcid=${redirectXc}</result>
+		</action>
+		<action name="delete_vote" class="voteAction" method="deleteVote"></action>
+		<action name="addVote" class="voteAction" method="addVote"></action>
+		<action name="vote_prieview" class="previewAction">
+			<result name="success" type="tiles">vote_preview</result>
+		</action>
+		<action name="modelManager10003" class="lotteryZhuanPanAction">
+			<result type="tiles" name="success">zhuan_pan</result>
+		</action>
+		<action name="vote_record_list" class="voteRecordDataAction">
+			<result type="tiles" name="success">vote_record_list</result>
+		</action>
+		<action name="vote_option_data" class="voteRecordDataAction" method="getVoteOptionData">
+			<result type="tiles" name="success">vote_option_data</result>
+		</action>
+		<action name="vote_content" class="voteOptionAction" method="findVoteOptionList">
+			<result type="tiles" name="success">vote_content</result>
+			<result type="tiles" name="toxc">vote_content2</result>
+		</action>
+		<action name="add_new_vote" class="voteOptionAction">
+			<result type="tiles" name="success">add_new_vote</result>
+			<result type="tiles" name="toxc">add_new_vote2</result>
+		</action>
+		<action name="vote_content_save" class="voteOptionAction" method="saveVoteOption">
+			<result name="success" type="redirect">
+				<param name="location">/interact/vote_content.action</param>
+				<param name="voteid">${voteid}</param>
+				<param name="type">${type}</param>
+				<param name="redirectXc">${redirectXc}</param>
+			</result>
+			<result name="failed" type="tiles">
+				add_new_vote
+			</result>
+		</action>
+		<action name="del_vote_option" class="voteOptionAction" method="delVoteOption"></action>
+		<action name="update_vote_option" class="voteOptionAction" method="updateVoteOption">
+			<result name="success" type="redirect">
+				<param name="location">/interact/vote_content.action</param>
+				<param name="voteid">${voteid}</param>
+				<param name="type">${type}</param>
+			</result>
+			<result name="failed" type="redirect">
+				<param name="location">/interact/find_one_option.action</param>
+				<param name="id">${id}</param>
+				<param name="type">${type}</param>
+				<param name="result">${result}</param>
+			</result>
+		</action>
+		<action name="find_one_option" class="voteOptionAction" method="findOneOption">
+			<result type="tiles" name="success">find_one_option</result>
+		</action>
+		<action name="prize" class="prizeaction">
+			<result name="success" type="tiles">prize_list</result>
+		</action>
+		<action name="prize_manage_doc" class="prizeaction" method="prizeManageDoc">
+			<result name="success" type="tiles">prize_manage_doc</result>
+		</action>
+		<action name="prizeAddPre" class="prizeaction" method="addPre">
+			<result name="success" type="tiles">prize_add_pre</result>
+		</action>
+		<action name="prizeAdd" class="prizeaction" method="add">
+			<result name="success" type="tiles">prize_add_pre</result>
+		</action>
+		<action name="prizeEditPre" class="prizeaction" method="updatePre">
+			<result name="success" type="tiles">prize_edit_pre</result>
+		</action>
+		<action name="updateprize" class="prizeaction" method="update">
+			<result name="success" type="tiles">prize_edit_pre</result>
+		</action>
+		<action name="delprize" class="prizeaction" method="del">
+		</action>
+		<action name="addPrizeCodePre" class="prizeaction" method="saveLotteryCodePre">
+			<result name="success" type="tiles">add_prize_code_pre</result>
+		</action>
+		<action name="findPrizeCodePre" class="prizeaction" method="findLotteryCodePre">
+			<result name="success" type="tiles">find_prize_code_pre</result>
+		</action>
+		<action name="lottery_prize_code_upload_submit"
+			class="prizeaction" method="uploadLotteryPrizeCodeSubmit">
+			<result name="success" type="redirect">
+				<param name="location">/interact/prize.action</param>
+				<param name="lid">${lid}</param>
+				<param name="returnType">${returnType}</param>
+				<param name="mid">${mid}</param>
+			</result>
+			<result name="error" type="tiles">
+				add_prize_code_pre
+			</result>
+		</action>
+		<action name="save_zhuanpan" class="lotteryZhuanPanAction" method="save">
+			<result type="tiles" name="success">save_zhuanpan</result>
+		</action>
+		<action name="showwbgroup" class="lotteryZhuanPanAction" method="showwbgroup">
+			<result name="success" >/WEB-INF/interactpage/lottery/showwbgroup.jsp</result>
+		</action>
+		
+		<action name="save_zhuanpan_sub" class="lotteryZhuanPanAction" method="saveSub">
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+			<result type="tiles" name="failed">save_zhuanpan</result>
+		</action>
+		<action name="edit_zhuanpan" class="lotteryZhuanPanAction" method="edit">
+			<result type="tiles" name="success">edit_zhuanpan</result>
+		</action>
+		<action name="edit_zhuanpan_sub" class="lotteryZhuanPanAction" method="editSub">
+			<result type="tiles" name="failed">edit_zhuanpan</result>
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+		</action>
+		<action name="apt_detail" class="orderMesAction" method="aptDetail">
+			<result type="tiles" name="success">apt_detail</result>
+		</action>
+		<action name="lottery_user_sina" class="lotteryDataAction">
+			<result type="tiles" name="success">lottery_user</result>
+		</action>
+		<action name="lottery_user_wx" class="lotteryDataAction" method="wxList">
+			<result type="tiles" name="success">lottery_user</result>
+		</action>
+		<action name="user_detail" class="lotteryDataAction" method="userDetail">
+			<result type="tiles" name="success">user_detail</result>
+		</action>
+		<action name="del_zhuanpan" class="lotteryZhuanPanAction" method="del">
+		</action>
+		<action name="lottery_winner" class="lotteryDataAction" method="winList">
+			<result type="tiles" name="success">lottery_winner</result>
+		</action>
+		<action name="lottery_winner_detail" class="lotteryDataAction" method="showWinDetail">
+			<result type="tiles" name="success">lottery_winner_detail</result>
+		</action>
+		<action name="export_winner" class="lotteryDataAction" method="exportWinner">
+		</action>
+		<!-- 老虎机 -->
+		<action name="modelManager10004" class="lotteryLHJAction">
+			<result type="tiles" name="success">l_h_j</result>
+		</action>
+		<action name="help_zjd" class="lotteryLHJAction" method="helpZJD">
+			<result type="tiles" name="success">help_zjd</result>
+		</action>
+		<!-- 
+		<action name="save_lhj" class="lotteryLHJAction" method="save">
+			<result type="tiles" name="success">save_lhj</result>
+		</action>
+		 -->
+		 <action name="save_lhj" class="lotteryZhuanPanAction" method="save">
+			<result type="tiles" name="success">add_lhj</result>
+		</action>
+		<action name="save_lhj_sub" class="lotteryZhuanPanAction" method="saveSub">
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+			<result type="tiles" name="failed">add_lhj</result>
+		</action>
+		<!-- 
+			<action name="save_lhj_sub" class="lotteryLHJAction" method="saveSub">
+			<result type="redirectAction" name="success">index.action?mid=10004</result>
+			<result type="tiles" name="failed">save_lhj</result>
+		</action>
+		<action name="edit_lhj" class="lotteryLHJAction" method="edit">
+			<result type="tiles" name="success">edit_lhj</result>
+		</action>
+		<action name="edit_lhj_sub" class="lotteryLHJAction" method="editSub">
+			<result type="tiles" name="failed">edit_lhj</result>
+			<result type="redirectAction" name="success">index.action?mid=10004</result>
+		</action>
+		 -->
+		 <action name="edit_lhj" class="lotteryZhuanPanAction" method="edit">
+			<result type="tiles" name="success">update_lhj</result>
+		</action>
+		<action name="edit_lhj_sub" class="lotteryZhuanPanAction" method="editSub">
+			<result type="tiles" name="failed">update_lhj</result>
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+		</action>
+		<action name="del_lhj" class="lotteryLHJAction" method="del">
+		</action>
+		
+		<!-- 刮刮乐 -->
+		<action name="modelManager10005" class="lotteryGGLAction">
+			<result type="tiles" name="success">g_g_l</result>
+		</action>
+		<!-- 
+		<action name="save_ggl" class="lotteryGGLAction" method="save">
+			<result type="tiles" name="success">save_ggl</result>
+		</action>
+			<action name="save_ggl_sub" class="lotteryGGLAction" method="saveSub">
+			<result type="redirectAction" name="success">index.action?mid=10005</result>
+			<result type="tiles" name="failed">save_ggl</result>
+		</action>
+		<action name="edit_ggl" class="lotteryGGLAction" method="edit">
+			<result type="tiles" name="success">edit_ggl</result>
+		</action>
+		<action name="edit_ggl_sub" class="lotteryGGLAction" method="editSub">
+			<result type="tiles" name="failed">edit_ggl</result>
+			<result type="redirectAction" name="success">index.action?mid=10005</result>
+		</action>
+		 -->
+		 <action name="save_ggl" class="lotteryZhuanPanAction" method="save">
+			<result type="tiles" name="success">add_ggl</result>
+		</action>
+		 <action name="help_ggl" class="lotteryGGLAction" method="helpGGL">
+			<result type="tiles" name="success">help_ggl</result>
+		</action>
+		<action name="save_ggl_sub" class="lotteryZhuanPanAction" method="saveSub">
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+			<result type="tiles" name="failed">add_ggl</result>
+		</action>
+		<action name="edit_ggl" class="lotteryZhuanPanAction" method="edit">
+			<result type="tiles" name="success">update_ggl</result>
+		</action>
+		<action name="help_dzp" class="lotteryZhuanPanAction" method="helpDZP">
+			<result type="tiles" name="success">help_dzp</result>
+		</action>
+		<action name="edit_ggl_sub" class="lotteryZhuanPanAction" method="editSub">
+			<result type="tiles" name="failed">update_ggl</result>
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+		</action>
+		<action name="del_ggl" class="lotteryGGLAction" method="del">
+		</action>
+		<!-- 摇一摇 -->
+		<action name="modelManager10011" class="lotteryYYYAction">
+			<result type="tiles" name="success">y_y_y</result>
+		</action>
+		<action name="save_yyy" class="lotteryZhuanPanAction" method="save">
+			<result type="tiles" name="success">add_yyy</result>
+		</action>
+		<action name="help_yyy" class="lotteryZhuanPanAction" method="helpDZP">
+			<result type="tiles" name="success">help_yyy</result>
+		</action>
+		<action name="save_yyy_sub" class="lotteryZhuanPanAction" method="saveSub">
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+			<result type="tiles" name="failed">add_yyy</result>
+		</action>
+		<action name="edit_yyy" class="lotteryZhuanPanAction" method="edit">
+			<result type="tiles" name="success">update_yyy</result>
+		</action>
+		<action name="edit_yyy_sub" class="lotteryZhuanPanAction" method="editSub">
+			<result type="tiles" name="failed">update_yyy</result>
+			<result type="redirect" name="success">/interact/index.action?mid=${mid}</result>
+		</action>
+		<action name="addLottery" class="lotteryYYYAction" method="addYYY"></action>
+		<!-- 调研内容 -->
+		<action name="createnext" class="researchQuestionAction" method="createNext">
+			<result type="tiles" name="success">createnext</result>
+		</action>
+		<action name="intarget" class="researchQuestionAction" method="inTarget"></action>
+		<action name="selistar" class="researchQuestionAction" method="selisTar"></action>
+		<action name="research_question_option" class="researchQuestionAction">
+			<result type="tiles" name="success">research_question_option</result>
+		</action>
+		<action name="save_research_question_pre" class="researchQuestionAction">
+			<result type="tiles" name="success">add_research_question_option</result>
+		</action>
+		<action name="save_research_question" class="researchQuestionAction" method="saveResearchQuestion">
+			<result type="redirect" name="success">/interact/research_question_option.action?searchid=${rqlmodel.searchid}</result>
+		</action>
+		<action name="del_research_question" class="researchQuestionAction" method="delResearchQuestion"></action>
+		<action name="update_research_question" class="researchQuestionAction" method="updateResearchQuestion">
+			<result type="redirect" name="success">/interact/research_question_option.action?searchid=${searchid}</result>
+		</action>
+		<action name="find_one_research_question" class="researchQuestionAction" method="findOneResearchQuestion">
+			<result type="tiles" name="success">find_one_research_question</result>
+		</action>
+		<action name="up_research_question" class="researchQuestionAction" method="upResearchQuestion" ></action>
+		<action name="down_research_question" class="researchQuestionAction" method="downResearchQuestion" ></action>
+		<action name="del_options" class="researchQuestionAction" method="deleteResearchOptions"></action>
+		<!-- <action name="file_upload" class="researchQuestionAction" method="fileUpload"></action> -->
+		<action name="modelManager10006" class="researchAction">
+			<result type="tiles" name="success">research_list</result>
+		</action>
+		<action name="help_research" class="researchAction" method="helpResearch">
+			<result type="tiles" name="success">help_research</result>
+		</action>
+		<action name="preview_research" class="researchPreviewAction">
+			<result type="tiles" name="success">research_preview</result>
+		</action>
+		<action name="research_design" class="researchAction" method="jumpToResearchDesign">
+			<result type="tiles" name="success">research_design</result>
+		</action>
+		<action name="save_research_design" class="researchAction" method="saveResearchDesign">
+			<result type="redirect" name="success">/interact/index.action?mid=10006</result>
+		</action>
+		<action name="delete_research" class="researchAction" method="deleteResearch"></action>
+		<action name="addResearch" class="researchAction" method="addResearch"></action>
+		<action name="to_update_research_design" class="researchAction" method="toUpdateResearchDesign">
+			<result type="tiles" name="success">update_research</result>
+		</action>
+		<action name="update_research_design" class="researchAction" method="updateResearchDesign">
+			<result type="redirect" name="success">/interact/index.action?mid=10006</result>
+		</action>
+		<action name="research_record_list" class="researchRecordDataAction">
+			<result type="tiles" name="success">research_record_list</result>
+		</action>
+		<action name="surveyresult_list" class="researchSurveyResultAction">
+			<result type="tiles" name="success">surveyresult_list</result>
+		</action>
+		<action name="research_record_data" class="researchRecordDataAction" method="getResearchData">
+			<result type="tiles" name="success">research_record_data</result>
+		</action>
+		
+		
+		<!-- auction -->
+		<action name="modelManager10007" class="auctionAction">
+			<result type="tiles" name="success">auction_list</result>
+		</action>
+		<action name="saveAuction" class="auctionAction" method="save">
+			<result type="tiles" name="success">add_auction</result>
+		</action>
+		<action name="help_auction" class="auctionAction" method="helpAuction">
+			<result type="tiles" name="success">help_auction</result>
+		</action>
+		<action name="saveAuctionSub" class="auctionAction" method="saveSub">
+			<result type="tiles" name="failed">add_auction</result>
+			<result type="redirect" name="success">/interact/index.action?mid=10007</result>
+		</action>
+		<action name="editAuction" class="auctionAction" method="edit">
+			<result type="tiles" name="success">edit_auction</result>
+		</action>
+		<action name="editAuctionSub" class="auctionAction" method="editSub">
+			<result type="tiles" name="failed">edit_auction</result>
+			<result type="redirect" name="success">/interact/index.action?mid=10007</result>
+		</action>
+		<action name="auctionDel" class="auctionAction" method="del"></action>
+		<action name="addAuction" class="auctionAction" method="addAuction"></action>
+		<action name="auctionJoinList" class="auctionDataAction">
+			<result type="tiles" name="success">auction_join_list</result>
+		</action>
+		<action name="auctionJoinDetail" class="auctionDataAction" method="joinDetail">
+			<result type="tiles" name="success">auction_join_detail</result>
+		</action>
+		<action name="auctionWinner" class="auctionDataAction" method="winList">
+			<result type="tiles" name="success">auction_winner</result>
+		</action>
+		
+		<!-- jifen -->
+		<action name="modelManager10009" class="jifenAction">
+			<result type="tiles" name="success">jifen_list</result>
+		</action>
+		<action name="wxjifen" class="jifenAction" method="wxJf">
+			<result type="tiles" name="success">wxjifen_list</result>
+		</action>
+		<action name="addRule" class="jifenAction" method="addRule">
+			<result type="tiles" name="success">add_jifen_rule</result>
+		</action>
+		<action name="addRuleSub" class="jifenAction" method="addRuleSub">
+				<result type="redirect" name="success">
+					<param name="location">/interact/showRule.action</param>
+					<param name="ownerwbuid">${ownerwbuid}</param>
+					<param name="mid">10009</param>
+				</result>
+		</action>
+		<action name="showRule" class="jifenAction" method="show">
+			<result type="tiles" name="success">show_rule_list</result>
+		</action>
+		<action name="jifenData" class="jifenDataAction">
+			<result type="tiles" name="success">jifen_data</result>
+		</action>
+		<action name="wxjifenData" class="jifenDataAction" method="wxjifenData">
+			<result type="tiles" name="success">wxjifen_data</result>
+		</action>
+		<action name="jifenDetail" class="jifenDataAction" method="detail">
+			<result type="tiles" name="success">jifen_data_detail</result>
+		</action>
+		<action name="wxjifenDetail" class="jifenDataAction" method="wxdetail">
+			<result type="tiles" name="success">wxjifen_data_detail</result>
+		</action>
+		
+		<!-- koubei chuanbo -->
+		<action name="spreadRecord" class="spreadRecordAction">
+			<result type="tiles" name="success">spreadRecord_list</result>
+		</action>
+		
+		<action name="balanceRuleDel" class="jifenAction" method="del">
+		</action>
+		
+		<action name="modelManager10010" class="spreadAction">
+			<result type="tiles" name="success">spread_list</result>
+		</action>
+		<action name="help_spread" class="spreadAction" method="helpSpread">
+			<result type="tiles" name="success">help_spread</result>
+		</action>
+		<action name="spread_option" class="spreadOptionAction" >
+			<result type="tiles" name="success">spread_option</result>
+		</action>
+		<action name="add_spread_option" class="spreadOptionAction">
+			<result type="tiles" name="success">add_spread_option</result>
+		</action>
+		<action name="save_spread_option" class="spreadOptionAction" method="saveSpreadOption">
+				<result type="redirect" name="success">
+					<param name="location">/interact/spread_option.action</param>
+					<param name="id">${sp.spreadid}</param>
+					<param name="mid">10010</param>
+				</result>
+		</action>
+		<action name="update_spread_option_pre" class="spreadOptionAction" method="findOneSpreadOption">
+			<result type="tiles" name="success">update_spread_option</result>
+		</action>
+		<action name="update_spread_option" class="spreadOptionAction" method="updateSpreadOption">
+			<result type="redirect" name="success">
+					<param name="location">/interact/spread_option.action</param>
+					<param name="id">${spreadid}</param>
+					<param name="mid">10010</param>
+			</result>
+		</action>
+		<action name="update_spread_wbid" class="spreadOptionAction" method="updateSpreadWbid">
+			<result type="redirect" name="success">/interact/index.action?mid=10010</result>
+			<result type="redirect" name="error">
+					<param name="location">/interact/spread_option.action</param>
+					<param name="id">${spreadid}</param>
+					<param name="mid">10010</param>
+					<param name="result">${result}</param>
+			</result>
+		</action>
+		<action name="delete_spread_option" class="spreadOptionAction" method="deleteSpreadOption"></action>
+		<action name="spread_design" class="spreadAction" method="jumpToSpreadDesign">
+			<result type="tiles" name="success">spread_design</result>
+		</action>
+		<action name="save_spread_design" class="spreadAction" method="saveSpreadDesign">
+			<result type="redirect" name="success">/interact/index.action?mid=10010</result>
+		</action>
+		<action name="to_update_spread_design" class="spreadAction" method="toUpdateSpreadDesign">
+			<result type="tiles" name="success">update_spread</result>
+		</action>
+		<action name="update_spread_design" class="spreadAction" method="updateResearchDesign">
+			<result type="redirect" name="success">/interact/index.action?mid=10010</result>
+		</action>
+		<action name="delete_spread" class="spreadAction" method="deleteSpread"></action>
+		<action name="addSpread" class="spreadAction" method="addSpread"></action>
+		<action name="preview_spread" class="spreadPreviewAction">
+			<result type="tiles" name="success">spread_preview</result>
+		</action>
+		<!-- 微期刊 -->
+		<action name="journal_list" class="journalAction">
+			<result type="tiles" name="success">journal_list</result>
+		</action>
+		<action name="preview_journal" class="journalPreviewAction">
+			<result type="tiles" name="success">journal_preview</result>
+		</action>
+		<action name="journal_content_list" class="journalContentAction" >
+			<result type="tiles" name="success">journal_content_list</result>
+		</action>
+		<action name="add_journal_content" class="journalContentAction" method="toJournalContentDesign">
+			<result type="tiles" name="success">add_journal_content</result>
+		</action>
+		<action name="journal_content_save" class="journalContentAction" method="saveJournalContent">
+			<result type="tiles" name="success">add_journal_content</result>
+		</action>
+		<action name="to_update_journal_design" class="journalContentAction" method="toUpdateJournalContent">
+			<result type="tiles" name="success">update_journal_content</result>
+		</action>
+		<action name="update_journal_content" class="journalContentAction" method="updateJournalContent">
+			<result type="tiles" name="success">update_journal_content</result>
+		</action>
+		<action name="to_journal_sharecontent" class="journalContentAction" method="toUpdateJournalShareContent">
+			<result type="tiles" name="success">update_journal_sharecontent</result>
+		</action>
+		<action name="journal_sharecontent" class="journalContentAction" method="updateJournalShareContent">
+			<result type="tiles" name="success">update_journal_sharecontent</result>
+		</action>
+		<action name="periodicalRecord" class="periodicalRecordAction">
+			<result type="tiles" name="success">periodicalRecord_list</result>
+		</action>
+		<action name="findJournalSR" class="periodicalRecordAction" method="findJournalSR">
+			<result type="tiles" name="success">findJournalRecord_list</result>
+		</action>
+		<action name="searchJnickname" class="periodicalRecordAction" method="searchJnickname">
+			<result type="tiles" name="success">findJournalRecord_list</result>
+		</action>
+		<action name="searchtimeorts" class="periodicalRecordAction" method="searchtimeorts">
+			<result type="tiles" name="success">findJournalRecord_list</result>
+		</action>
+		<action name="save_journal_pre" class="journalAction">
+			<result type="tiles" name="success">save_journal</result>
+		</action>
+		<action name="save_journal" class="journalAction" method="saveJournal">
+			<result type="redirect" name="success">/interact/journal_list.action</result>
+		</action>
+		<action name="update_journal" class="journalAction" method="updateJournal">
+			<result type="redirect" name="success">/interact/journal_list.action</result>
+		</action>
+		<action name="delete_journal" class="journalAction" method="deleteJournal">
+		</action>
+		<action name="update_journal_pre" class="journalAction" method="findOneJournal">
+			<result type="tiles" name="success">update_journal</result>
+		</action>
+		<action name="journalSub" class="journalSubmitAction"></action>
+		<action name="delete_journal_content" class="journalContentAction" method="deleteJournalContent">
+		</action>
+		<!-- 私人订制 -->
+		<action name="personalTailor" class="personalTailorAction">
+			<result name="success" type="tiles">personTailor_list</result>
+		</action>
+		<!-- 集人气 -->
+		<action name="modelManager10012" class="renQiAction">
+			<result name="success" type="tiles">rq_list</result>
+		</action>
+		<action name="renqiAdd" class="renQiAction" method="add">
+			<result name="success" type="tiles">rq_add</result>
+		</action>
+		<action name="renqiAddSub" class="renQiAction" method="addSub">
+			<result name="success" type="redirect">/interact/modelManager10012.action</result>
+			<result type="tiles" name="fail">rq_add</result>
+		</action>
+		<action name="editIndex" class="renQiAction" method="edit">
+			<result name="success" type="tiles">rq_edit</result>
+		</action>
+		<action name="renqiEditSub" class="renQiAction" method="editSub">
+			<result name="success" type="redirect">/interact/modelManager10012.action</result>
+			<result type="tiles" name="fail">rq_edit</result>
+		</action>
+		<action name="renQiDel" class="renQiAction" method="del">
+		</action>
+		<action name="renQiData" class="renQiDataAction">
+			<result name="success" type="tiles">rq_data</result>
+		</action>
+		<action name="renQiDetail" class="renQiDataAction" method="detail">
+			<result name="success" type="tiles">rq_detail</result>
+		</action>
+		
+		<!-- 传播 -->
+		<action name="modelManager10013" class="csAction">
+			<result name="success" type="tiles">cs_list</result>
+		</action>
+		<action name="csAdd" class="csAction" method="add">
+			<result name="success" type="tiles">cs_add</result>
+		</action>
+		<action name="csAddSub" class="csAction" method="addSub">
+			<result name="success" type="redirect">/interact/index.action?mid=10013</result>
+			<result type="tiles" name="fail">cs_add</result>
+		</action>
+		<action name="csEdit" class="csAction" method="edit">
+			<result name="success" type="tiles">cs_edit</result>
+		</action>
+		<action name="csEditSub" class="csAction" method="editSub">
+			<result name="success" type="redirect">/interact/index.action?mid=10013</result>
+			<result type="tiles" name="fail">cs_edit</result>
+		</action>
+		<action name="csContent" class="csAction" method="content">
+			<result name="success" type="tiles">cs_content</result>
+		</action>
+		<action name="csContentAdd" class="csAction" method="addContentIndex">
+			<result name="success" type="tiles">cs_content_add</result>
+		</action>
+		<action name="csContentSub" class="csAction" method="addContentSub">
+			<result name="success" type="redirect">
+				<param name="location">/interact/csContent.action</param>
+				<param name="id">${id}</param>
+				<param name="mid">${mid}</param>
+			</result>
+		</action>
+		<action name="csContentDel" class="csAction" method="delContent">
+		</action>
+		<action name="csData" class="csDataAction">
+			<result name="success" type="tiles">cs_data</result>
+		</action>
+		<!-- 现场抽奖 -->
+		<action name="modelManager10014" class="xcLotteryAction">
+			<result name="success" type="tiles">xcLottery_list</result>
+		</action>
+		<action name="add_xcLottery" class="xcLotteryAction" method="addXcLottery">
+			<result name="success" >/WEB-INF/interactpage/xc/xcLottery_add.jsp</result>
+		</action>
+		<action name="updatexcName" class="xcLotteryAction" method="updatexcName">
+		</action>
+		<action name="xcLotterySave" class="xcLotteryAction" method="saveXcLottery">
+		</action>
+		<action name="editBigScreenSite" class="xcLotteryAction" method="addXcLottery">
+			<result name="success" type="tiles">editBigScreenSite</result>
+		</action>
+		<action name="editXcSite" class="xcLotteryAction" method="addXcLottery">
+			<result name="success" type="tiles">editXcSite</result>
+		</action>
+		<action name="updateBigScreenSite" class="xcLotteryAction" method="updateBigScreenSite">
+		</action>
+		<action name="updateXcSite" class="xcLotteryAction" method="updateXcSite">
+		</action>
+		<action name="to_restartLottery" class="xcLotteryAction" method="toRestartXcLottery">
+			<result name="success" >/WEB-INF/interactpage/xc/restartLottery.jsp</result>
+		</action>
+		<action name="restartXcLottery" class="xcLotteryAction" method="restartXcLottery">
+		</action>
+		<action name="edit_xcLottery" class="xcLotteryAction" method="editXcLottery">
+			<result name="success" type="tiles">xcLottery_edit</result>
+		</action>
+		<action name="xcLottery_update" class="xcLotteryAction" method="updateXcLottery">
+			<result name="success" type="tiles">xcLottery_edit</result>
+		</action>
+		<action name="del_xc" class="xcLotteryAction" method="delXcLottery">
+		</action>
+		<action name="edit_xcBigScreen" class="xcBigScreen" method="editXcBigScreen">
+			<result name="success" type="tiles">xcBigScreen_edit</result>
+		</action>
+		<action name="ajaxUpLoad" class="xcBigScreen" method="ajaxUpLoad">
+		</action>
+		<action name="add_xcBigScreen" class="xcBigScreen" method="addXcBigScreen">
+			<result name="success" type="tiles">xcBigScreen_add</result>
+		</action>
+		<action name="save_xcBigScreen" class="xcBigScreen" method="saveXcBigScreen">
+			<result name="success" type="redirect">/interact/edit_xcBigScreen.action?xcid=${xcid}</result>
+		</action>
+		<action name="switchBigScreen" class="xcBigScreen" method="switchBigScreen">
+		</action>
+		<action name="ajax_get_page" class="xcBigScreen" method="findPageList">
+		</action>
+		<action name="del_xcBigScreen" class="xcBigScreen" method="delXcBigScreen">
+		</action>
+		<!-- 评论 -->
+		<action name="invite_detail" class="xcLotteryAction" method="inviteDetail">
+			<result name="success" type="tiles">invite_detail</result>
+		</action>
+		<action name="checkin_detail" class="xcLotteryAction" method="checkinDetail">
+			<result name="success" type="tiles">checkin_detail</result>
+		</action>
+		<action name="comment_detail" class="xcLotteryAction" method="commentDetail">
+			<result name="success" type="tiles">comment_detail</result>
+		</action>
+		<action name="checkdpmComment" class="xcLotteryAction" method="commentDetail">
+			<result name="success" type="tiles">checkdpmComment</result>
+		</action>
+		<action name="bathPass" class="xcLotteryAction" method="bathPass">
+		</action>
+		<action name="auditList" class="xcLotteryAction" method="auditList">
+			<result name="success" type="tiles">comment_detail</result>
+		</action>
+		<action name="checkauditList" class="xcLotteryAction" method="auditList">
+			<result name="success" type="tiles">checkdpmComment</result>
+		</action>
+		<action name="lottery_detail" class="xcLotteryAction" method="lotteryDetail">
+			<result name="success" type="tiles">lottery_detail</result>
+		</action>
+		<action name="export_xc" class="xcLotteryAction" method="export">
+		</action>
+		
+		<action name="xcSendDetail" class="xcSendDetailAction">
+			<result name="success" type="tiles">xc_send_detail</result>
+		</action>
+		
+		<action name="insetUser" class="signinAction" method="InsetUser">
+			<result name="success">/WEB-INF/pageshow/lenovo/mo/qiandao.jsp</result>
+		</action>
+		<action name="xcupload" class="xcSendDetailAction" method="uploadIndex">
+			<result name="success" type="tiles">xc_upload_index</result>
+		</action>
+		<action name="xcfileSub" class="xcSendDetailAction" method="uploadSub">
+			<result name="success" type="tiles">xc_upload_index</result>
+		</action>
+		<action name="updateXcSd" class="xcSendDetailAction" method="updateNickname">
+		</action>
+		<action name="delXcSd" class="xcSendDetailAction" method="deleteSdRecord">
+		</action>
+		
+	</package>
+	<package name="data" namespace="/data"
+		extends="esite-default">
+		<action name="index" class="dataIndexAction">
+			<result type="tiles" name="success">data_index</result>
+		</action>
+		<action name="iframe_data_index" class="dataIndexAction" method="data">
+			<result type="tiles" name="success">iframe_data_index</result>
+		</action>
+		<action name="index_user" class="dataIndexAction" method="user">
+			<result type="tiles" name="success">data_index_user</result>
+		</action>
+		<action name="index_user_detail" class="dataIndexAction" method="userDetail">
+			<result type="tiles" name="success">iframe_user_detail</result>
+		</action>
+		<action name="page" class="dataPageAction">
+			<result type="tiles" name="success">data_page</result>
+		</action>
+		<action name="iframe_data_page" class="dataPageAction" method="data">
+			<result type="tiles" name="success">iframe_data_page</result>
+		</action>
+		<action name="iframe_user_page" class="dataPageAction" method="user">
+			<result type="tiles" name="success">iframe_user_page</result>
+		</action>
+		<action name="report_index" class="reportAllAction" method="getReportIndex">
+			<result type="tiles" name="success">
+			    report_index
+			</result>
+		</action>
+		<action name="owner_visit_data" class="siteVistReportAction" method="getOwnerVisitData">
+			<result type="tiles" name="success">
+			    owner_visit_data
+			</result>
+		</action>
+		<action name="owner_hd_data" class="siteVistReportAction" method="getOwnerHdData">
+			<result type="tiles" name="success">
+			    owner_hd_data
+			</result>
+		</action>
+		<action name="site_report" class="siteVistReportAction" method="getSiteReport">
+			<result type="tiles" name="success">
+				site_report
+			</result>
+		</action>
+		<action name="site_page_list" class="siteVistReportAction" method="getSitePageList">
+			<result type="tiles" name="success">
+				site_page_list
+			</result>
+		</action>
+		<action name="site_hd_data" class="siteVistReportAction" method="getSiteHdData">
+			<result type="tiles" name="success">
+				site_hd_data
+			</result>
+		</action>
+		<action name="site_visit_data" class="siteVistReportAction" method="getSiteVisitData">
+			<result type="tiles" name="success">
+				site_visit_data
+			</result>
+		</action>
+		<action name="page_visit_area" class="siteVistReportAction" method="getVisitPageArea">
+			<result type="tiles" name="success">
+				page_visit_area
+			</result>
+		</action>
+		<action name="page_visit_gender" class="siteVistReportAction" method="getVisitPageGender">
+			<result type="tiles" name="success">
+				page_visit_gender
+			</result>
+		</action>
+		<action name="page_visit_fans" class="siteVistReportAction" method="getVisitPageFans">
+			<result type="tiles" name="success">
+				page_visit_fans
+			</result>
+		</action>
+		<action name="page_hd_area" class="siteVistReportAction" method="getHdPageArea">
+			<result type="tiles" name="success">
+				page_hd_area
+			</result>
+		</action>
+		<action name="page_hd_gender" class="siteVistReportAction" method="getHdPageGender">
+			<result type="tiles" name="success">
+				page_hd_gender
+			</result>
+		</action>
+		<action name="page_hd_fans" class="siteVistReportAction" method="getHdPageFans">
+			<result type="tiles" name="success">
+				page_hd_fans
+			</result>
+		</action>
+		<action name="page_hd_list" class="siteVistReportAction" method="getHdPageList">
+			<result type="tiles" name="success">
+				page_hd_list
+			</result>
+		</action>
+		<action name="page_hd_type" class="siteVistReportAction" method="getHdPageType">
+			<result type="tiles" name="success">
+				page_hd_type
+			</result>
+		</action>
+		<action name="page_visit_list" class="siteVistReportAction" method="getVisitPageList">
+			<result type="tiles" name="success">
+				page_visit_list
+			</result>
+		</action>
+	</package>
+	<package name="template" namespace="/template" extends="esite-default">
+		<action name="index" class="templateSiteManagerAction">
+			<result type="tiles" name="success">template_index</result>
+		</action>
+		<action name="findPageTemplate" class="templateSiteManagerAction" method="findPageTemplate">
+			<result type="tiles" name="success">share_template_index</result>
+		</action>
+		<action name="getTempleteCards" class="templateSiteManagerAction" method="getTempleteCards"></action>
+		<action name="ljsy" class="templateManagerAction" method="ljsy"></action>
+		<action name="mytemplate" class="templateManagerAction" method="myTemplate">
+			<result type="tiles" name="success">my_template</result>
+		</action>
+		<action name="del_template" class="templateManagerAction" method="deleteTemplate"></action>
+		<action name="update_template_pre" class="templateManagerAction" method="findOneTemplate">
+			<result type="tiles" name="success">update_templatename</result>
+		</action>
+		<action name="update_template" class="templateManagerAction" method="updateTemplate">
+			<result type="tiles" name="success">update_templatename</result>
+		</action>
+		<action name="rename_template" class="templateManagerAction" method="updateNameTemplate"></action>
+	</package>
+	<package name="material" namespace="/material" extends="esite-default">
+		<action name="index" class="materialManagerAction">
+			<result type="tiles" name="success">material_index</result>
+		</action>
+		<action name="getMaterialPics" class="materialManagerAction" method="getMaterialPics"></action>
+	</package>
+	<package name="weixin" namespace="/weixin" extends="esite-default">
+		<action name="wxopen" class="wxPageAction" method="jssdk"></action>
+		<action name="publish_to_wx" class="wxPublishAction">
+			<result type="tiles" name="success">publish_to_wx</result>
+		</action>
+		<action name="getPageShow" class="wxPublishAction" method="getPageShow"></action>
+		<action name="pic_upload" class="wxPublishAction" method="picUpload"></action>
+		<action name="save_publish" class="wxPublishAction" method="savePublishPage"></action>
+	</package>
+</struts>

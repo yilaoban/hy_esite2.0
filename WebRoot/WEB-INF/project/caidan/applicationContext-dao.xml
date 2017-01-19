@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="cd-accountTypeDaoImpl" class="project.caidan.dao.impl.AccountTypeDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+
+	<bean id="cd-taskDao" class="project.caidan.dao.impl.TaskDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="cd-kqDao" class="project.caidan.dao.impl.KqDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+
+	<bean id="cd-newsDao" class="project.caidan.dao.impl.CDNewsDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="cd-mediaDao" class="project.caidan.dao.impl.CaiDanMedaiDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="cd-ggDao" class="project.caidan.dao.impl.CaiDanGGDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cd-couponDao" class="project.caidan.dao.impl.CouponDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cd-wayDao" class="project.caidan.dao.impl.CdWayDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cd-lotteryDao" class="project.caidan.dao.impl.CaiDanLotteryDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cd-rmbDao" class="project.caidan.dao.impl.CaiDanRmbDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="cd-productDao" class="project.caidan.dao.impl.CaiDanProductDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cd-userDao" class="project.caidan.dao.impl.CaiDanUserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cd-rmbRecordDao" class="project.caidan.dao.impl.CdRmbRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cd-teamDao" class="project.caidan.dao.impl.CaiDanTeamDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

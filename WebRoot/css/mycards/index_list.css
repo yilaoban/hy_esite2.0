@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+body{color:#323232;background:#f2f2f2;width:100%;font-size:13px;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;}
+.list0504{}
+.list0504 ul{margin-top:20px;margin-bottom:20px;background:#FFF;border-top:1px solid #d6d7dc;border-bottom:1px solid #d6d7dc;padding-left:4%;}
+.list0504 ul li{border-bottom:1px solid #d6d7dc;height:60px;line-height:60px;}
+.list0504 ul li:last-child{border-bottom:none;}
+.list0504 ul li img{width:36px;height:36px;vertical-align:-14px;margin:12px 10px;}
+.list0504 ul li span{color:#b4b4b4;float:left;}
+.list0504 ul li em{display:inline-block;}
+.list0504 ul li b,.list0504 ul li small{display:block;line-height:22px;}
+.list0504 ul li b{color:#323232;font-size:18px;}
+.list0504 ul li small{color:#909090;}
+
+

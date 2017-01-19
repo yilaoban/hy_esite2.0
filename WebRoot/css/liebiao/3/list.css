@@ -1,0 +1,18 @@
+/* CSS Document */
+
+
+
+
+.liebiao_1022_3{ width:100%; height:100%;}
+
+.wdy_top2{ margin:0 auto;text-align:center;width:100%;height:135px;}
+.todayList{float: inherit;width:100%;margin-top: 5px;}
+.todayList li{float: left;padding: 0;margin-bottom:5px;display: block;color: #222222;border: 1px solid #DDDDDD;font-weight: bold;text-shadow: 0 1px 0 #FFFFFF;text-decoration: none;background: #F9F9F9;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;position: relative;overflow: hidden;width:100%;}
+.todayList li.only4 a {float: left;width: 96%;/* margin-left: 10px; */display: block;padding: 5px 5px 5px 10px;}
+.todayList li .img {width: 75px;height: 55px;float: left;margin: 0 10px 0 0;display: inline;overflow: hidden;}
+.todayList li img {width: 75px;float: left;height: 55px;}
+.todayList li.only4 h2 {padding: 0;}
+.todayList li h2 {float: left;font-size: 16px;color: #2f2f2f;height: 20px;width: 200px;font-weight: normal;line-height: 16px;max-width: 100%;text-overflow: ellipsis;margin-top: 8px;margin-bottom: 0;white-space: nowrap !important;overflow: hidden;font-family: "Microsoft Yahei", Arial;}
+.todayList li p.onlyheight {height: 22px;}
+.todayList li p {float: left;display: block;width: 200px;font-size: 12px;color: #9C9C9C;line-height: 16px;font-weight: normal;margin: 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;padding-right: 2px;}
+.todayList li .icon {margin-top: -6px;position: absolute;top: 50%;right: 10px;height: 14px;width: 14px;background: url(../images/wz_jiantou.png) no-repeat 0 0;background-size: 14px 14px;}

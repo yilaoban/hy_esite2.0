@@ -1,0 +1,18 @@
+/* CSS Document */
+
+
+
+/*图文1028_3*/
+
+.tuwen1028_3{ margin:0 auto; width:100%; height:100%;}
+
+.tuwen1028_3 span img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+.tuwen1028_3 span img:not([src*="/"]) { display: none; }
+.tuwen1028_3_wenzi{ width:100%; margin:0 auto;}
+.tuwen1028_3_wenzi header{border-bottom:1px solid; line-height:30px;padding: 8px 5px;border-bottom-color: rgba(255,255,255,0.2);}
+
+
+.tuwen1028_3_wenzi header h3 {font-size:1.2em;line-height: 30px; color:#fff; padding-top:10px;font-family:Microsoft YaHei;}
+.tuwen1028_3_wenzi header span{color:#fff;font-size: 0.9em;font-family:Microsoft YaHei;}
+
+.tuwen1028_3_wenzi span {padding: 10px;line-height: 24px;color:#fff;font-size: 0.9em;}

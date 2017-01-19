@@ -1,0 +1,5 @@
+.yyy_top{  width:280px;position:absolute;left:20px;top:60px;}
+.yyy_center{ width:240px;position:absolute;left:40px;top:140px;}
+.yyy_cishu{ width:200px;position:absolute;left:60px;top:400px;}
+.yyy_cishu h1{  margin:0 auto; font-size:1.0em; text-align:center; background:#dd1258; line-height:40px;border-radius: 10px; color:#fff;}
+.yyy_top img, .yyy_center img {width:100%;max-width: 100%;}

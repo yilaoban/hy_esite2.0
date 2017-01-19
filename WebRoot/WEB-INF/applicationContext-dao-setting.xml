@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="hyUserDzDao" class="com.huiyee.interact.setting.dao.impl.HyUserDzDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="userJfDaoImpl" class="com.huiyee.interact.setting.dao.impl.UserJfDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="hyUserLevelDaoImpl" class="com.huiyee.interact.setting.dao.impl.HyUserLevelDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="hyUserWayDao" class="com.huiyee.interact.setting.dao.impl.HyUserWayDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="hyUserPrintDao" class="com.huiyee.interact.setting.dao.impl.HyUserPrintDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="hyUserXfDescDao" class="com.huiyee.interact.setting.dao.impl.HyUserXfDescDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="hyUserLevelCodeDao" class="com.huiyee.interact.setting.dao.impl.HyUserLevelCodeDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+</beans>

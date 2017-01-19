@@ -1,0 +1,12 @@
+##签到
+
+<div id="wrapper" hydata="$!pcbid" hyct="Y" status="0"  class="hyzj $!ctname" style='$!hyct;'>
+    <a href="javascript:;" onclick="showCheckinData()" class="bounceIn dialog"><img width="100%" height="100%" src="$img"/></a>
+    <div id="HBox">
+    </div>
+</div>
+<style type="text/css">
+	#HBox{width:300px;height:270px;margin:0 auto;box-shadow:1px 1px 5px #333;-webkit-box-shadow:1px 1px 5px #333;display:none;background-color:#ffffff;position:fixed;top:50%;left:50%;margin:-120px 0 0 -150px;z-index:100000;}
+	.tk_zi{ width:100%; float:left; text-align:center;font-family: "Microsoft Yahei", Arial; font-size:1em; line-height:35px; margin-top:50px;}
+	.tk_zi span{color:#ff3333}
+</style>

@@ -1,0 +1,44 @@
+/* CSS Document */
+
+.yk_index_box{ width:100%; float:left;}
+.yk_i_top{ width:100%; float:left; text-align:center; margin-top:20px;}
+.yk_i_top img{max-width: 100%;height: auto;width: auto\9;}
+
+.yk_i_box{width:100%; float:left; text-align:center;font-family: "Microsoft Yahei", Arial; font-size:1em; line-height:26px; margin:20px 0; color:#ff6600; font-weight:bold;}
+
+.yk_bottom{ width:100%; float:left; text-align:center;}
+.yk_bottom img{max-width: 100%;height: auto;width: auto\9;}
+
+
+.tou_yk_box{margin:0 auto;}
+.tou_yk_box li{width:100%; float:left; height:24%;margin-top:3%;background:#06a7e1;}
+.tou_yk_box li.aaabbb{height:10%;}
+.tou_yk_img{ width:40%; float:left;}
+.tou_yk_img img{max-width: 100%;height: auto;width: auto\9;}
+.tou_yk_con{width:60%; background:#06a7e1;float:left;}
+.tou_yk_con h1{width:90%; margin:0 auto;font-family: "Microsoft Yahei", Arial; font-size:.9em; color:#fff; line-height:30px;text-align: left;}
+
+.tou_yk_con span{width:90%; margin:0 auto;font-family: "Microsoft Yahei", Arial; font-size:.8em; color:#fff; line-height:18px;margin-top: 5px;text-align: left;}
+.dianzan{display:block;text-align:right; color:#fff;font-family: "Microsoft Yahei", Arial; font-size:.8em;margin-top: 5px;padding:0 20px;}
+.dianzan img{max-width: 100%;height: auto;width:20px;}
+.anniu{width:100%; float:left; }
+.anniu li{width:50%; margin-top:20px; float:left; text-align:center;background:none;}
+.anniu li img{max-width: 100%;height: auto;width: auto\9; width:70%;}
+.anniu li a{color:#fff; text-decoration:none;}
+.shz{width:100%; float:left; }
+.shz img{max-width: 100%;height: auto;width: auto\9; float:left;}
+
+.triangle-left {
+    width:o;
+    height: 0;
+    border-top: 10px solid transparent;
+    border-right: 20px solid #00a6e0;
+    border-bottom: 10px solid transparent; position:absolute; z-index:1;margin-top: -60px;margin-left: 34%;
+}
+
+.hide{ display:none;}
+.page{
+	width:100%;
+	height:100%;
+	text-align:center;
+}

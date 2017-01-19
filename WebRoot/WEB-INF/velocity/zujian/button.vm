@@ -1,0 +1,21 @@
+<div  hydata="$pcbid" hyct="Y" status="0" class="buttonvm$pcbid hyzj  $!ctname" style='line-height:40px;font-weight:600;font-size:16px;position:absolute;padding:8px;$!hyct;'>
+	<a href="${link}"><div style="width:100%;height:100%;text-align:center;background:rgba($!col,$!tm);border-radius:$!{bdradius}px;color:$!{fontcol};">
+		#if(${tubiao}=="" || ${tubiao}=="nullclass showcolor" || ${tubiao}=="nullclass")
+			${title}
+		#else
+			<span class="${tubiao}" style="margin-right:10px;"></span>${title}
+		#end
+		</div>
+	</a>
+	<script type="text/javascript">
+	var pcbid =$pcbid;
+	$(document).ready(function() {
+		$('.buttonvm'+pcbid).css('line-height',$('.buttonvm'+pcbid).height()+"px");
+		$('.buttonvm'+pcbid).css('font-size',$('.buttonvm'+pcbid).height()/2+"px");
+	});
+	$('.buttonvm'+pcbid).resize(function(){
+	   $(this).css('line-height',$(this).height()+"px");
+	   $(this).css('font-size',$(this).height()/2+"px");
+	})
+	</script>
+</div>

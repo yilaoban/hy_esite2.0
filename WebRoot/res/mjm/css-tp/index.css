@@ -1,0 +1,411 @@
+/* CSS Document */
+
+/*ÃÀ¼ªÄ·Í¶Æ± 01*/
+.mjm0213_tp_01_logo img,.mjm_0213_tp_01_text img,.mjm_0213_tp_01_anniu img,.mjm_02_top_left img,.mjm_02_top_right img,.mjm_02_shu_box img,.mjm_03_top img,.mjm_03_c_1_a1 img,.mjm_03_c_1_a4 img,.mjm_03_bottom li img,.mjm_04_c_photo img,.mjm_04_sp_anniu img,.mjm_02_c_1_photo img,.mjm_02_c_1_ps img{max-width: 100%;height: auto;width: auto\9;}
+.mjm0213_content_tp{
+width:100%; 
+margin:0 auto;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;}
+.mjm0213_tp_01_logo{ width: 40%;
+position: absolute;
+top: 2%;
+left: 3%;}
+.mjm_0213_tp_01_text{ width: 60%;
+position: absolute;
+bottom: 15%;
+left: 20%;}
+.mjm_0213_tp_01_anniu{width: 35%;
+position: absolute;
+bottom: 4%;
+left: 33%;}
+
+/*02*/
+.mjm_02_top{ width:265px;position:absolute; height:89px; top:3%; left:5%;background: url(/res/mjm/images-tp/2_01.png) no-repeat center;
+background-size: cover;
+background-position: 50% 50%;}
+.mjm_02_top_left{ width: 160px;
+float: left;
+}
+.mjm_02_t_left_tx{width: 90%;
+border: none;
+color: #0071be;
+font-size: .8em;
+margin-top: 45px;
+margin-left: 20px;
+background: none;
+text-align: center;font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;}
+.mjm_02_top_right{width: 30px;
+float: left;
+margin: 48px 0 0 45px;}
+.mjm_02_top_right a{ float:left;}
+.mjm_02_shu_center{width:320px; height:455px; background:url(/res/mjm/images-tp/2_03.png) no-repeat;background-size: cover;
+background-position: 50% 50%; margin:0 auto;margin-top: 35%;}
+
+/*02_1*/
+.mjm_02_c_1{position: relative;top: 1%;left: 39%;width: 63px; float:left;z-index:1;}
+.mjm_02_c_1_photo{
+width: 63px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 63px;}
+.mjm_02_c_1_photo img{
+border-radius: 100px;
+width: 51px;
+float: left;
+margin: 6px;}
+.mjm_02_c_1_mc{ width: 30px;
+background: #e40012;
+text-align: center;
+line-height: 15px;
+color: #fff;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+float: left;
+border-radius: 5px;
+margin: 5px 0 0 15px;
+font-size: .6em;}
+.mjm_02_c_1_ps{width: 100%;
+font-size: .6em;
+line-height: 20px;
+float: left;
+margin-top: 3px;}
+.mjm_02_c_1_ps img{width: 30%;
+float: left;}
+
+/*02_2*/
+.mjm_02_c_2{position: relative;
+top: 7%;
+left: 0px;
+width: 63px;
+float: left;
+z-index: 1;}
+.mjm_02_c_2_photo{
+width: 56px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 56px;}
+.mjm_02_c_2_photo img{
+border-radius: 100px;
+width: 51px;
+float: left;
+margin: 4px;}
+
+
+/*02_3*/
+.mjm_02_c_3{position: relative;
+top: 20%;
+left: -26px;
+width: 63px;
+float: left;
+z-index: 0;}
+.mjm_02_c_3_photo{
+width: 45px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 45px;}
+.mjm_02_c_3_photo img{
+border-radius: 100px;
+width: 38px;
+float: left;
+margin: 4px;}
+
+/*02_4*/
+.mjm_02_c_4{position: relative;
+top: 20%;
+left: 54px;
+width: 63px;
+float: left;
+z-index: 1;}
+.mjm_02_c_4_photo{
+width: 50px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 50px;}
+.mjm_02_c_4_photo img{
+border-radius: 100px;
+width: 42px;
+float: left;
+margin: 4px;}
+
+/*02_5*/
+.mjm_02_c_5{position: relative;
+top: 26%;
+left: -66px;
+width: 63px;
+float: left;
+z-index: 0;}
+.mjm_02_c_5_photo{
+width: 50px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 50px;}
+.mjm_02_c_5_photo img{
+border-radius: 100px;
+width: 42px;
+float: left;
+margin: 4px;}
+
+/*02_6*/
+.mjm_02_c_6{position: relative;
+top: 11%;
+left: -98px;
+width: 65px;
+float: left;
+z-index: 1;}
+.mjm_02_c_6_photo{
+width: 65px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 65px;}
+.mjm_02_c_6_photo img{
+border-radius: 100px;
+width: 55px;
+float: left;
+margin: 4px;}
+
+/*02_7*/
+.mjm_02_c_7{position: relative;
+top: 25%;
+left: -112px;
+width: 63px;
+float: left;
+z-index: 0;}
+.mjm_02_c_7_photo{
+width: 53px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 53px;}
+.mjm_02_c_7_photo img{
+border-radius: 100px;
+width: 45px;
+float: left;
+margin: 4px;}
+
+/*02_8*/
+.mjm_02_c_8{position: relative;
+top: 16%;
+left: -5px;
+width: 65px;
+float: left;
+z-index: 0;}
+.mjm_02_c_8_photo{
+width: 65px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 65px;}
+.mjm_02_c_8_photo img{
+border-radius: 100px;
+width: 57px;
+float: left;
+margin: 4px;}
+
+/*02_9*/
+.mjm_02_c_9{position: relative;
+top: 4%;
+left: 4px;
+width: 65px;
+float: left;
+z-index: 0;}
+.mjm_02_c_9_photo{
+width: 45px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 45px;}
+.mjm_02_c_9_photo img{
+border-radius: 100px;
+width: 37px;
+float: left;
+margin: 4px;}
+
+/*02_10*/
+.mjm_02_c_10{position: relative;
+top: 4%;
+left: 125px;
+width: 65px;
+float: left;
+z-index: 0;}
+.mjm_02_c_10_photo{
+width: 53px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 53px;}
+.mjm_02_c_10_photo img{
+border-radius: 100px;
+width: 44px;
+float: left;
+margin: 4px;}
+
+
+
+/*03*/
+.mjm_03_top{ width:80%;position:absolute;top:3%; left:10%;}
+.mjm_03_c_box{ width:95%; margin:0 auto; margin-top: 30%;}
+.mjm_03_c_box li{ float:left;width: 100%; margin-top:5px;}
+.mjm_03_c_box_1{ width:100%; float:left;}
+.mjm_03_c_1_a1{ width:123px; height:54px; background:url(/res/mjm/images-tp/3_07.png) no-repeat center;background-size: cover;
+background-position: 50% 50%;float: left;}
+.mjm_03_c_1_a1 img{ width:40px;border-radius: 100px;margin: 7px;float: left;}
+.mjm_03_c_1_a2{ width: 55px;
+float: left;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+font-size: 1em;
+line-height: 69px;
+text-align: right;}
+.mjm_03_c_1_a3{ width: 34%;
+height: 54px;
+background: url(/res/mjm/images-tp/3_08.png) repeat-x;
+float: left;
+margin-right: 5px;}
+.mjm_03_c_1_a4{width:70px;
+float: left;
+height: 54px;
+line-height: 69px;
+text-align: right;
+font-size: .8em;}
+.mjm_03_c_1_a4 img{margin-top: 20px; float:left;}
+.mjm_03_bottom{ width:100%;}
+.mjm_03_bottom li{ width: 30%;
+float: left;
+margin: 20px 0 10px 40px;}
+.mjm_03_bottom li a{ float:left;}
+
+.mjm_03_c_1_a3_02{ width: 31%;height: 54px;background: url(/res/mjm/images-tp/33_15.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_03{ width: 28%;height: 54px;background: url(/res/mjm/images-tp/33_23.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_04{ width: 25%;height: 54px;background: url(/res/mjm/images-tp/3_08.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_05{ width: 22%;height: 54px;background: url(/res/mjm/images-tp/33_15.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_06{ width: 19%;height: 54px;background: url(/res/mjm/images-tp/33_23.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_07{ width: 16%;height: 54px;background: url(/res/mjm/images-tp/3_08.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_08{ width: 13%;height: 54px;background: url(/res/mjm/images-tp/33_15.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_09{ width: 10%;height: 54px;background: url(/res/mjm/images-tp/33_23.png) repeat-x;float: left;margin-right: 5px;}
+.mjm_03_c_1_a3_10{ width: 7%;height: 54px;background: url(/res/mjm/images-tp/3_08.png) repeat-x;float: left;margin-right: 5px;}
+
+
+.mjm_03_c_1_a1_02{ width:123px; height:54px; background:url(/res/mjm/images-tp/33_14.png) no-repeat center;background-size: cover;
+background-position: 50% 50%;float: left;}
+.mjm_03_c_1_a1_02 img{ width:40px;border-radius: 100px;margin: 7px;float: left;}
+.mjm_03_c_1_a1_03{ width:123px; height:54px; background:url(/res/mjm/images-tp/33_22.png) no-repeat center;background-size: cover;
+background-position: 50% 50%;float: left;}
+.mjm_03_c_1_a1_03 img{ width:40px;border-radius: 100px;margin: 7px;float: left;}
+
+
+
+/*04*/
+.mjm_04_center{
+width: 271px;
+background: url(/res/mjm/images-tp/4_03.png) no-repeat center;
+background-size: cover;
+height: 300px;
+background-position: 50% 50%;
+margin: 0 auto;
+margin-top: 2%;}
+.mjm_04_c_photo{
+width: 75px;
+border-radius: 100px;
+background: url(/res/mjm/images-tp/t_03.png) no-repeat;
+background-size: cover;
+background-position: 50% 50%;
+float: left;
+height: 75px;
+margin: 3% 0 0 37%;}
+.mjm_04_c_photo img{
+border-radius: 100px;
+width: 61px;
+float: left;
+margin: 7px;}
+.mjm_04_c_l_01{
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+font-size: 1em;
+width: 30px;
+position: relative;
+top: 11%;
+left: 34%;}
+.mjm_04_c_l_02{
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+font-size: 1em;
+width: 40px;
+position: relative;
+top: 12%;
+left: 14%;}
+.mjm_04_c_l_03{
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+font-size: 1em;
+width: 40px;
+position: relative;
+top: 18%;
+left: 1%;
+text-align: center;}
+.mjm_04_c_l_04{
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+font-size: 1em;
+width: 50px;
+position: relative;
+top: -23px;
+left: 58%;
+text-align: center;}
+.mjm_04_c_l_05{
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+font-size: .6em;
+width: 60px;
+position: relative;
+top: -10px;
+left: 79%;
+text-align: center;}
+.mjm_04_c_l_06{
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+font-size: .8em;
+width: 95px;
+position: relative;
+top: 8px;
+left: 35%;
+text-align: center;
+height: 82px;
+overflow: hidden;
+float: left;
+line-height: 16px;}
+.mjm_04_shipin{
+width: 80%;
+margin: 0 auto;
+height: 120px;
+background: #9999FF;
+}
+.mjm_04_sp_anniu{ 
+width:100%; 
+margin:0 auto;}
+.mjm_04_sp_anniu li{ 
+width: 25%;
+float: left;
+margin: 6% 0 0 6%;}
+.mjm_04_sp_anniu li a{ 
+float:left;}
+
+
+

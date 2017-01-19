@@ -1,0 +1,26 @@
+/* CSS Document */
+
+
+
+
+.tuwen_1023_1{ width:100%; height:100%; margin:0 auto;}
+
+.wdy_top2{position:absolute; margin:0 auto;text-align:center;}
+
+.msg_page {position:absolute; width:100%;top:145px;font-size: 14px; line-height:22px;}
+.msg_list {margin-bottom: 5px;margin-left: 5px;margin-right: 5px;}
+.msg_list_bd {margin-left: auto;margin-right: auto;background-color: #fff;padding: 0px 10px;border: 1px solid #cacbcb;box-shadow: 0 1px 2px #ddd;-moz-box-shadow: 0 1px 2px #ddd;-webkit-box-shadow: 0 1px 2px #ddd; margin-top:10px;}
+.text_box, .voice_box, .images_box, .news_box {margin-left: 0;}
+.msg_inner_wrapper {display: inline-block;width: 100%;color: #000;text-decoration: none;}
+.msg_wrapper {font-size: 14px;}
+.msg_item .multi_news {padding-left: 0;padding-right: 0;}
+.msg_item {padding: 0;display: block;text-decoration: none;color: #000;}
+.sub_msg_list {padding-top: 10px;}
+.msg_item {color: #000;}
+.sub_msg_item {overflow: hidden;padding: 10px 0 10px 0;border-top: 1px solid #e5e5e5;display: block;text-decoration: none;}
+a:-webkit-any-link:active {color: -webkit-activelink;}
+
+.msg_item.multi_news .sub_msg_item .msg_title {margin-right: 62px;}
+.msg_title {font-size: 16px;font-weight: 700;color: #000;word-wrap: break-word;word-break: break-all; line-height:24px; margin-top:10px;}
+.tuwen_1023_1_wenzi{ margin-top:20px; line-height:26px;}
+.tuwen_1023_1_wenzi img{ margin-bottom:10px;max-width: 100%;height: auto;width: auto\9;border:none;}

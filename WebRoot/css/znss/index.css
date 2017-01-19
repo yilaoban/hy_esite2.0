@@ -1,0 +1,43 @@
+/* CSS Document */
+.search_box{ width:90%; left:5%;top:55px; border:1px #e1e1e1 solid; height:40px; background:#fff;border-radius:5px;}
+.qz_search{ width:70%; float:left; height:30px; margin-top:3px; border:none; color:#a5a5a5;font-family: "Microsoft Yahei", Arial; font-size:.9em; padding-left:5px;}
+.search_box span{ width:15%; float:right; border-left:1px #a5a5a5 solid; text-align:center; margin-top:10px;}
+.search_box span img{max-width: 100%;height: auto;width: auto\9; width:20px;}
+
+.search_jg{margin:0 auto;}
+.search_jg li{ width:100%; float:left;margin-top: 10px;
+    border-bottom: 1px #ccc dashed;
+    padding-bottom: 10px;font-family: "Microsoft Yahei", Arial; font-size:.9em;}
+.search_jg li p{ line-height:24px;word-break: break-all;}
+.search_jg li p b{color: #c00;}
+.search_jg li span{ line-height:24px;}
+.search_jg li a{color: #db584e;}
+.search_jgd{position:absolute;width:90%;left:5%;top:102px;}
+
+.top_home{    height: 44px;
+    background: #db584e;
+    z-index: 999;
+}
+.home {
+    width: 20%;
+    position: absolute;
+    left: 10px;
+    top: 7px;
+}
+
+.er_position {
+    width: 100%;
+    float: left;
+    text-align: center;
+    line-height: 45px;
+    color: #fff;
+    font-family: "Microsoft Yahei", Arial;
+    font-size: 1em;
+}
+.home img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
+    width: 40%;
+    float: left;
+}

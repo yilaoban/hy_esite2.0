@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="noticeDaoImpl" class="com.huiyee.esite.fdao.impl.NoticeDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="prolistproductDaoImpl" class="com.huiyee.esite.fdao.impl.ProListProductDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="prolistDaoImpl" class="com.huiyee.esite.fdao.impl.ProlistDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="prolistListDaoImpl" class="com.huiyee.esite.fdao.impl.ProlistListDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="videoDaoImpl" class="com.huiyee.esite.fdao.impl.VideoDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userUploadCheckListDaoImpl" class="com.huiyee.esite.fdao.impl.UserUploadCheckListDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userUploadRecordDaoImpl" class="com.huiyee.esite.fdao.impl.UserUploadRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userUploadDaoImpl" class="com.huiyee.esite.fdao.impl.UserUploadDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userUploadRecommentListDaoImpl" class="com.huiyee.esite.fdao.impl.UserUploadRecommentListDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="newsListDaoImpl" class="com.huiyee.esite.fdao.impl.NewsListDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="pictureDaoImpl" class="com.huiyee.esite.fdao.impl.PictureDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaShareListCheckDaoImpl" class="com.huiyee.esite.fdao.impl.SinaShareListCheckDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaShareListNoCheckDaoImpl" class="com.huiyee.esite.fdao.impl.SinaShareListNoCheckDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaShareListRecordDaoImpl" class="com.huiyee.esite.fdao.impl.SinaShareListRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaShareDaoImpl" class="com.huiyee.esite.fdao.impl.SinaShareDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaShareRecordCheckListDaoImpl" class="com.huiyee.esite.fdao.impl.SinaShareRecordCheckListDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd103DaoImpl" class="com.huiyee.esite.fdao.impl.Hd103DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd106DaoImpl" class="com.huiyee.esite.fdao.impl.Hd106DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd111DaoImpl" class="com.huiyee.esite.fdao.impl.Hd111DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd113DaoImpl" class="com.huiyee.esite.fdao.impl.Hd113DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd117DaoImpl" class="com.huiyee.esite.fdao.impl.Hd117DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd131DaoImpl" class="com.huiyee.esite.fdao.impl.Hd131DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd133DaoImpl" class="com.huiyee.esite.fdao.impl.Hd133DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd135DaoImpl" class="com.huiyee.esite.fdao.impl.Hd135DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd118DaoImpl" class="com.huiyee.esite.fdao.impl.Hd118DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="emailContractDaoImpl" class="com.huiyee.esite.fdao.impl.EmailContractDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd121DaoImpl" class="com.huiyee.esite.fdao.impl.Hd121DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd120DaoImpl" class="com.huiyee.esite.fdao.impl.Hd120DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd122DaoImpl" class="com.huiyee.esite.fdao.impl.Hd122DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd123DaoImpl" class="com.huiyee.esite.fdao.impl.Hd123DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd124DaoImpl" class="com.huiyee.esite.fdao.impl.Hd124DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd125DaoImpl" class="com.huiyee.esite.fdao.impl.Hd125DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd126DaoImpl" class="com.huiyee.esite.fdao.impl.Hd126DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="interactSpreadDaoImpl" class="com.huiyee.esite.fdao.impl.InteractSpreadDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd140DaoImpl" class="com.huiyee.esite.fdao.impl.Hd140DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd130DaoImpl" class="com.huiyee.esite.fdao.impl.Hd130DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd137DaoImpl" class="com.huiyee.esite.fdao.impl.Hd137DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd139DaoImpl" class="com.huiyee.esite.fdao.impl.Hd139DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd141DaoImpl" class="com.huiyee.esite.fdao.impl.Hd141DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd127DaoImpl" class="com.huiyee.esite.fdao.impl.Hd127DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd128DaoImpl" class="com.huiyee.esite.fdao.impl.Hd128DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd129DaoImpl" class="com.huiyee.esite.fdao.impl.Hd129DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd142DaoImpl" class="com.huiyee.esite.fdao.impl.Hd142DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd144DaoImpl" class="com.huiyee.esite.fdao.impl.Hd144DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd145DaoImpl" class="com.huiyee.esite.fdao.impl.Hd145DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd146DaoImpl" class="com.huiyee.esite.fdao.impl.Hd146DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd147DaoImpl" class="com.huiyee.esite.fdao.impl.Hd147DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd148DaoImpl" class="com.huiyee.esite.fdao.impl.Hd148DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd149DaoImpl" class="com.huiyee.esite.fdao.impl.Hd149DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd150DaoImpl" class="com.huiyee.esite.fdao.impl.Hd150DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd151DaoImpl" class="com.huiyee.esite.fdao.impl.Hd151DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd152DaoImpl" class="com.huiyee.esite.fdao.impl.Hd152DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd153DaoImpl" class="com.huiyee.esite.fdao.impl.Hd153DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd154DaoImpl" class="com.huiyee.esite.fdao.impl.Hd154DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd159DaoImpl" class="com.huiyee.esite.fdao.impl.Hd159DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd160DaoImpl" class="com.huiyee.esite.fdao.impl.Hd160DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hd161DaoImpl" class="com.huiyee.esite.fdao.impl.Hd161DaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

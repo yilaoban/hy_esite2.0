@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+body{color:#323232;width:100%;font-size:13px;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;}
+.zhifuje{background:#FFF;min-height:100vh;}
+.zhifuje h1,.zhifuje h2{color:#a8a8a8;padding-left:4%;line-height:40px;}
+.zhifuje h1{font-size:14px;}
+.zhifuje h2{border-top:1px solid #d6d7dc;border-bottom:1px solid #d6d7dc;font-size:15px;}
+.zhifuje h2 i{color:#323232;font-size:17px;margin-left:5px;}
+.zhifuje span,.zhifuje em{display:block;text-align:center;}
+.zhifuje span{line-height:10vh;font-size:34px;height:12vh;}
+.zhifuje em{background:#0bb928;height:40px;line-height:40px;margin:7vh 10% auto;border-radius:5px;}
+.zhifuje em input{background:none;border:none;color:#FFF;font-size:17px;}
+

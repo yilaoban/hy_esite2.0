@@ -1,0 +1,58 @@
+@charset "utf-8";
+/* CSS Document */
+
+.jingpai_141113_box{ width:100%;height:100%;font-family: "Microsoft Yahei", Arial;}
+
+
+
+.wdy_top{ margin:0 auto;text-align:center;}
+
+
+.jingpai_141113_box_c{ width:96%; margin:0 auto;margin-top: 20px;}
+.jingpai_141113_box_c_left{float:left; padding-left:10px; width:55%;}
+.jingpai_141113_box_c_left h3, .jingpai_141113_box_c_left p {padding:0;margin:0;}
+.jingpai_141113_box_c_left h3{ float:left; font-size:1.1em; width:100%;}
+.jingpai_141113_box_c_l_1{float:left; font-size:0.9em; width:100%; line-height:40px;}
+.jingpai_141113_box_c_l_time{ width:100%; float:left;font-size:0.9em;}
+.jingpai_141113_box_c_l_time p{ float:left;}
+.jingpai_141113_box_c_l_time span{ float:left; color:#F00;}
+.jingpai_141113_box_c_l_qp{float:left; font-size:0.9em; width:100%; line-height:40px;}
+.jingpai_141113_box_c_l_qp p{ float:left;}
+.jingpai_141113_box_c_l_qp span{ float:left;}
+.jp_141114_jj{ width:100%; float:left;}
+.jp_141114_jj ul{ float:left; width:100%; }
+.jp_141114_jj li{ float:left; width:30%;}
+.jp_141114_jj li img{ float:left;}
+.jp_141113_cj{ width:100%; float:left;}
+.anniu_141114_cj{ float:left; width:100%; margin-top:10px;}
+.anniu_141114_cj img{ float:left; padding-right:5px;}
+.anniu_141114_cj span{ float:left;font-size:0.9em; line-height:26px;}
+
+.jingpai_141113_box_c_l_qp img{ float:left; margin:8px 5px 0 0;}
+
+.jingpai_141114_cp{ width:40%; float:left;}
+.jingpai_141114_cp img{ width:100%; float:left;}
+
+
+.jp_141114_xq{ float:left;margin-top:30px; background:#fbf6f3;line-height:24px; font-size:0.9em;color:#5e5e5e; padding:10px;}
+
+.zxf_span1{ float:left; background:url(/images/hudong/jingpai/biao_07.png) no-repeat left center;font-size:0.9em; color:#F00; text-indent:1.7em;}
+.zxf_span2{ float:left; line-height:24px; width:100%; margin-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

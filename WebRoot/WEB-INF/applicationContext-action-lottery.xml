@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="lotteryDrawAction" class="com.huiyee.interact.lottery.action.LotteryDrawAction" 
+		parent="interactModelAction" scope="prototype" >
+		<property name="lotteryDrawService" ref="lotteryDrawService"></property>
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+	</bean>
+	<bean id="lotteryZhuanPanAction" class="com.huiyee.interact.lottery.action.LotteryZhuanPanAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="sinaGroupMgr" ref="sinaGroupMgr"></property>
+		<property name="wxHongbaoMgr" ref="wxHongbaoMgrImpl"></property>
+		<property name="lotteryPrizeMgr" ref="lotteryPrizeMgr"></property>
+	</bean>
+	<bean id="lotteryDataAction" class="com.huiyee.interact.lottery.action.LotteryDataAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="lotteryUserMgr" ref="lotteryUserMgr"></property>
+		<property name="lotteryUserRecordMgr" ref="lotteryUserRecordMgr"></property>
+		<property name="lotteryPrizeMgr" ref="lotteryPrizeMgr"></property>
+		<property name="wxHbSendMgr" ref="wxHbSendMgrImpl"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+	</bean>
+	<bean id="prizeaction" class="com.huiyee.interact.lottery.action.PrizeAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="lotteryprizeMgr" ref="lotteryPrizeMgr"></property>
+	</bean>
+	<bean id="lotteryLHJAction" class="com.huiyee.interact.lottery.action.LotteryLHJAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+	</bean>
+	<bean id="lotteryGGLAction" class="com.huiyee.interact.lottery.action.LotteryGGLAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+	</bean>
+	<bean id="lotteryYYYAction" class="com.huiyee.interact.lottery.action.LotteryYYYAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+	</bean>
+	<bean id="lotteryWinnerUserAction" class="com.huiyee.interact.lottery.action.LotteryWinnerUserAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+	</bean>
+	<bean id="lotteryInformationAction" class="com.huiyee.interact.lottery.action.LotteryInformationAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+	</bean>
+	
+	<bean id="lotteryNineAction" class="com.huiyee.interact.lottery.action.LotteryNineAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="sinaGroupMgr" ref="sinaGroupMgr"></property>
+		<property name="wxHongbaoMgr" ref="wxHongbaoMgrImpl"></property>
+		<property name="lotteryPrizeMgr" ref="lotteryPrizeMgr"></property>
+	</bean>
+</beans>

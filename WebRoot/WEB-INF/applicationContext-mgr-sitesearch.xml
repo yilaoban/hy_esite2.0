@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="sitesearchSolrServer" class="com.huiyee.interact.sitesearch.solr.SitesearchSolrServer" init-method="init">
+	<property name="zkHost"><value>${zkHost}</value></property>
+	<property name="defaultCollection"><value>${hysitesearchCollection}</value></property>
+	</bean>
+
+	<bean id="siteSearchMgr" class="com.huiyee.interact.sitesearch.mgr.impl.SiteSearchMgrImpl">
+		<property name="siteSearchDao" ref="siteSearchDao"></property>
+	</bean>
+	<bean id="siteSearchIndexMgr" class="com.huiyee.interact.sitesearch.mgr.impl.SiteSearchIndexMgrImpl">
+		<property name="siteSearchIndexDao" ref="siteSearchIndexDao"></property>
+	</bean>
+	<bean id="siteGroupMgr" class="com.huiyee.interact.sitesearch.mgr.impl.SiteGroupMgrImpl">
+		<property name="siteGroupDao" ref="siteGroupDao"></property>
+	</bean>
+
+</beans>

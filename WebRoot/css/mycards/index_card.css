@@ -1,0 +1,56 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+body{background:#f2f2f2;color:#323232;width:100%;font-size:13px;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;}
+.top0429{background:url(/images/mycards/pic_292.png);height:148px;background-size:100% 100%;position:relative;}
+.member_level {position: absolute;top: 20px;left: 10%;width:64px;height:64px;}
+.member_level_text {position: absolute;top: 28px;left: 10%;color:#fff;-webkit-transform: rotate(-45deg);}
+
+.middle0503{margin-top:30px;}
+.middle0503 ul{background:#FFF;padding:0 0 0 4%;border-bottom:1px solid #D6D7DC;margin-top:20px;}
+.middle0503 ul li{border-bottom:1px solid #D6D7DC;line-height:40px;height:40px;}
+.middle0503 ul li:last-child{border-bottom:none;}
+.middle0503 ul li a{display:block;}
+.middle0503 ul li span{font-size:15px;}
+.middle0503 ul li span img{width:24px;height:24px;vertical-align:-6px;margin-right:10px;}
+.middle0503 ul li i{float:right;font-size:14px;margin-right:4%;color:#646464;}
+.middle0503 ul li i img{width:16px;vertical-align:-3px;margin-left:10px;}
+.middle0503 ul li i big.num{color:#e71162;font-size:17px;margin-right:2px;vertical-align:-2px;}
+.middle0503 ul li i small{color:#e71162;font-size:12px;}
+.middle0503 ul li i b{color:#999;font-size:13px;}
+.middle0503 ul li big.big_shouye{width:16px;height:16px;float:right;margin-top:12px;background: url(/images/mycards/pic_299.png);background-size: 100% 100%;}
+
+.block{width:96%;}
+
+
+
+/*
+.top0429::before {
+    content: '';
+    display: block;
+    height: 104px;
+    width: 100%;
+    position: absolute;
+    background-image: -webkit-gradient(linear,0 0,0 bottom,from(#22292c),to(#414546));
+    top: 0;
+    left: 0;
+    z-index: 0;
+}
+.top0429::after {
+    content: '';
+    display: block;
+    height: 11px;
+    width: 100%;
+    background: url("https://e.dianping.com/h5wechat/css/../img/card_unopen_bar.png") 50% 0 no-repeat;
+    -webkit-background-size: contain;
+    background-size: contain;
+    position: absolute;
+    bottom: 5px;
+    left: 0;
+    z-index: 1;
+}
+*/

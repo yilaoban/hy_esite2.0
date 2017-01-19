@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="cc-loginAction" class="project.chuanmc.action.LoginAction" parent="abstractAction" scope="prototype">
+		<property name="accountManager" ref="cc-accountManagerImpl"></property>
+	</bean>
+	<bean id="cc-adminAction" class="project.chuanmc.action.AdminAction" parent="abstractAction" scope="prototype">
+		<property name="accountManager" ref="cc-accountManagerImpl"></property>
+	</bean>
+</beans>

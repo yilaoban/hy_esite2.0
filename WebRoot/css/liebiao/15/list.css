@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+* {padding: 0;margin: 0;}
+body{font-family: Microsoft YaHei,宋体;height: 100%;background-color: #ebebeb;}
+li {
+list-style-type: none;
+}
+a {
+text-decoration: none;
+}
+.clear {clear: both;}
+
+.wdy_top2{}
+
+
+
+/*第三种*/
+.ul01 {height: 95px;/*width: 100%;*/background-repeat: repeat-x;padding-bottom: 1px;background-image: url(/images/liebiao/15/wz_05_007.png);padding-bottom: 0;}
+.ul01_left{float: left;width: 11px;height: 95px;}
+.ulmain{/* float: left; */width:100%;}
+.ul01_cont{
+	float: left;/* width: 100%; */
+	height: 95px;
+	position: absolute;
+	overflow: hidden;
+	left: 5px;
+}
+.circle {width: 75px;height: 75px;-moz-border-radius: 50px;-webkit-border-radius: 50px;border-radius: 50px;float: left;margin-top: 3px;margin-left: 13px;padding: 6px;background-image: url(/images/liebiao/15/wz_smm_15.png);background-repeat: no-repeat;overflow: hidden;}
+.semicircle {z-index: 999;position: relative;top: -45px;filter: alpha(opacity = 50);opacity: 0.5;width: 75px;height: 75px;background: #ffffff;-moz-border-radius: 100px 100px 100 100;-webkit-border-radius: 100px 100px 100 100;border-radius: 100px 100px 100px 100px;}
+.imgchange {top: 9px;position: absolute;overflow: hidden;background-repeat: no-repeat;background-position: center center;width: 75px;height: 75px;-moz-border-radius: 100px 100px 100 100;-webkit-border-radius: 100px 100px 100 100;border-radius: 100px 100px 100px 100px;}
+.imgchange img{-moz-border-radius: 100px 100px 100 100;-webkit-border-radius: 100px 100px 100 100;border-radius: 100px 100px 100px 100px;}
+.ul01_cont_nr {/*float: left;position: absolute;*/width: 100%;padding-left: 110px;/* padding-right: 44px; *//*max-width: 100%;z-index: 32;*/}
+.ul01_cont_nr h4 {font-family: "微软雅黑";font-size: 14px;color: #000000;display: block;margin-top: 21px;margin-left: auto;margin-right: auto;height: 22px;overflow: hidden;}
+.ul01_cont p {margin-top: 11px;display: block;margin-left:auto;margin-right: auto;font-size:13px;font-family: "宋体";color:#777879;height: 30px;overflow: hidden;}
+.arrow_right {position: relative;float: right;z-index: 20;top:34px;right:10px;}
+.ul01_right {float: right;width: 11px;height: 95px;}
+

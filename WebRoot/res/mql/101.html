@@ -1,0 +1,72 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>米其林</title>
+<link href="/res/mql/css/index.css" rel="stylesheet" type="text/css" />
+<link href="/res/mql/css/reset.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/res/mql/js/mql.js"></script>
+</head>
+<body>
+<div class="mqilin_141126_201" style="background:url(/res/mql/images/2-01_bj.png) no-repeat center top #fff;background-size:100%,100%;">
+<div class="miqilin_141126_201_center1">
+<span>
+<strong style="font-weight:bold;">活动时间：</strong>2014年12月1日-2014年12月31日<br/>
+<strong style="font-weight:bold;">活动产品：</strong>米其林所有在售轮胎型号<br/>
+<strong style="font-weight:bold;">活动内容：</strong>消费者购买两条米其林全能表现轮胎，将在本次获得相应RMB100元/2条的话费充值
+</span>
+<p>*联通、电信、中国移动的手机均可充值，每个手机的充值上限为RMB200元。</p>
+  <p style="font-size:0.8em;margin-top:5px;">*如您已购四条轮胎，请点击“继续填写”按钮</p>
+<form method="post" id="myform">
+ <div class="miqilin_141126_201_c_b">
+  <ul>
+    <li><em style="width:35%">防伪码1：</em><input id="code1" name="code1" type="text" class="mql_141126_201_tk" /></li>
+    <li><em style="width:35%">防伪码2：</em><input id="code2" name="code2" type="text" class="mql_141126_201_tk"/></li>
+    <li><em style="width:40%">手机号码：</em><input id="phone" name="phone" type="text" class="mql_141126_201_tk"/></li>
+    <li><em style="width:45%">特约店名称：</em><input id="address" name="address" type="text" class="mql_141126_201_tk"/></li>
+  </ul>
+  
+  <div class="mql_141126_201_anniu">
+  <ul>
+    <li><a href="/res/mql/201.html">继续填写</a></li>
+    <li onclick="saveUser()">点击提交</li>
+  </ul>
+</div>
+<div class="mql_141126_201_db"><img src="/res/mql/images/2-01_db.png" width="146" height="50" /></div>
+</div>
+</form>
+<script type="text/javascript">
+function saveUser(){
+	if($("#code1").val() == $("#code2").val()){
+		window.location.href="/res/mql/401.html";
+	}
+	$.ajax({
+        cache: true,
+        type: "POST",
+        url:"/user/saveuser.action",
+        data:$('#myform').serialize(),// 你的formid
+        async: false,
+        error: function(request) {
+            alert("Connection error",0);
+        },
+        success: function(data) {
+            if(data==1){
+            	window.location.href="/res/mql/301.html";
+            }else{
+          		  window.location.href="/res/mql/401.html";
+            }
+        }
+    });
+}
+</script>
+</div>
+</div>
+
+</body>
+</html>

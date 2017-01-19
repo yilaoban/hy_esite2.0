@@ -1,0 +1,24 @@
+
+.tw_150310_page3_zt {
+	width: 300px;
+	float: left;
+	z-index: 0;
+	position: absolute;
+}
+.tw_150310_page3_zt img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+.tw_150310_page3_zi {
+	width: 210px;
+	font-size: .8em;
+	float: left;
+	line-height: 24px;
+	-webkit-transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -9deg);
+	transform: translate3d(0, 0, 0) rotate3d(0, 0, 1, -9deg);
+	color: #000;
+	top: 70px;
+	left: 50px;
+	position:absolute;
+}

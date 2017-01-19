@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="aliCallBackAction" class="com.huiyee.pay.action.AliCallBackAction"  scope="prototype">
+	</bean>
+	
+	<bean id="aliPayAction" class="com.huiyee.pay.action.AliPayAction" parent="interactModelAction"  scope="prototype">
+		<property name="ownerPayMgr" ref="ownerPayMgr"></property>
+	</bean>
+	<bean id="aliPushAction" class="com.huiyee.pay.action.AliPushAction"  scope="prototype">
+	</bean>
+	
+	<bean id="aliCallBack4PhoneAction" class="com.huiyee.pay.action.AliCallBack4PhoneAction"  scope="prototype">
+	</bean>
+	
+	<bean id="aliPay4PhoneAction" class="com.huiyee.pay.action.AliPay4PhoneAction" parent="interactModelAction" scope="prototype">
+		<property name="ownerPayMgr" ref="ownerPayMgr"></property>
+	</bean>
+	
+	<bean id="aliPush4PhoneAction" class="com.huiyee.pay.action.AliPush4PhoneAction"  scope="prototype">
+	</bean>
+	<bean id="aliMerchant4PhoneAction" class="com.huiyee.pay.action.AliMerchant4PhoneAction"  scope="prototype">
+	</bean>
+	
+	<bean id="ownerPayAction" class="com.huiyee.pay.action.OwnerPayAction" parent="interactModelAction"  scope="prototype">
+		<property name="ownerPayMgr" ref="ownerPayMgr"></property>
+	</bean>
+	
+	<bean id="payAction" class="com.huiyee.interact.pay.action.PayAction" parent="abstractAction"  scope="prototype">
+		<property name="marketingEbMgr" ref="marketingEbMgrImpl"></property>
+		<property name="wxTemplateMgr" ref="wxTemplateMgr"></property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,71 @@
+/* CSS Document */
+
+
+
+/*图文列表-文章列表11*/
+/*手机端样式*/
+
+.liebiao_1023_7{ margin:0 auto; width:100%; height:100%;}
+
+.liebiao_1023_7_main{ width:100%;height:100%;min-width:300px; max-width:640px;margin:0 auto;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; position:relative;ont-family:"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53", Arial, Helvetica, sans-serif; font-size: 62.5%; line-height: 1.231;}
+.liebiao_1023_7_menu{width:38%;position:absolute;top:10%;right:12%;overflow:hidden;-webkit-animation: myfirst 0.5s;}
+.liebiao_1023_7_menu li{width:100%;height:35px;margin-top:3px;}
+.liebiao_1023_7_menu li a{display:block;width:100%;height:35px;line-height:35px;background-color:#FFF;opacity:0.9;text-align:center;color:#000;font-size:16px;overflow:hidden;}
+
+
+.liebiao_1023_7_menu li a.nav1{-webkit-animation: myfirst1 1.2s;}
+.liebiao_1023_7_menu li a.nav2{-webkit-animation: myfirst2 1.1s;}
+.liebiao_1023_7_menu li a.nav3{-webkit-animation: myfirst3 1s;}
+.liebiao_1023_7_menu li a.nav4{-webkit-animation: myfirst4 0.9s;}
+.liebiao_1023_7_menu li a.nav5{-webkit-animation: myfirst5 0.8s;}
+.liebiao_1023_7_menu li a.nav6{-webkit-animation: myfirst6 0.7s;}
+.liebiao_1023_7_menu li a.nav7{-webkit-animation: myfirst7 0.6s;}
+.liebiao_1023_7_menu li a.nav8{-webkit-animation: myfirst8 0.5s;}
+
+
+@-webkit-keyframes myfirst
+{
+0%   {top:-200%;}
+100% {top:10%}
+}
+@-webkit-keyframes myfirst1
+{
+0%   {width:0px}
+100% {width:100%}
+}
+@-webkit-keyframes myfirst2
+{
+0%   {width:0px}
+100% {width:100%}
+}
+@-webkit-keyframes myfirst3
+{
+0%   {width:0px}
+100% {width:100%}
+}
+@-webkit-keyframes myfirst4
+{
+0%   {width:0px}
+100% {width:100%}
+}
+@-webkit-keyframes myfirst5
+{
+0%   {width:0px}
+100% {width:100%}
+}
+@-webkit-keyframes myfirst6
+{
+0%   {width:0px}
+100% {width:100%}
+}
+@-webkit-keyframes myfirst7
+{
+0%   {width:0px}
+100% {width:100%}
+}
+@-webkit-keyframes myfirst8
+{
+0%   {width:0px}
+100% {width:100%}
+}
+

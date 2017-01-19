@@ -1,0 +1,26 @@
+
+.box_swipe{overflow:hidden;position:relative;}
+.box_swipe img{max-width: 100%;height: auto;width: auto\9;}
+.box_swipe ul{-webkit-padding-start:0px;}
+.box_swipe>ol{height:20px;position:relative;z-index:10;margin-top:-25px;text-align:right;padding-right:15px;background-color:rgba(0,0,0,0.3);}
+.box_swipe>ol>li{display:inline-block;margin:5px 0;width:8px;height:8px;background-color:#757575;border-radius:8px;}
+.box_swipe>ol>li.on{background-color:#ffffff;}
+
+.mainmenu_20150228_1{
+width:100%; 
+margin:0 auto;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;}
+
+.mainmenu_20150228_1_box {margin:6px;border-radius:5px; overflow:hidden; border:1px solid #d8e0cb;border:0; overflow: hidden;}
+.mainmenu_20150228_1_box li { border-bottom:1px solid #CCC; background:-webkit-gradient(linear, 55% 100%, 55% 0%, from(#f1f1f1), to(#ffffff)); overflow:hidden ;border:1px solid #CCC; margin-bottom:6px; border-radius:5px;}
+.mainmenu_20150228_1_box li a { display:block;   padding:6px 30px 6px 20px; position:relative; text-decoration:none;}
+
+.mainmenu_20150228_1_box li a em { display:block; width:8px; height:100%; position:absolute; left:0px;top: 0;}
+.zxf_addspan1{  line-height:24px; color:#4a4a4a;font-size:1em; }
+.zxf_addspan2{ display:block; line-height:24px; font-size:.8em;  text-overflow:ellipsis; overflow:hidden; white-space:nowrap; color:#b0b0b0; font-style: normal;}
+.mainmenu_20150228_1_box li a b{ display:block;  width:15px; height:19px; position:absolute; top:50%; margin-top:-10px; right:10px;  background:url(../images/jt.png) no-repeat; background-size:15px 19px;}
+
+.mainmenu_20150228_1_box li:last-child{ border-bottom:none;border-bottom:1px solid #CCC;}
+
+
+

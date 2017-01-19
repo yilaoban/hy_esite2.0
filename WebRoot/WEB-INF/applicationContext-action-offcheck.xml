@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="offCheckAction" class="com.huiyee.interact.offcheck.action.OffCheckAction" scope="prototype" parent="abstractAction">
+		<property name="offCheckMgr" ref="offCheckMgrImpl"></property>
+		<property name="gzEventMgr" ref="gzEventMgr"></property>
+		<property name="wxTemplateMgr" ref="wxTemplateMgr"></property>
+		<property name="featureManager" ref="featureManagerImpl"></property>
+		<property name="siteManager" ref="siteManagerImpl"></property>
+		<property name="offCheckDzWayMgr" ref="offCheckDzWayMgr"></property>
+		<property name="hyUserLevelMgr" ref="hyUserLevelMgrImpl"></property>
+	</bean>
+
+</beans>

@@ -1,0 +1,17 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+ul, ol{list-style: none; }
+a{text-decoration:none;color:#646464;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+body{font-family:"Microsoft Yahei",Tahoma,Arial,Helvetica,STHeiti;width:100%;font-size:13px;}
+/****************my orders*******************/
+.top{height:44px;width:100%;background:#353535;text-align:center;font-size:17px;color:#FFF;line-height:44px;display:inline-block;z-index:1000;position:fixed;top:0;}
+.top a.left{float:left;display:inline-block;height:44px;font-size:14px;color:#FFF;margin-left:3%;}
+.top a.left img{height:16px;width:10px;vertical-align:-3px;}
+.main0415{background:#FFF;}
+.main0415 img.pic1{width:80%;margin:12vh 10%;}
+.main0415 img.pic2{width:80%;margin:0 10% 10vh;}
+.main0415 a{display:inline-block;width:50%;border:1px solid #e71162;text-align:center;margin:0 25%;height:40px;line-height:40px;color:#e71162;border-radius:5px;font-size:16px}

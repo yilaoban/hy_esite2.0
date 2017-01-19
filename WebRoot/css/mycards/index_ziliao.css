@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+body{background:#f2f2f2;color:#323232;width:100%;font-size:13px;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;}
+.ziliao0503{}
+.ziliao0503 ul{background:#FFF;margin-top:20px;border-top:1px solid #D6D7DC;border-bottom:1px solid #D6D7DC;}
+.ziliao0503 ul li{margin-left:4%;border-top:1px solid #D6D7DC;line-height: 40px;height:40px;}
+.ziliao0503 ul li i{color:#b4b4b4;margin-right:10px;font-size:15px;}
+.ziliao0503 ul li:first-child{border:none;}
+.ziliao0503 ul li input{border:none;height:30px;line-height:30px;color:#646464;font-size:15px;vertical-align:1px;width:50%;}
+.ziliao0503 ul li input.yanzheng{width:55px;}
+.ziliao0503 ul li input#sex{width:50%;}
+.ziliao0503 ul li em.get{color:#e71162;float:right;margin-right:4%;border:1px solid #e71162;border-radius:3px;line-height:28px;
+	                  height:28px;margin-top:5px;padding:0 10px;}
+
+.ziliao0503 ul li b{display:inline-block;float:right;color:#e71162;font-size: 13px;margin-top:-1px;}
+.ziliao0503 ul li img.ziliao_left{width:24px;vertical-align:-6px;margin-right:10px;}
+.ziliao0503 ul li big{width:16px;height:16px;float:right;margin-right:4%;margin-top:11px;}
+.ziliao0503 ul li big.big_1{background: url(/images/mycards/pic_299.png);background-size: 100% 100%;}
+.ziliao0503 ul li big.big_2{background: url(/images/mycards/pic_2918.png);background-size: 100% 100%;}
+.ziliao0503 ul li input.birth{width:80px;}
+.ziliao0503 ul li em.tip{float:right;color:#a8a8a8;font-size:12px;margin-right:5px;margin-top:-1px;}
+.ziliao0503 span{display:block;margin:8vh 10%;border-radius:5px;background:#0bb928;height:40px;line-height:40px;text-align:center;}
+.ziliao0503 span input{border:none;background:none;font-size:17px;color:#FFF;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

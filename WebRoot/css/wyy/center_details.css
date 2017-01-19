@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;}
+i,em{font-style:normal;}
+a,img{border:0;color:#323232;}
+textarea{resize:none;}
+p{padding:0;}
+input,button,select,textarea{outline:none}
+body{color:#323232;width:100%;font-size:13px;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;}
+
+.top0510{border-bottom:1px solid #D6D7DC;}
+.top0510 img{width:100%;}
+.top0510 p.details_1{line-height:20px;font-size: 14px;overflow: hidden;-webkit-line-clamp: 3;
+	display: -webkit-box;-webkit-box-orient:vertical;text-overflow:ellipsis;padding:0 4%;margin-top:6px}
+.top0510 p.yuyue{text-align:right;margin:8px auto;padding:0 4%;}
+.top0510 p.yuyue a{color:#FFF;background:#e71162;border-radius: 3px;padding:4px 12px;font-size: 14px;display: inline-block;}
+.space{height:15px;background: #f1f1f1;}
+.introduce0510{border-top:1px solid #D6D7DC;}
+.introduce0510 h1{border-bottom:1px solid #D6D7DC;height:34px;line-height:34px;font-size:14px;color:#e71162;padding:0 6%;margin:0 auto 10px;}
+.introduce0510 .common{margin:0 4%;}
+.introduce0510 .common p{line-height: 20px;font-size: 13px;}
+.introduce0510 .common p.kongge{text-indent: 2em;}
+.introduce0510 .common p.show{margin:10px auto;line-height:0;}
+.introduce0510 .common img{width:100%;}
+

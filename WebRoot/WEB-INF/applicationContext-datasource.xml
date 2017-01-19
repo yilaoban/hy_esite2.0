@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+	
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value><![CDATA[${ds.main.url}]]></value>
+		</property>
+		<property name="username">
+			<value>${ds.main.user}</value>
+		</property>
+		<property name="password">
+			<value>${ds.main.password}</value>
+		</property>
+		<property name="validationQuery">
+			<value>SELECT 1</value>
+		</property>
+		<property name="testOnBorrow">
+			<value>true</value>
+		</property>
+	</bean>
+	<bean id="jdbcTransactionManager"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+
+	<bean id="jdbcTemplate"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource" />
+		</property>
+	</bean>
+	
+<!--易博的数据源 -->
+<bean id="dataSource2"
+		class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value><![CDATA[${ds.yibo.url}]]></value>
+		</property>
+		<property name="username">
+			<value>${ds.yibo.user}</value>
+		</property>
+		<property name="password">
+			<value>${ds.yibo.password}</value>
+		</property>
+		<property name="validationQuery">
+			<value>SELECT 1</value>
+		</property>
+		<property name="testOnBorrow">
+			<value>true</value>
+		</property>
+	</bean>
+	<bean id="jdbcTransactionManager2"
+		class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+		<property name="dataSource">
+			<ref bean="dataSource2" />
+		</property>
+	</bean>
+
+	<bean id="jdbcTemplate2"
+		class="org.springframework.jdbc.core.JdbcTemplate">
+		<property name="dataSource">
+			<ref bean="dataSource2" />
+		</property>
+	</bean>
+	
+	
+<!--  配置事务 -->
+<!--  基本事务定义,使用transactionManager作事务管理,默认get*方法的事务为readonly,其余方法按默认设置. 默认的设置请参考Spring文档事务一章.	-->
+<tx:advice id="txAdvice"
+	transaction-manager="jdbcTransactionManager">
+	<tx:attributes>
+		<tx:method name="get*" read-only="true" />
+		<tx:method name="find*" read-only="true" />
+		<tx:method name="configSub*" propagation="REQUIRED" />
+		<tx:method name="add*" propagation="REQUIRED" />
+		<tx:method name="insert*" propagation="REQUIRED" />
+		<tx:method name="remove*" propagation="REQUIRED" />
+		<tx:method name="save*" propagation="REQUIRED" />
+		<tx:method name="del*" propagation="REQUIRED" />
+		<tx:method name="update*" propagation="REQUIRED" />
+		<tx:method name="login*" propagation="REQUIRED" />
+		<tx:method name="dynamic*" propagation="REQUIRED" />
+		<tx:method name="*" read-only="true" />
+	</tx:attributes>
+</tx:advice>
+
+<aop:config>
+	<aop:pointcut id="allManagerMethod"
+		expression="execution(* com.huiyee.esite.mgr.imp.*.*(..)) or execution(* com.huiyee.esite.fmgr.imp.*.*(..)) or execution(* com.huiyee.individual.mgr.*.*(..)) or execution(* com.huiyee.interact.*.mgr.*.*(..)) or execution(* com.huiyee.weixin.mgr.impl.*.*(..))" />
+	<aop:advisor pointcut-ref="allManagerMethod"
+		advice-ref="txAdvice" />
+</aop:config>
+</beans>

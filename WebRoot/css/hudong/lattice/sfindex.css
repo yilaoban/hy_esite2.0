@@ -1,0 +1,64 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+.line0427{height:6px;background:url(/images/hudong/lattice/pic_2.png) repeat-x;background-size: auto 6px;}
+.top0427{position: relative;z-index:-100;}
+.top0427 img.top0427_pic_3{width:100%;}
+.top0427 img.top0427_pic_4{width:88%;position: absolute;left:6%;top:4vh;}
+.nav0427{width:100%;height:130px;position:absolute;top:112px;}
+.nav0427 ul{padding-top:22px;}
+.nav0427 ul li{float:left;width:27%;background:url(/images/hudong/lattice/bg_4.png) no-repeat;background-size: 100% 100%;height:40px;
+	          line-height:40px;text-align: center;font-weight:600;text-indent: 0.5em;margin-left:4%;font-size:12px;}
+.nav0427 ul li a{display:block;color:#FFF;}
+.nav0427 span{text-align:center;display:block;}
+.nav0427 span em{display:inline-block;background:#fce18e;position: relative;padding:0px 10px 0px 40px;height: 21px;color:#84550F;
+	          line-height:21px;font-size: 12px;margin-top: 2px;}
+.nav0427 span em img{width:28px;height:26px;position: absolute;left:6px;bottom:0;}
+.nav0427 span em i{font-size:20px;color:#FF5F01;vertical-align: -2px;padding:0 2px;}
+.middle0428{position:absolute;top:205px;width:100%;}
+	#lottery{width:92%;background-size:cover;background:url(/images/hudong/lattice/bg_1.png);background-size:100% 100%;
+		    margin:0 auto 0;padding:9px 0 12px;}
+    #lottery table{width:93%;margin:0 3.5%;}
+	#lottery table td{height:85px;text-align:center;vertical-align:middle;font-index:-999;}
+	#lottery table td a{width:100%;height:100%;display:block;}
+	#lottery table td p{font-size:12px;width:85px;margin:0 auto;overflow:hidden;}
+    #lottery table td img{width:75px;height:55px;}
+	#lottery table td.td_1{background:url(/images/hudong/lattice/bg_3.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_2{background:url(/images/hudong/lattice/bg_3.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_3{background:url(/images/hudong/lattice/bg_3.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_4{background:url(/images/hudong/lattice/bg_3.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_5{background:url(/images/hudong/lattice/pic_1.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_6{background:url(/images/hudong/lattice/bg_3.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_7{background:url(/images/hudong/lattice/bg_3.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_8{background:url(/images/hudong/lattice/bg_3.png) no-repeat center bottom;background-size:94% 94%;}
+	#lottery table td.td_9{background:url(/images/hudong/lattice/bg_3.png)  no-repeat center bottom;background-size:94% 94%;}
+    #lottery table td.active{background:url(/images/hudong/lattice/bg_2.png) no-repeat center bottom;background-size:94% 94%;}
+	#demo{width:300px; margin:50px auto 10px; overflow:hidden;}
+	#demo a{float:left; width:90px; height:30px; line-height:30px; text-align:center; margin-left:10px; background-color:#000; color:#fff; text-decoration:none; font-weight:bold;}
+	#demo a.cur{background-color:#933;}
+.bottom0428{position:absolute;z-index:100;bottom:0;background:#F1D992;}
+.bottom0428 img{width:100%;}
+
+#modal-content {background:#fff;border-radius:5px;margin:0 10px;}
+#modal-hongbao{ margin: 25% 30px 0;height: 60%;position:relative;z-index:1002;}
+.modal-head {}
+.modal-body {padding:10px 20px 20px;max-height:350px;overflow:auto;}
+.modal-body p {font-size:14px;line-height:25px;}
+.modal-body p.title {margin: 10px 0 5px;font-weight:bold;}
+.modal-top {padding: 10px 10px 0;height: 16px;}
+.modal-close {float:right;display:block;width:16px;height:16px;background:url(http://cdimg.huiyee.com/site/2405/2736/images/stupid_x.png) no-repeat 50%;}
+.modal-title {text-align:center;background:url(http://cdimg.huiyee.com/site/2405/2736/images/stupid_line.png) no-repeat center 50%;}
+.hongbao-title {text-align:center;width:50%;position:absolute;top: 22%;left:25%;color:#602705;font-weight:bold;}
+.hongbao-text {    text-align: center;width: 80%;position: absolute;top: 37%;left: 10%;font-size: .8em;}
+.iknow {width: 40%;left: 30%;position: absolute;top: 76%;}
+
+	#scrollDiv {width:100%; height:130px;overflow:hidden;margin: -23px auto 0;}
+.middle0428 .gonggao{margin-top:-8px;margin-bottom:10px;}
+.middle0428 .gonggao h1{width:92%;margin:0 auto;position: relative;z-index:10;}
+.middle0428 .gonggao h1 img{width:100%;}
+.middle0428 .gonggao ul{width:83%;margin:0 auto;background:#fee597;padding:10px 2% 0;}
+.middle0428 .gonggao ul li{border-bottom:1px dashed #CDA975;color:#855510;height:30px;line-height:30px;padding:0 3%;}
+.middle0428 .gonggao ul li em{float:right;}

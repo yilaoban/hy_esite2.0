@@ -1,0 +1,41 @@
+/* CSS Document */
+
+.mainmenu_20150205_1 {
+z-index: 20;
+color: #FFF;
+position: absolute;
+width: 56%;
+padding-top: 8px;
+top: 0;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+}
+
+.mainmenu_20150205_1 a{ text-decoration:none;}
+.mainmenu_20150205_1 ul {
+	display: block;
+}
+.mainmenu_20150205_1 li {
+float: left;
+text-align: center;
+display: block;
+}
+.mainmenu_20150205_1 li .menubtn_20150205_1{
+width: 77px;
+height: 77px;
+margin-left: 8px;
+margin-bottom: 8px;
+position: relative;
+border-radius: 5px;
+}
+.mainmenu_20150205_1 li img {
+width: 40px;
+height: 40px;
+margin-top: 8px;
+border-radius: 5px;
+}
+.menutitle_20150205_1 {
+color: #fff;
+font-size: 0.8em;
+display: block;
+text-align:center;
+}

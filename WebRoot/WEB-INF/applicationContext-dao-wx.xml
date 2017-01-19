@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="wxPageShowDao" class="com.huiyee.weixin.dao.impl.WxPageShowDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="payShopOwnerDao" class="com.huiyee.weixin.dao.impl.PayShopOwnerDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+
+	<bean id="wxAppDao" class="com.huiyee.weixin.dao.impl.WxAppDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+
+	<bean id="wxMpDao" class="com.huiyee.weixin.dao.impl.WxMpDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+
+	<bean id="wxBuyProductDaoImpl" class="com.huiyee.weixin.dao.impl.WxBuyProductDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

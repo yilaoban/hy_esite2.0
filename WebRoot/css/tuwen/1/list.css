@@ -1,0 +1,19 @@
+/* CSS Document */
+
+
+
+
+.wdy_top2{position:absolute;width:100%;}
+.mainshowtop{top:140px;width:100%;}
+
+.weimob-list {margin:0;padding: 5px;}
+.weimob-list-item-title {white-space: normal!important;line-height:50px;overflow: hidden;text-align: left;margin-top: auto;-webkit-box-sizing: border-box; color:#000; border-bottom:1px #929292 dashed;}
+.weimob-list-item-fulltitle {font-size: 12px;color: #333;text-align: left;}
+.weimob-list-item-img {margin: 5px;height: 53%;display: block;}
+.weimob-list-item-img img {width: 100% !important;}
+.weimob-list-item-summary {font-size: 0.8rem;color: #333;}
+.weimob-list-item-summary {margin-top: 3px;font-size: 12px;color: #929292;line-height:25px;text-align: left;}
+.weimob-list-item1 {position: relative;display: block;background: none;border-radius: 15px;border: 1px solid #cdcdcd;box-shadow: 1px 2px 3px #929292;}
+.weimob-list-item-line1 {line-height: 30px;padding: 0;margin: auto;text-align: center;float:left;}
+.weimob-list-item-line1 {display: table-cell;height: inherit;background-position: center;background-repeat: no-repeat;padding-left:30px;vertical-align: middle;padding-right: 32px;}
+.msg_cover img {width: 100%; margin-top:8px;}

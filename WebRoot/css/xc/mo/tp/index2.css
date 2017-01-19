@@ -1,0 +1,24 @@
+.toupiao_150327_top {width: 300px;position: absolute;left: 10px;top:30px;}
+.toupiao_150327_top img , .toupiao_150327_prize img{width: 100%;max-width: 100%;}
+.toupiao_150327_center {position: absolute;left: 10px;top: 35%;right:10px; height:60%;padding: 10px;}
+.toupiao_150327_center ul {height: 100%;}
+.toupiao_150327_center li {height:17%;margin-bottom: 4%;}
+.toupiao_150327_prize {width: 50px;height: 100%;float: left;border-radius: 5px 0 0 5px;overflow:hidden;background-color:#fff;}
+.toupiao_150327_fenmu {width: 170px;height: 100%;float: left;border-radius: 0 5px 5px 0;position: relative;overflow:hidden;color:#fff;}
+.toupiao_150327_fenzi {height: 100%;}
+.toupiao_150327_fenmu span.span1 {position: absolute;top: 50%;margin-top: -10px;left: 10px;color: #fff;font-size: .8em}
+.toupiao_150327_fenmu span.span2 {position: absolute;right: 10px;font-size: .8em;text-align: right;line-height:25px;}
+.toupiao_150327_fenmu span.span3 {position: absolute;right: 10px;font-size: .8em;text-align: right;line-height:25px;bottom:0px;}
+.toupiao_150327_btn {width: 50px;height: 100%;float: right;text-align: center;color: #fff;border-radius: 5px;position: relative;}
+.toupiao_150327_btn span {position: absolute;top: 50%;margin-top: -10px;left: 10px;}
+.style1 {background: #BD4B00;}
+.style {background: #818181;}
+.style2 {background: #2473A6;}
+.style3 {background: #283848;}
+.style4 {background: #3E3E54;}
+.style5 {background: #239C56;}
+.style11 {background: #E67E22;}
+.style12 {background: #3498DB;}
+.style13 {background: #2C3E50;}
+.style14 {background: #5A68A5;}
+.style15 {background: #2ECC71;}

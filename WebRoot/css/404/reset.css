@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* CSS Document */
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td
+{
+  margin: 0;
+  padding: 0;
+}
+body.homepage {
+  background: #fff;
+}
+body,button,select,textarea,input {
+  font-family: "Microsoft Yahei", Arial;
+  font-size: 12px;
+}
+
+img {
+  border: 0;
+}
+
+li {
+  list-style-type: none;
+}
+ul{ list-style:none;}

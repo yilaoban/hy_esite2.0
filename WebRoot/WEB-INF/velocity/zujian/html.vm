@@ -1,0 +1,3 @@
+<div  hydata="$pcbid" hyct="Y" status="0" class="hyzj $!ctname" style='$!hyct;'>
+		${html}
+</div>

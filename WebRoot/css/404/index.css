@@ -1,0 +1,9 @@
+@charset "utf-8";
+
+.box{ width:720px; margin:0 auto;}
+.box_return{ width:60%;margin:0 auto;}
+.box_return li{ width:50%; float:left; line-height:50px; text-align:left; font-size:14px;font-family: "Microsoft Yahei", Arial; }
+.box_return li a{ color:#0066cc; text-decoration:none;}
+.box_return li a:hover{ color:#964902; text-decoration:none;}
+.box_zi{width:60%;margin:0 auto;}
+.box_zi li{ width:90%;line-height:30px; background:url(/images/404/dian.png) no-repeat left center; text-indent:15px; color:#333333;font-size:14px;font-family: "Microsoft Yahei", Arial;}

@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="researchAction" class="com.huiyee.interact.research.action.ResearchAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="researchMgr" ref="researchMgrImpl"></property>
+	</bean>
+	<bean id="researchQuestionAction" class="com.huiyee.interact.research.action.ResearchQuestionAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="researchQuestionMgr" ref="researchQuestionMgrImpl"></property>
+	</bean>
+	<bean id="researchPreviewAction" class="com.huiyee.interact.research.action.ResearchPreviewAction"
+	 	parent="interactModelAction" scope="prototype">
+		<property name="researchMgr" ref="researchMgrImpl"></property>
+	</bean>
+	<bean id="researchRecordDataAction" class="com.huiyee.interact.research.action.ResearchRecordDataAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="researchManager" ref="researchMgrImpl"></property>
+		<property name="researchQuestionMgr" ref="researchQuestionMgrImpl"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+	</bean>
+	<bean id="researchSurveyResultAction" class="com.huiyee.interact.research.action.ResearchSurveyResultAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="researchQuestionOptionMgr" ref="researchQuestionOptionMgrImpl"></property>
+	</bean>
+	<bean id="researchSubmitAction" class="com.huiyee.interact.research.action.ResearchSubmitAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="researchManager" ref="researchMgrImpl"></property>
+	</bean>
+</beans>

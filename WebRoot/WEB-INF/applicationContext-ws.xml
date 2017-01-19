@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="
+http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd">
+	
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+	
+	<bean id="diwsProxyFactory"
+		class="org.apache.cxf.jaxws.JaxWsProxyFactoryBean">
+		<property name="serviceClass"
+			value="com.huiyee.esite.ws.WeiBoService" />
+			
+		<property name="address"
+			value="${wsurl}" />
+			
+		<property name="outInterceptors">
+			<list>
+				<ref bean="wss4jOutInterceptor" />
+			</list>
+		</property>
+	</bean>
+
+	<bean id="wss4jOutInterceptor"
+		class="org.apache.cxf.ws.security.wss4j.WSS4JOutInterceptor">
+
+		<constructor-arg>
+			<map>
+				<entry key="action" value="UsernameToken" />
+				<entry key="passwordType" value="PasswordText" />
+				<entry key="user" value="emailsvc" />	 
+				<entry key="passwordCallbackRef">
+					<ref bean="passwordCallback"/>
+				</entry>
+				
+			</map>
+		</constructor-arg>
+	</bean>
+
+
+	<bean id="passwordCallback"
+		class="com.huiyee.esite.ws.WeiBoServicePasswordCallback">
+		<property name="name" value="hyorg1" />
+		<property name="password" value="111111" />
+	</bean>
+		
+		
+	<bean id="weiBoService" class="com.huiyee.esite.ws.WeiBoService"
+		factory-bean="diwsProxyFactory" factory-method="create" />
+		
+	<!-- =================================================================== -->
+
+	<bean id="esiteWebServiceImpl"
+		class="com.huiyee.esite.ws.imp.EsiteWebServiceImpl">
+		<property name="accountManager" ref="accountManagerImpl"></property>
+		<property name="bbsMgr" ref="bbsMgr"></property>
+	</bean>
+	
+	<bean id="esiteWebPasswordCallback"
+		class="com.huiyee.esite.ws.EsiteWebServicePasswordCallback">
+		<property name="name" value="hyorg1" />
+		<property name="password" value="111111" />
+	</bean>
+
+	<jaxws:endpoint id="upservice" implementor="#esiteWebServiceImpl"
+		address="/esite">
+		<jaxws:inInterceptors>
+			<bean
+				class="org.apache.cxf.ws.security.wss4j.WSS4JInInterceptor">
+				<constructor-arg>
+					<map>
+						<entry key="action" value="UsernameToken" />
+						<entry key="passwordType" value="PasswordText" />
+						<entry key="passwordCallbackRef">
+							<ref bean="esiteWebPasswordCallback" />
+						</entry>
+					</map>
+				</constructor-arg>
+			</bean>
+		</jaxws:inInterceptors>
+	</jaxws:endpoint>
+</beans>

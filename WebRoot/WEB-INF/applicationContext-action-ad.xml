@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="adAction" class="com.huiyee.interact.ad.action.AdAction" parent="abstractAction" scope="prototype">
+		<property name="adMgr" ref="adMgrImpl"></property>
+	</bean>
+	<bean id="adGGAction" class="com.huiyee.interact.ad.action.AdGGAction" parent="abstractAction" scope="prototype">
+		<property name="adGGMgr" ref="adGGMgrImpl"></property>
+	</bean>
+	<bean id="adWagGGAction" class="com.huiyee.interact.ad.action.AdWayGGShowAction" parent="abstractAction" scope="prototype">
+		<property name="adWagGGMgr" ref="adWagGGMgrImpl"></property>
+	</bean>
+	<bean id="adMediaAction" class="com.huiyee.interact.ad.action.AdMediaAction" parent="abstractAction" scope="prototype">
+		<property name="adMediaMgr" ref="adMediaMgrImpl"></property>
+	</bean>
+</beans>

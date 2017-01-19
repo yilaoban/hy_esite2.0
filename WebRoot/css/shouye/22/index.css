@@ -1,0 +1,60 @@
+/* CSS Document */
+
+/*微站首页20150228 微首页4*/
+/* box_swipe */
+.box_swipe{overflow:hidden;position:relative;}
+.box_swipe img{max-width: 100%;height: auto;width: auto\9;}
+.box_swipe ul{-webkit-padding-start:0px;}
+.box_swipe>ol{height:20px;position:relative;z-index:10;margin-top:-25px;text-align:right;padding-right:15px;background-color:rgba(0,0,0,0.3);}
+.box_swipe>ol>li{display:inline-block;margin:5px 0;width:8px;height:8px;background-color:#757575;border-radius:8px;}
+.box_swipe>ol>li.on{background-color:#ffffff;}
+
+.mainmenu_20150228_4{
+width: 100%;
+}
+
+.mainmenu_20150228_4 li {
+float: left;
+width: 33.3%;
+}
+.mainmenu_20150228_4 li a {
+display: block;
+margin: 5px;
+padding-top: 0px;
+padding: 5px;
+border: 1px solid #CCC;
+border-radius: 8px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+-o-border-radius: 5px;
+-webkit-box-shadow: 0px 1px 3px rgb(190, 190, 190);
+-moz-box-shadow: 0px 1px 3px rgb(190, 190, 190);
+-o-box-shadow: 0px 1px 3px rgb(190, 190, 190);
+box-shadow: 0px 1px 3px rgb(190, 190, 190);
+text-decoration:none;
+}
+.mainmenu_20150228_4 li .ChannelIcon {
+text-align: center;
+overflow: hidden;
+padding: 0px;
+margin: auto;
+border-radius: 5px 5px 0px 0px;
+-webkit-border-radius: 5px 5px 0px 0px;
+-moz-border-radius: 5px 5px 0px 0px;
+-o-border-radius: 5px 5px 0px 0px;
+}
+.mainmenu_20150228_4 li .ChannelName {
+text-align: center;
+height: 22px;
+line-height: 22px;
+border: 0px dashed red;
+padding: 5px 0 0 5px;
+font-size: .8em;
+vertical-align: middle;
+}
+.mainmenu_20150228_4 li .ChannelIcon img {
+width: 100%;
+}
+
+
+

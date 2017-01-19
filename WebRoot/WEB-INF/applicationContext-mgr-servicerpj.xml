@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="servicerPjMgrImpl" class="com.huiyee.interact.servicerpj.mgr.ServicerPjMgrImpl" parent="abstractMgr">
+		<property name="yuyueServicerDao" ref="yuyueServicerDaoImpl"></property>
+		<property name="yuyueServicePjDao" ref="yuyueServicerPjDaoImpl"></property>
+		<property name="servicerPjPageDao" ref="servicerPjPageDao"></property>
+		<property name="yuYueDao" ref="yuYueDaoImpl"></property>
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+
+	<bean id="servicerMgr" class="com.huiyee.interact.servicerpj.mgr.ServicerMgrImpl">
+		<property name="yuyueServicerDao" ref="yuyueServicerDaoImpl"></property>
+	</bean>
+
+	<bean id="servicerPjPageMgr" class="com.huiyee.interact.servicerpj.mgr.ServicerPjPageMgrImpl">
+		<property name="servicerPjPageDao" ref="servicerPjPageDao"></property>
+	</bean>
+	<bean id="servicerPjWdMgr" class="com.huiyee.interact.servicerpj.mgr.ServicerPjWdMgrImpl">
+		<property name="servicerPjWdDao" ref="servicerPjWdDao"></property>
+	</bean>
+	
+	
+</beans>

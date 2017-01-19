@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+
+	<bean id="settingUserAction" class="com.huiyee.interact.setting.action.SettingUserAction" parent="abstractAction" scope="prototype">
+		<property name="hyUserPrintMgr" ref="hyUserPrintMgr"></property>
+		<property name="hyUserXfDescMgr" ref="hyUserXfDescMgr"></property>
+		<property name="velocityEngine" ref="velocityEngine"></property>
+	</bean>
+
+	<bean id="settingDataAction" class="com.huiyee.interact.setting.action.SettingDataAction" parent="abstractAction" scope="prototype">
+		<property name="hyJfSolrServer" ref="hyJfSolrServer"></property>
+	</bean>
+
+	<bean id="settingDzAction" class="com.huiyee.interact.setting.action.SettingDzAction" parent="abstractAction" scope="prototype">
+		<property name="hyUserDzMgr" ref="hyUserDzMgr"></property>
+	</bean>
+
+	<bean id="settingTempalteAction" class="com.huiyee.interact.setting.action.SettingTemplateAction" parent="abstractAction" scope="prototype">
+		<property name="wxTemplateMgr" ref="wxTemplateMgr"></property>
+	</bean>
+
+	<bean id="userJfManagerAction" class="com.huiyee.interact.setting.action.UserJfManagerAction" parent="abstractAction" scope="prototype">
+		<property name="userJfMgr" ref="userJfMgrImpl"></property>
+		<property name="checkinMgr" ref="checkinMgr"></property>
+	</bean>
+
+	<bean id="hyUserLevelAction" class="com.huiyee.interact.setting.action.HyUserLevelAction" parent="abstractAction" scope="prototype">
+		<property name="hyUserLevelMgr" ref="hyUserLevelMgrImpl"></property>
+		<property name="userJfMgr" ref="userJfMgrImpl"></property>
+		<property name="hyUserLevelCodeMgr" ref="hyUserLevelCodeMgr"></property>
+	</bean>
+
+	<bean id="cashierAction" class="com.huiyee.interact.setting.action.CashierAction" parent="abstractAction" scope="prototype">
+		<property name="hyUserWayMgr" ref="hyUserWayMgr"></property>
+		<property name="hyUserXfDescMgr" ref="hyUserXfDescMgr"></property>
+	</bean>
+
+	<bean id="hyCashierAction" class="com.huiyee.interact.setting.action.HyCashierAction" parent="abstractAction" scope="prototype">
+		<property name="hyUserMgr" ref="hyUserMgr"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="hyUserWayMgr" ref="hyUserWayMgr"></property>
+		<property name="hyUserPrintMgr" ref="hyUserPrintMgr"></property>
+		<property name="velocityEngine" ref="velocityEngine"></property>
+		<property name="wkqMgr" ref="wkqMgrImpl"></property>
+	</bean>
+</beans>

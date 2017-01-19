@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="xcDao" class="com.huiyee.interact.xc.dao.XcDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="xcMcDao" class="com.huiyee.interact.xc.dao.XcMcDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="cacheTime" value="60000"></property>
+	</bean>
+	<bean id="xcLotteryDao" class="com.huiyee.interact.xc.dao.XcLotteryDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="commentDao" class="com.huiyee.interact.xc.dao.InteractCommentDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="signinDao" class="com.huiyee.interact.xc.dao.SigninDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="zhuanpanDao" class="com.huiyee.interact.xc.dao.ZhuanpanDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="xcSendRecordDao" class="com.huiyee.interact.xc.dao.XcSendRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="xcBigScreenDao" class="com.huiyee.interact.xc.dao.XcBigScreenDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="xcfeatureDaoImpl" class="com.huiyee.interact.xc.dao.XcfeatureDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

@@ -1,0 +1,20 @@
+/* CSS Document */
+
+
+
+.wdy_top2{ margin:0 auto;text-align:center;}
+#shouye_1022_5{display:block;min-width: 320px; margin:0 auto; max-width:640px; width: 100%;padding-bottom:5%;font-family:"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53", Arial, Helvetica, sans-serif; font-size: 62.5%; line-height: 1.231;}
+.banner { display: block; width: 100%; margin-bottom:5%; }
+.cont-box { display: block; width: 95%; margin-left:5%;}
+.cont-box img{max-width: 100%;height: auto;width: auto\9;border:none;border:none; padding:0px; margin:0px;}
+.cont-box p{ text-align:center; line-height:26px;}
+
+.telbtn01 { display: block; float: left; width: 28.3%; margin:0 5% 5% 0;background:#fff;}
+.telbtn02 { display: block; float: left; width: 28.3%; margin:0 5% 5% 0;background:#fff;}
+.telbtn03 { display: block; float: left; width: 28.3%; margin:0 5% 5% 0;background:#fff;}
+.telbtn04 { display: block; float: left; width: 28.3%; margin:0 5% 5% 0;background:#fff;}
+.telbtn05 { display: block; float: left; width: 28.3%; margin:0 5% 5% 0;background:#fff;}
+.telbtn06 { display: block; float: left; width: 28.3%; margin:0 5% 5% 0;background:#fff;}
+#wrap_shouye12 p {text-align:center; line-height:2; font-size:1rem; color:#333;}
+
+footer {float:left;display:block; width:100%; line-height:2.5; background:#333; color:#fff; font-size:1.4em; text-align:center;}

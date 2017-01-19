@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, form, fieldset, legend, input, textarea, p, blockquote, th, td {
+	margin: 0;
+	padding: 0;color: #444444;
+	
+}
+img {
+  border: 0;
+}
+
+li {
+  list-style-type: none;
+}
+a{ list-style:none; text-decoration:none;}
+.box{ width:100%; background:url(images/sq_bj_03.png) repeat center; height:100%;}
+.logo{ width:100%; height:80px; background:url(images/logo_bj.jpg) no-repeat center; margin:0 auto;}
+
+
+.wdy_top{ margin:0 auto;text-align:center;}
+.wsq_center{ width:95%; margin:0 auto;border-radius: 5px;background:#000;filter:alpha(opacity=15);-moz-opacity:0.5;opacity:0.5; margin-top:20px;}
+.bottom_kong{ width:100%; height:30px;}
+.bottom_kong3{ width:100%; height:20px;}
+.wsq_c_box{ width:90%; margin:0 auto;}
+.wsq_c_box_b{ background:#fff;width:100%; margin:0 auto;border-radius: 5px;}
+.wsq_c_top{margin:0 auto;text-align:center; padding-top:10px; width:95%;}
+.wsq_c_bt{background:url(images/bt_07.png) repeat center; height:70px; margin-top:30px; line-height:70px; text-indent:10px;font-size: 1.5em; font-family:Microsoft YaHei; color:#000; margin-top:10px;width:95%;margin:0 auto;}
+.dy_tatle{padding: 0 5px 0px 10px;color: #36393d;height: 22px;margin-top: 20px; font-size: 1.1em; font-family:Microsoft YaHei; font-weight:bold; text-indent:10px;}
+.tx{ width:90%; margin:0 auto; padding:10px 0 10px 0;}
+
+.cn{ width:90%; margin:0 auto; color:#858585; line-height:25px; margin-top:10px;}
+
+.tj_anniu{ width:40%; margin:0 auto; height:30px; line-height:30px;border-radius: 10px; text-align:center;background:url(images/dy_bj.jpg) repeat;border:1px #8a8a8a solid; margin-top:10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

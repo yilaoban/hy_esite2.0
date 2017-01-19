@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean class="com.huiyee.esite.action.AbstractAction" id="abstractAction" abstract="true" parent="hyabstractAction">
+		<property name="pageCompose" ref="pageCompose"></property>
+	</bean>
+	<bean class="com.huiyee.esite.action.HyAbstractAction" id="hyabstractAction" abstract="true">
+		<property name="hyUtilMgr" ref="hyUtilMgr"></property>
+	</bean>
+	<bean id="showPageAction"
+		class="com.huiyee.esite.action.ShowPageAction2"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="hyUserAction"
+		class="com.huiyee.esite.action.HyUserAction"
+		parent="abstractAction" scope="prototype">
+		<property name="hyUserMgr" ref="hyUserMgr"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	<bean id="baiDuAction"
+		class="com.huiyee.bdmap.action.BaiDuAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="oauthForLinkAction"
+		class="com.huiyee.esite.action.OauthForLinkAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="showlogin" class="com.huiyee.esite.action.ShowLoginAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="crmShowAction"
+		class="com.huiyee.esite.action.CrmShowAction" parent="abstractAction"
+		scope="prototype">
+		<property name="crmMgr" ref="crmMgr"></property>
+	</bean>
+	<bean id="wXOAuthAction"
+		class="com.huiyee.esite.action.WXOAuthAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="wXShowPageAction"
+		class="com.huiyee.esite.action.WXShowPageAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="cacheClearAction"
+		class="com.huiyee.esite.action.CacheClearAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="cache4WxTokenAction"
+		class="com.huiyee.esite.action.Cache4WxTokenAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="oauthAction" class="com.huiyee.esite.action.OauthAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="siteIndexAction"
+		class="com.huiyee.esite.action.SiteIndexAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="contentAction"
+		class="com.huiyee.esite.action.ContentAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="pageAction" class="com.huiyee.esite.action.PageAction"
+		parent="abstractAction" scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="featureAction"
+		class="com.huiyee.esite.action.FeatureAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="contentPictureAction"
+		class="com.huiyee.esite.action.ContentPictureAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="contentNewsAction"
+		class="com.huiyee.esite.action.ContentNewsAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="featureMgrAction"
+		class="com.huiyee.esite.action.FeatureMgrAction"
+		parent="abstractAction" scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="pageShowAction"
+		class="com.huiyee.esite.action.PageShowAction2" scope="prototype"
+		parent="abstractAction">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="dynamicAction"
+		class="com.huiyee.esite.action.DynamicAction" parent="abstractAction"
+		scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="contentVideoAction"
+		class="com.huiyee.esite.action.ContentVideoAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="siteCountAction"
+		class="com.huiyee.esite.action.SiteCountAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="siteVisitLogAction"
+		class="com.huiyee.esite.action.SiteVistLogAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="userUploadAction"
+		class="com.huiyee.esite.action.UserUploadAction" init-method="init"
+		parent="abstractAction" scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="musicUploadAction"
+		class="com.huiyee.esite.action.MusicUploadAction"
+		parent="abstractAction" scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="interactionAction"
+		class="com.huiyee.esite.action.InteractionAction"
+		parent="abstractAction" scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="unifyLoginAction"
+		class="com.huiyee.esite.action.UnifyLoginAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="loadPageIndexAction"
+		class="com.huiyee.esite.action.LoadPageIndexAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="loadPageAction"
+		class="com.huiyee.esite.action.LoadPageAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="logoutAction" class="com.huiyee.esite.action.LogoutAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="loadPageInteraction"
+		class="com.huiyee.esite.action.LoadPageInteractionAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="loadSiteVistLogAction"
+		class="com.huiyee.esite.action.LoadSiteVistLogAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="loadPageSiteCountAction"
+		class="com.huiyee.esite.action.LoadPageSiteCountAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="forwardAction"
+		class="com.huiyee.esite.action.ForwardAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="userOauthForLinkAction"
+		class="com.huiyee.esite.action.UserOauthForLinkAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="userOauthAction"
+		class="com.huiyee.esite.action.UserOauthAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="sinaPicUploadAction"
+		class="com.huiyee.esite.action.SinaPicUploadAction"
+		parent="abstractAction" scope="prototype" init-method="init">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="siteGroupIndexAction"
+		class="com.huiyee.esite.action.SiteGroupIndexAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="userSinaShareAction"
+		class="com.huiyee.esite.action.UserSinaShareAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="hdReportAction"
+		class="com.huiyee.esite.action.HdReportAction" parent="abstractAction"
+		scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<bean id="siteVistReportAction"
+		class="com.huiyee.esite.action.SiteVistReportAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="startPageAction"
+		class="com.huiyee.esite.action.StartPageAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="createActivityAction"
+		class="com.huiyee.esite.action.CreateActivityAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="activityListAction"
+		class="com.huiyee.esite.action.ActivityListAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="updateActivityAction"
+		class="com.huiyee.esite.action.UpdateActivityAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="delActivityAction"
+		class="com.huiyee.esite.action.DelActivityAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="activityVisitReportAction"
+		class="com.huiyee.esite.action.ActivityVisitReportAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="activityParticipateReportAction"
+		class="com.huiyee.esite.action.ActivityParticipateReportAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="activityParticipateSuccessAction"
+		class="com.huiyee.esite.action.ActivityParticipateSuccessAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="nonAnonVisitReportAction"
+		class="com.huiyee.esite.action.NonAnonVisitReportAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="activityParticipateDetailsAction"
+		class="com.huiyee.esite.action.ActivityParticipateDetailsAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="activityParticipateSuccessDetailsAction"
+		class="com.huiyee.esite.action.ActivityParticipateSuccessDetailsAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="activityParticipateFailDetailsAction"
+		class="com.huiyee.esite.action.ActivityParticipateFailDetailsAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="addActivityLogAction"
+		class="com.huiyee.esite.action.AddActivityLogAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<!-- 页面配置 -->
+	<bean id="pageConfigAction"
+		class="com.huiyee.esite.action.PageConfigAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<!-- 区域分析 -->
+	<bean id="rgAnalysisAction"
+		class="com.huiyee.esite.action.RgAnalysisAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="hdDetailAction"
+		class="com.huiyee.esite.action.HdDetailAction" parent="abstractAction"
+		scope="prototype">
+		<property name="featureCompose" ref="featureCompose"></property>
+	</bean>
+	<!-- 访问用户报告 -->
+	<bean id="customVisitReportAction"
+		class="com.huiyee.esite.action.CustomVisitReportAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="fansAnalysisAction"
+		class="com.huiyee.esite.action.FansAnalysisAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="danymicUserReportAction"
+		class="com.huiyee.esite.action.DanymicUserReportAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="visitRecordDetail"
+		class="com.huiyee.esite.action.VisitRecordDetail"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="sinaForwardAction"
+		class="com.huiyee.esite.action.UserSinaForwardAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="interactModelAction"
+		class="com.huiyee.esite.action.InteractModelAction"
+		parent="abstractAction" scope="prototype" init-method="init">
+	</bean>
+	<bean id="sinaCommentAction"
+		class="com.huiyee.esite.action.UserSinaCommentAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="hdAnalysisAction"
+		class="com.huiyee.esite.action.HdAnalysisAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="fansHdAnalysisAction"
+		class="com.huiyee.esite.action.FansHdAnalysisAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="templateManagerAction"
+		class="com.huiyee.esite.action.TemplateManagerAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="hdAreaAction" class="com.huiyee.esite.action.HdAreaAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="featureFriendsShipsAction"
+		class="com.huiyee.esite.action.FeatureFriendsShipsAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="zanDetailAction"
+		class="com.huiyee.esite.action.ZanDetailAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="cardAction" class="com.huiyee.esite.action.CardAction"
+		parent="abstractAction" scope="prototype">
+		<property name="velocityEngine" ref="velocityEngine"></property>
+	</bean>
+	<bean id="pageEditAction"
+		class="com.huiyee.esite.action.PageEditAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="copyPageAction"
+		class="com.huiyee.esite.action.CopyPageAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="copySuitAction"
+		class="com.huiyee.esite.action.CopySuitAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="templateSiteManagerAction"
+		class="com.huiyee.esite.action.TemplateSiteManagerAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="publishAction"
+		class="com.huiyee.esite.action.PublishAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="materialManagerAction"
+		class="com.huiyee.esite.action.MaterialManagerAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="newDetails"
+		class="com.huiyee.esite.action.NewDetailsAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="imgFlashAction"
+		class="com.huiyee.esite.action.ImgFlashAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="reportAllAction"
+		class="com.huiyee.esite.action.ReportAllAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="personalTailorAction"
+		class="com.huiyee.esite.action.PersonalTailorAction"
+		parent="interactModelAction" scope="prototype">
+	</bean>
+	<bean id="editUpLoadFileAction"
+		class="com.huiyee.esite.action.EditUpLoadFileAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="configInteractAction"
+		class="com.huiyee.esite.action.InteractConfigAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="contentFormAction"
+		class="com.huiyee.esite.action.ContentFormAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="dataIndexAction"
+		class="com.huiyee.esite.action.DataIndexAction"
+		parent="abstractAction" scope="prototype">
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+	</bean>
+	<bean id="dataUserAction"
+		class="com.huiyee.esite.action.DataUserAction"
+		parent="abstractAction" scope="prototype">
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+	</bean>
+	<bean id="dataSiteAction"
+		class="com.huiyee.esite.action.DataSiteAction"
+		parent="abstractAction" scope="prototype">
+		<property name="pageCompose" ref="pageCompose"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+	</bean>
+	<bean id="dataPageAction"
+		class="com.huiyee.esite.action.DataPageAction" parent="abstractAction"
+		scope="prototype">
+		<property name="pageCompose" ref="pageCompose"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+	</bean>
+	<bean id="dataShareAction"
+		class="com.huiyee.esite.action.DataShareAction" parent="abstractAction"
+		scope="prototype">
+		<property name="pageCompose" ref="pageCompose"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+	</bean>
+	<bean id="areaAction" class="com.huiyee.esite.action.AreaAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="editGPAction" class="com.huiyee.esite.action.EditGPAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="communityManagerAction" class="com.huiyee.esite.action.CommunityManagerAction" parent="abstractBBSAction" scope="prototype">
+		<property name="pageCompose" ref="pageCompose"></property>
+	</bean>
+	<bean id="communityTopicManagerAction" class="com.huiyee.esite.action.CommunityTopicManagerAction" parent="abstractBBSAction" scope="prototype">
+		<property name="bbsTopicMgr" ref="bbsUTopicMgrImpl"></property>
+		<property name="bbsLikeMgr" ref="bbsLikeMgr"></property>
+	</bean>
+	<bean id="communityUserManagerAction" class="com.huiyee.esite.action.CommunityUserManagerAction" parent="abstractBBSAction" scope="prototype">
+		<property name="communityUserMgr" ref="communityUserMgrImpl"></property>
+	</bean>
+	<bean id="editFileAction" class="com.huiyee.esite.action.EditFileAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="zujianAction" class="com.huiyee.esite.action.ZujianAction"
+		parent="abstractAction" scope="prototype"></bean>
+	<bean id="quanJingAction" class="com.huiyee.esite.action.QuanJingAction"
+		parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="marketingActivityAction" class="com.huiyee.esite.action.MarketingActivityAction"
+		parent="abstractAction" scope="prototype">
+		<property name="marketActivityMgr" ref="marketActivityMgrImpl"></property>
+		<property name="wxHongbaoMgr" ref="wxHongbaoMgrImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	<bean id="pageShowMaterialAction" class="com.huiyee.esite.action.PageShowMaterialAction" parent="abstractAction" scope="prototype">
+		<property name="pageShowMaterialManager" ref="pageShowMaterialManagerImpl"></property>
+		<property name="siteManager" ref="siteManagerImpl"></property>
+	</bean>
+	<bean id="baseAppAction" class="com.huiyee.esite.action.BaseAppAction" parent="abstractAction" scope="prototype">
+		<property name="baseAppMgr" ref="baseAppMgrImpl"></property>
+	</bean>
+	<bean id="contentReportAction" class="com.huiyee.esite.action.ContentRecordAction" parent="abstractAction" scope="prototype">
+		<property name="contentRecordMgr" ref="contentRecordMgrImpl"></property>
+	</bean>
+	<bean id="microRecordAction" class="com.huiyee.esite.action.MicroRecordAction" parent="abstractAction" scope="prototype">
+		<property name="contentRecordMgr" ref="contentRecordMgrImpl"></property>
+	</bean>
+	<bean id="mbManagerAction" class="com.huiyee.esite.action.MbManagerAction" parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="siteSourceAction" class="com.huiyee.esite.action.SiteSourceAction" parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="ownerSourceAction" class="com.huiyee.esite.action.OwnerSourceAction" parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="hyDrawAction" class="com.huiyee.esite.action.HyDrawAction" parent="abstractAction" scope="prototype"></bean>
+	
+	<bean id="wxMoveToGroupAction" class="com.huiyee.esite.action.WxMoveToGroupAction" parent="interactModelAction" scope="prototype">
+		<property name="moveToGroupMgr" ref="moveToGroupMgrImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	
+	<bean id="jfDesignAction" class="com.huiyee.esite.action.JfDesignAction" parent="abstractAction" scope="prototype">
+		<property name="jfDesignMgr" ref="jfDesignMgrImpl"></property>
+		<property name="checkinMgr" ref="checkinMgr"></property>
+	</bean>
+	<bean id="jfUserAction" class="com.huiyee.esite.action.JfUserAction" parent="abstractAction" scope="prototype">
+		<property name="jfUserMgr" ref="jfUserMgrImpl"></property>
+		<property name="hyJfSolrServer" ref="hyJfSolrServer"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	
+	<bean id="rmbRuleAction" class="com.huiyee.esite.action.RmbRuleAction" parent="abstractAction" scope="prototype">
+		<property name="rmbRuleMgr" ref="rmbRuleMgrImpl"></property>
+		<property name="userJfMgr" ref="userJfMgrImpl"></property>
+	</bean>
+	<bean id="contentMoveAction"
+		class="com.huiyee.esite.action.ContentMoveAction" parent="abstractAction"
+		scope="prototype">
+		<property name="contentManager" ref="contentManagerImpl"></property>
+	</bean>
+	<bean id="groupAction" class="com.huiyee.esite.action.GroupAction" parent="abstractAction" scope="prototype">
+		<property name="wxUserMgr" ref="wxUserMgrImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="wxGroupMgr" ref="moveToGroupMgrImpl"></property>
+	</bean>
+	<bean id="interactRecordAction" class="com.huiyee.esite.action.InteractRecordAction" parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="marketingEbAction" class="com.huiyee.esite.action.MarketingEbAction" parent="abstractAction" scope="prototype">
+		<property name="marketingEbMgr" ref="marketingEbMgrImpl"></property>
+		<property name="bbsMgr" ref="bbsMgrImpl"></property>
+	</bean>
+	<bean id="weiKaQuanSetAction" class="com.huiyee.esite.action.WeiKaQuanSetAction" parent="abstractAction" scope="prototype">
+		<property name="wkqMgr" ref="wkqMgrImpl"></property>
+		<property name="wxUserMgr" ref="wxUserMgrImpl"></property>
+		<property name="siteManager" ref="siteManagerImpl"></property>
+	</bean>
+	
+	<bean id="marketingOrderAction" class="com.huiyee.esite.action.MarketingOrderAction" parent="abstractAction" scope="prototype">
+		<property name="marketingEbMgr" ref="marketingEbMgrImpl"></property>
+	</bean>
+	<bean id="userTagAction" class="com.huiyee.esite.action.UserTagAction" parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="contentCategoryAction" class="com.huiyee.esite.action.ContentCategoryAction" parent="abstractAction" scope="prototype"></bean>
+	<bean id="wxGzEventAction" class="com.huiyee.esite.action.WxGzEventAction" parent="abstractAction" scope="prototype">
+		<property name="gzEventMgr" ref="gzEventMgr"></property>
+	</bean>
+	<bean id="appSiteAction" class="com.huiyee.esite.action.AppSiteAction" parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="appAction" class="com.huiyee.esite.action.AppAction" parent="abstractAction" scope="prototype">
+	</bean>
+	<bean id="userVipAction" class="com.huiyee.esite.action.UserVipAction" parent="abstractAction" scope="prototype">
+		<property name="hyUserMgr" ref="hyUserMgr"></property>
+		<property name="jfDesignMgr" ref="jfDesignMgrImpl"></property>
+	</bean>
+	<bean id="grCenterAction" class="com.huiyee.esite.action.GrCenterAction" parent="abstractAction" scope="prototype">
+		<property name="grCenterMgr" ref="grCenterMgrImpl"></property>
+	</bean>
+	<bean id="ownerBalanceAction" class="com.huiyee.esite.action.OwnerBalanceAction" parent="abstractAction" scope="prototype">
+		<property name="ownerBalanceMgr" ref="ownerBalanceMgrImpl"></property>
+	</bean>
+</beans>

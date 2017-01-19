@@ -1,0 +1,20 @@
+/* CSS Document */
+.Hhrbanner{ width:100%; float:left;}
+.Hhrbanner img{max-width: 100%;height: auto;width: auto\9;}
+.Hhrbox{width:100%; float:left;font-family: "Microsoft Yahei", Arial; font-size:14px; top:150px;}
+.Hhrinput{ width:90%; float:left; height:30px; line-height:30px; border:1px solid #ddd; margin:0 0 0 10px; padding:0;}
+.Hhrbox li{ width:100%; float:left; margin-top:15px;line-height:30px;}
+.Hhrbox ul{ width:80%; margin:0 auto;}
+.Hhrbox li span{ width:25%; float:left; text-align:right; line-height:30px;}
+.Hhrbox li font{line-height:35px;margin-left:4px;}
+.Hhrbutton{ width:40%; float:left;background:#0099ff; line-height:30px; color:#fff; margin-top:30px;border-radius:5px; border:none; margin-left:30%;font-family: "Microsoft Yahei", Arial; font-size:14px;}
+
+.Hhrcontrol-form {margin-bottom:8px;}
+.Hhrcontrol-form .control-label {width:28%;float:left;text-align:right;height:30px;line-height:30px;font-weight:bold;color:#333;margin:0;}
+.Hhrcontrol-form .controls {width:65%;margin-left:28%;}
+.Hhrcontrol-form .controls label {display:block;line-height:30px;font-weight:normal;color:#333;margin:0;}
+.Hhrcontrol-form input[type="text"],.Hhrcontrol-form input[type="number"],.Hhrcontrol-form input[type="email"], .Hhrcontrol-form input[type="date"] {height: 30px;border: 1px #ccc solid;width:100%;padding:0;margin:0;}
+.Hhrcontrol-form select {height: 34px;border: 1px #ccc solid;width:101%;}
+.Hhrcontrol-form textarea {border: 1px #ccc solid;width:100%;padding:0;margin:0;}
+.Hhrcontrol-form input[type="radio"], .Hhrcontrol-form input[type="checkbox"] {margin-right:10px;}
+.Hhrcontrol-form input[type="submit"], .Hhrcontrol-form input[type="button"] {background: #e3e3e3;border: 1px solid #ccc;padding: 5px 10px 3px;color: #333;border-radius: 3px;cursor: pointer;font-size:14px;font-weight:bold;}

@@ -1,0 +1,24 @@
+/* CSS Document */
+
+
+#wrap_shouye5 {display:block;min-width: 320px; margin:0 auto; max-width:640px; width: 100%;overflow: hidden;-webkit-box-sizing: border-box; -moz-box-sizing:border-box;  font-family:"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53", Arial, Helvetica, sans-serif; font-size: 62.5%; line-height: 1.231;}
+.banner{display:block; with:100%; max-width:640px;}
+.banner img{display:block; with:100%;}
+.telnav {display:block; position:relative; width:100%; margin:3.5% 0 1%;
+  }
+.telnav li{display:block;float:left; position:relative;  color:#000; background:#fff; width:45.6%; margin:0% 0 2.5% 3.1%; border-radius:10px; text-align:center;
+}
+.telnav li span{display:block;float:left;  position:relative; width:100%;font-size:1.6em; text-align:center; padding:1.5% 0% 2% 0%; }
+.telnav li p{display:block;float:left;  position:relative; color:#a0a0a0; width:86%; min-height:32px;font-size:1.3em; text-align:center; padding:0% 0% 0% 7%; }
+.icon_w{display:block;width:100px; height:100px; border:1px solid #afafaf;border-radius:100px;margin:7% auto 2%;overflow:hidden;}
+.icon {display:block;width:96px; height:96px;/*padding:5% 0%; */  padding:0%;border-radius:100px;border:2px solid #fff;background:#f2f9f8; overflow:hidden; }
+.icon img {display:block; width:100%; min-height:100%; vertical-align:middle;border-radius:100px; overflow:hidden;}
+
+.banner{
+	position: absolute;
+}
+.clr{
+	position: absolute;
+	top:133px;
+}
+

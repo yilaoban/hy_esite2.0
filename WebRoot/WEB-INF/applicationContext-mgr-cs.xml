@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="csMgr" class="com.huiyee.interact.cs.mgr.CsMgr">
+		<property name="csDao" ref="csDao"></property>
+	</bean>
+	
+	<bean id="csRecordMgr" class="com.huiyee.interact.cs.mgr.CsRecordMgr">
+		<property name="csRecordDao" ref="csRecordDao"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="sinaUserDao" ref="sinaUserDaoImpl"></property>
+	</bean>
+</beans>

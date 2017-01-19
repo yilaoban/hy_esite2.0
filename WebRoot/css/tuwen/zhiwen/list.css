@@ -1,0 +1,29 @@
+/* CSS Document */
+
+
+
+.dh_141217_box_3{ width:100%; margin:0 auto;}
+.zhiwen_141217.ANI .elem2 {
+-webkit-animation: s13-3 1s infinite;
+-webkit-animation-delay: 1s;
+-webkit-animation-name: "bounceIn_zw";
+}
+@-webkit-keyframes bounceIn_zw {
+   from { top:60%;opacity:1 ;}    
+   to {top:25%;opacity:0;}
+}
+
+.zhiwen_141217 {width:100%; height:100%; margin:0 auto;}
+.zhiwen_141217 .elem4 { position: absolute; height: 100%;}
+.zhiwen_141217 .elem3 { z-index: 1; width:70%; height:40%;background:url(/images/tuwen/zhiwen/scene13-1.png) no-repeat; background-size:100% 100%; position:absolute; top:30%; left:15%;}
+.zhiwen_141217 .elem3 b { display: block; width:70%; height: 60%; background: url(/images/tuwen/zhiwen/zhiwen.png) no-repeat;background-size:100% 100%;position:absolute; top:20%; left:15%;}
+.zhiwen_141217 .elem2 {  z-index: 2; -webkit-filter: blur(4px); width: 80%;overflow: visible;position:absolute; top:30%; height:40%; left:10%;}
+.zhiwen_141217 .elem2 sub { display: block; height: 10px; margin: 0 85px;}
+.zhiwen_141217 .elem2 img{ float:left; margin:0; width:100%;}
+.zhiwen_141217 .elem5 { z-index: 1; width:87%;line-height:30px; color: #fff; font-size:1.5em; text-align: center; float:left;font-family: "Microsoft Yahei", Arial; padding:20px; margin-top:20px;}
+.zhiwen_141217 .elem6 { z-index: 1; width:100%;color: #fff; font-size:1.0em; text-align: center; float:left;font-family: "Microsoft Yahei", Arial; }
+
+
+.ANI * {
+-webkit-animation-fill-mode: both !important;
+}

@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/*公共头*/
+.header_logo img,.header_right li img,.nav_b_left img,.nav_b_right img,.hm_content_1 li img,.cx_m3_gqmt img,.cx_m3_cspz img,.cx_m3_hxmd img,.cx_m3_cx img,.hm_header2_left img,.hm_header2_right img,.s5_gqmt_box img,.ln_moofun_img img,.ln_moofun_box img,.czjj_box li img,.yx_axc_logo img,.yx_axc_menu img,.hm_content img{max-width: 100%;height: auto;width: auto\9;}
+.hm_container{ width:100%; margin:0 auto;padding-top:49px;}
+.hm_header{ width:100%;position:fixed; top:0;height:49px; background:url(http://img.huiyee.com/res/hm/images/header_line.png) no-repeat bottom center #2d364e;}
+
+.hm_header_i{ width:100%;position:fixed; top:0;height:49px; background:url(http://img.huiyee.com/res/hm/images/header_line.png) no-repeat bottom center #2d364e; z-index:88;}
+
+.header_logo{ width:30%; float:left; margin:20px 0 0 10px;}
+.header_right{ width:65%; float:left;}
+.header_right ul{ width:100%; float:right; list-style:none;}
+.header_right li{ width:30%; float:right; margin:20px 0 0 0;}
+
+/*二级栏目头*/
+.hm_header2{ width:100%; height:45px;background: url(http://img.huiyee.com/res/hm/images/header_line.png) no-repeat bottom center #181c26;}
+.hm_header2_left{ width:7%; float:left; margin:7px 0 0 15px;}
+.hm_header2_center{ width:65%; float:left; color:#fff; font-size:.9em;font-family: "Microsoft Yahei", Arial; line-height:40px; text-align:center;}
+.hm_header2_right{ width:20%; float:right; margin:13px 10px 0 0;}
+.hm_header2_center2{ width:80%; float:left; color:#fff; font-size:.9em;font-family: "Microsoft Yahei", Arial; line-height:40px; text-align:center;}
+
+
+/*底部导航*/
+.nav_bottom{ width:100%; position:fixed; bottom:0; height:50px;background:url(http://img.huiyee.com/res/hm/images/header_line.png) no-repeat top center #2d364e;  z-index: 2;}
+.nav_b_left{ float:left; margin:10px 0 0 20px;}
+.nav_b_right{ float:right;margin:13px 20px 0 0;}
+.nav_bottom1{ width:100%; bottom:0; height:50px;background:url(http://img.huiyee.com/res/hm/images/header_line.png) no-repeat top center #2d364e;  z-index: 2;float: left;}
+
+
+/*引导页轮换*/
+.hm_content{ width:100%; float:left;}
+.hm_content1{ width:100%; float:left; position:fixed;}
+/* box_swipe */
+.box_swipe{overflow:hidden;position:relative;}
+.box_swipe img{max-width: 100%;height: auto;width: auto\9;}
+.box_swipe ul{-webkit-padding-start:0px;}
+.box_swipe>ol{height:20px;position:absolute;z-index:10; top:70%; left:45%;}
+.box_swipe>ol>li{display:inline-block;margin:5px 0;width:8px;height:8px;background-color:#757575;border-radius:8px;}
+.box_swipe>ol>li.on{background-color:#ffffff;}
+
+
+/*首页*/
+.hm_content_1{ width:90%; margin:0 auto;}
+.hm_content_1 ul{ width:100%; float:left; list-style:none;}
+.hm_content_1 li{ width:35%; float:left; margin:20px 0 0 33px;}
+
+
+/*车型m3*/
+.cx_m3_box{width:300px; height:402px; margin:0 auto;background: url(http://img.huiyee.com/res/hm/images/cx_03.png) no-repeat;
+	background-size: cover;
+	background-position: 50% 50%;
+	margin: 0 auto;; margin-top:5%;}
+.cx_m3_gqmt{width: 13%;
+position: relative;
+top: 26%;
+left: 56%;}
+.cx_m3_cspz{width: 13%;
+position: relative;
+top: 33%;
+left: 13%;}
+.cx_m3_hxmd{width: 13%;
+position: relative;
+top: 41.5%;
+left: 56.5%;}
+.cx_m3_cx{  width: 30%;
+  position: relative;
+  top: 6%;
+  left: 33%;}
+
+#HBox1, #HBox2, #HBox3, #HBox4, #HBox5, #HBox6 { width:100%; margin:0 auto;display:none;}
+#HBox1 dl, #HBox2 dl, #HBox3 dl, #HBox4 dl, #HBox5 dl, #HBox6 dl { width:100%; float:left; list-style:none;border-radius: 10px; background:#fb004d; }
+#HBox1 dd, #HBox2 dd, #HBox3 dd, #HBox4 dd, #HBox5 dd, #HBox6 dd { width:100%; float:left; line-height:45px; text-align:center; font-size:1em;font-family: "Microsoft Yahei", Arial; border-bottom:1px #fff solid;}
+#HBox1 dd a, #HBox2 dd a, #HBox3 dd a, #HBox4 dd a, #HBox5 dd a, #HBox6 dd a{ float:left;width:100%; color:#fff; text-decoration:none;}
+#HBox1 dd a:link, #HBox2 dd a:link, #HBox3 dd a:link, #HBox4 dd a:link, #HBox5 dd a:link, #HBox6 dd a:link {float:left; width:100%; color:#fff; text-decoration:none;border-radius: 10px;}
+#HBox1 dd a:hover, #HBox2 dd a:hover, #HBox3 dd a:hover, #HBox4 dd a:hover, #HBox5 dd a:hover, #HBox6 dd a:hover { background:url(http://img.huiyee.com/res/hm/images/tc_bj.png) repeat-x center; width:100%; float:left;}
+
+
+
+
+#mall-list{border-radius: 10px;display:none;position:absolute;top:45px;left:50px;right:30px;background:#838487;opacity:0.8; z-index:1;}
+#mall-list li{ line-height:35px; text-align:center;font-family: "Microsoft Yahei", Arial; font-size:1em; border-bottom:1px #535354 solid;}
+#mall-list li span{ color:#ff0000}
+#mall-list li a{ text-decoration:none; color:#000;}
+.sh_bj{width: 20%;
+position: absolute;
+top: -10px;
+right: 0px;}
+.sh_bj img{max-width: 100%;height: auto;width: auto\9;opacity: 0.7;}
+
+/*s5高清美图*/
+.s5_gqmt_box{ width:95%; margin-top:5%; position:absolute; z-index:0; margin-left:5%;}
+.s5_gqmt_center{ width:95%;margin-top:5%; position:absolute; z-index:1; margin-left:5%;}
+.s5_gqmt_c_1{width: 18%;
+  position: relative;
+  left: 15%;
+  margin-top: 8%;}
+.s5_gqmt_c_2{width: 23%;
+  position: relative;
+  left: 38%;
+  margin-top: -20%;}
+.s5_gqmt_c_3{  width: 23%;
+  position: relative;
+  left: 65%;
+  margin-top: -18%;}
+.s5_gqmt_c_4{width: 18%;
+  position: relative;}
+.s5_gqmt_c_5{  width: 23%;
+  position: relative;
+  left: 22%;
+  margin-top: -23%;}
+.s5_gqmt_c_6{width: 23%;
+  position: relative;
+  left: 49%;
+  margin-top: -21%;}
+  
+.s5_gqmt_c_7{width: 23%;
+  position: relative;
+  left: 75%;
+  margin-top: -21%;}
+.s5_gqmt_c_8{width: 23%;
+  position: relative;
+  left: 10%;
+  margin-top: 0%;}
+.s5_gqmt_c_cx_menu_s5{width: 26%;
+  position: relative;
+  left: 36%;
+  margin-top: -25%;}
+.s5_gqmt_c_9{width: 23%;
+  position: relative;
+  left: 65%;
+  margin-top: -24%;}
+  
+.s5_gqmt_c_10{width: 16%;
+  position: relative;
+  left: 2%;
+  margin-top: 0;}
+  
+.s5_gqmt_c_11{width: 23%;
+  position: relative;
+  left: 22%;
+  margin-top: -18%;}
+  
+.s5_gqmt_c_12{width: 23%;
+  position: relative;
+  left: 50%;
+  margin-top: -22%;}
+.s5_gqmt_c_13{width: 23%;
+  position: relative;
+  left: 76%;
+  margin-top: -22%;}
+  
+.s5_gqmt_c_14{width: 18%;
+  position: relative;
+  left: 12%;
+  margin-top: -2%;}
+  
+.s5_gqmt_c_15{width: 18%;
+  position: relative;
+  left: 40%;
+  margin-top: -15%;}
+.s5_gqmt_c_16{width: 18%;
+  position: relative;
+  left: 67%;
+  margin-top: -18%;}
+
+a.clickbox, a.clickbox:visited, a.clickbox:hover { text-decoration:none; }
+a.clickbox img { display:block; border:0;max-width: 100%;height: auto;width: auto\9; margin:0 auto; }
+a.clickbox b { display:block; }
+a.clickbox {width:100%; }
+a.clickbox .lightbox { display:none; position:absolute; left:0; width:100%; height:100%; top:0; cursor:default; z-index:500; }
+a.clickbox .light { position:fixed; left:0; top:0; background:#000; width:100%; height:100%; opacity:0.75;}
+a.clickbox .box { position:absolute; left:0; width:100%; text-align:center;top:0; }
+/* trigger for IE6 */
+.clear { clear:left; }
+a.clickbox i { display:block; width:16px; height:16px; position:absolute; right:-100px; top:0; z-index:500; }
+a.clickbox .lightbox i { right:10px; top:10px; background:url(http://img.huiyee.com/res/hm/images/s5_gqmt/close.gif); }
+#close { display:block; position:absolute; width:16px; height:16px; right:10px; top:20px; z-index:1000; background:url(trans.gif); cursor:pointer; }
+
+
+
+
+/*海马理念-moofun*/
+.ln_moofun{ width:90%; margin:0 auto;}
+.ln_moofun_img{ width:100%; float:left; margin-top:20px;}
+.ln_moofun_box{ width:100%; float:left;font-family: "Microsoft Yahei", Arial;font-size:.8em; line-height:22px; color:#fff; margin-top:20px;}
+.ln_moofun_box img{ margin:10px 0;}
+.ln_moofun_box span{ font-weight:bold;}
+
+
+/*车展聚焦-热点信息*/
+.czjj_box{ width:90%; margin:0 auto;}
+.czjj_box ul{ width:100%; float:left; list-style:none;}
+.czjj_box li{ width:100%; float:left; margin-top:20px; background:url(http://img.huiyee.com/res/hm/images/xinwen_line.png) no-repeat bottom center;}
+.czjj_box li img{ margin:0 auto; width:320px; height:120px; overflow:hidden; text-align:center;}
+.czjj_box li span{ width:90%; float:left;font-family: "Microsoft Yahei", Arial;font-size:.9em; line-height:22px; color:#fff;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.czjj_box li p{ width:100%; float:left;font-family: "Microsoft Yahei", Arial;font-size:.7em; line-height:22px; color:#fff;}
+.czjj_box li font{ width:100%; float:left; text-align:right;font-family: "Microsoft Yahei", Arial;font-size:.8em;color:#fff;line-height:30px;}
+.czjj_box li span a{ color:#fff; text-decoration:none;}
+
+/*车展聚焦-美图瞬间*/
+.jj_mtsj_title{ width:100%; float:left;font-family: "Microsoft Yahei", Arial;font-size:.9em; line-height:22px; color:#fff; padding:10px 0;}
+.jj_mtsj_title a{color:#fff; text-decoration:none;}
+
+/*互动游戏-海马爱消除*/
+.yx_axc{ width:90%; margin:0 auto;}
+.yx_axc_logo{ width:80%; margin:0 auto; margin-top:15%;}
+.yx_axc_menu{width:30%; margin:0 auto;margin-top:15%;}
+
+
+/*预约试驾*/
+.yuyue_list{ width:70%; margin:0 auto;}
+.yuyue_list span{ width:100%; float:left;font-family: "Microsoft Yahei", Arial;font-size:1em; line-height:22px; color:#fff; text-align:center; padding:20px 0 10px 0;}
+.yuyue_l_input{ width:100%; float:left;border-radius: 10px; background:#a1a2a4; border:none; height:40px; line-height:30px; text-indent:20px; color:#fff;font-size:.8em;font-family: "Microsoft Yahei", Arial; margin-top:10px;}
+.yuyue_l_select{ width:100%; float:left;border-radius: 10px; background:#a1a2a4; border:none; height:40px; line-height:30px; text-indent:10px; color:#000;font-size:.8em;font-family: "Microsoft Yahei", Arial; margin-top:10px;}
+.yuyue_tijiao{ width:70%; margin:0 auto;}
+
+
+
+
+#pg_desc1{ width:75%; float:left;}
+
+.pg_content{
+    width: 78%; float:right;}
+#overlay{
+	position:fixed;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	background: #000;
+	display:none;
+	opacity:0.9;	
+}
+#thumbContainter{
+	width:21%; float:left;
+
+	border-right:1px solid #f0f0f0;
+
+}
+#thumbScroller{
+	position:relative;
+	height:auto;
+	overflow:hidden;
+	left:-180px;
+}
+#thumbScroller .container{
+	position:relative;
+	top:0;
+	float:left;
+}
+#thumbScroller .content{
+	clear:both;
+	float:left;
+}
+#thumbScroller .content div{
+	padding:1px 0 0 0;
+	height:100%;
+	float:left;
+}
+#thumbScroller .content a{
+	outline:none;
+}
+#thumbScroller img{
+	max-width: 100%;height: auto;width: auto\9;
+	
+}
+img.pg_thumb,
+img#pg_large,
+.pg_title h1,
+.pg_content .pg_description div
+{
+	position:absolute;
+}
+.pg_content .pg_description div{
+	display:none;
+}
+.pg_title h1{
+	display:none;
+	left:35%;
+	top:-50px;/*25*/
+	background:transparent url(http://img.huiyee.com/res/hm/bg.png) repeat top left;
+	padding:10px 20px;
+	color:#fff;
+	font-weight:bold;
+}
+img.pg_thumb{
+	display:none;
+}
+img#pg_large{
+	z-index:1;
+}
+img.pg_thumb,
+img#pg_large{
+	padding:10px 0 0 10px;
+	background:transparent url(http://img.huiyee.com/res/hm/bg.png) repeat top left;
+	cursor:pointer;max-width: 100%;height: auto;width: auto\9; width:70%;
+}
+#pg_preview{ width: 100%;
+float: left;
+height: 100%;
+overflow: auto;
+position: absolute;}
+.pg_description h2{
+	color:#fff;
+	font-size:1.1em;font-family: "Microsoft Yahei", Arial;line-height:22px; font-weight:bold;
+
+}
+.pg_description p{
+	font-size:1em;
+	width:100%;
+	color:#fff;font-family: "Microsoft Yahei", Arial; line-height:22px;
+}
+#pg_desc1 div{
+
+}
+#pg_desc2 div{
+	top:560px;
+	left:295px;
+}
+.pg_thumb img{max-width: 100%;height: auto;width: auto\9;}
+
+.xw_xq{ width:95%; margin:0 auto;}
+.xw_xq p img{max-width: 100%;height: auto;width: auto\9; margin-bottom:10px;}
+.xw_xq h1{ width:90%; float:left;color:#fff;font-family: "Microsoft Yahei", Arial;line-height:30px;font-size:1em;overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap; margin-top:10px;}
+.xw_xq p { width:100%; float:left;color:#fff;font-family: "Microsoft Yahei", Arial;line-height:24px;font-size:.8em; margin-top:20px;}
+.xw_xq font{ width:100%; float:left; text-align:right;color:#fff;font-family: "Microsoft Yahei", Arial;font-size:.9em;line-height:22px;}

@@ -1,0 +1,3 @@
+<div  hydata="$pcbid" hyct="Y" status="0" class="hyzj $!ctname" style='$!hyct;'>
+	<img id="img_$pcbid" width="100%" height="100%" src="$img">
+</div>

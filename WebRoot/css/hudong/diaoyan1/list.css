@@ -1,0 +1,37 @@
+.shinaide1030_yd{ margin:0 auto; background:#91b93e; width:100%; height:100%;}
+.shinaide1030_yd_top{ margin:0 auto;}
+.shinaide1030_yd_top img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+.shinaide1030_yd_top img:not([src*="/"]) { display: none; }
+.shinaide1030_yd_center{ margin:0 auto;width:100%;}
+.shinaide1030_yd_c_anniu{ margin:0 auto; width:65%;}
+
+.shinaide1030_yd_c_anniu img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+.shinaide1030_yd_c_anniu img:not([src*="/"]) { display: none; }
+
+.shinaide1030_yd_bottom{ width:100%; text-align:center;font-size: 1.5em; font-family:Microsoft YaHei; font-weight:bold;color:#fff; line-height:100px;letter-spacing:3px;}
+
+
+.shinaide1030_wt_box{ margin:0 auto;background:#c5e7fa; width:100%;}
+.shinaide1030_wt_box_tian{margin:0 auto;background:#c5e7fa; width:100%;height: inherit;}
+.shinaide1030_wt_top{ margin:0 auto;}
+.shinaide1030_wt_top img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+.shinaide1030_wt_top img:not([src*="/"]) { display: none; }
+.shinaide1030_wt_title{ width:95%; margin:0 auto;font-size: 1.3em; font-family:Microsoft YaHei; font-weight:bold;color:#1c4295; line-height:30px;letter-spacing:2px; margin-top:10px;}
+.shinaide1030_wt_center{ width:95%; margin:0 auto;}
+.shinaide1030_wt_center ul{ width:100%; list-style:none;}
+.shinaide1030_wt_center li{background:url(/images/hudong/diaoyan1/wt_bj.jpg) no-repeat;background-size:100% 100%; line-height:50px; margin-top:10px;}
+.shinaide1030_wt_center li p{ width:95%;font-size: 1.1em; font-family:Microsoft YaHei; font-weight:bold;color:#fff;letter-spacing:2px;}
+.shinaide1030_wt_center li span{ width:14%;background:url(/images/hudong/diaoyan1/wt_dian.jpg) no-repeat;background-size:100% 100%;font-size: 1.1em; font-family:Microsoft YaHei; font-weight:bold;color:#fff; line-height:40px; float:left; text-align:center; margin:3px 10px 0 5px;}
+.shinaide1030_wt_center li span.selected {background:url(/images/hudong/diaoyan1/wt_dian_s.jpg) no-repeat;background-size:100% 100%;}
+.shinaide1030_wt_anniu{background:url(/images/hudong/diaoyan1/wt_bj.jpg) no-repeat;background-size:100% 100%; line-height:50px; margin-top:20px;font-size: 1.1em; font-family:Microsoft YaHei; font-weight:bold;color:#fff; text-align:center;}
+
+.shinaide1030_wt_center_tian{width:95%; margin:0 auto;}
+.shinaide1030_wt_center_tian span{font-size: 1.1em; font-family:Microsoft YaHei; font-weight:bold;color:#1c4295;letter-spacing:2px;}
+
+.shinaide_konghang{ height:10px;}
+
+.shinaide1030_wt_center input[type="radio"], .shinaide1030_wt_center input[type="checkbox"] {display:none}
+
+
+
+

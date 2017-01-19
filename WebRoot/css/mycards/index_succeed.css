@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+body{color:#323232;width:100%;font-size:13px;font-family:Tahoma,Arial,Roboto,”Droid Sans”,”Helvetica Neue”,”Droid Sans Fallback”,”Heiti SC”,sans-self;}
+.succeed0503{position:absolute;background:#FFF;width:100%;top:40px;height:155px;}
+.succeed0503 span{display:block;text-align:center;color:#646464;font-size:17px;line-height:25px;}
+.succeed0503 span img{width:40%;}
+.succeed05031{position:absolute;background:#FFF;width:80%;top:210px;height:40px;left:10%}
+.succeed05031 p{border-radius:5px;background:#0bb928;width:100%;;height:40px;line-height:40px;text-align:center;padding-bottom:0px;}
+.succeed05031 p input{border:none;background:none;font-size:17px;color:#FFF;}
+
+
+
+
+
+
+

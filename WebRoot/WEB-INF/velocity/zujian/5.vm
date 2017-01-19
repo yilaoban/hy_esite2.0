@@ -1,0 +1,7 @@
+<div id="banner_box"  hydata="$pcbid" hyct="Y" status="0" class="hyzj $!ctname" style='$!hyct;'>
+#if($isRun)
+	<img src="http://img.huiyee.com/video_03.png" style="width:100%;height:100%;">
+#else
+	$!source
+#end
+</div>

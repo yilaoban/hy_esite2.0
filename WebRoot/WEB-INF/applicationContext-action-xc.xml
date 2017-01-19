@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="xcAction"
+		class="com.huiyee.interact.xc.action.XcAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="xcService" ref="xcService"></property>
+	</bean>
+	<bean id="xcLotteryAction" class="com.huiyee.interact.xc.action.XcLotteryAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="xcLotteryMgr" ref="xcLotteryMgr"></property>
+		<property name="moveToGroupMgr" ref="moveToGroupMgrImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	<bean id="signinAction" class="com.huiyee.interact.xc.action.SigninAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="signinMgr" ref="signinMgr"></property>
+		<property name="xcMgr" ref="xcMgr"></property>
+		<property name="gzEventMgr" ref="gzEventMgr"></property>
+	</bean>
+	<bean id="zhuanpanAction" class="com.huiyee.interact.xc.action.ZhuanpanAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="zhuanpanMgr" ref="zhuanpanMgr"></property>
+	</bean>
+	<bean id="commentSubmitAction" class="com.huiyee.interact.xc.action.CommentSubmitAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="commentMgr" ref="commentMgr"></property>
+		<property name="xcMgr" ref="xcMgr"></property>
+		<property name="signinMgr" ref="signinMgr"></property>
+	</bean>
+	<bean id="xcSendDetailAction" class="com.huiyee.interact.xc.action.XcSendDetailAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="xcMgr" ref="xcMgr"></property>
+	</bean>
+	<bean id="xcBigScreen" class="com.huiyee.interact.xc.action.XcBigScreenAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="xcBigScreenMgr" ref="xcBigScreenMgr"></property>
+	</bean>
+	<bean id="xcPageAction" class="com.huiyee.interact.xc.action.XcPageAction" 
+		parent="interactModelAction" scope="prototype">
+	</bean>
+	<bean id="xchdAction"
+		class="com.huiyee.interact.xc.action.XchdAction" parent="abstractAction"
+		scope="prototype">
+		<property name="xcMgr" ref="xcMgr"></property>
+		<property name="interactAptManager" ref="interactAptManagerImpl"></property>
+	</bean>
+	<bean id="xccleanAction"
+		class="com.huiyee.interact.xc.action.XccleanAction" parent="abstractAction"
+		scope="prototype">
+		<property name="xccleanMgr" ref="xccleanMgrImpl"></property>
+	</bean>
+	<bean id="xcSiteAction"
+		class="com.huiyee.interact.xc.action.XcSiteAction" parent="abstractAction"
+		scope="prototype">
+	</bean>
+	<bean id="xcPersonAction"
+		class="com.huiyee.interact.xc.action.XcPersonAction" parent="abstractAction"
+		scope="prototype">
+		<property name="xcMgr" ref="xcMgr"></property>
+	</bean>
+</beans>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="auctionDrawAction" class="com.huiyee.interact.auction.action.AuctionDrawAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="auctionMgr" ref="auctionMgr"></property>
+		<property name="auctionDrawService" ref="auctionDrawService"></property>
+	</bean>
+	<bean id="auctionAction" class="com.huiyee.interact.auction.action.AuctionAction"
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="auctionMgr" ref="auctionMgr"></property>
+	</bean>
+	<bean id="auctionDataAction" class="com.huiyee.interact.auction.action.AuctionDataAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="auctionRecordMgr" ref="auctionRecordMgr"></property>
+	</bean>
+</beans>

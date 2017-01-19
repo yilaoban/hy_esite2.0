@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+.box_hudong_141112_dx_1{ width:100%; height:100%;font-family: "Microsoft Yahei", Arial;}
+
+.wdy_top{ margin:0 auto;text-align:center;}
+input.dy_wt_left_141112_dx_1{ margin:20px 0 0 0;width:30px; float:left;display:block;}
+.dy_wt_141112_dx_1 span{ float:left; width:80%; text-align:left; line-height:50px;}
+
+
+
+.box_hudong_141112_dx_1 ul{ width:100%; margin:0 auto;}
+
+.dy_wt_141112_dx_1{background:url(/images/hudong/diaoyan3_2/dy_bj.jpg) repeat;border-radius: 5px;border:1px #8a8a8a solid; height:50px; width:90%;font-size: 1.0em; font-family:Microsoft YaHei;  margin:0 auto;margin-top:10px;}
+a:link .dy_wt_141112_dx_1{background:url(/images/hudong/diaoyan3_2/dy_bj.jpg) repeat;border-radius: 5px;border:1px #8a8a8a solid;border-radius: 5px; height:50px; width:90%;font-size: 1.0em; font-family:Microsoft YaHei;margin:0 auto;margin-top:10px;}
+a:visited .dy_wt_141112_dx_1{background:url(/images/hudong/diaoyan3_2/dy_bj.jpg) repeat;border-radius: 5px;border:1px #8a8a8a solid;border-radius: 5px; height:50px; width:90%;font-size: 1.0em; font-family:Microsoft YaHei;margin:0 auto;margin-top:10px;}
+a:hover .dy_wt_141112_dx_1 {background:url(/images/hudong/diaoyan3_2/dy_bj_a.jpg) repeat;border-radius: 5px;border:1px #8a8a8a solid;border-radius: 5px; height:50px; width:90%;font-size: 1.0em; font-family:Microsoft YaHei;margin:0 auto;margin-top:10px;}
+
+.dy_tatle_141112_dx_1{padding: 0 5px 0px 10px;color: #36393d;height: 22px;margin-top: 20px; font-size: 1.1em; font-family:Microsoft YaHei; font-weight:bold;}
+
+
+.tj_anniu_141112_dx_1{ width:30%; margin:0 auto; height:30px; line-height:30px;border-radius: 10px; text-align:center;background:url(/images/hudong/diaoyan3_2/dy_bj.jpg) repeat;border:1px #8a8a8a solid; margin-top:20px;}
+.gerenziliao_141112_dx_1{ width:90%; margin:0 auto;font-family: "Microsoft Yahei", Arial; font-size:1.0em;}
+.gerenziliao_141112_dx_1 span{ width:30%; line-height:50px;}
+
+.kh_141112_dx_1{width:100%; height:20px;}
+
+.cn_141112_dx_1{ width:90%; margin:0 auto; color:#858585; line-height:25px; font-size:0.8em;}
+.gerenziliao_141112_dx_1_tianxie{height:30px;border-radius: 5px;border:1px #8a8a8a solid; width:50%; }
+.diaoyan_141112_dx_xinxi{ width:100%;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

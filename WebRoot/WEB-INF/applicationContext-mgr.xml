@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="siteManagerImpl" class="com.huiyee.esite.mgr.imp.SiteManagerImpl">
+		<property name="siteDao" ref="siteDaoImpl"></property>
+		<property name="sinaTokenDao" ref="sinaTokenDaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+	</bean>
+	<bean id="weiXinMgr" class="com.huiyee.esite.mgr.imp.WeiXinMgr">
+		<property name="weiXinDao" ref="weiXinDao"></property>
+	</bean>
+	<bean id="hyUtilMgr" class="com.huiyee.esite.mgr.imp.HyUtilMgr">
+		<property name="hyUtilDao" ref="hyUtilDao"></property>
+		<property name="hyUtilDao2" ref="hyUtilDao2"></property>
+	</bean>
+	<bean id="hyUserMgr" class="com.huiyee.esite.mgr.imp.HyUserMgr">
+		<property name="hyUserDao" ref="hyUserDao"></property>
+		<property name="bbsUserDao" ref="bbsUserDaoImpl"></property>
+	</bean>
+	<bean id="crmMgr" class="com.huiyee.esite.mgr.imp.CrmMgr">
+		<property name="crmDao" ref="crmDao"></property>
+	</bean>
+	<bean id="visitLogMgr" class="com.huiyee.esite.mgr.imp.VisitLogMgr">
+		<property name="visitLogDao" ref="visitLogDao"></property>
+	</bean>
+	<bean id="visitMgrImpl" class="com.huiyee.esite.mgr.imp.VisitMgrImpl">
+		<property name="siteDao" ref="siteDaoImpl"></property>
+		<property name="visitDao" ref="visitDaoImpl"></property>
+	</bean>
+	<bean id="abstractMgr" class="com.huiyee.esite.mgr.imp.AbstractMgr" abstract="true">
+		<property name="ownerBalanceDao" ref="ownerBalanceDao"></property>
+		<property name="ownerLotteryUserDao" ref="ownerLotteryUserDao"></property>
+		<property name="ownerBalanceRecordDao" ref="ownerBalanceRecordDao"></property>
+		<property name="ownerBalanceSetDao" ref="ownerBalanceSetDao"></property>
+		<property name="userChanceRecordDao" ref="userChanceRecordDaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="longWS" ref="longWS"></property>
+		<property name="shortWS" ref="shortWS"></property>
+		<property name="mustShortWS" ref="mustShortWS"></property>
+		<property name="justWS" ref="justWS"></property>
+		<property name="hdUserDataDao" ref="hdUserDataDao"></property>
+		<property name="dynamicActionRecordDao" ref="dynamicActionRecordDaoImpl"></property>
+		<property name="wxTemplateJobDao" ref="wxTemplateJobDao"></property>
+		<property name="wxTemplateDao" ref="wxTemplateDao"></property>
+		<property name="hyUserDzDao" ref="hyUserDzDao"></property>
+	</bean>
+	<bean id="userMgrImpl" class="com.huiyee.esite.mgr.imp.UserMgrImpl">
+		<property name="userDao" ref="userDaoImpl"></property>
+	</bean>
+	<bean id="sinaTokenMgrImpl" class="com.huiyee.esite.mgr.imp.SinaTokenMgrImpl">
+		<property name="sinaTokenDao" ref="sinaTokenDaoImpl"></property>
+	</bean>
+	<bean id="contentManagerImpl" class="com.huiyee.esite.mgr.imp.ContentManagerImpl">
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+		<property name="contentProductDao" ref="contentProductDaoImpl"></property>
+		<property name="contentPictureDao" ref="contentPictureDaoImpl"></property>
+		<property name="contentNewDao" ref="contentNewDaoImpl"></property>
+		<property name="contentVideoDao" ref="contentVideoDaoImpl"></property>
+		<property name="contentFormDao" ref="contentFormDaoImpl"></property>
+		<property name="accountHideDao" ref="accountHideDaoImpl"></property>
+		<property name="hd149Dao" ref="hd149DaoImpl"></property>
+	</bean>
+	<bean id="contentFormMgrImpl" class="com.huiyee.esite.mgr.imp.ContentFormMgrImpl">
+		<property name="contentFormDao" ref="contentFormDaoImpl"></property>
+		<property name="bdlbsDao" ref="bdlbsDao"></property>
+	</bean>
+	<bean id="pageManagerImpl" class="com.huiyee.esite.mgr.imp.PageManagerImpl" >
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="featureDao" ref="featureDaoImpl"></property>
+		<property name="pageFeatureDao" ref="pageFeatureDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="managers" ref="managers"></property>
+		<property name="siteSourceDao" ref="siteSourceDaoImpl"></property>
+	</bean>
+	<bean id="featureManagerImpl" class="com.huiyee.esite.mgr.imp.FeatureManagerImpl">
+		<property name="featureDao" ref="featureDaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="xcLotteryDao" ref="xcLotteryDao"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="pageManager" ref="pageManagerImpl"></property>
+		<property name="interactAptDao" ref="interactAptDaoImpl"></property>
+		<property name="pageFeatureDao" ref="pageFeatureDaoImpl"></property>
+		<property name="managers" ref="managers"></property>
+		<property name="interactCbDao" ref="interactCbDaoImpl"></property>
+		<property name="offCheckDao" ref="offCheckDaoImpl"></property>
+	</bean>
+	<bean id="siteActionManagerImpl" class="com.huiyee.esite.mgr.imp.SiteActionManagerImpl">
+	<property name="siteActionDao" ref="siteActionDaoImpl"></property>
+	</bean>
+	<bean id="pageCacheManagerImpl" class="com.huiyee.esite.mgr.imp.PageCacheManagerImpl">
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="pageCacheDao" ref="pageCacheDaoImpl"></property>
+	</bean>
+	<bean id="accountManagerImpl" class="com.huiyee.esite.mgr.imp.AccountManagerImpl">
+		<property name="accountDao" ref="accountDaoImpl"></property>
+		<property name="accountHideDao" ref="accountHideDaoImpl"></property>		
+	</bean>
+	<bean id="uploadManagerImpl" class="com.huiyee.esite.mgr.imp.UserUploadManagerImpl">
+		<property name="userUploadDao" ref="userUploadDaoImpl"></property>
+	</bean>
+	<bean id="sinaUserManagerImpl" class="com.huiyee.esite.mgr.imp.SinaUserManagerImpl">
+		<property name="sinaUserDao" ref="sinaUserDaoImpl"></property>
+		<property name="dynamicActionRecordDao" ref="dynamicActionRecordDaoImpl"></property>
+	</bean>
+	<bean id="sinaShareManagerImpl2" class="com.huiyee.esite.mgr.imp.SinaShareManagerImpl">
+		<property name="sinaShareDao" ref="sinaShareDaoImpl2"></property>
+	</bean>
+	<bean id="sinaShareRecordManagerImpl2" class="com.huiyee.esite.mgr.imp.SinaShareRecordManagerImpl">
+		<property name="sinaShareRecordDao" ref="sinaShareRecordDaoImpl2"></property>
+		<property name="sinaShareDao" ref="sinaShareDaoImpl2"></property>
+		<property name="dynamicActionRecordDao" ref="dynamicActionRecordDaoImpl"></property>
+	</bean>
+	<bean id="sinaUserAppManagerImpl2" class="com.huiyee.esite.mgr.imp.SinaUserAppManagerImpl">
+		<property name="sinaUserAppDao" ref="sinaUserAppDaoImpl2"></property>
+	</bean>
+	<bean id="activityManagerImpl" class="com.huiyee.esite.mgr.imp.ActivityManagerImpl">
+		<property name="activityDao" ref="activityDaoImpl"></property>
+		<property name="categoryDao" ref="contentCategoryDaoImpl"></property>
+		<property name="activityMatterDao" ref="activityMatterDaoImpl"></property>
+	</bean>
+	<bean id="hdRecordManagerImpl" class="com.huiyee.esite.mgr.imp.HdRecordManagerImpl">
+		<property name="hdRecordDao" ref="hdRecordDaoImpl"></property>
+	</bean>
+	<bean id="visitReportManagerImpl" class="com.huiyee.esite.mgr.imp.VisitReportManagerImpl">
+		<property name="dynamicActionRecordDao" ref="dynamicActionRecordDaoImpl"></property>
+		<property name="visitDao" ref="visitDaoImpl"></property>
+	</bean>
+	<bean id="fansAnalyseManagerImpl" class="com.huiyee.esite.mgr.imp.FansAnalyseManagerImpl">
+		<property name="fansAnalyseDao" ref="fansAnalyseDaoImpl"></property>
+		<property name="hdRecordDao" ref="hdRecordDaoImpl"></property>
+		<property name="visitDao" ref="visitDaoImpl"></property>
+	</bean>
+	<bean id="sinaForwardManagerImpl" class="com.huiyee.esite.mgr.imp.SinaForwardManagerImpl">
+		<property name="sinaForwardDao" ref="sinaForwardDaoImpl"></property>
+		<property name="dynamicActionRecordDao" ref="dynamicActionRecordDaoImpl"></property>
+	</bean>
+	<bean id="emotionManagerImpl" class="com.huiyee.esite.mgr.imp.EmotionsManagerImpl">
+		<property name="emotionsDao" ref="emotionDaoImpl"></property>
+	</bean>
+	<bean id="interactModelManagerImpl" class="com.huiyee.esite.mgr.imp.InteractModelManagerImpl">
+		<property name="interactModelDao" ref="interactModelDaoImpl"></property>
+		<property name="accountHideDao" ref="accountHideDaoImpl"></property>
+	</bean>
+	<bean id="sinaCommentManagerImpl" class="com.huiyee.esite.mgr.imp.SinaCommentManagerImpl" parent="abstractMgr">
+		<property name="sinaCommentDao" ref="sinaCommentDaoImpl"></property>
+	</bean>
+	<bean id="templateManagerImpl" class="com.huiyee.esite.mgr.imp.TemplateManagerImpl">
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="managers" ref="managers"></property>
+		<property name="velocityEngine" ref="velocityEngine"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+	</bean>
+	<bean id="friendsShipsMgrImpl" class="com.huiyee.esite.mgr.imp.FriendsShipsMgrImpl" parent="abstractMgr">
+		<property name="friendsShipsDao" ref="friendsShipsDaoImpl"></property>
+	</bean>
+	<bean id="wsManagerImpl" class="com.huiyee.esite.mgr.imp.WSManagerImpl" parent="abstractMgr">
+	</bean>
+	<bean id="materialManagerImpl" class="com.huiyee.esite.mgr.imp.MaterialManagerImpl">
+		<property name="materialDao" ref="materialDaoImpl"></property>
+	</bean>
+	<bean id="areaMgrImpl" class="com.huiyee.esite.mgr.imp.AreaManagerImpl">
+		<property name="areaDao" ref="areaDaoImpl"></property>
+	</bean>
+	<bean id="bbsMgrImpl" class="com.huiyee.esite.mgr.imp.BBSManagerImpl">
+		<property name="bbsDao" ref="bbsDaoImpl"></property>
+	</bean>
+	<bean id="bbsUTopicMgrImpl" class="com.huiyee.esite.mgr.imp.BBSTopicMgrImpl" parent="abstractMgr">
+		<property name="bbsTopicDao" ref="bbsUTopicDaoImpl"></property>
+	</bean>
+	
+	<bean id="communityUserMgrImpl" class="com.huiyee.esite.mgr.imp.CommunityUserMgrImpl">
+		<property name="communityUserDao" ref="communityUserDaoImpl"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+		<property name="bbsUserDao" ref="bbsUserDaoImpl"></property>
+	</bean>
+	<bean id="hdUserDataMgr" class="com.huiyee.esite.mgr.imp.HdUserDataMgrImpl">
+		<property name="hdUserDataDao" ref="hdUserDataDao"></property>
+	</bean>
+	<bean id="marketActivityMgrImpl" class="com.huiyee.esite.mgr.imp.MarketActivityMgrImpl">
+		<property name="marketActivityDao" ref="marketActivityDaoImpl"></property>
+	</bean>
+	<bean id="pageShowMaterialManagerImpl" class="com.huiyee.esite.mgr.imp.PageShowMaterialManagerImpl">
+		<property name="pageShowMaterialDao" ref="pageShowMaterialDaoImpl"></property>
+		<property name="categoryDao" ref="contentCategoryDaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+	<bean id="baseAppMgrImpl" class="com.huiyee.esite.mgr.imp.BaseAppMgrImpl">
+		<property name="baseAppDao" ref="baseAppDaoImpl"></property>
+	</bean>
+	<bean id="contentRecordMgrImpl" class="com.huiyee.esite.mgr.imp.ContentRecordMgrImpl">
+		<property name="contentRecordDao" ref="contentRecordDaoImpl"></property>
+	</bean>
+	<bean id="mbMgrImpl" class="com.huiyee.esite.mgr.imp.MbMgrImpl">
+		<property name="mbDao" ref="mbDaoImpl"></property>
+	</bean>
+	<bean id="siteSourceManagerImpl" class="com.huiyee.esite.mgr.imp.SiteSourceManagerImpl">
+		<property name="siteSourceDao" ref="siteSourceDaoImpl"></property>
+		<property name="velocityEngine" ref="velocityEngine"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+	</bean>
+	<bean id="moveToGroupMgrImpl" class="com.huiyee.esite.mgr.imp.MoveToGroupMgrImpl">
+		<property name="moveToGroupDao" ref="moveToGroupDaoImpl"></property>
+	</bean>
+	<bean id="jfDesignMgrImpl" class="com.huiyee.esite.mgr.imp.JfDesignMgrImpl">
+		<property name="jfDesignDao" ref="jfDesignDaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+	<bean id="jfUserMgrImpl" class="com.huiyee.esite.mgr.imp.JfUserMgrImpl">
+		<property name="jfUserDao" ref="jfUserDaoImpl"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+	</bean>
+	<bean id="rmbRuleMgrImpl" class="com.huiyee.esite.mgr.imp.RmbRuleMgrImpl">
+		<property name="rmbRuleDao" ref="rmbRuleDaoImpl"></property>
+	</bean>
+	<bean id="wxUserMgrImpl" class="com.huiyee.esite.mgr.imp.WxUserMgrImpl">
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+	</bean>
+	<bean id="marketingEbMgrImpl" class="com.huiyee.esite.mgr.imp.MarketingEbMgrImpl">
+		<property name="ebproductDao" ref="ebproductDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+		<property name="wxUserDao" ref="wxUserDaoImpl"></property>
+		<property name="sinaUserDao" ref="sinaUserDaoImpl"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+		<property name="contentProductDao" ref="contentProductDaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+	<bean id="userTagMgrImpl" class="com.huiyee.esite.mgr.imp.UserTagMgrImpl">
+		<property name="userTagDao" ref="userTagDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="wkqMgrImpl" class="com.huiyee.esite.mgr.imp.WeiKaQuanMgrImpl">
+		<property name="wkqDao" ref="wkqDaoImpl"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+	</bean>
+	<bean id="gzEventMgr" class="com.huiyee.esite.mgr.imp.GzEventImpl">
+		<property name="gzEventDao" ref="gzEventDaoImpl"></property>
+	</bean>
+	<bean id="appManagerImpl" class="com.huiyee.esite.mgr.imp.AppManager">
+		<property name="offCheckMgr" ref="offCheckMgrImpl"></property>
+		<property name="yuYueMgr" ref="yuYueMgrImpl"></property>
+		<property name="iInteractCbMgr" ref="interactCbMgrImpl"></property>
+	</bean>
+	
+	<bean id="grCenterMgrImpl" class="com.huiyee.esite.mgr.imp.GrCenterMgrImpl" parent="abstractMgr">
+		<property name="grCenterDao" ref="grCenterDaoImpl"></property>
+		<property name="jfDesignDao" ref="jfDesignDaoImpl"></property>
+		<property name="rmbRuleDao" ref="rmbRuleDaoImpl"></property>
+		<property name="hyUserLevelDao" ref="hyUserLevelDaoImpl"></property>
+		<property name="hyUserLevelCodeDao" ref="hyUserLevelCodeDao"></property>
+		<property name="userJfDao" ref="userJfDaoImpl"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+	</bean>
+	
+	<bean id="ownerBalanceMgrImpl" class="com.huiyee.esite.mgr.imp.OwnerBalanceMgrImpl" parent="abstractMgr">
+		<property name="wxBuyProductDao" ref="wxBuyProductDaoImpl"></property>
+		<property name="jfDesignDao" ref="jfDesignDaoImpl"></property>
+		<property name="offCheckDzWayDao" ref="offCheckDzWayDao"></property>
+	</bean>
+</beans>

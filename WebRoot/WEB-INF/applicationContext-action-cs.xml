@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="csAction" class="com.huiyee.interact.cs.action.CsAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="csMgr" ref="csMgr"></property>
+	</bean>
+	
+	<bean id="csDrawAction" class="com.huiyee.interact.cs.action.CsDrawAction" 
+		parent="interactModelAction" scope="prototype" >
+		<property name="csDrawService" ref="csDrawService"></property>
+	</bean>
+	<bean id="csDataAction" class="com.huiyee.interact.cs.action.CsDataAction" 
+		parent="interactModelAction" scope="prototype" >
+		<property name="csRecordMgr" ref="csRecordMgr"></property>
+	</bean>
+</beans>

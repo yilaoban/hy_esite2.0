@@ -1,0 +1,20 @@
+/* CSS Document */
+
+/*微站首页20150228微首页3*/
+
+.mainmenu_20150228_3{
+width:100%; 
+margin:0 auto;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+position: absolute;
+top: 10%;text-align:left;}
+
+.mainmenu_20150228_3 ul {
+	display: block;
+}
+.mainmenu_20150228_3 li {
+	display: block;
+	margin-top:7px; margin-left:7px;  width:40%; box-shadow: 0px 0px 3px rgba(0,0,0,0.3); border-radius:5px;
+}
+.mainmenu_20150228_3 li a { display:block;  font-size:1em;   text-align:left; padding:0 0 0 40px;height:40px;position:relative; line-height:40px;overflow: hidden;text-overflow:ellipsis; white-space:nowrap; text-decoration:none;}
+.mainmenu_20150228_3 li a img { position: absolute; top:50%; left:5px; margin-top:-15px; width:30px; height:30px;  }

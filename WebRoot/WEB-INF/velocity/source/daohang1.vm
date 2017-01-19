@@ -1,0 +1,51 @@
+#if($!style.backgroundColor)
+	#set($bgcolor = $!style.backgroundColor )
+#else
+	#set($bgcolor = '#88BBF1')
+#end
+#if($!style.fontColor)
+	#set($fontColor = $!style.fontColor )
+#else
+	#set($fontColor = '#fff')
+#end
+<style type="text/css">
+.dl-menuwrapper button {
+	background: $bgcolor url(/plug-in/daohang/images/menu-button-bg.png) no-repeat center center;
+}
+.dl-menuwrapper button:hover ,
+.dl-menuwrapper button.dl-active {
+	opacity :0.9;
+}
+.dl-menuwrapper ul {
+	background: $bgcolor;
+}
+.dl-menuwrapper li a {
+	color: $fontColor;
+}
+</style>
+<div id="dl-menu" class="dl-menuwrapper">
+	<button id="dl-menu-button">菜单</button>
+	<ul class="dl-menu">
+		#foreach($arr in $json)
+			<li>
+				<a href="$arr.link">$arr.name</a>
+				#if($arr.list.size() > 0)
+					<ul class="dl-submenu">
+						<li class="dl-back"><a href="#">返回上一级</a></li>
+						#foreach($l in $arr.list)
+							<li><a href="$l.link">${l.name}</a></li>
+						#end
+					</ul>
+				#end
+			</li>
+		#end
+	</ul>
+</div>
+<link href="/plug-in/daohang/css/component.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/plug-in/daohang/js/modernizr.custom.js"></script>
+<script type="text/javascript" src="/plug-in/daohang/js/jquery.dlmenu.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	$( '#dl-menu' ).dlmenu();
+})
+</script>

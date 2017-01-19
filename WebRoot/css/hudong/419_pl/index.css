@@ -1,0 +1,65 @@
+.grey {background-color: #F0F0F0;}
+
+.comment_list {margin: 0 12px; padding-bottom: 50px;}
+.comment {margin: 30px 5px 0 15px;padding:10px 20px 10px 30px;position: relative;background: #FCF2F6;}
+.comment_portrait {position:absolute; width:40px;top: -15px;left: -15px;}
+.comment_portrait img {width: 100%; border-radius: 50%;}
+.comment_customer {color:#e71162;font-size:14px;}
+.comment_server {margin-top: 10px;}
+.comment_server .customer_server {color:#e71162;font-size:14px;float: right;}
+.comment_server .customer_stars {clear:both;}
+.y_star {background-image: url(/images/hudong/419_pl/y_star.png);background-repeat: no-repeat;background-size: cover;background-position: center;display: inline-block;width: 15px;height: 13px;}
+.y_star_b {background-image: url(/images/hudong/419_pl/y_star_b.png);background-repeat: no-repeat;background-size: cover;background-position: center;display: inline-block;width: 15px;height: 13px;}
+
+.comment_content {margin-top:5px;color:#333;font-size:14px;line-height: 1.3em;}
+.comment_time {margin-top: 10px;color: #b2b1b1;font-size: 10px;}
+.angle {height:8px;margin-top:5px;background-image: url(/images/hudong/419_pl/angle.png); background-repeat: no-repeat;background-position: 30px 0; }
+.shopper_reply {margin: 0 5px 0 15px;padding:10px 20px 10px 30px;position: relative;background: #FCE3ED;}
+.reply_content {color:#333;font-size:14px;line-height: 1.3em;}
+.reply_content .replier {color:#e71162;}
+
+
+.c_bottom {position: fixed; bottom: 0; overflow: hidden; width: 100%;}
+.c_bottom ul {border-top: 1px solid #D6D7DC;}
+.c_bottom ul li {width: 50%; float: left;text-align: center; height: 40px;}
+.c_bottom ul li a {display: block; line-height: 40px;border-right: 1px solid #D6D7DC;background: #F7F7F7;}
+.c_bottom ul li:last-child a {border-right: none;}
+
+
+.server_list {padding-bottom: 50px; font-size: 14px;}
+.server_list ul li {border-bottom: 1px solid #D6D7DC;line-height: 40px;}
+.server_name {display: inline-block;width: 30%;text-align: center;}
+.server_rate {display: inline-block;text-align: center;}
+.server_right {display: inline-block;float: right;background-image: url(/images/hudong/419_pl/arrow_right.png);background-repeat: no-repeat;background-size: cover; height: 23px; width: 12px; margin: 9px 10px 0 0;}
+.p_star, .p_star_b, .g_star_b {background-repeat: no-repeat;background-size: cover;background-position: center;display: block;    width: 22px;height: 21px;margin: 0px 0 -5px 7px;float: left;}
+.p_star {background-image: url(/images/hudong/419_pl/p_star.png);}
+.p_star_b {background-image: url(/images/hudong/419_pl/p_star_b.png);}
+.g_star_b {background-image: url(/images/hudong/419_pl/g_star_b.png);}
+
+
+.comment_div {padding-bottom: 50px;background: #fff;font-size: 14px;}
+.comment_header {height: 44px; line-height: 44px;font-size: 18px;text-align: center;background-color: #fff;}
+.comment_server {padding: 12px;background-color:#f0f0f0;}
+.slick {margin-top: 20px; height: 140px;}
+.server_item {text-align: center;position: relative;}
+.server_item img {margin: 0 auto; width:80px; height:80px;border-radius: 40px; }
+.server_item p {margin-top: 10px;font-size: 14px;}
+.selected_sign {position: absolute;top: 0; left: 0; right: 0; bottom: 0;}
+.selected .selected_sign {background-image: url(/images/hudong/419_pl/selected.png);background-repeat: no-repeat;background-position: center 16px;}
+.comment_wrap {margin-top: 10px;background-color: #fff;}
+.comment_wrap ul li {padding:0 12px;border-bottom: 1px solid #D6D7DC;line-height: 45px;}
+.comment_wrap ul li:last-child {border-bottom: none;line-height: normal;padding-bottom: 5px;}
+.comment_div ul li textarea {border: 1px solid #B4B4B4; width: 98%;margin-top: 10px;border-radius: 5px;font-size: 14px;height: 80px;}
+.comment_button {background-color: #E71162;border: none;color: #fff;border-radius: 5px;margin: 0 auto;padding:10px 20px; font-size:18px;}
+.comment_show {margin-top:10px;background-color: #fff;}
+.comment_show ul li {padding:0 12px;line-height: 45px;}
+.comment_title {float: left;}
+.comment_p {padding: 12px 0;margin-left: 80px;line-height: 1.5em;}
+.shopper_comment {line-height: 18px !important;}
+.shopper_comment_button {background-color: #E71162;border: none;color: #fff;border-radius: 5px;margin: 0 auto;padding:5px 10px; font-size:18px;display: block;margin: 10px auto;line-height: 18px;}
+
+.con0607{background:#FFF;color:#323232;margin-bottom: 15px;padding:4px 0 8px;}
+.con0607 h2{border-bottom: 1px solid #d6d7dc;margin:0 1.5%;line-height: 34px;font-size:15px;padding:0 2.5%;}
+.con0607 ul li{font-size:14px;line-height: 30px;padding:0 4%;}
+.con0607 ul li i{margin-left:5px;width:26px;height:26px;background:url(/images/hudong/419_pl/pic0607_2.png) ; background-size:100% 100%;display: inline-block;vertical-align: -8px;}
+.con0607 ul li i.xz{background:url(/images/hudong/419_pl/pic0607_1.png);background-size:100% 100%;}

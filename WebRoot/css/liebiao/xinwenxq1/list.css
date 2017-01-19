@@ -1,0 +1,25 @@
+/* CSS Document */
+
+
+.tuwen1028_3_141112_xq{ margin:0 auto; width:100%; height:100%;}
+.tuwen1028_3_wenzi_141112_xq{ width:100%; margin:0 auto;}
+.tuwen1028_3_wenzi_141112_xq span {padding: 20px 10px;line-height: 24px;color:#565656;font-size: 0.9em;font-family: "Microsoft Yahei", Arial;}
+
+.tuwen1028_3_wenzi_141112_xq h3 {
+  font-size: 1em;
+  line-height: 30px;
+  color: #565656;
+  padding-top: 10px;
+  font-family: "Microsoft Yahei", Arial;
+  text-align: center;
+  border-bottom: 1px dashed #565656;
+}
+.tuwen_xq_box{
+  padding: 20px 10px;
+  line-height: 24px;
+  color: #565656;
+  font-size: 0.9em;
+  font-family: "Microsoft Yahei", Arial;
+  }
+
+  .tuwen_xq_box img{ max-width: 100%;height: auto;width: auto\9;  }

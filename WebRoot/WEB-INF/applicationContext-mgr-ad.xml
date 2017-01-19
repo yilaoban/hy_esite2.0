@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="adMgrImpl" class="com.huiyee.interact.ad.mgr.impl.AdMgrImpl">
+		<property name="adDao" ref="adDaoImpl"></property>
+		<property name="adMediaDao" ref="adMediaDaoImpl"></property>
+		<property name="adwdDao" ref="adwdDaoImpl"></property>
+		<property name="areaProvinceDao" ref="areaProvinceDaoImpl"></property>
+		<property name="adWayDao" ref="adWayDaoImpl"></property>
+		<property name="adWayggDao" ref="adWayggDaoImpl"></property>
+		<property name="adggDao" ref="adGGDaoImpl"></property>
+	</bean>			    
+	<bean id="adGGMgrImpl" class="com.huiyee.interact.ad.mgr.impl.AdGGMgrImpl">
+		<property name="adGGDao" ref="adGGDaoImpl"></property>
+	</bean>
+	<bean id="adWagGGMgrImpl" class="com.huiyee.interact.ad.mgr.impl.AdWagGGMgrImpl">
+		<property name="adWayggDao" ref="adWayggDaoImpl"></property>
+		<property name="adWayDao" ref="adWayDaoImpl"></property>
+	</bean>
+	<bean id="adMediaMgrImpl" class="com.huiyee.interact.ad.mgr.impl.AdMediaMgrImpl">
+		<property name="adMediaDao" ref="adMediaDaoImpl"></property>
+		<property name="areaProvinceDao" ref="areaProvinceDaoImpl"></property>
+	</bean>
+</beans>

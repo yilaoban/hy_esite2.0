@@ -1,0 +1,57 @@
+/* CSS Document */
+
+
+a:link {
+text-decoration: none;
+}
+a:visited {
+text-decoration: none;
+}
+a:hover {
+text-decoration: none;
+}
+a:active {
+text-decoration: none;
+}
+.mainmenu_20150206_1{
+width:100%; 
+margin:0 auto;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+margin: 0 auto;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;
+}
+.mainmenu_20150206_1>a {
+width: 33%;
+float: left;
+text-align: center;
+overflow: hidden;
+margin-bottom: 15px;
+}
+.mainmenu_20150206_1>a .mainmenu_20150206_1_btn {
+margin: 0 auto;
+width: 80px;
+height: 80px;
+border-radius: 100%;
+display: block;
+overflow: hidden;
+}
+.mainmenu_20150206_1_btn img{
+margin-top: 5px;
+width: 45px;
+height: 45px;
+border-radius: 0;}
+.mainmenu_20150206_1_btn p {
+padding-bottom:0;
+}
+.mainmenu_20150206_1_ttle{
+padding-bottom:0;
+line-height:18px;
+font-size: 0.8em;
+margin: 3px 0 5px 0;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}

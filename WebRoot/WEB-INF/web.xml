@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee 
+	http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+	<!-- 生成随机数 -->
+	<filter>
+		<filter-name>CheckCodeFilter</filter-name>
+		<filter-class>
+			com.huiyee.esite.filter.CheckCodeFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>CheckCodeFilter</filter-name>
+		<url-pattern>/checkCode.cc</url-pattern>
+	</filter-mapping>		
+		
+	<!-- 是否登录 -->
+	<filter>
+		<filter-name>LoginFilter</filter-name>
+		<filter-class>com.huiyee.esite.filter.LoginFilter</filter-class>
+		<init-param>
+			<param-name>login_uri</param-name>
+			<param-value>http://cloud.huiyee.com</param-value>
+		</init-param>
+		<init-param>
+			<param-name>login_action_uri</param-name>
+			<param-value>/sign.action</param-value>
+		</init-param>
+	</filter>
+	<filter-mapping>
+		<filter-name>LoginFilter</filter-name>
+		<url-pattern>*.action</url-pattern>
+	</filter-mapping>
+	
+	<filter>
+		<filter-name>FansFilter</filter-name>
+		<filter-class>com.huiyee.esite.filter.FansFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>FansFilter</filter-name>
+		<url-pattern>/caidan/user/show.action</url-pattern>
+	</filter-mapping>
+
+	<servlet>
+		<servlet-name>CXFServlet</servlet-name>
+		<servlet-class>
+			org.apache.cxf.transport.servlet.CXFServlet
+		</servlet-class>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CXFServlet</servlet-name>
+		<url-pattern>/esite/*</url-pattern>
+	</servlet-mapping>
+	
+	<filter>
+		<filter-name>struts2</filter-name>
+		<filter-class>
+			org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter
+		</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>struts2</filter-name>
+		<url-pattern>*.action</url-pattern>
+		<dispatcher>FORWARD</dispatcher>
+        <dispatcher>REQUEST</dispatcher>
+	</filter-mapping>
+	<!-- 加载spring配置文件applicationContext.xml -->
+	<listener>
+		<listener-class>
+			org.springframework.web.context.ContextLoaderListener
+		</listener-class>
+	</listener>
+	<context-param>
+		<param-name>contextConfigLocation</param-name>
+		<param-value>/WEB-INF/applicationContext-*.xml,/WEB-INF/project/caidan/applicationContext-*.xml</param-value>
+	</context-param>
+	<listener>
+		<listener-class>
+			org.apache.struts2.tiles.StrutsTilesListener
+		</listener-class>
+	</listener>
+	<context-param>
+		<param-name>org.apache.tiles.CONTAINER_FACTORY</param-name>
+		<param-value>
+			org.apache.struts2.tiles.StrutsTilesContainerFactory
+		</param-value>
+	</context-param>
+	<context-param>
+		<param-name>
+			org.apache.tiles.impl.BasicTilesContainer.DEFINITIONS_CONFIG
+		</param-name>
+		<param-value>/WEB-INF/tiles.xml,/WEB-INF/project/caidan/tiles.xml</param-value>
+	</context-param>
+	
+	  <listener>  
+           <listener-class>com.huiyee.interact.bbs.action.BBSSessionTimer</listener-class>  
+    </listener>
+    
+    <listener>  
+           <listener-class>com.huiyee.esite.filter.ReadFontFilter</listener-class>  
+    </listener>    
+	
+	<session-config>
+		<session-timeout>30</session-timeout>
+	</session-config>
+	<welcome-file-list>
+		<welcome-file>index.jsp</welcome-file>
+	</welcome-file-list>
+	 <error-page>  
+         <error-code>404</error-code>
+         <location>  
+             /WEB-INF/page/forbidden.jsp
+         </location>
+     </error-page>
+      <error-page>  
+         <error-code>500</error-code>
+         <location>  
+             /WEB-INF/page/forbidden.jsp
+         </location>
+     </error-page>
+</web-app>

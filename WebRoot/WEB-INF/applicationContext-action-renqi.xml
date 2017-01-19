@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="renQiAction" class="com.huiyee.interact.renqi.action.RenQiAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="renQiMgr" ref="renQiMgr"></property>
+	</bean>
+	
+	<bean id="renQiDrawAction" class="com.huiyee.interact.renqi.action.RenQiDrawAction" 
+		parent="interactModelAction" scope="prototype" >
+		<property name="renQiMgr" ref="renQiMgr"></property>
+		<property name="renQiDrawService" ref="renQiDrawService"></property>
+	</bean>
+	<bean id="renQiDataAction" class="com.huiyee.interact.renqi.action.RenQiDataAction" 
+		parent="interactModelAction" scope="prototype" >
+		<property name="renQiDataMgr" ref="renQiDataMgrImpl"></property>
+	</bean>
+</beans>

@@ -1,0 +1,27 @@
+* {margin: 0;padding: 0;}
+body {background:#fff;width: 100%;font-family:微软雅黑;}
+a {color:#2b2b2b;text-decoration:none;outline:none;}
+img {border:0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;} 
+.left {float:left;}
+.right {float:right;}
+.mt2 {margin-top:2px;}
+.mr2 {margin-right:2px;}
+.ilb {display:inline-block;float:left;position:relative;cursor:pointer;}
+ul li {list-style:none;}
+
+.imgblock {margin: 0 auto;width: 940px;}
+textarea {background:none;border:1px solid #8C4A93;width:658px;height:60px;padding:5px;}
+.emotion {margin:5px 0 0 5px;}
+label {cursor:pointer;}
+
+/* uidialog */
+.ui-dialog{position:fixed;min-width:150px;background:#fff;overflow:hidden;z-index:99999;color:#8C4A92;font-size:16px;}
+.ui-dialog h1{*margin-top:-3px;position:relative;text-indent:1em;padding:3px 0;font-size:14px;font-weight:normal;-moz-user-select:none;/* FF禁止选择文字 */-webkit-user-select:none;/* Chrome禁止选择文字 */}
+.ui-dialog h1 .ui-close{position:absolute;top:10px;right:10px;cursor:pointer;text-indent:-9999px;background:url(/images/haima/pop_close.png);height:24px;width:24px;display:block;}
+.ui-dialog-body{ padding:10px;}
+.ui-title{ border-bottom:1px solid #ccc; background:#f0f0f0;}
+.ui-mask{position:absolute;left:0;top:0;z-index:77777;background:#000;filter:alpha(opacity=50);opacity:0.5;}
+.wrap{ width:500px; margin:40px auto;}
+
+.popdiv, .transformer {position:absolute;top:0;left:0;right:0;bottom:0;background:#000;text-align:center;vertical-align:middle;display:none;cursor:pointer;}

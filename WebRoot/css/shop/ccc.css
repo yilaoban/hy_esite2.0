@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+ul, ol{list-style: none; }
+a{text-decoration:none;color:#646464;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+body{font-family:"Microsoft Yahei",Tahoma,Arial,Helvetica,STHeiti;width:100%;color:#646464;font-size:13px;background:#FFF;}
+
+/* flexslider */
+.flexslider{margin:0px auto;position:relative;width:100%;overflow:hidden;zoom:1;}
+.flex-viewport{max-height:2000px;-webkit-transition:all 1s ease;-moz-transition:all 1s ease;transition:all 1s ease;}
+.flexslider .slides{zoom:1;}
+.flex-direction-nav a{width:60px;height:90px;line-height:99em;overflow:hidden;margin:-45px 0 0;display:block;background:url(../images/ad_ctr.png) no-repeat;position:absolute;top:50%;z-index:10;opacity:0;filter:alpha(opacity=0);-webkit-transition:all .3s ease;}
+.flex-direction-nav .flex-next{background-position:0 -90px;right:0;}
+.flex-direction-nav .flex-prev{left:0;}
+.flexslider:hover .flex-next{opacity:0.3;filter:alpha(opacity=30);}
+.flexslider:hover .flex-prev{opacity:0.3;filter:alpha(opacity=30);}
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover{opacity:0.3;filter:alpha(opacity=30);}
+.flex-control-nav{width:100%;position:absolute;bottom:0px;text-align:right;background:url(../images/bg.png) no-repeat;z-index:1000;height:20px;background-size:100% 20px;}
+.flex-control-nav li{margin:0 0px;display:inline-block;zoom:1;*display:inline;}
+.flex-control-paging li a{background:url(../images/dot3.png) no-repeat 0 -16px;display:block;height:16px;overflow:hidden;text-indent:2em;width:16px;color:#FFF;}
+.flex-control-paging li a.flex-active{background-position:0 0;}
+.img img{width:100%;}
+.flexslider p{position:absolute;left:0;bottom:0;z-index:1001;color:#FFF;height:25px;line-height:25px;padding-left:7px;}
+.more{width:100%;text-align:right;height:27px;line-height:35px;}
+.more a{color:#999;font-size:14px;}
+.more a img{width:17px;vertical-align:-3px;margin-right:3%;margin-left:5px;}
+.main{width:100%;}
+.main ul{width:100%;}
+.main ul li{width:41%;padding:1vh 2%;border:1px solid #ccc;display:inline-block;margin-left:2.5%;margin-top:1.5vh;}
+.main ul li img{width:100%;}
+.main ul li p{font-size:15px;color:#E71062;margin-top:5px;}
+.main ul li p i{font-size:12px;text-decoration:line-through;color:#999999;margin-left:8px;}
+.main ul li span{font-size:15px;color:#696969;}

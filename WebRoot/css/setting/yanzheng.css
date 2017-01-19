@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+.top0615{height:160px;background:url(/images/setting/pic0615_1.png) no-repeat;background-size:100% 100%;padding:35px 0;}
+.top0615 .tx0615{width:110px;height:105px;border-radius:50%;background:url(/images/setting/pic0615_3.png) repeat center;
+	            margin:0 auto;padding-top:5px;}
+.top0615 .tx0615 .tx{width:100px;height:100px;border-radius:50%;margin:0 auto;}
+.top0615 .tx0615 .tx img{border-radius:50%;width:100px;height:100px;}
+.top0615 p{color:#FFF;text-align:center;}
+.top0615 p.name{font-size:18px;margin-top:5px;line-height:26px;}
+.top0615 p.level{font-size:13px;line-height:20px;}
+form{width:92%;margin:0 auto;}
+form input{display:block;width:100%;background:none;border:none;text-align: center;font-size:20px;}
+form p{margin-top:40px;border-radius:10px;}
+.p34{border:1px solid #1bb2f7;padding:14px 0;height:20px;}
+.p35{background:#1bb2f7;height:50px;line-height:50px;}
+form input[type=text]{color:#323232;height:20px;line-height:20px;}
+form input[type=button]{color:#FFF;height:50px;line-height:50px;}
+:-moz-placeholder { 
+   color:#a0a0a0; font-size: 18px; 
+}
+
+::-moz-placeholder { 
+   color:#a0a0a0; font-size: 18px; 
+}
+
+input:-ms-input-placeholder {
+   color:#a0a0a0; font-size: 18px; 
+}
+
+input::-webkit-input-placeholder{
+   color:#a0a0a0; font-size: 18px; 
+}

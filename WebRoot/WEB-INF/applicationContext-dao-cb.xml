@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="interactCbDaoImpl" class="com.huiyee.interact.cb.dao.impl.InteractCbDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cbSenderDaoImpl" class="com.huiyee.interact.cb.dao.impl.CbSenderDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cbJiDaoImpl" class="com.huiyee.interact.cb.dao.impl.CbJiDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cbActivityMatterDaoImpl" class="com.huiyee.interact.cb.dao.impl.CbActivityMatterDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="cbActivityJlDaoImpl" class="com.huiyee.interact.cb.dao.impl.CbActivityJlDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="activityMatterDaoImpl" class="com.huiyee.interact.cb.dao.impl.ActivityMatterDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="hbRecordDaoImpl" class="com.huiyee.interact.cb.dao.impl.HbRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="cbActivityDao" class="com.huiyee.interact.cb.dao.impl.CbActivityDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="cbUserCenterDaoImpl" class="com.huiyee.interact.cb.dao.impl.CbUserCenterDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

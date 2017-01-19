@@ -1,0 +1,11 @@
+.shenqing_141120_c { width:90%;top:20px;}
+
+.control-form {margin-bottom:8px;}
+.control-form .control-label {width:32%;float:left;text-align:right;height:30px;line-height:30px;font-weight:bold;color:#333;margin:0;}
+.control-form .controls {width:58%;margin-left:35%;line-height:30px;overflow:hidden;}
+.control-form .controls label {display:block;line-height:30px;font-weight:normal;color:#333;margin:0;}
+.control-form input[type="text"],.control-form input[type="number"],.control-form input[type="email"], .control-form input[type="date"] {height: 30px;border: 1px #ccc solid;width:90%;padding:0;margin:0;}
+.control-form select {height: 34px;border: 1px #ccc solid;width:92%;}
+.control-form textarea {border: 1px #ccc solid;width:90%;padding:0;margin:0;height:50px;}
+.controls dd{margin-top:5px;}
+.control-form input[type="submit"], .control-form input[type="button"] {background: #e3e3e3;border: 1px solid #ccc;padding: 5px 10px 3px;color: #333;border-radius: 3px;cursor: pointer;font-size:14px;font-weight:bold;}

@@ -1,0 +1,126 @@
+@charset "utf-8";
+/* CSS Document */
+*{ margin:0; padding:0;}
+body{ margin:0; padding:0;}
+a{ text-decoration:none; color:#000;}
+/*头部开始*/
+
+#TXJ{ width:100%; overflow:hidden; border:0px solid #096; margin:0 auto;}
+.TXJ_header{width:100%; height:auto; overflow:hidden;}
+.TXJ_nav{ width:100%; height:auto; overflow:hidden; z-index:9999;position:relative;}
+.TXJ_ad{ width:100%; height:auto; overflow:hidden;}
+
+body{ background-color:#efeff0;}
+#TXJ .TXJ_nav{ width:100%; height:auto; overflow:hidden; background-color:#efeff0; }
+.TXJ_nav dl{ width:25%; height:auto; overflow:hidden; float:left; text-align:center;padding-top:7px;padding-bottom:7px;}
+.TXJ_nav a{ color:#4f4f4f; font-size:0.5em; font-weight:bold;}
+.TXJ_nav_go{position:relative; top:3px; left:5px;}
+.TXJ_nav_s{position:absolute; top:3px; right:5px;}
+
+.TXJ_nav_d{ width:100%; height:auto; overflow:hidden; background-color:#dbdbdc; }
+.TXJ_nav_d dl{ width:25%; height:auto; overflow:hidden; float:left; text-align:center;padding-top:7px;padding-bottom:7px;}
+.TXJ_nav_d a{ color:#4f4f4f; font-size:0.5em; font-weight:bold;}
+
+
+.TXJ_time{ height:auto; overflow:hidden; text-align:center; background:url(/images/shouye/6/Texture1.png) no-repeat; background-size:100% 100%; padding:5px; font-size:0.8em; }
+.TXJ_time .tim1{width:30%; float:left; text-align:right;}
+.TXJ_time .tim2{width:60%; float:left; text-align:left; line-height:50px; margin-left:10px;}
+.imgs{
+	border: 1px solid #CCC;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	box-shadow: 1px 1px 4px #BEBEBE;
+	background-color: #EBEBEB;
+}
+.sele{ width:100%; height:auto; overflow:hidden; margin:0 auto; text-align:center;}
+.TXJ_sectiondiv{width:30%; border:0px solid #000; margin:20px 3px 3px 3px; display:block; float:left; margin-bottom:5px;}
+.TXJ_sectiondiv dl{width:60%;height: auto;overflow: hidden; margin:0 auto; padding:5px;border:10px solid #dbdbdc;border-radius: 50%;
+-moz-border-radius:50%; -webkit-border-radius:50%; text-align:center; padding:5px;}
+.TXJ_sectiondiv dt{ width:100%; height:auto; overflow:hidden; text-align:center;}
+.TXJ_sectiondiv dd{width:100%; font-size:0.8em;position: relative; font-size:0.6em;bottom:5px;}
+.TXJ_img{width:70%; line-height:0; margin-left:5px; margin-right:5px;}
+
+
+
+.TXJ_contime{ width:100%; height:auto; overflow:hidden; text-align:center; background:url(/images/shouye/6/Texture1.png) no-repeat; background-size:100% 100%; padding:5px; font-size:0.8em; margin-top:-4px;position: relative;z-index: 99999;}
+.TXJ_contime a{ background:url(/images/shouye/6/Arrow1%20.png) no-repeat; background-position:left; display:block; width:90%; height:auto; margin:0 auto; text-align:left;}
+.TXJ_contsnp{ margin-left:20px; line-height:30px;color:#89898a; }
+.TXJ_sect_er{width:90%; height:auto; overflow:hidden; margin:0 auto;}
+.imgs{
+	border: 1px solid #CCC;
+	padding: 5px;
+	border-radius: 4px;
+	-moz-border-radius:4px;
+	-webkit-border-radius:4px;
+	box-shadow: 1px 1px 4px #BEBEBE;
+	background-color: #EBEBEB;
+}
+
+.TXJ_sect_er dl{width:100%; height:auto; overflow:hidden; padding-bottom:2px; border-bottom:1px solid #CCC; font-size:0.5em;}
+.TXJ_sect_er dt{width:30%; height:auto; overflow:hidden; border:0px solid #000; float:left; margin-right:5px;}
+.TXJ_sect_er dd{ width:65%; border:0px solid #000; float:left;  }
+.TXJ_sect_er dd h4{ margin-top:5px;}
+.TXJ_imgback{ max-width:90%; padding:2px; border:1px solid #ccc; background-color:#fff;}
+.TXJ_artidiv{width:auto; height:auto; overflow:hidden; margin:0 auto; border:0px solid #000; margin-top:5px; text-align:center;}
+.TXJ_sect_time{width:65%; background:url(/images/shouye/6/Arrow1.png) no-repeat; background-position:right; line-height:30px;}
+
+
+
+.TXJ_sects{width:33%; border:0px solid #000;  display:block; float:left;border:0px solid #000; margin-top:5px;}
+.TXJ_sects dl{width:100%;height: auto;overflow: hidden; margin:0 auto;text-align:center; border:0px solid #000;}
+.TXJ_sects dl dd:nth-of-type(2){font-size:0.6em; color:#89898a;}
+.TXJ_sects dd{width:90%; font-size:0.8em; margin:0 auto; text-align:left;}
+.TXJ_sectimg{width:90%;border: 1px solid #aeaeaf;padding:2px; box-shadow:1px 1px 2px #aeaeaf; }
+
+
+.TXJ_sectcer{width:90%; height:auto; overflow:hidden; margin:0 auto;text-indent:2em; font-size:0.6em; margin-top:5px;}
+.TXJ_secdivimg{width:50%;height:auto; overflow:hidden; float:right; margin-left:-10px;}
+
+
+.lis_ul{width:90%; height:auto; overflow:hidden; border:0px  solid #000; margin:0 auto; margin-bottom:30px;}
+.lis_ul li{ list-style:none; border:0px solid #ccc; background:url(/images/shouye/6/arrow3.png) no-repeat; background-position:left; padding-left:20px;
+line-height:35px; }
+.lis_ul li a{color:#5f5f5f;}
+.lis_a{ color:#97c74d; margin-bottom:5px; margin-top:5px;}
+.TXJ_foot{ width:100%; height:auto;}
+.TXJ_foot img{ width:100%;}
+/*顶部导航菜单*/
+
+#TXJ .TXJ_nav ul{ width:100%; height:100%; margin:0; padding:0; margin-top:5px;}
+#TXJ .TXJ_nav li{ width:28%; height:90%; list-style:none;  border:0px solid #000; float:left; text-align:center; background:url(/images/shouye/6/1504.png) no-repeat; background-position:right; padding-top:13px; padding-bottom:5px;}
+/*顶部导航菜单*/
+#TXJ .TXJ_nav li:last-child{ background:none;}
+.TXJ_section{width:100%; height:auto; overflow:hidden;}
+
+
+
+/*顶部导航菜单*/
+.TXJ_nav img{ max-width:75%;}
+/*头部结束*/
+
+/*内容开始*/
+.color{ color:#F00;}
+.color0{ color:#000;}
+.colorfff{ color:#fff;}
+.bac_color1{ background-color:#9a777e;}
+.bac_color2{ background-color:#181931;}
+.font_bold{font-weight:bold;}
+
+
+/*内容结束*/  
+/*xf*/
+
+/*三级*/
+
+
+/*三级*/
+/*新闻展示*/
+.TXJ_news{ width:90%; height:auto; overflow:hidden; margin:0 auto; font-size:0.6em;}
+.TXJ_news h3{ margin-top:10px; margin-bottom:10px;}
+.TXJ_news dl{width:100%; height:auto; overflow:hidden; background:url(/images/shouye/6/55.png) no-repeat; background-position:right; margin-bottom:10px; padding-bottom:5px; border-bottom:1px solid #CCC;}
+.TXJ_news dt{width:30%; height:auto; overflow:hidden; border:0px solid #000; float:left;}
+.TXJ_news dd{ width:62%; border:0px solid #000; float:left; line-height:20px; }
+
+/*新闻展示*/

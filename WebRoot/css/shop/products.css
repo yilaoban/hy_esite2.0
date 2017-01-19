@@ -1,0 +1,37 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+ul, ol{list-style: none; }
+a{text-decoration:none;color:#646464;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+body{font-family:"Microsoft Yahei",Tahoma,Arial,Helvetica,STHeiti;width:100%;color:#646464;font-size:13px;background:#FFF;}
+.nav{width:100%;background:#FAFAFA;position:fixed;top:0;left:0;z-index:1000;}
+.nav ul{height:40px;line-height:40px;border-bottom:1px solid #D9DADD;text-align:center;width:100%;}
+.nav ul li{display:inline-block;text-align:center;height:20px;line-height:20px;font-size:14px;color:#323232;}
+.nav ul li em{display:inline-block;border-right:1px solid #D6D7DC;padding:0 20px 0 17px;}
+.nav ul li.last em{border-right:none;}
+.nav ul li.red{color:#E71162;font-size:15px;height:31px;background:url(../images/line.png) 10px bottom no-repeat;background-size:42px 1px;}
+.main{width:100%;margin-bottom:49px;}
+.main ul li{width:96%;margin-left:4%;border-bottom:1px solid #D9DADF;padding:10px 0;height:85px;position:relative;}
+.main ul li img.pic{width:83px;height:83px;float:left;border:1px solid #D6D7DC;}
+.main ul li a.join{position:absolute;bottom:10px;right:4%;width:22px;height:22px;z-index:200;}
+.main ul li a.join img{width:22px;height:22px;}
+.main ul li p.one,.main ul li p.two,.main ul li p.three{width:68%;display:inline-block;margin-left:12px;}
+.main ul li p.one{font-size:15px;color:#383838;}
+.main ul li p.move{margin-top:-5px;}
+.main ul li p.two{color:#7C7B7B;margin:6px 0 6px 12px;line-height:19px;font-size:12px;}
+.main ul li p.three span{font-size:15px;margin-right:5px;color:#E71162;}
+.main ul li p.three i{color:#999999;font-size:11px;text-decoration:line-through;}
+.bottom{position:fixed;z-index:1000;width:100%;background:#FAFAFA;bottom:0;left:0;height:50px;line-height:50px;border-top:1px solid #D6D7DC;}
+.bottom p{line-height:68px;}
+.bottom p a{display:inline-block;width:25%;text-align:center;font-size:10px;letter-spacing:2px;text-indent:1px;}
+.bottom p a.shouye{background:url(/images/shop/shouye.png) no-repeat center 5px;background-size:25px auto;}
+.bottom p a.fenlei{background:url(/images/shop/fenlei.png) no-repeat center 5px;background-size:25px auto}
+.bottom p a.car{background:url(/images/shop/car.png) no-repeat center 5px;background-size:25px auto}
+.bottom p a.mine{background:url(/images/shop/mine.png) no-repeat center 5px;background-size:25px auto}
+.bottom p a.fenlei2{background:url(/images/shop/fenlei2.png) no-repeat center 5px;background-size:25px auto;color:#e71162;}
+.bottom p a.mine2{background:url(/images/shop/mine2.png) no-repeat center 5px;background-size:25px auto}
+.bottom p a.shouye2{background:url(/images/shop/shouye2.png) no-repeat center 5px;background-size:25px auto;}
+.bottom p a.car2{background:url(/images/shop/car2.png) no-repeat center 5px;background-size:25px auto}

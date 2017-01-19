@@ -1,0 +1,25 @@
+##搜索引擎
+<style>
+	.searchvm{ width:90%; margin:0 auto; border:1px #e1e1e1 solid; height:40px; background:#fff; margin-top:10px;border-radius:5px}
+	.qz_search{ width:70%; float:left; height:30px; margin-top:5px; border:none; color:#a5a5a5;font-family: "Microsoft Yahei", Arial; font-size:.9em; padding-left:5px;}
+	.searchvm span{ width:15%; float:right; border-left:1px #a5a5a5 solid; text-align:center; margin-top:10px;}
+	.searchvm span img{max-width: 100%;height: auto;width: auto\9; width:20px;}
+</style>
+
+<div class="searchvm hyzj"  hydata="$pcbid" hyct="Y" status="0"  style="$!hyct;">
+  <form action="" method="post">
+	<input name="wd" type="text" class="qz_search" placeholder="$!title" />
+	<span onclick="submit()"><img src="/images/search.png" /></span>
+  </form>
+</div>
+<script>
+$(document).ready(function(){
+	var oname = $("#oname").val();
+	$("form").attr("action","/"+oname+"/user/search_result_page.action");
+});
+	function submit(){
+		if($(".qz_search").val().trim()!=""){
+			$("form").submit();
+		}
+	}
+</script>

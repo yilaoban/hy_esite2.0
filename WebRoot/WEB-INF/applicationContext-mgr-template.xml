@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="wxTemplateMgr" class="com.huiyee.interact.template.mgr.impl.WxTemplateMgrImpl">
+		<property name="wxTemplateDao" ref="wxTemplateDao"></property>
+	</bean>
+	<bean id="wxTemplateIndustryMgr" class="com.huiyee.interact.template.mgr.impl.WxTemplateIndustryMgrImpl">
+		<property name="wxTemplateIndustryDao" ref="wxTemplateIndustryDao"></property>
+	</bean>
+	<bean id="wxTemplateStoreMgr" class="com.huiyee.interact.template.mgr.impl.WxTemplateStoreMgrImpl">
+		<property name="wxTemplateStoreDao" ref="wxTemplateStoreDao"></property>
+	</bean>
+	<bean id="wxTemplateJobMgr" class="com.huiyee.interact.template.mgr.impl.WxTemplateJobMgrImpl">
+		<property name="wxTemplateJobDao" ref="wxTemplateJobDao"></property>
+	</bean>
+
+</beans>

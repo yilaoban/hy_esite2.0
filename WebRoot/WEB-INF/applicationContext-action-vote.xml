@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="voteAction" class="com.huiyee.interact.vote.action.VoteAction" 
+		parent="interactModelAction" scope="prototype" init-method="init">
+		<property name="voteMgr" ref="voteMgrImpl"></property>
+	</bean>
+	<bean id="previewAction" class="com.huiyee.interact.vote.action.VotePreviewAction"
+		parent="interactModelAction" scope="prototype" >
+		<property name="voteMgr" ref="voteMgrImpl"></property>
+	</bean>
+	<bean id="voteRecordDataAction" class="com.huiyee.interact.vote.action.VoteRecordDataAction" 
+		parent="interactModelAction" scope="prototype" >
+		<property name="voteMgr" ref="voteMgrImpl"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+		
+	</bean>
+	<bean id="voteSubmitAction" class="com.huiyee.interact.vote.action.VoteSubmitAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="voteMgr" ref="voteMgrImpl"></property>
+	</bean>
+	<bean id="voteOptionAction" class="com.huiyee.interact.vote.action.VoteOptionAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="voteMgr" ref="voteMgrImpl"></property>
+	</bean>
+	
+</beans>

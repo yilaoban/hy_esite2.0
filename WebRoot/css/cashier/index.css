@@ -1,0 +1,33 @@
+.pcs_bg {width: 100%;height: 100vh;background: #fff;}
+.pcs_img_bg {width: 100%;height: 100vh;background-image: url(/images/cashier/bg.png);background-size: cover;}
+.pcs_blue {height: 40%;background-color: #3399FF;margin-bottom: 5%;}
+.pcs_white {height: 70%;background: #fff;position: absolute;top:15%;width: 600px;left: 50%;margin-left: -300px;overflow: auto;}
+.pcs_main {width: 300px;margin: 0 auto;text-align: center;}
+.pcs_login_img {width: 120px;margin: 120px auto;}
+.pcs_finish_img {width: 80px;margin: 22% auto 10%;}
+.pcs_input_bg {height:44px;background-size: cover;margin-bottom: 20px;text-align: right;}
+.pcs_input_bg1 {background-image: url(/images/cashier/account_img.png);}
+.pcs_input_bg2 {background-image: url(/images/cashier/password_img.png);}
+.pcs_input_bg input[type="text"], .pcs_input_bg input[type="password"] {line-height: 44px;border: none;background: none;outline: none;width: 80%;color: #fff;font-size: 18px;padding: 0;}
+.pcs_input_bg input::-webkit-input-placeholder{color: #fff;}
+.pcs_input_bg input[type="button"] {width: 100%;background-color: #3399FF;line-height: 44px;border-radius:24px;border: none;outline: none;color: #fff;font-size: 18px;padding: 0;}
+ul.pcs_tab {width: 600px;margin: 0 auto;}
+ul.pcs_tab:after {content:".";display:block;height:0;clear:both;visibility:hidden;}
+ul.pcs_tab li {width: 150px;float: right;text-align: center;color: #fff;height: 40px;line-height: 40px;margin: 30px 0 0 20px;border:1px solid #fff;border-radius: 21px;cursor: pointer; }
+span.scan {display:inline-block;width:14px;height:14px;background-image: url(/images/cashier/scan.png);background-size: cover;}
+span.bill {display:inline-block;width:14px;height:14px;background-image: url(/images/cashier/bill.png);background-size: cover;}
+.pcs_scan_big {width:100px;margin:30% auto;}
+.pcs_input {border: 1px solid #FF9933;height:44px;margin-bottom: 15px;border-radius:24px;}
+.pcs_input input[type="text"] {line-height: 44px;border: none;background: none;outline: none;width: 90%;color: #333;font-size: 18px;padding: 0;text-align: center;}
+.pcs_input input[type="password"] {line-height: 44px;border: none;background: none;outline: none;width: 90%;color: #333;font-size: 18px;padding: 0;text-align: center;}
+.pcs_input select {height: 44px;line-height: 44px;border: none;background: none;outline: none;width: 60%;color: #333;font-size: 18px;padding: 0;text-align: center;}
+.pcs_button  input[type="button"] {width: 100%;background-color: #FF9933;line-height: 44px;border-radius:24px;border: none;outline: none;color: #fff;font-size: 18px;padding: 0;}
+.pcs_dscp {color: #646464;width: 260px;margin: 0 auto;text-align: left;line-height: 24px;font-size: 14px;margin-bottom: 30px;}
+.pcs_table {border-collapse: collapse;text-align: center;line-height:40px;font-size:14px;width: 100%;}
+.pcs_table thead {background: #3399FF;color: #fff;}
+.jine {color: #FF9933;}
+.pcs_head {width: 80px;height: 80px;border-radius: 40px;float: left;margin-top: 19%;}
+.pcs_text {margin-left:100px;padding-top: 20%;}
+.pcs_text p {color: #fff;text-align: left;margin-bottom: 10px;font-size: 16px;}
+.pcs_print {width: 200px;margin: 0 auto 18%;}
+.pcs_print p {margin-bottom: 10px;color:#333;text-align: left;}

@@ -1,0 +1,48 @@
+<div id="80_1" class="print print80">
+	<img class="logo" src="$!logo"/>
+	<div>会员：$!No</div>
+	<div>时间：$!time</div>
+	<p>****************************************</p>
+	<table>
+		<thead>
+			<th>商品</th>
+			<th>数量</th>
+			<th>单价</th>
+			<th>小计</th>
+		</thead>
+		<tbody>
+			#foreach($xf in $list)
+			<tr>
+				<td>$!xf.name</td>
+				<td>$!xf.num</td>
+				<td>$!xf.price</td>
+				<td>$!xf.subtotal</td>
+			</tr>
+			#end
+		</tbody>
+	</table>
+	<p>****************************************</p>
+	<p>合计：$!total</p>
+	<p>实收：$!receive</p>
+	<p>找零：$!change</p>
+	<div id="qr_80_1" class="qrcode"></div>
+	
+	#if($showTitle)
+		<p class="slick-title">80mm模板1</p>
+	#end
+</div>
+
+<script type="text/javascript" src="/js/qrcode.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var url = "$!url";
+	if(url != ""){
+		var qrcode = new QRCode(document.getElementById("qr_80_1"),{
+			width:100,
+			height:100
+		});
+		qrcode.clear();
+		qrcode.makeCode(url);
+	}
+});
+</script>

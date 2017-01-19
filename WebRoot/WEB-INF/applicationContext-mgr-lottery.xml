@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="lotteryMgr" class="com.huiyee.interact.lottery.mgr.LotteryMgr">
+		<property name="lotteryDao" ref="lotteryDao"></property>
+		<property name="lotteryPrizeInfoDao" ref="lotteryPrizeInfoDao"></property>
+		<property name="signinDao" ref="signinDao"></property>
+	</bean>
+	<bean id="sinaGroupMgr" class="com.huiyee.interact.lottery.mgr.SinaGroupMgr">
+		<property name="sinaGroupDao" ref="sinaGroupDao"></property>
+	</bean>
+	<bean id="lotteryAsignUserMgr" class="com.huiyee.interact.lottery.mgr.LotteryAsignUserMgr">
+		<property name="lotteryAsignUserDao" ref="lotteryAsignUserDao"></property>
+	</bean>
+	<bean id="lotteryPrizeCodeMgr" class="com.huiyee.interact.lottery.mgr.LotteryPrizeCodeMgr">
+		<property name="lotteryPrizeCodeDao" ref="lotteryPrizeCodeDao"></property>
+	</bean>
+	
+	<bean id="lotteryPrizeMgr" class="com.huiyee.interact.lottery.mgr.LotteryPrizeMgr">
+		<property name="lotteryPrizeDao" ref="lotteryPrizeDao"></property>
+		<property name="lotteryPrizeCodeDao" ref="lotteryPrizeCodeDao"></property>
+		<property name="contentProductDao" ref="contentProductDaoImpl"></property>
+	</bean>
+	
+	<bean id="lotteryUserDateMgr" class="com.huiyee.interact.lottery.mgr.LotteryUserDateMgr">
+		<property name="lotteryUserDateDao" ref="lotteryUserDateDao"></property>
+	</bean>
+	
+	<bean id="lotteryUserMgr" class="com.huiyee.interact.lottery.mgr.LotteryUserMgr" parent="abstractMgr">
+		<property name="lotteryUserDao" ref="lotteryUserDao"></property>
+	</bean>
+	
+	<bean id="lotteryUserRecordMgr" class="com.huiyee.interact.lottery.mgr.LotteryUserRecordMgr" parent="abstractMgr">
+		<property name="lotteryUserRecordDao" ref="lotteryUserRecordDao"></property>
+		<property name="lotteryUserDateDao" ref="lotteryUserDateDao"></property>
+		<property name="lotteryPrizeDao" ref="lotteryPrizeDao"></property>
+		<property name="lotteryUserDao" ref="lotteryUserDao"></property>
+		<property name="lotteryPrizeCodeDao" ref="lotteryPrizeCodeDao"></property>
+		<property name="lotteryDao" ref="lotteryDao"></property>
+	</bean>
+	<bean id="wxHbSendMgrImpl" class="com.huiyee.interact.lottery.mgr.WxHbSendMgrImpl" >
+		<property name="wxHbSendDao" ref="wxHbSendDaoImpl"></property>
+	</bean>
+	<bean id="lotteryUserSubMgr" class="com.huiyee.interact.lottery.mgr.LotteryUserSubMgr">
+		<property name="lotteryUserSubDao" ref="lotteryUserSubDao"></property>
+	</bean>
+	<bean id="wxHongbaoMgrImpl" class="com.huiyee.interact.lottery.mgr.WxHongbaoMgrImpl">
+		<property name="wxHongbaoDao" ref="wxHongbaoDaoImpl"></property>
+	</bean>
+</beans>

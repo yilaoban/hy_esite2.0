@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="yuyueServicerDaoImpl" class="com.huiyee.interact.servicerpj.dao.YuyueServicerDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="yuyueServicerPjDaoImpl" class="com.huiyee.interact.servicerpj.dao.YuyueServicerPjDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="servicerPjPageDao" class="com.huiyee.interact.servicerpj.dao.ServicerPjPageDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="servicerPjWdDao" class="com.huiyee.interact.servicerpj.dao.ServicerPjWdDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

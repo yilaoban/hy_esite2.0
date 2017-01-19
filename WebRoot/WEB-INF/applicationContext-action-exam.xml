@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="examAction" class="com.huiyee.interact.exam.action.ExamAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="examMgr" ref="examMgrImpl"></property>
+	</bean>
+	<bean id="examQuestionAction" class="com.huiyee.interact.exam.action.ExamQuestionAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="examQuestionMgr" ref="examQuestionMgrImpl"></property>
+	</bean>
+	<bean id="examPreviewAction" class="com.huiyee.interact.exam.action.ExamPreviewAction"
+	 	parent="interactModelAction" scope="prototype">
+		<property name="examMgr" ref="examMgrImpl"></property>
+	</bean>
+	<bean id="examRecordDataAction" class="com.huiyee.interact.exam.action.ExamRecordDataAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="examManager" ref="examMgrImpl"></property>
+		<property name="examQuestionMgr" ref="examQuestionMgrImpl"></property>
+	</bean>
+	<bean id="examSurveyResultAction" class="com.huiyee.interact.exam.action.ExamSurveyResultAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="examQuestionOptionMgr" ref="examQuestionOptionMgrImpl"></property>
+	</bean>
+	<bean id="examSubmitAction" class="com.huiyee.interact.exam.action.ExamSubmitAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="examManager" ref="examMgrImpl"></property>
+	</bean>
+	<bean id="examResultAction" class="com.huiyee.interact.exam.action.ExamResultAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="examManager" ref="examMgrImpl"></property>
+	</bean>
+	<bean id="examResultShowAction" class="com.huiyee.interact.exam.action.ExamResultShowAction" parent="abstractAction" scope="prototype">
+	</bean>
+</beans>

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="spreadMgrImpl" class="com.huiyee.interact.spread.mgr.SpreadManagerImpl" parent="abstractMgr">
+		<property name="spreadDao" ref="spreadDaoImpl"></property>
+	</bean>
+	<bean id="spreadOptionMgrImpl" class="com.huiyee.interact.spread.mgr.SpreadOptionMgrImpl">
+		<property name="spreadOptionDao" ref="spreadOptionDaoImpl"></property>
+	</bean>
+	
+	<bean id="spreadRecordMgrImpl" class="com.huiyee.interact.spread.mgr.SpreadRecordMgrImpl">
+		<property name="spreadRecordDao" ref="spreadRecordDaoImpl"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="sinaUserDao" ref="sinaUserDaoImpl"></property>
+	</bean>
+	<bean id="baShareMgrImpl" class="com.huiyee.interact.spread.mgr.BAShareManagerImpl" parent="abstractMgr">
+		<property name="spreadDao" ref="spreadDaoImpl"></property>
+	</bean>
+</beans>

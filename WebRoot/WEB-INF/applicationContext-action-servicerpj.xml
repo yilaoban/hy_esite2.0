@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="servicerpjAction" class="com.huiyee.interact.servicerpj.action.ServicerPjAction" parent="abstractAction" scope="prototype">
+		<property name="servicerMgr" ref="servicerMgr"></property>
+		<property name="servicerPjMgr" ref="servicerPjMgrImpl"></property>
+		<property name="servicerPjPageMgr" ref="servicerPjPageMgr"></property>
+		<property name="wxTemplateMgr" ref="wxTemplateMgr"></property>
+		<property name="servicerPjWdMgr" ref="servicerPjWdMgr"></property>
+	</bean>
+
+</beans>

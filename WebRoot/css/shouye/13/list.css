@@ -1,0 +1,11 @@
+#shouye_1022_6{display:block;min-width: 320px; margin:0 auto; max-width:640px; width: 100%; min-height:100%;overflow: hidden;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; background:rgba(234,234,234,1.0); font-family:"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53", Arial, Helvetica, sans-serif; font-size: 62.5%; line-height: 1.231;}
+.telnav {display:block; position:relative; padding:0%;}
+.telbtn {display:block; position:relative;overflow:hidden;font-size:1.6em; color:#fff; }
+.pic {float:left;display:block; width:100%;
+  }
+.pic img {display:block;width:100%;
+  }
+.t_content{display:block; position:absolute; top:0; width:35%; border-radius:5px; padding:3% 2% 2%; margin-left:2%;  }
+.t_t{display:block; width:100%; color:#fff; font-size:1.1em; text-align:center;}
+footer {display:block; width:100%;line-height:30px; background:#1f1f1f; color:#fff; font-size:1.4em; text-align:center;}
+

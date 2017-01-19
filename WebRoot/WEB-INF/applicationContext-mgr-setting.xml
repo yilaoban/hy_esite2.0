@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="hyUserDzMgr" class="com.huiyee.interact.setting.mgr.impl.HyUserDzMgrImpl" parent="abstractMgr">
+		<property name="hyUserDzDao" ref="hyUserDzDao"></property>
+	</bean>
+	
+	<bean id="userJfMgrImpl" class="com.huiyee.interact.setting.mgr.impl.UserJfMgrImpl" parent="abstractMgr">
+		<property name="userJfDao" ref="userJfDaoImpl"></property>
+		<property name="grCenterDao" ref="grCenterDaoImpl"></property>
+		<property name="hyUserLevelDao" ref="hyUserLevelDaoImpl"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+	</bean>
+	
+	<bean id="hyUserLevelMgrImpl" class="com.huiyee.interact.setting.mgr.impl.HyUserLevelMgrImpl">
+		<property name="hyUserLevelDao" ref="hyUserLevelDaoImpl"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+		<property name="userJfDao" ref="userJfDaoImpl"></property>
+		<property name="ownerBalanceDao" ref="ownerBalanceDao"></property>
+	</bean>
+	<bean id="hyUserWayMgr" class="com.huiyee.interact.setting.mgr.impl.HyUserWayMgr" parent="abstractMgr">
+		<property name="hyUserWayDao" ref="hyUserWayDao"></property>
+		<property name="hyUserDao" ref="hyUserDao"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="hyUserLevelDao" ref="hyUserLevelDaoImpl"></property>
+		<property name="hyUserXfDescDao" ref="hyUserXfDescDao"></property>
+	</bean>
+	
+	<bean id="hyUserPrintMgr" class="com.huiyee.interact.setting.mgr.impl.HyUserPrintMgrImpl">
+		<property name="hyUserPrintDao" ref="hyUserPrintDao"></property>
+	</bean>
+	
+	<bean id="hyUserXfDescMgr" class="com.huiyee.interact.setting.mgr.impl.HyUserXfDescMgrImpl">
+		<property name="hyUserXfDescDao" ref="hyUserXfDescDao"></property>
+	</bean>
+	
+	<bean id="hyUserLevelCodeMgr" class="com.huiyee.interact.setting.mgr.impl.HyUserLevelCodeMgrImpl">
+		<property name="hyUserLevelCodeDao" ref="hyUserLevelCodeDao"></property>
+	</bean>
+	
+</beans>

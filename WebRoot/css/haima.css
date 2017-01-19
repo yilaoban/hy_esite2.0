@@ -1,0 +1,87 @@
+* {margin: 0;padding: 0;}
+body {background:#fff;width: 100%;font-family:微软雅黑;}
+a {color:#2b2b2b;text-decoration:none;outline:none;}
+img {border:0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;} 
+.left {float:left;}
+.right {float:right;}
+.mt2 {margin-top:2px;}
+.mr2 {margin-right:2px;}
+.ilb {display:inline-block;float:left;position:relative;cursor:pointer;}
+ul li {list-style:none;}
+
+.imgblock {margin: 0 auto;width: 940px;}
+.tab_menu {z-index:1;border:1px solid #D2D2D2;}
+.tab_menu ul {background:url(/images/haima/tab_bg.png);}
+.tab_menu li {list-style:none;float:left;padding:0 30px;height:49px;line-height:49px;cursor:pointer;background:url(/images/haima/tab_bg.png);text-align:center;color:#444;border-right:1px solid #DCDDDF;font-weight:bold;}
+li.tabon {background:url(/images/haima/tabon_bg.png);color:#fff;}
+.tab_content {background:#fff;}
+#sina_share {position:absolute;top:240px;left:465px;}
+
+a.travel, a.music, a.photo, a.digital, a.food, a.creative {display:block;width:90px;height:91px;float:left;text-indent:-9999px;margin-right:30px;}
+a.travel {background:url(/images/haima/creative.png);}
+a.music {background:url(/images/haima/music.png);}
+a.photo {background:url(/images/haima/photo.png);}
+a.digital {background:url(/images/haima/digital.png);}
+a.food {background:url(/images/haima/food.png);}
+a.creative {background:url(/images/haima/travel.png);}
+
+ul.namelist {color:#fff;padding-bottom:12px;margin-left:-30px;}
+ul.namelist li {float:left;margin:16px 0 0 50px;}
+ul.namelist li p {text-align:center;}
+ul.namelist li p.name {padding-bottom:10px;}
+
+.share-list{overflow:hidden;*zoom:1}
+.share-list li.line {padding:0 0 20px 0;overflow:hidden;border-bottom:1px solid #AFAFAF;padding:20px 68px;height:240px;}
+.wb_face {float:left;width:50px;}
+.wb_detail {margin-left:65px;}
+.wb_media {padding:8px 0;}
+.wb_name {font-size:14px;font-weight:bold;padding-bottom:5px;}
+.wb_text {font-size:14px;line-height:23px;}
+.wb_text a {color:#5183C1}
+
+h2.cityplayer {color:#608613;}
+input[type="text"] {background:#fff;border:none;line-height:20px;height:20px;width:100px;}
+textarea {border:none;width:400px;}
+#picture_p {padding:15px 0;}
+.imgarea {display:inline-block;width:48px;height:48px;float:left;position:relative;margin-right:20px;}
+a.removePic {display:block;background:url(/images/haima/removepic.png);height:16px;width:16px;position:absolute;top:-5px;right:-5px;}
+input[type="button"] {background:#608714;padding:3px 15px;color:#fff;border:none;font-size:16px;font-family:微软雅黑;cursor:pointer;}
+a.share_s_btn {background:#608714;padding:3px 15px;color:#fff;border:none;font-size:16px;font-family:微软雅黑;}
+
+.row {float:left;height:651px;width:235px;color:#fff;font-size:14px;}
+.modal {height:100%;width:100%;cursor:pointer;}
+.shadow {background:#000;opacity:0.7;}
+.shadow .board {display:none;}
+.shadow .blabla {display:block;}
+.board {background:#000;opacity:0.6;position:absolute;bottom:0;left:0;right:0;text-align:center;padding:5px 0;}
+.blabla {padding:25px 15px;display:none;}
+
+label {position:relative;}
+.fans_div {display:none;position:absolute;top:23px;left:14px;background:#fff;z-index:999999}
+#fans_ul {color:#555;font-size:12px;}
+#fans_ul li {padding:2px;width:96px;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;}
+.scrollDiv{height:840px;min-height:840px;line-height:18px;overflow:hidden;}
+
+/* uidialog */
+.ui-dialog{position:fixed;min-width:150px;background:url(/images/haima/pop_bg.png);overflow:hidden;z-index:99999;border:2px solid #c3c5c9;color:#333;font-size:14px;}
+.ui-dialog h1{*margin-top:-3px;position:relative;text-indent:1em;padding:3px 0;font-size:14px;font-weight:normal;-moz-user-select:none;/* FF禁止选择文字 */-webkit-user-select:none;/* Chrome禁止选择文字 */}
+.ui-dialog h1 .ui-close{position:absolute;top:10px;right:10px;cursor:pointer;text-indent:-9999px;background:url(/images/haima/pop_close.png);height:24px;width:24px;display:block;}
+.ui-dialog-body{ padding:10px;}
+.ui-title{ border-bottom:1px solid #ccc; background:#f0f0f0;}
+.ui-mask{position:absolute;left:0;top:0;z-index:77777;background:#000;filter:alpha(opacity=50);opacity:0.5;}
+.wrap{ width:500px; margin:40px auto;}
+
+.popdiv, .transformer {position:absolute;top:0;left:0;right:0;bottom:0;background:#000;text-align:center;vertical-align:middle;display:none;cursor:pointer;}
+
+/*翻页*/
+.t_prev, .t_next {display:inline-block;width:37px;height:38px;text-indent:-9999px;position:absolute;top:280px;}
+.t_prev {background:url(/images/haima/left.png);left:0;}
+.t_next {background:url(/images/haima/right.png);right:0;}
+i.camera {display:inline-block;width:32px;height:32px;text-indent:-9999px;position:absolute;bottom:8px;right:8px;background:url(/images/haima/camera.png);}
+.video {position:absolute;bottom:0;left:0;right:0;text-align:right;padding:2px 5px;color:#fff;font-size:12px;}
+.video span {float:left;padding-left:18px;background:url(/images/haima/video.png) 2px 2px no-repeat;}
+
+a#pic_upload {background:url(/images/haima/upload.png) no-repeat;line-height:22px;display:inline-block;height:22px;padding-left:28px;}
+iframe {margin-bottom:-330px;}
+.nick_link {position:absolute;top:0;bottom:0;right:0;left:0;}

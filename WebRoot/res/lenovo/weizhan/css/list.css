@@ -1,0 +1,75 @@
+/* CSS Document */
+
+.bottom{ width:100%;font-size:0.6em; text-align:center; position:fixed; bottom:0.5%; z-index:-1; color:#6c6c6c;}
+
+.sy_Favicon{ width:100%; margin:0 auto; padding-top:65%;}
+.sy_Favicon_left{ width:6%;z-index:2;position:absolute;top:43%; left:11%;}
+.sy_Favicon_left img{max-width: 100%;height: auto;width: auto\9;border-radius: 100px;}
+.sy_Favicon_right{ width:100%;margin-top:10px;position:absolute; top:40%; left:0; z-index:1;}
+.sy_button{ width:100%; margin:0 auto;}
+.sy_button1{ width:20%; position:absolute; top:57%; left:7%;}
+.sy_button2{ width:16%; position:absolute; top:58%; left:34%;}
+.sy_button3{ width:14%; position:absolute; top:60%; left:55%;}
+.sy_button4{ width:11%; position:absolute; top:64%; left:72%;}
+.sy_button5{ width:11%; position:absolute; top:83%; left:44%;}
+.sy_button6{ width:18%; position:absolute; top:83%; left:23%;}
+.sy_Favicon_right img,.sy_button1 img,.sy_button2 img,.sy_button3 img,.sy_button4 img,.sy_button5 img,.sy_button6 img{max-width: 100%;height: auto;width: auto\9;}
+
+.iphone4 .sy_button1{ width:20%; position:absolute; top:58%; left:8%;}
+.iphone4 .sy_button2{ width:16%; position:absolute; top:59%; left:35%;}
+.iphone4 .sy_button3{ width:14%; position:absolute; top:61%; left:54%;}
+.iphone4 .sy_button4{ width:11%; position:absolute; top:66%; left:70%;}
+.iphone4 .sy_button5{ width:11%; position:absolute; top:87%; left:45%;}
+.iphone4 .sy_button6{ width:18%; position:absolute; top:88%; left:24%;}
+
+
+.jdrs_box{ width:90%; margin:0 auto;}
+.jdrs_return{ position:absolute;width:10%; top:4%;  right:5%;}
+.jdrsz_return{  position:absolute;width:10%; top:4%;  right:5%;}
+.jdrs_return_final{width:10%; position:absolute; top:5%; right:10%;}
+
+.jdrs_box_z{ width:100%; margin:0 auto;}
+.jdrsz_1{ width:90%; position:absolute; top:15%; left:3%;}
+.jdrsz_2{ width:90%; position:absolute; top:47%;right:0%}
+
+.jdrs_final{ width:100%; margin-top:25%;}
+.jdrs_final img,.yyy_top img,.jdrsz_1 img,.jdrsz_2 img,.jdrsz_return img,.jdrs_return img,.tc_nr_left img,.jp_box img,.jp_box_final img,.jdrs_return_final img,.dzp_bj img,.yyy_bj img{max-width: 100%;height: auto;width: auto\9;}
+
+.wdxxd_box{width:100%; float:left; margin-top:28%;}
+.wdxxd_box img{max-width: 100%;height: auto;width: auto\9; margin-top:2%;}
+
+.yyy_box{width:100%; float:left; margin-top:0;}
+.yyy_top{ width:100%; float:left;}
+.yyy_center{ width:100%; float:left; margin-top:6%;}
+.yyy_cishu{ width:100%; float:left;}
+.yyy_cishu h1{ width:70%; margin:0 auto; font-family: "Microsoft Yahei", Arial; font-size:1.0em; text-align:center; background:#dd1258; line-height:40px;border-radius: 10px; color:#fff; margin-top:6%;}
+.yyy_bj{ width:210px; margin:0 auto; height:210px; background:#ffb901;border-radius: 100px;}
+
+
+.dzp_box{width:100%; margin-top:25%;overflow:hidden;}
+.dzp_bj{width:230px; margin:0 auto;}
+
+.tc_box{ width:100%; float:left;}
+.tc_box ul{ width:100%;float:left; list-style:none;}
+.tc_box li{ width:100%; float:left; margin-top:10px;}
+.tc_tx{ width:50px; float:left;text-align:center;}
+.tc_tx img{ width:50px; height:50px;border-radius: 100px; float:left;}
+.tc_tx span{ width:50px; float:left; text-align:center; line-height:24px; font-size:1.0em;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;}
+.tc_nr{ width:80%; float:left;}
+.tc_nr_left{float:left;}
+.tc_nr_right{ width:90%; float:left; background:#dd1359;border-radius: 10px; height:45px; opacity:0.6;font-family: "Microsoft Yahei", Arial; font-size:1.0em; line-height:45px; text-indent:10px; color:#fff;text-overflow: ellipsis;white-space: nowrap;overflow: hidden;}
+
+.tc_bottom {width: 95%;position: fixed;bottom: 5%;left: 2%;}
+.tc_sh{ width:75%; float:left; height:35px;border-radius: 10px; background:#fff; border:1px #d2d2d2 solid; margin-top:10px;}
+.tc_an{ width:20%; float:right;height:35px;border-radius: 10px; background:url(../images/tc_an_07.png) center no-repeat #ebecee;border:1px #bfbfbf solid;margin-top:12px;}
+
+.tc_nr_left1{ width:0;
+    height:0;
+    border-width:10px;
+    border-style:solid; float:left; margin-right:0;
+    border-color:#fefefe #dd1359 #fefefe #fefefe; margin-top:10px;opacity:0.6;outline:none}
+
+
+.jp_box{width:100%; margin:0 auto;}
+.jp_box_final,jp_box_final,.jp_box_final_1{ width:100%;}
+.jp_box_final img{ float:left; border:0;}

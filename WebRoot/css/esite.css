@@ -1,0 +1,41 @@
+* {margin: 0;padding: 0;}
+body {background:#fff;width: 100%;font-family:Î¢ÈíÑÅºÚ;}
+a {color:#2b2b2b;text-decoration:none;outline:none;}
+img {border:0;}
+hr {padding-top:10px;margin-bottom:10px;height:1px;border:none;border-bottom:1px dashed #bfbfbf}
+.imgblock {margin: 0 auto;width: 867px;}
+li {list-style:none;}
+ul.lst {display:block;height:34px;font-size:16px;}
+ul.lst li {list-style: none;float: left;margin-right: 40px;font-weight: bolder;height:30px;line-height:30px;padding-bottom:4px;}
+ul.lst li.active {background:url(/images/test1/angle.jpg) no-repeat center bottom;}
+ul.kst {margin:-10px 0 20px -10px;}
+ul.kst li {list-style: none;float: left;margin: 10px 0 0 8px;}
+ul.kst p {font-size:12px;color:#555;padding:5px 0 0;text-align:center;}
+ul.mst {margin:-26px 0 0 -26px;}
+ul.mst li {list-style: none;float: left;margin: 26px 0 0 26px;}
+ul.mst p {font-size:12px;color:#555;padding:5px 0 10px;text-align:center;}
+.tab_content {padding:20px;}
+.share span {padding-left:4px;}
+.share a {margin-right:12px;}
+.support {width:867px;margin:0 auto;padding:20px 0;text-align:right;color:#888;font-size:12px;}
+.support a {color:#888}
+/*Í¼Æ¬*/
+#popImage_cache img{border:4px solid #fff;background:#fff;display:block;padding:4px;position:absolute;cursor:pointer;z-index:9999;-webkit-border-radius: 5px;-moz-border-radius: 5px;border-radius: 5px;-moz-box-shadow: 0 0 45px #888;-webkit-box-shadow: 0 0 45px #888;box-shadow: 0 0 45px #888;}
+.popImage_close{background:url(/images/close.png) center no-repeat;position:absolute;height:40px;width:40px;z-index:9999;cursor:pointer;display:none;}
+a.image_gall {display:inline-block;}
+/*ÂÖ²¥*/
+.jCarousel li {padding:10px;}
+.jCarousel li a {position:relative;display:block;}
+.jCarousel li .shade {    background: none repeat scroll 0 0 #000000;bottom: 7px;color: #FFFFFF;font-size: 12px;left: 7px;opacity: 0.7;padding: 2px 0;position: absolute;right: 7px;}
+.prev1, .next1 {text-indent£º-9999px;display:block;width:29px;height:44px;position:absolute;top:250px;z-index:9999;}
+.prev1 {background:url(/images/test1/prev-11.png);left:0;}
+.next1 {background:url(/images/test1/next-11.png);right:0;}
+.prev2, .next2 {text-indent£º-9999px;display:block;width:25px;height:115px;position:absolute;top:10px;}
+.prev2 {background:url(/images/test2/prev-2.png);left:0;}
+.next2 {background:url(/images/test2/next-2.png);right:0;}
+/*µ¹¼ÆÊ±*/
+.clock {display:inline-block;width:31px;height:38px;background:url(/images/test1/clock_bg.png) no-repeat;color:#333;line-height:35px;font-size:28px;font-weight:bold;margin-right:5px;}
+.clockText {font-size:22px;margin:0 10px 0 5px;font-weight:bold;color:#333;}
+/*·­Ò³*/
+.t_prev {display:inline-block;background:url(/images/prev.png);width:66px;height:28px;text-indent:-9999px;margin-right:20px;}
+.t_next {display:inline-block;background:url(/images/next.png);width:67px;height:28px;text-indent:-9999px;}

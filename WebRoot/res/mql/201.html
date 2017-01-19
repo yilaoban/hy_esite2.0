@@ -1,0 +1,66 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta name="viewport" content="width=device-width,height=device-height,inital-scale=1.0,maximum-scale=1.0,user-scalable=no;" />
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+<meta name="format-detection" content="telephone=no"/>
+<meta name=”viewport” content=”width=device-width, initial-scale=1, maximum-scale=1″/>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>米其林</title>
+<link href="/res/mql/css/index.css" rel="stylesheet" type="text/css" />
+<link href="/res/mql/css/reset.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="/js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript" src="/res/mql/js/mql.js"></script>
+</head>
+<body>
+
+<div class="mqilin_141126_201" style="background:url(images/3-01_bj.png) no-repeat center top #fff;background-size:100%;padding-bottom:5%;">
+<form method="post" id="myform">
+<div class="mql_141127_center clearfix">
+
+  <ul>
+    <li><em style="width:40%">防伪码1：</em><input id="code1" name="code1" type="text" class="mql_141126_201_tk"/></li>
+    <li><em style="width:40%">防伪码2：</em><input id="code2" name="code2" type="text" class="mql_141126_201_tk"/></li>
+    <li><em style="width:40%">防伪码3：</em><input id="code3" name="code3" type="text" class="mql_141126_201_tk"/></li>
+    <li><em style="width:40%">防伪码4：</em><input id="code4" name="code4" type="text" class="mql_141126_201_tk"/></li>
+    <li><em style="width:45%">手机号码：</em><input id="phone" name="phone" type="text" class="mql_141126_201_tk"/></li>
+    <li><em style="width:52%">特约店名称：</em><input id="address" name="address" type="text" class="mql_141126_201_tk"/></li>
+  </ul>
+  
+  <div class="mql_141127_301_anniu" onclick="saveUser()">点击提交</div>
+
+</div>
+</form>
+<script type="text/javascript">
+function saveUser(){
+	if($("#code1").val() != null && $("#code1").val() == "" && $("#code2").val() != null && $("#code2").val() == ""){
+		if($("#code1").val() == $("#code2").val() || $("#code1").val() == $("#code3").val() || $("#code1").val() == $("#code4").val() || $("#code2").val() == $("#code3").val() || $("#code2").val() == $("#code4").val() || $("#code3").val() == $("#code4").val()){
+			window.location.href="/res/mql/401.html";
+		}
+	}
+	
+	$.ajax({
+        cache: true,
+        type: "POST",
+        url:"/user/saveuser.action",
+        data:$('#myform').serialize(),// 你的formid
+        async: false,
+        error: function(request) {
+            alert("Connection error",0);
+        },
+        success: function(data) {
+            if(data==1){
+            	window.location.href="/res/mql/301.html";
+            }else{
+          		  window.location.href="/res/mql/401.html";
+            }
+        }
+    });
+}
+</script>
+   
+</div>
+
+</body>
+</html>

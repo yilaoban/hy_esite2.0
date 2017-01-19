@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<constant name="struts.enable.SlashesInActionNames" value="true" />
+	<package name="cd-login" extends="esite-default">
+		<action name="login" class="cd-loginAction">
+			<result name="success">/WEB-INF/project/caidan/page/login.jsp</result>
+			<result name="ALZ" type="redirect">/${oname}/cd-way/index.action</result>
+			<result name="PRZ" type="redirect">/${oname}/cd-news/index.action</result>
+			<result name="YYR" type="redirect">/${oname}/cd-media/adIndex.action</result>
+			<result name="ADM" type="redirect">/${oname}/cd-account/index.action</result>
+		</action>
+		<action name="sign" class="cd-loginAction" method="sign">
+			<result name="input" type="redirectAction">
+				<param name="namespace">/</param>
+				<param name="actionName">login</param>
+				<param name="msg">${msg}</param>
+			</result>
+			<result name="ALZ" type="redirect">/${oname}/cd-way/index.action</result>
+			<result name="PRZ" type="redirect">/${oname}/cd-news/index.action</result>
+			<result name="YYR" type="redirect">/${oname}/cd-media/adIndex.action</result>
+			<result name="ADM" type="redirect">/${oname}/cd-account/index.action</result>
+		</action>
+	</package>
+	<package name="cd-admin" extends="esite-default">
+		<action name="*/cd-admin/index" class="cd-adminAction">
+			<result name="success" type="tiles">admin</result>
+		</action>
+	</package>
+	<package name="cd-media" extends="esite-default">
+		<action name="*/cd-media/adIndex" class="cd-adAction" method="index">
+			<result name="success" type="tiles">cd_open</result>
+			<result name="toQR" type="redirect">/${oname}/cd-media/adQrList.action</result>
+		</action>
+		<action name="*/cd-media/adOpen" class="cd-adAction" method="open">
+			<result name="success" type="redirect">/${oname}/cd-media/adIndex.action</result>
+		</action>
+		<action name="*/cd-media/adQrList" class="cd-adAction" method="adQrList">
+			<result name="success" type="tiles">cd_qr_list</result>
+		</action>
+		<action name="*/cd-media/adajax_*" class="cd-adAction" method="{2}">
+		</action>
+		<action name="*/cd-media/showAdWay" class="cd-adAction" method="showAdWay">
+			<result name="success" type="tiles">cd_showAdWay</result>
+		</action>
+		<action name="*/cd-media/adWayggSet" class="cd-adAction" method="adWayggSet">
+			<result name="success" type="tiles">cd_way_gg</result>
+		</action>
+		<action name="*/cd-media/editAdWay" class="cd-adAction" method="editAdWay"></action>
+
+		<action name="*/cd-media/adMediaList" class="cd-mediaAction">
+			<result name="success" type="tiles">cd_media_list</result>
+		</action>
+		<action name="*/cd-media/addMedia" class="cd-mediaAction" method="addMedia">
+			<result name="success" type="tiles">cd_add_media</result>
+		</action>
+		<action name="*/cd-media/savedMedia" class="cd-mediaAction" method="savedMedia">
+			<result name="success" type="redirect">/${oname}/cd-media/adMediaList.action</result>
+		</action>
+		<action name="*/cd-media/editMedia" class="cd-mediaAction" method="editMedia">
+			<result name="success" type="tiles">cd_edit_media</result>
+		</action>
+		<action name="*/cd-media/updateMedia" class="cd-mediaAction" method="updateMedia">
+			<result name="success" type="redirect">/${oname}/cd-media/adMediaList.action</result>
+		</action>
+		<action name="*/cd-media/delMedia" class="cd-mediaAction" method="delMedia"></action>
+		<action name="*/cd-media/mediaWay" class="cd-mediaAction" method="mediaWay">
+			<result name="success" type="tiles">cd_mediaWayList</result>
+		</action>
+		<action name="*/cd-media/showMediaWay" class="adMediaAction" method="showMediaWay">
+			<result name="success" type="tiles">cd_showMediaWay</result>
+		</action>
+	</package>
+	<package name="cd-guanggao" extends="esite-default">
+		<action name="*/cd-guanggao/adGGList" class="cd-ggAction">
+			<result name="success" type="tiles">cd_gg_list</result>
+		</action>
+		<action name="*/cd-guanggao/addGG" class="cd-ggAction" method="addGG">
+			<result name="success" type="tiles">cd_add_gg</result>
+		</action>
+		<action name="*/cd-guanggao/saveGG" class="cd-ggAction" method="saveGG">
+			<result name="success" type="redirect">/${oname}/cd-guanggao/adGGList.action</result>
+		</action>
+		<action name="*/cd-guanggao/editGG" class="cd-ggAction" method="editGG">
+			<result name="success" type="tiles">cd_edit_gg</result>
+		</action>
+		<action name="*/cd-guanggao/updateGG" class="cd-ggAction" method="updateGG">
+			<result name="success" type="redirect">/${oname}/cd-guanggao/adGGList.action</result>
+		</action>
+		<action name="*/cd-guanggao/delGG" class="cd-ggAction" method="delGG"></action>
+		<action name="*/cd-guanggao/tfgg" class="cd-ggAction" method="tfgg"></action>
+		<action name="*/cd-guanggao/tfggList" class="cd-ggAction" method="tfggList">
+			<result name="success" type="tiles">cd_tf_ggList</result>
+		</action>
+		<action name="*/cd-guanggao/ggUp" class="cd-ggAction" method="ggUp">
+		</action>
+		<action name="*/cd-guanggao/ggDown" class="cd-ggAction" method="ggDown">
+		</action>
+		<action name="*/cd-guanggao/delTfGG" class="cd-ggAction" method="delTfGG"></action>
+		<action name="*/user/findGuanggaoListByOwner" class="cd-ggAction" method="findGuanggaoListByOwner">
+		</action>
+	</package>
+
+	<package name="cd-lottery" extends="esite-default">
+		<action name="*/cd-lottery/index" class="cd-lotteryAction">
+			<result type="tiles" name="success">cd_lottery</result>
+		</action>
+		<action name="*/cd-lottery/save_yyy" class="cd-lotteryAction" method="save">
+			<result type="tiles" name="success">cd_add_yyy</result>
+		</action>
+		<action name="*/cd-lottery/save_yyy_sub" class="cd-lotteryAction" method="saveSub">
+			<result type="redirect" name="success">/${oname}/cd-lottery/index.action?htype=${htype}</result>
+			<result type="tiles" name="failed">cd_add_yyy</result>
+		</action>
+		<action name="*/cd-lottery/edit_yyy" class="cd-lotteryAction" method="edit">
+			<result type="tiles" name="success">cd_update_yyy</result>
+		</action>
+		<action name="*/cd-lottery/edit_yyy_sub" class="cd-lotteryAction" method="editSub">
+			<result type="tiles" name="failed">cd_update_yyy</result>
+			<result type="redirect" name="success">/${oname}/cd-lottery/index.action?htype=${htype}</result>
+		</action>
+		<action name="*/cd-lottery/save_lhj" class="cd-lotteryAction" method="save">
+			<result type="tiles" name="success">cd_add_lhj</result>
+		</action>
+		<action name="*/cd-lottery/save_lhj_sub" class="cd-lotteryAction" method="saveSub">
+			<result type="redirect" name="success">/${oname}/cd-lottery/index.action?htype=${htype}</result>
+			<result type="tiles" name="failed">cd_add_lhj</result>
+		</action>
+		<action name="*/cd-lottery/edit_lhj" class="cd-lotteryAction" method="edit">
+			<result type="tiles" name="success">cd_update_lhj</result>
+		</action>
+		<action name="*/cd-lottery/edit_lhj_sub" class="cd-lotteryAction" method="editSub">
+			<result type="tiles" name="failed">cd_update_lhj</result>
+			<result type="redirect" name="success">/${oname}/cd-lottery/index.action?htype=${htype}</result>
+		</action>
+
+		<action name="*/cd-lottery/save_hongbao" class="cd-lotteryAction" method="save">
+			<result type="tiles" name="success">cd_add_hongbao</result>
+		</action>
+		<action name="*/cd-lottery/save_hongbao_sub" class="cd-lotteryAction" method="saveSub">
+			<result type="redirect" name="success">/${oname}/cd-lottery/index.action?htype=${htype}</result>
+			<result type="tiles" name="failed">cd_add_hongbao</result>
+		</action>
+		<action name="*/cd-lottery/edit_hongbao" class="cd-lotteryAction" method="edit">
+			<result type="tiles" name="success">cd_update_hongbao</result>
+		</action>
+		<action name="*/cd-lottery/edit_hongbao_sub" class="cd-lotteryAction" method="editSub">
+			<result type="tiles" name="failed">cd_update_hongbao</result>
+			<result type="redirect" name="success">/${oname}/cd-lottery/index.action?htype=${htype}</result>
+		</action>
+		<action name="*/cd-lottery/lotteryUp" class="cd-lotteryAction" method="lotteryUp">
+		</action>
+		<action name="*/cd-lottery/lotteryDown" class="cd-lotteryAction" method="lotteryDown">
+		</action>
+		<action name="*/user/findPrizeWinnerInfo" class="cd-lotteryAction" method="findPrizeWinnerInfo">
+		</action>
+		<action name="*/user/findLotteryListByOwner" class="cd-lotteryAction" method="findLotteryListByOwner">
+		</action>
+		<action name="*/user/findRemainNum" class="cd-lotteryAction" method="findRemainNum">
+		</action>
+		<action name="*/user/cdlottery" class="cd-lotteryAction" method="findLottery">
+		</action>
+		<action name="*/cd-lottery/prize" class="cd-prizeAction">
+			<result name="success" type="tiles">cd_prize_list</result>
+		</action>
+		<action name="*/cd-lottery/prizeAddPre" class="cd-prizeAction" method="addPre">
+			<result name="success" type="tiles">prize_add_pre</result>
+		</action>
+		<action name="*/cd-lottery/prizeAdd" class="cd-prizeAction" method="add">
+			<result name="success" type="tiles">prize_add_pre</result>
+		</action>
+		<action name="*/cd-lottery/prizeEditPre" class="cd-prizeAction" method="updatePre">
+			<result name="success" type="tiles">prize_edit_pre</result>
+		</action>
+		<action name="*/cd-lottery/updateprize" class="cd-prizeAction" method="update">
+			<result name="success" type="tiles">prize_edit_pre</result>
+		</action>
+		<action name="*/cd-lottery/delprize" class="cd-prizeAction" method="del">
+		</action>
+		<action name="*/cd-lottery/addPrizeCodePre" class="cd-prizeAction" method="saveLotteryCodePre">
+			<result name="success" type="tiles">cd_add_prize_code_pre</result>
+		</action>
+		<action name="*/cd-lottery/lottery_prize_code_upload_submit" class="cd-prizeAction" method="uploadLotteryPrizeCodeSubmit">
+			<result name="success" type="redirect">
+				<param name="location">/${oname}/cd-lottery/prize.action</param>
+				<param name="lid">${lid}</param>
+				<param name="returnType">${returnType}</param>
+			</result>
+			<result name="error" type="tiles">
+				add_prize_code_pre
+			</result>
+		</action>
+		<action name="*/cd-lottery/findPrizeCodePre" class="cd-prizeAction" method="findLotteryCodePre">
+			<result name="success" type="tiles">cd_find_prize_code_pre</result>
+		</action>
+		<action name="*/cd-lottery/findPrizeCode" class="cd-prizeAction" method="findPrizeCode">
+			<result name="success" type="tiles">cd_find_prize_code_pre</result>
+		</action>
+		
+		<action name="*/cd-lottery/lottery_user_sina" class="cd-lotteryDataAction">
+			<result type="tiles" name="success">cd_lottery_user</result>
+		</action>
+		<action name="*/cd-lottery/lottery_user_wx" class="cd-lotteryDataAction">
+			<result type="tiles" name="success">cd_lottery_user</result>
+		</action>
+		<action name="*/cd-lottery/lottery_winner" class="cd-lotteryDataAction" method="winList">
+			<result type="tiles" name="success">cd_lottery_winner</result>
+		</action>
+		<!--以下四个链接全是layer弹窗使用start -->
+		<action name="*/cd-lottery/lottery_winner_detail" class="lotteryDataAction" method="showWinDetail">
+			<result type="tiles" name="success">lottery_winner_detail</result>
+		</action>
+		<action name="*/cd-lottery/lotterySend" class="lotteryDataAction" method="lotterySend">
+			<result type="tiles" name="success">lotterySend</result>
+		</action>
+		<action name="*/cd-lottery/showLotteryWinner" class="lotteryDataAction" method="showLotteryWinner">
+			<result type="tiles" name="success">showLotteryWinner</result>
+		</action>
+		<action name="*/cd-lottery/export_winner" class="lotteryDataAction" method="exportWinner">
+		</action>
+		<!-- end -->
+	</package>
+
+	<package name="cd-task" extends="esite-default">
+		<action name="*/cd-task/index" class="cd-taskAction">
+			<result name="success" type="tiles">cd_task</result>
+		</action>
+		<action name="*/cd-task/edit" class="cd-taskAction" method="editTask">
+			<result name="download" type="tiles">cd_task_download</result>
+			<result name="qa" type="tiles">cd_task_qa</result>
+		</action>
+		<action name="*/cd-task/save" class="cd-taskAction" method="saveTask"></action>
+		<action name="*/cd-task/del" class="cd-taskAction" method="delTask"></action>
+		<action name="*/cd-task/sort" class="cd-taskAction" method="sortTask"></action>
+
+		<action name="*/cd-task/record" class="cd-taskAction" method="record">
+			<result name="success" type="tiles">cd_task_record</result>
+		</action>
+		<action name="*/cd-task/record_update" class="cd-taskAction" method="updateRecord"></action>
+		<action name="*/cd-task/record_del" class="cd-taskAction" method="delRecord"></action>
+
+		<action name="*/user/cd-task/tasks" class="cd-taskAction" method="tasks"></action>
+		<action name="*/user/cd-task/task" class="cd-taskAction" method="task"></action>
+		<action name="*/user/cd-task/record_add" class="cd-taskAction" method="addRecord"></action>
+	</package>
+	<package name="cd-news" extends="esite-default">
+		<action name="*/cd-news/index" class="cd-newsAction">
+			<result name="success" type="tiles">cd_news</result>
+		</action>
+		<action name="*/cd-news/add" class="cd-newsAction" method="addcdNewsPre">
+			<result name="success" type="tiles">add_cd_news</result>
+		</action>
+		<action name="*/cd-news/save" class="cd-newsAction" method="savecdNews">
+			<result type="redirect" name="success">
+				/${oname}/cd-news/index.action
+			</result>
+			<result type="tiles" name="fail">
+				add_new_pre
+			</result>
+		</action>
+		<action name="*/cd-news/tags" class="cd-tagsAction">
+			<result name="success">/WEB-INF/page/content_tag_index.jsp</result>
+		</action>
+		<action name="*/cd-news/edit" class="cd-newsAction" method="editNewsPre">
+			<result name="success" type="tiles">edit_cd_news</result>
+		</action>
+		<action name="*/cd-news/editSub" class="cd-newsAction" method="editNewsSub">
+			<result type="redirect" name="success">
+				/${oname}/cd-news/index.action
+			</result>
+			<result type="tiles" name="fail">
+				edit_cd_news
+			</result>
+		</action>
+		<action name="*/cd-news/del" class="cd-newsAction" method="delNew"></action>
+		<action name="*/cd-news/moveUp" class="cd-newsAction" method="moveUp"></action>
+		<action name="*/cd-news/moveDown" class="cd-newsAction" method="moveDown"></action>
+	</package>
+	<package name="cd-coupon" extends="esite-default">
+		<action name="*/cd-coupon/index" class="cd-couponAction">
+			<result name="success" type="tiles">cd_coupon</result>
+		</action>
+		<action name="*/cd-coupon/add" class="cd-couponAction" method="addCouponPre">
+			<result name="success" type="tiles">add_cd_coupon</result>
+		</action>
+		<action name="*/cd-coupon/sub" class="cd-couponAction" method="addCouponSub">
+			<result type="redirect" name="success">
+				/${oname}/cd-coupon/index.action
+			</result>
+			<result type="tiles" name="fail">
+				add_cd_coupon
+			</result>
+		</action>
+		<action name="*/cd-coupon/addCodePre" class="cd-couponAction" method="saveCodePre">
+			<result name="success" type="tiles">cd_add_code</result>
+		</action>
+		<action name="*/cd-coupon/saveCode" class="cd-couponAction" method="saveCode"></action>
+		<action name="*/cd-coupon/code_upload_submit" class="cd-couponAction" method="uploadCodeSubmit">
+			<result name="success" type="redirect">
+				<param name="location">/${oname}/cd-coupon/productCodeIndex.action</param>
+				<param name="pid">${pid}</param>
+			</result>
+			<result name="error" type="tiles">cd_add_code</result>
+		</action>
+		<action name="*/cd-coupon/productCodeIndex" class="cd-couponAction" method="productCode">
+			<result type="tiles" name="success">product_code_list</result>
+		</action>
+		<action name="*/cd-coupon/delCouponCode" class="cd-couponAction" method="delCouponCode">
+		</action>
+		<action name="*/cd-coupon/clearCouponCode" class="cd-couponAction" method="clearCouponCode">
+		</action>
+		<action name="*/cd-coupon/getWay" class="cd-couponAction" method="findWayByCatalog"></action>
+		<action name="*/cd-coupon/edit" class="cd-couponAction" method="editPre">
+			<result type="tiles" name="success">edit_cd_coupon</result>
+		</action>
+		<action name="*/cd-coupon/editSub" class="cd-couponAction" method="editSub">
+			<result type="redirect" name="success">
+				/${oname}/cd-coupon/index.action
+			</result>
+			<result type="tiles" name="fail">
+				edit_cd_coupon
+			</result>
+		</action>
+		<action name="*/user/newsForPage" class="cd-newsForPage">
+		</action>
+		<action name="*/user/newsForStation" class="cd-newsForPage" method="touzhuzhan">
+		</action>
+	</package>
+	<package name="cd-rmb" extends="esite-default">
+		<action name="*/cd-rmb/index" class="cd-rmbAction">
+			<result type="tiles" name="success">rmb_get_index</result>
+		</action>
+		<action name="*/cd-rmb/tiquCheck" class="cd-rmbAction" method="tiquCheck">
+		</action>
+		<action name="*/cd-rmb/export" class="cd-rmbAction" method="export">
+		</action>
+		<action name="*/cd-rmb/tiquCheckFail" class="cd-rmbAction" method="tiquCheckFail">
+		</action>
+	</package>
+	
+	<package name="cd-way" extends="esite-default">
+		<action name="*/cd-way/index" class="cd-wayAction">
+			<result name="success" type="tiles">cd_way_catalog</result>
+		</action>
+		<action name="*/cd-way/addCatalog" class="cd-wayAction" method="addCatalog">
+			<result name="success" type="tiles">add_way_catalog</result>
+		</action>
+		<action name="*/cd-way/editCatalog" class="cd-wayAction" method="editCatalog">
+			<result name="success" type="tiles">edit_way_catalog</result>
+		</action>
+		<action name="*/cd-way/saveCatalog" class="cd-wayAction" method="saveCatalog">
+			<result type="redirect" name="success">
+				/${oname}/cd-way/index.action
+			</result>
+		</action>
+		<action name="*/cd-way/editCatalogSave" class="cd-wayAction" method="editCatalogSave">
+			<result type="redirect" name="success">
+				/${oname}/cd-way/index.action
+			</result>
+		</action>
+		<action name="*/cd-way/deleteCatalog" class="cd-wayAction" method="deleteCatalog">
+		</action>
+		<action name="*/cd-way/wayIndex" class="cd-wayAction" method="wayIndex">
+			<result name="success" type="tiles">cd_way</result>
+		</action>
+		<action name="*/cd-way/addWay" class="cd-wayAction" method="addWayIndex">
+			<result name="success" type="tiles">add_cd_way</result>
+		</action>
+		<action name="*/cd-way/saveWay" class="cd-wayAction" method="saveWay">
+			<result type="redirect" name="success">
+				/${oname}/cd-way/wayIndex.action?caid=${way.caid}
+			</result>
+		</action>
+		<action name="*/cd-way/editWay" class="cd-wayAction" method="editWayIndex">
+			<result name="success" type="tiles">edit_cd_way</result>
+		</action>
+		<action name="*/cd-way/editWaySub" class="cd-wayAction" method="editWaySub">
+			<result type="redirect" name="success">
+				/${oname}/cd-way/wayIndex.action?caid=${way.caid}
+			</result>
+		</action>
+		<action name="*/cd-way/deleteWay" class="cd-wayAction" method="deleteWay">
+		</action>
+	</package>
+	<package name="cd-product" extends="esite-default">
+		<action name="*/user/productRmb" class="cd-productAction">
+		</action>
+		<action name="*/user/findCdProductById" class="cd-productAction" method="findCdProductById">
+		</action>
+		<action name="*/user/findCdWxUser" class="cd-productAction" method="findWxUser">
+		</action>
+		<action name="*/user/findCdQbUser" class="cd-productAction" method="findCdQbUser">
+		</action>
+		<action name="*/user/saveCdRmbget" class="cd-productAction" method="saveCdRmbget">
+		</action>
+		<action name="*/user/showCdOrderList" class="cd-productAction" method="showCdOrderList">
+		</action>
+		<action name="*/user/findCdOrderById" class="cd-productAction" method="findCdOrderById">
+		</action>
+		<action name="*/user/findCouponArea" class="cd-productAction" method="findCouponArea">
+		</action>
+		<action name="*/user/cdConfirmOrder" class="cd-productAction" method="cdConfirmOrder">
+		</action>
+	</package>
+	<package name="cd-user" extends="esite-default">
+		<action name="*/cd-user/index" class="cd-userAction">
+			<result name="success" type="tiles">cd_user</result>
+		</action>
+		<action name="*/cd-user/balance" class="cd-userAction" method="balance">
+			<result name="success" type="tiles">cd_user_balance</result>
+		</action>
+		<action name="*/cd-user/order" class="cd-userAction" method="order">
+			<result name="success" type="tiles">cd_user_order</result>
+		</action>
+	
+		<action name="*/user/findHyUser" class="cd-userAction" method="findHyUser"></action>
+		<action name="*/user/bindTel" class="cd-userAction" method="bindTel"></action>
+		<action name="*/cd-user/export" class="cd-userAction" method="export">
+		</action>
+	</package>
+	<package name="cd-team" extends="esite-default">
+		<action name="*/user/findCdTeam" class="cd-teamAction" >
+		</action>
+		<action name="*/user/findTeamBusiness" class="cd-teamAction" method="findTeamBusiness">
+		</action>
+		<action name="*/user/channelCheck" class="cd-teamAction" method="channelCheck">
+		</action>
+		<action name="*/user/doCheckPre" class="cd-teamAction" method="doCheckPre">
+		</action>
+		<action name="*/user/doCheck" class="cd-teamAction" method="doCheck">
+		</action>
+		<action name="*/user/subForm" class="cd-teamAction" method="subForm">
+		</action>
+		<action name="*/user/findSubUser" class="cd-teamAction" method="findSubUser">
+		</action>
+		<action name="*/user/findSubUserInfo" class="cd-teamAction" method="findSubUserInfo">
+		</action>
+	</package>
+	
+	<package name="cd-kq" extends="esite-default">
+		<action name="*/user/cd-kq/sub" class="cd-kqAction" method="asub">
+		</action>
+	</package>
+	<package name="cd-station" extends="esite-default">
+		<action name="*/user/cdzhangben" class="cd-lotteryStation" method="zhangben">
+		</action>
+		<action name="*/user/cdtixian" class="cd-rmbAction" method="tixian">
+		</action>
+		<action name="*/user/cdtixianRecord" class="cd-rmbAction" method="tixianRecord">
+		</action>
+		<action name="*/user/cdduihuan" class="cd-lotteryStation" method="duihuan">
+		</action>
+	</package>
+	<package name="cd-account" extends="esite-default">
+		<global-results>
+			<result name="error" type="tiles">notallow</result>
+		</global-results>
+		<action name="*/cd-account/index" class="cd-accountAction">
+			<result name="success" type="tiles">cd_accounts</result>
+		</action>
+		<action name="*/cd-account/addAccount" class="cd-accountAction" method="addAccount">
+			<result name="success" type="tiles">add_account</result>
+		</action>
+		<action name="*/cd-account/editAct" class="cd-accountAction" method="editAct">
+			<result name="success" type="tiles">cd_edit_account</result>
+		</action>
+		<action name="*/user/cdAccountBdWxuid" class="cd-accountAction" method="bindWxuid">
+		</action>
+		<action name="*/cd-account/saveAccount" class="cd-accountAction" method="saveAccount">
+			<result name="success" type="redirect">/${oname}/cd-account/index.action?type=${type}</result>
+			<result name="input" type="tiles">add_account</result>
+		</action>
+		<action name="*/cd-account/editActSub" class="cd-accountAction" method="editActSub">
+			<result name="success" type="redirect">/${oname}/cd-account/index.action?type=${type}</result>
+			<result name="input" type="tiles">cd_edit_account</result>
+		</action>
+		<action name="*/cd-account/jiechubangding" class="cd-accountAction" method="jiechubangding">
+		</action>
+		<action name="*/cd-account/detAt" class="cd-accountAction" method="removeAccount">
+		</action>
+		<action name="*/cd-account/updatePwd" class="cd-accountAction" method="updatePwd">
+		</action>
+	</package>
+	<package name="cd-report" extends="esite-default">
+		<action name="*/cd-report/index" class="cd-reportAction" method="wayIndex">
+			<result name="success" type="tiles">cd_way_report</result>
+		</action>
+		<action name="*/cd-report/cpzIndex" class="cd-reportAction" method="cpzIndex">
+			<result name="success" type="tiles">cd_cpz_index</result>
+		</action>
+		<action name="*/cd-report/wayMoneyIndex" class="cd-reportAction" method="wayMoneyIndex">
+			<result name="success" type="tiles">cd_way_money</result>
+		</action>
+		<action name="*/cd-report/export" class="cd-reportAction" method="export">
+		</action>
+		<action name="*/cd-report/jfIndex" class="cd-reportAction" method="jfIndex">
+			<result name="success" type="tiles">cd_jf</result>
+		</action>
+		<action name="*/cd-report/jfExport" class="cd-reportAction" method="jfExport"></action>
+	</package>
+</struts>

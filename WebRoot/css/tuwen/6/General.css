@@ -1,0 +1,11 @@
+/* CSS Document */
+ *{padding:0; margin:0;}
+html, body{ height:100%;}
+
+input,form, ul, li,dt,dd,dl, h1, h2, h3, h4, h5, h6{padding:0;	margin:0px;	color:#333;	border:0px; font-family:"微软雅黑";}
+h1 {font-family:"微软雅黑"; font-size:22px; color:#333; font-weight:normal;}
+p,dt,dd,dl{ margin:0px; padding:0px;}
+img{max-width: 100%;height: auto;width: auto\9;border:none;border:none; padding:0px; margin:0px;}
+a{font:"微软雅黑";text-decoration: none;}
+
+ul{ list-style:none;}

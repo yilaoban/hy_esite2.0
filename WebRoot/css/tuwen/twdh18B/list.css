@@ -1,0 +1,38 @@
+.tw_150309_page2 {
+	width: 90%;
+	margin: 0 auto;
+	padding-top: 10%;
+}
+.tw_150309_page2_img {
+	width: 280px;
+	left: 20px;
+	float: left;
+	position: absolute;
+	z-index: 0;
+}
+.tw_150309_page2_img img, .tw_150309_page2_x img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+.tw_150309_page2_t {
+	width: 50px;
+	float: left;
+	z-index: 1;
+	font-size: 2em;
+	color: #fff;
+	text-align: center;
+	line-height: 35px;
+	left: 44px;
+	top: 68px;
+}
+.tw_150309_page2_s {
+	float: left;
+	font-size: .8em;
+	color: #fff;
+	line-height: 24px;
+	left: 120px;
+	top: 100px;
+	width: 142px;
+	height: 300px;
+}

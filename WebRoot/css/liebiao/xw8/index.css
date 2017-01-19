@@ -1,0 +1,232 @@
+@charset "utf-8";
+.gywsm_150313_top img {
+	height: 141px;
+	width: 100%;
+}
+/*top_menu*/
+.top_150313_menu {
+	width: 100%;
+	top: 0;
+}
+.ui-header_150313 {
+	position: relative;
+	background: #eae8e8;
+	border-bottom: 1px solid #d2d0d0;
+}
+.ui-header_150313 h1 {
+	margin:0;
+	height: 40px;
+	line-height: 40px;
+	font-size: 1em;
+	text-align: center;
+	font-family: "Microsoft Yahei", Arial;
+	color: #da011c;
+}
+.ui-header-left {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+height: 30px;
+margin-top: 5px;
+margin-left: 5px;
+}
+
+.ui-header-right {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 30px;
+height: 30px;
+margin-top: 5px;
+margin-right: 5px;
+}
+
+
+.ui-header-right {
+	left: auto;
+	right: 0;
+}
+.ui-header-left a, .ui-header-right a {
+	display: block;
+	height: 100%;
+	background-size: 30px auto;
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+
+.menu_150313 {
+	position: absolute;
+	width: 120px;
+	top: 40px;
+	background: #eae8e8;
+	color: #666;
+	z-index: 100;
+	display: none;
+	font-family: "Microsoft Yahei", Arial;
+}
+.menu_150313 li {
+	border-bottom: 1px solid #f7f6f6;
+}
+.menu_150313 li:after {
+	content: '';
+	display: block;
+	width: 100%;
+	border-bottom: 1px solid #d2d0d0;
+}
+.menu_150313 a {
+	position: relative;
+	height: 40px;
+	line-height: 40px;
+	padding: 0 20px 0 20px;
+	border: none;
+	display: block;
+	color: #919191;
+	text-decoration: none;
+	font-size: 1em;
+}
+.menu_150313 a:after {
+	display: block;
+	content: '';
+	position: absolute;
+	right: 8px;
+	top: 50%;
+	margin-top: -6px;
+	width: 10px;
+	height: 10px;
+	border: 2px solid #bbb;
+	border-width: 2px 2px 0 0;
+	-webkit-transform: rotate(45deg);
+	transform: rotate(45deg);
+}
+/* gysm */
+.gywsm_150313_top {
+	width: 100%;
+	float: left;
+	text-align: center;
+	top:40px;
+}
+.gysm_banner_150313 {
+	width: 100%;
+	float: left;
+	background: #fff;
+	top:158px;
+}
+.gysm_banner_150313 li {
+	width: 33%;
+	float: left;
+	text-align: center;
+	line-height: 35px;
+	font-family: "Microsoft Yahei", Arial;
+	color: #cfcfcf;
+	font-size: .9em;
+	border-right: 1px #cfcfcf solid;
+	border-bottom: 3px #cfcfcf solid;
+	background: #fff;
+}
+.gysm_banner_150313 li a {
+	color: #505051;
+	text-decoration: none;
+}
+.jlly_center_150313 {
+	width: 95%;
+	margin: 0 auto;
+}
+.jlly_box_150316 {
+	width: 96%;
+	left:2%;
+	float: left;
+	border: 1px #cfcfcf solid;
+	background: #fff;
+	top:206px;
+}
+.jlly_box_150316_img {
+	width: 93%;
+	margin: 0 auto;
+}
+.jlly_box_150316_img img, .jlly_b_150316_c_r img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+.jlly_b_150316_c {
+	width:100%;
+	border:1px solid #cfcfcf;
+	margin: 0 auto;
+}
+.jlly_b_150316_c li {
+	width: 100%;
+	float: left;
+	border-top: 1px #cfcfcf solid;
+	margin-bottom:10px;
+}
+.jlly_b_150316_c_l {
+	width: 65%;
+	float: left;
+	font-family: "Microsoft Yahei", Arial;
+	font-size: .9em;
+	line-height: 22px;
+	margin-top: 25px;
+	margin-left: 10px;
+}
+.jlly_b_150316_c_r {
+	width: 25%;
+	float: right;
+	margin: 10px 10px 0 0;
+}
+/* pagnation */
+.pagnation {
+	text-align: center;
+	margin: 20px 0 0 0;
+	width: 100%;
+	float: left;
+}
+.pagnation a {
+	display: inline-block;
+	width: 34px;
+	height: 34px;
+	line-height: 34px;
+	overflow: hidden;
+	background: url(/images/liebiao/xw7/sprite.png) no-repeat 0 -29px;
+	font-size: 16px;
+	vertical-align: top;
+	-webkit-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-o-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	text-decoration: none;
+	font-family: "Microsoft Yahei", Arial;
+	color: #aaaaaa;
+}
+.pagnation a:hover {
+	background-position: 0 -64px;
+	color: #fff;
+	text-decoration: none
+}
+.pagnation .page-prev, .pagnation .page-next {
+	line-height: 555px;
+}
+.pagnation .page-prev {
+	background-position: -35px -29px;
+}
+.pagnation .page-prev:hover {
+	background-position: -35px -64px;
+}
+.pagnation .page-next {
+	background-position: -70px -29px;
+}
+.pagnation .page-next:hover {
+	background-position: -70px -64px;
+}
+.pagnation .current {
+	background-position: 0px -64px;
+	color: #fff
+}
+.pagnation-tips {
+	margin-top: 10px;
+	color: #999;
+	text-align: center
+}
+
+

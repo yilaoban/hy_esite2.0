@@ -1,0 +1,14 @@
+/* CSS Document */
+
+
+.liebiao_141111_1{width:100%; margin:0 auto;}
+.wdy_top2_cp{ margin:0 auto;text-align:center;}
+.liebiao_141111_1_box{ width:96%; margin:0 auto;top:158px;left:2%}
+.liebiao_141111_1_box ul{ width:100%; float:left;}
+.liebiao_141111_1_box li{ width:48%; float:left; margin-left:4px; margin-top:10px; background:#fff;}
+.liebiao_141111_1_box li a{ text-decoration:none; color:#000;}
+.liebiao_141111_1_box li img{ float:left;}
+.liebiao_141111_1_box li p{ width:100%; float:left;font-size:0.6em;font-family: "Microsoft Yahei", Arial; margin-top:10px; line-height:18px;height:30px;overflow:hidden;}
+.liebiao_141111_1_box li span{ width:100%; height:30px; background:#fff2cf; float:left; line-height:30px;font-family: "Microsoft Yahei", Arial; }
+.liebiao_141111_1_box li span strong{ color:#d71837;font-size:0.6em;}
+.liebiao_141111_1_box li span b{text-decoration:line-through;font-size:0.6em;}

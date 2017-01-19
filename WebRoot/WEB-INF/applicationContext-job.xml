@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<!-- 论坛登录时长处理 -->
+	<bean id="bbsLoginTimeJob" class="com.huiyee.esite.job.BbsLoginTimeJob">
+	   <property name="bbsUserLoginMgr"><ref bean="bbsUserLoginMgr"/></property>
+	</bean>
+	<bean id="bbsLoginTimeTask"
+		class="org.springframework.scheduling.timer.MethodInvokingTimerTaskFactoryBean">
+		<property name="targetObject">
+			<ref local="bbsLoginTimeJob" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+
+	<bean id="bbsLoginTimeJobRunner"
+		class="org.springframework.scheduling.timer.ScheduledTimerTask">
+		<property name="timerTask">
+			<ref local="bbsLoginTimeTask" />
+		</property>
+		<property name="period">
+			<value>300000</value>
+		</property>
+		<property name="delay">
+			<value>5000</value>
+		</property>
+	</bean>
+	<bean id="timerFactoryScheduled3"
+		class="org.springframework.scheduling.timer.TimerFactoryBean">
+		<property name="scheduledTimerTasks">
+			<list>
+				<!--  <ref bean="bbsLoginTimeJobRunner"/>-->
+			</list>
+		</property>
+	</bean>
+	
+	<!--管理wbcache-->
+
+	<bean id="wbCacheJob" class="com.huiyee.esite.job.WbCacheJob">
+	  <property name="wxAppMgr" ref="wxAppMgr"></property>
+	  <property name="hyUtilMgr" ref="hyUtilMgr"></property>
+	</bean>
+	<bean id="wbCacheTask"
+		class="org.springframework.scheduling.timer.MethodInvokingTimerTaskFactoryBean">
+		<property name="targetObject">
+			<ref local="wbCacheJob" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+
+	<bean id="wbCacheJobRunner"
+		class="org.springframework.scheduling.timer.ScheduledTimerTask">
+		<property name="timerTask">
+			<ref local="wbCacheTask" />
+		</property>
+		<property name="period">
+			<value>60000</value>
+		</property>
+		<property name="delay">
+			<value>5000</value>
+		</property>
+	</bean>
+	<bean id="wbCacheTaskTimerFactoryScheduled"
+		class="org.springframework.scheduling.timer.TimerFactoryBean">
+		<property name="scheduledTimerTasks">
+			<list>
+				<!-- <ref bean="wbCacheJobRunner"/>-->
+			</list>
+		</property>
+	</bean>
+	
+	<!-- 更新日志表 -->
+		<bean id="visitLogJob" class="com.huiyee.esite.job.VisitLogJob">
+	 <property name="visitLogMgr" ref="visitLogMgr"></property>
+	</bean>
+	<bean id="visitLogTask"
+		class="org.springframework.scheduling.timer.MethodInvokingTimerTaskFactoryBean">
+		<property name="targetObject">
+			<ref local="visitLogJob" />
+		</property>
+		<property name="targetMethod">
+			<value>execute</value>
+		</property>
+	</bean>
+
+	<bean id="VisitLogRunner"
+		class="org.springframework.scheduling.timer.ScheduledTimerTask">
+		<property name="timerTask">
+			<ref local="visitLogTask" />
+		</property>
+		<property name="period">
+			<value>12000</value>
+		</property>
+		<property name="delay">
+			<value>1000</value>
+		</property>
+	</bean>
+	<bean id="visitLogTaskTimerFactoryScheduled"
+		class="org.springframework.scheduling.timer.TimerFactoryBean">
+		<property name="scheduledTimerTasks">
+			<list>
+				<ref bean="VisitLogRunner"/>
+			</list>
+		</property>
+	</bean>
+	
+</beans>

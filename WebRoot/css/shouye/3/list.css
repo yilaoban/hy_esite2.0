@@ -1,0 +1,37 @@
+/* CSS Document */
+
+.wdy_top2{ margin:0 auto;text-align:center;}
+#mainmenu20 {float:inherit;width:96%; margin:0 auto;}
+#mainmenu20 ul{float:inherit;height:100%;width:100%;margin: 0 auto;margin-top: 6px;border: 1px solid #cdcdcd;-webkit-box-shadow: #d4d4d4 0 1px 2px;-moz-box-shadow: #d4d4d4 0 1px 2px;box-shadow: #d4d4d4 0 1px 2px;}
+#mainmenu20 li:first-child {border: none;}
+#mainmenu20 li {height: 70px;list-style: none;margin-bottom: 1px;position: relative;border-top: 1px solid #dbdbdb;}
+#mainmenu20 li a {display: block;color: #000;}
+#mainmenu20 li.menu-1 .icon {background-color: #be4041;}
+#mainmenu20 li .icon {width: 75px;height: 70px;display: block;float: left;background-image:none;}
+#mainmenu20 li .title {padding:0;line-height: 70px;font-weight: 700;width: auto;text-overflow: ellipsis;white-space: nowrap!important;overflow: hidden; text-indent:10px; background:#fff;filter:alpha(opacity=50); 
+  -moz-opacity:0.5; 
+  opacity:0.5;}
+#mainmenu20 li .right-arrow {position: absolute;width: 18px;height: 27px;background:url(/images/shouye/3/right_01n.png) no-repeat 0 0;top: 25px;right: 15px;-webkit-background-size: 12px 18px;-o-background-size: 12px 18px;}
+#mainmenu20 li.menu-2 .icon {background-color: #d77670;}
+#mainmenu20 li.menu-3 .icon {background-color: #b2cebf;}
+#mainmenu20 li.menu-4 .icon {background-color: #6f9e98;}
+#mainmenu20 li.menu-5 .icon {background-color: #1ba0e1;}
+#mainmenu20 li.menu-6 .icon {background-color: #6bb61e;}
+#mainmenu20 li.menu-7 .icon {background-color: #d90073;}
+#mainmenu20 li.menu-8 .icon {background-color: #a15001;}
+#mainmenu20 li.menu-9 .icon {background-color: #f19609;}
+#mainmenu20 li.menu-10 .icon {background-color: #e671b8;}
+#mainmenu20 li .icon img{ float:left;width:30px;height:30px;display: block; margin-left:22px; margin-top:20px;}
+#mainmenu20 li:end-child .icon {-webkit-border-radius: 8px 0px 0px 0px;-moz-border-radius: 8px 0px 0px 0px;border-radius: 8px 0px 0px 0px;}
+#mainmenu20 li:last-child .icon {-webkit-border-radius: 0px 0px 0px 8px;-moz-border-radius: 0px 0px 0px 8px;border-radius: 0px 0px 0px 8px;}
+
+.f3201505073217{
+	position: absolute;
+	top:140px;
+	left:5px;
+}
+.wdy_top2{
+	position: absolute;
+	width: 320px;
+	height: 140px;	
+}

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="journalAction" class="com.huiyee.interact.journal.action.JournalAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="journalMgr" ref="journalMgrImpl"></property>
+	</bean>
+	<bean id="periodicalRecordAction" class="com.huiyee.interact.journal.action.PeriodicalRecordAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="periodicalRecordMgr" ref="periodicalRecordMgrImpl"></property>
+	</bean>	
+	<bean id="journalPreviewAction" class="com.huiyee.interact.journal.action.JournalPreviewAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="journalMgr" ref="journalMgrImpl"></property>
+	</bean>
+	<bean id="journalSubmitAction" class="com.huiyee.interact.journal.action.JournalSubmitAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="journalMgr" ref="journalMgrImpl"></property>
+	</bean>
+	<bean id="journalContentAction" class="com.huiyee.interact.journal.action.JournalContentAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="journalMgr" ref="journalMgrImpl"></property>
+	</bean>	
+</beans>
+
+

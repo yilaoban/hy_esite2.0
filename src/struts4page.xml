@@ -1,0 +1,646 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+	"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+	<constant name="struts.enable.SlashesInActionNames" value="true" />
+	<package name="4page" extends="esite-default">
+		<!-- user start -->
+		<action name="*/user/areaProvince" class="areaAction"></action>
+		<action name="*/user/areaCity" class="areaAction" method="city"></action>
+		<action name="*/user/showpage*" class="showPageAction">
+			<param name="appid">{1}</param>
+			<result name="success" type="redirect">
+				${refurl}
+			</result>
+			<result name="forward">/WEB-INF/pageshow/test_pc.jsp</result>
+			<result name="forwardPhone">/WEB-INF/pageshow/test_phone.jsp</result>
+			<result name="appPage">/WEB-INF/pageshow/app/app${appid}_pc.jsp</result>
+			<result name="appPagePhone">/WEB-INF/pageshow/app/app${appid}_phone.jsp</result>
+		</action>
+		<action name="*/user/crmshow" class="crmShowAction">
+			<result name="su1">/WEB-INF/pageshow/crm.jsp</result>
+			<result name="su2" type="redirect">
+				${refurl}
+			</result>
+		</action>
+		<action name="*/user/wxshowpage" class="wXShowPageAction">
+			<result name="success" type="redirect">
+				${refurl}
+			</result>
+			<result name="success4jsp">/WEB-INF/pageshow/${jsp}.jsp</result>
+			<result name="errclose">/WEB-INF/pageshow/wxclose.jsp</result>
+		</action>
+		<action name="*/user/wxoauth" class="wXOAuthAction">
+		
+			<result name="success" type="redirect">
+				${refurl}
+			</result>
+			<result name="success4jsp">/WEB-INF/pageshow/${state}.jsp</result>
+			<result name="errclose">/WEB-INF/pageshow/wxclose.jsp</result>
+		</action>
+		<action name="*/user/weixin" class="showPageAction" method="weixin">
+			<result name="success" type="chain">
+				<param name="actionName">show</param>
+				<param name="namespace">/user</param>
+				<param name="pageid">${pageid}</param>
+			</result>
+		</action>
+		<action name="*/user/wxmedia" class="wxMediaAction"></action>
+		<action name="*/user/cc" class="cacheClearAction"></action>
+		<action name="*/user/ct" class="cache4WxTokenAction"></action>
+		<action name="*/user/bdmap/*" class="baiDuAction" method="{2}">
+			<result name="success" type="redirect">
+				${refurl}
+			</result>
+			<result name="success0">
+				/WEB-INF/bdmap/${x}.jsp
+			</result>
+		</action>
+		<action name="*/user/bdmap/ak.action" class="baiDuAction" method="ak">
+		</action>
+		<action name="*/user/bdmap/asub2.action" class="baiDuAction" method="asub2">
+		</action>
+		<action name="*/user/bdmap/address.action" class="baiDuAction" method="address">
+		</action>
+		<action name="*/user/showlogin" class="showlogin">
+			<result name="success" type="chain">
+				<param name="actionName">page</param>
+				<param name="namespace">/page</param>
+				<param name="sitegroupid">8</param>
+			</result>
+		</action>
+		<action name="*/user/preview" class="pageShowAction" method="preview">
+			<result name="success">/WEB-INF/pageshow/${jspname}</result>
+		</action>
+		<action name="*/user/oauthlink" class="oauthForLinkAction">
+			<result name="success" type="redirect">
+				${sinaOauthUrl}
+			</result>
+		</action>
+		<action name="*/user/oauth" class="oauthAction">
+			<result name="success" type="redirect">
+				${refUrl}
+			</result>
+		</action>
+		<action name="*/user/publishLink" class="publishAction" method="publishLink">
+			<result name="success" type="redirect">
+				${publishUrl}
+			</result>
+		</action>
+		<action name="*/user/publish" class="publishAction" method="publish">
+			<result name="success" type="redirect">
+				${refUrl}
+			</result>
+		</action>
+		<action name="*/user/show" class="pageShowAction" method="show">
+			<result name="success">/WEB-INF/pageshow/${jspname}</result>
+		</action>
+		<action name="*/user/zan" class="dynamicAction" method="zan"></action>
+		<action name="*/user/upload" class="dynamicAction" method="upload">
+			<result name="success" type="tiles">user_upload</result>
+		</action>
+		<action name="*/user/emailContract" class="dynamicAction" method="emailContract"></action>
+		<action name="*/user/uploadSub" class="userUploadAction">
+			<result name="success" type="tiles">user_upload</result>
+		</action>
+		<action name="*/user/unifylogin" class="unifyLoginAction">
+			<result name="failed" type="redirect">
+				${unifyLoginUrl}?msg=${errmsg}
+			</result>
+			<result name="successRedirect" type="redirect">
+				/page/site.action
+			</result>
+			<result name="oldRedirect" type="redirect">${rPath}</result>
+		</action>
+		<action name="*/user/logout" class="logoutAction">
+			<result type="redirect" name="successRedirect">
+				${url}
+			</result>
+		</action>
+		<action name="*/user/select_zan" class="dynamicAction" method="selectZan">
+		</action>
+		<action name="*/user/userOauthlink" class="userOauthForLinkAction">
+			<result name="success" type="redirect">
+				${sinaOauthUrl}
+			</result>
+		</action>
+		<action name="*/user/userOauth" class="userOauthAction">
+			<result name="success" type="redirect">
+				${refUrl}
+			</result>
+		</action>
+		<action name="*/user/shareUpload" class="sinaPicUploadAction"></action>
+		<action name="*/user/atuser" class="dynamicAction" method="selectFans"></action>
+		<action name="*/user/face" class="dynamicAction" method="getFace"></action>
+		<action name="*/user/share" class="userSinaShareAction"></action>
+		<action name="*/user/forward" class="sinaForwardAction"></action>
+		<action name="*/user/comment" class="sinaCommentAction"></action>
+		<action name="*/user/weibo" class="dynamicAction" method="selectWeibo"></action>
+		<action name="*/user/wtotal" class="dynamicAction" method="weiboTotal"></action>
+		<action name="*/user/phonePic" class="sinaPicUploadAction" method="picSubByPhone"></action>
+		<action name="*/user/sinaback" class="dynamicAction" method="sinaReturn">
+			<result name="success">/WEB-INF/pagefeature/sina_back.jsp</result>
+		</action>
+		<action name="*/user/comment_record" class="customAppointReportAction"></action>
+		<action name="*/user/vote" class="voteSubmitAction"></action>
+		<action name="*/user/voteOptionCountpc" class="voteRecordDataAction" method="getVoteOptionCountPC"></action>
+		<action name="*/user/voteOptionCount" class="voteRecordDataAction" method="getVoteOptionCount"></action>
+		<action name="*/user/research" class="researchSubmitAction"></action>
+		<action name="*/user/guanzhu" class="featureFriendsShipsAction"></action>
+		<action name="*/user/spread" class="spreadSubmitAction"></action>
+		<action name="*/user/spread_page_sub" class="spreadSubmitAction" method="pageSub"></action>
+		<action name="*/user/lottery_draw" class="lotteryDrawAction"></action>
+		<action name="*/user/lotteryJoin" class="lotteryDrawAction" method="getJoinDetail"></action>
+		<action name="*/user/lotteryRemain" class="lotteryDrawAction" method="remainDraw"></action>
+		<action name="*/user/rqdraw" class="renQiDrawAction"></action>
+		<action name="*/user/csdraw" class="csDrawAction"></action>
+		<action name="*/user/rqshare" class="renQiDrawAction" method="share"></action>
+		<action name="*/user/shareUploadPic" class="userUploadAction" method="shareUploadPic"></action>
+		<action name="*/user/h5UploadPic" class="userUploadAction" method="h5UploadPic"></action>
+		<action name="*/user/musicUpload" class="musicUploadAction" method="musicUpload"></action>
+		<action name="*/user/imgdata" class="userUploadAction" method="imgData"></action>
+		<action name="*/user/showCard" class="cardAction" method="showCard">
+			<result name="success">/WEB-INF/card/${dto.tc.path}</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="*/user/newdetails" class="newDetails">
+			<result name="success">/WEB-INF/pageshow/template_news.jsp</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="*/user/examresult" class="examResultShowAction">
+			<result name="success">/WEB-INF/pageshow/template_news.jsp</result>
+			<result name="error" type="tiles">forbidden</result>
+		</action>
+		<action name="*/user/zhuanpan_winner" class="lotteryWinnerUserAction">
+		</action>
+		<action name="*/user/bashare" class="baShareAction"></action>
+		<action name="*/user/wxshare" class="spreadSubmitAction" method="pageSub"></action>
+		<action name="*/user/saveuser" class="securityCodeRecordAction" method="saveUser"></action>
+		<action name="*/user/lottery_prize_winner" class="lotteryInformationAction"></action>
+		<action name="*/user/auction_draw" class="auctionDrawAction">
+		</action>
+		<action name="*/user/auction_winer_sub" class="auctionDrawAction" method="winnerSub">
+		</action>
+		<action name="*/user/checkin_draw" class="checkinDrawAction">
+		</action>
+		<action name="*/user/signinlist" class="signinAction" method="signinlist"></action>
+		<action name="*/user/commentlist" class="commentSubmitAction" method="commentlist"></action>
+		<action name="*/user/winnerlist" class="lotteryWinnerUserAction" method="winnerlist"></action>
+		<action name="*/user/wx_comment" class="commentSubmitAction"></action>
+		<action name="*/user/saveComment" class="commentSubmitAction" method="saveComment"></action>
+		<action name="*/user/commentDraw" class="commentSubmitAction" method="commentDraw"></action>
+		<action name="*/user/checkTeyue" class="xcSendDetailAction" method="checkTeyue">
+		</action>
+		<action name="*/user/acceptInvite" class="xcSendDetailAction" method="acceptInvite">
+		</action>
+		<action name="*/user/zhuanpan" class="zhuanpanAction">
+			<result name="success"></result>
+		</action>
+		<action name="*/user/updatecheckin" class="signinAction" method="updateCheckin">
+		</action>
+		<action name="*/user/xcStartAction" class="xcAction" method="start"></action>
+		<action name="*/user/xcAction" class="xcAction"></action>
+		<action name="*/user/xcResultAction" class="xcAction" method="getResult"></action>
+		<action name="*/user/xcSwitchAction" class="xcPageAction" method="pageid"></action>
+		<action name="*/user/xcCacheAction" class="xcPageAction" method="cachePageid"></action>
+		<action name="*/user/bbs/category/*-*" class="bbsCategoryAction" method="{2}">
+			<param name="category">{3}</param>
+		</action>
+		<action name="*/user/bbs/forum/*-*-*" class="bbsForumAction" method="{2}">
+			<param name="category">{3}</param>
+			<param name="forumid">{4}</param>
+		</action>
+		<action name="*/user/bbs/forumuser/*-*-*" class="bbsForumUserAction" method="{2}">
+			<param name="category">{3}</param>
+			<param name="forumid">{4}</param>
+		</action>
+		<action name="*/user/bbs/topic/*-*-*-*" class="bbsTopicAction" method="{2}">
+			<param name="category">{3}</param>
+			<param name="forumid">{4}</param>
+			<param name="topicid">{5}</param>
+		</action>
+		<action name="*/user/bbs/topicuser/*-*-*-*" class="bbsTopicUserAction" method="{2}">
+			<param name="category">{3}</param>
+			<param name="forumid">{4}</param>
+			<param name="topicid">{5}</param>
+
+			<result name="fail" type="redirect">
+				<param name="location">/${oname}/user/addTopic.action</param>
+				<param name="msg">${msg}</param>
+				<param name="forumid">${topic.FORUM_ID}</param>
+			</result>
+		</action>
+		<action name="*/user/bbs/*" class="bbsUserAction" method="{2}">
+			<result name="success">${jspname}</result>
+			<result name="rs" type="chain">
+				<param name="actionName"> */user/show </param>
+				<param name="oname">${oname}</param>
+			</result>
+		</action>
+		<action name="*/user/hyuser/*" class="hyUserAction" method="{2}">
+			<result name="success">${jspname}</result>
+			<result name="rs" type="chain">
+				<param name="actionName"> */user/show </param>
+				<param name="oname">${oname}</param>
+			</result>
+		</action>
+		<action name="*/user/doregister" class="bbsUserAction" method="doRegister">
+		</action>
+		<action name="*/user/bbslogin" class="bbsUserAction" method="login">
+		</action>
+		<action name="*/user/bbs/bbslogin/*" class="bbsUserAction" method="{2}">
+		</action>
+		<action name="*/user/bbsexit" class="bbsUserAction" method="bbsexit">
+		</action>
+		<action name="*/user/findBBSUserByName" class="bbsUserAction" method="findBBSUserByName">
+		</action>
+		<action name="*/user/topicPostInfo" class="bbsPostAction" method="topicPostInfo">
+			<result name="success" type="tiles">topicPostInfo</result>
+		</action>
+		<action name="*/user/personalTopicPost" class="bbsPostAction" method="personalTopicPost">
+			<result name="success" type="tiles">topicPostInfo</result>
+		</action>
+		<action name="*/user/savetopicReport" class="bbsPostAction" method="savetopicReport">
+		</action>
+		<action name="*/user/saveReplyInfo" class="bbsPostAction" method="saveReplyInfo">
+			<result name="success" type="redirect">
+				<param name="location">/${oname}/user/topicPostInfo.action</param>
+				<param name="topicid">${topic.id}</param>
+				<param name="forumid">${topic.FORUM_ID}</param>
+			</result>
+		</action>
+		<action name="*/user/replyAuthor" class="bbsPostAction" method="replyAuthor">
+			<result name="success" type="tiles">replyAuthor</result>
+		</action>
+		<action name="*/user/addViewCount" class="bbsPostAction" method="addViewCount">
+		</action>
+		<action name="*/user/editContent" class="bbsPostAction" method="editContent">
+			<result name="success" type="tiles">editTopic</result>
+		</action>
+		<action name="*/user/updateTopic" class="bbsPostAction" method="updateTopic">
+			<result name="success" type="redirect">
+				<param name="location">/${oname}/user/topicPostInfo.action</param>
+				<param name="topicid">${topicid}</param>
+				<param name="forumid">${forumid}</param>
+			</result>
+		</action>
+		<action name="*/user/saveMessage" class="bbsPostAction" method="saveMessage">
+		</action>
+		<action name="*/user/findMessage" class="bbsPostAction" method="findMessage">
+		</action>
+		<action name="*/user/messageCenter" class="bbsPostAction" method="messageCenter">
+			<result name="success" type="tiles">myMessage</result>
+		</action>
+		<action name="*/user/saveMessagereply" class="bbsPostAction" method="saveMessagereply">
+		</action>
+		<action name="*/user/bbsUserCenter" class="bbsUserCenterAction" method="bbsUserCenter">
+			<result name="success" type="tiles">bbsUserCenter</result>
+		</action>
+		<action name="*/user/bbsUserInfo" class="bbsUserCenterAction" method="bbsUserCenter">
+			<result name="success" type="tiles">bbsUserInfo</result>
+		</action>
+		<action name="*/user/bbsMyTopic" class="bbsUserCenterAction" method="bbsMyTopic">
+			<result name="success" type="tiles">bbsMyTopic</result>
+		</action>
+		<action name="*/user/bbsMyReply" class="bbsUserCenterAction" method="bbsMyReply">
+			<result name="success" type="tiles">bbsMyReply</result>
+		</action>
+		<action name="*/user/bbsContent" class="bbsProductAction" method="getBBSData"></action>
+		<action name="*/user/aptRecord" class="customAppointReportAction" method="record"></action>
+		<action name="*/user/quanjing" class="quanJingAction"></action>
+		<action name="*/user/360show" class="quanJingAction" method="show360">
+			<result name="success">/WEB-INF/page/show_360.jsp</result>
+		</action>
+		<action name="*/user/showfms" class="contentFormAction" method="showForms"></action>
+		<action name="*/user/showofm" class="contentFormAction" method="showOneForm"></action>
+		<action name="*/user/interactRecord" class="interactRecordAction"></action>
+		<action name="*/user/aptCatlist" class="aptAction" method="getCategoryList"></action>
+		<action name="*/user/aptFormlist" class="aptAction" method="getFormRecord"></action>
+		<action name="*/user/lottery_user_screen" class="lotteryDataAction" method="lotteryRecordShow"></action>
+		<action name="*/user/myWinList" class="lotteryDrawAction" method="userWinList"></action>
+
+		<action name="*/user/wxs" class="weixinEventLogAction" method="ashare"></action>
+		<action name="*/user/pwaibu" class="weixinEventLogAction" method="asub"></action>
+		<action name="*/user/wxpayPrePay" class="wxPayAction" method="prePay"></action>
+		<action name="*/user/wxpayPayResult" class="wxPayAction" method="payResult"></action>
+		<action name="*/user/wxBalancePayPrePay" class="wxBalancePayAction" method="prePay"></action>
+		<action name="*/user/wxBalancePayResult" class="wxBalancePayAction" method="payResult"></action>
+		<action name="*/user/userJfDetail" class="jfUserAction" method="userJfDetail"></action>
+		<action name="*/user/searchRecordBySolr" class="jfUserAction" method="getRecordBySolr"></action>
+		<action name="*/user/userJfSubDetail" class="jfUserAction" method="findUserJfSubDetail"></action>
+		<action name="*/user/userJfAddDetail" class="jfUserAction" method="findUserJfAddDetail"></action>
+		<action name="*/user/exam" class="examSubmitAction"></action>
+		<action name="*/user/hyDraw" class="hyDrawAction"></action>
+		<action name="*/user/cbAptrSub" class="cbAptAction"></action>
+		<action name="*/user/checkSenderStatus" class="cbAptAction" method="checkSenderStatus"></action>
+		<action name="*/user/findCbActivityJlRecord" class="cbActivityJlRecordAction" method="findCbActivityJlRecordList"></action>
+		<action name="*/user/findActivityMatterList" class="activityMatterAction" method="findActivityMatterList"></action>
+		<action name="*/user/findActivityMatterChildList" class="activityMatterAction" method="findActivityMatterChildList"></action>
+		<action name="*/user/activitymatterDetail" class="activityMatterAction" method="findActivityMatterDetail"></action>
+		<action name="*/user/findHbRecordList" class="hdRecordAction" method="findHbRecordList"></action>
+		<action name="*/user/tixian" class="hdRecordAction" method="tixian"></action>
+		<action name="*/user/look" class="pageShowAction" method="look">
+			<result type="tiles" name="success">looklook</result>
+		</action>
+		
+		<action name="*/user/addToShoppingCart" class="pingTuAction" method="addToShoppingCart">
+		</action>
+		
+		<action name="*/user/buyProduct" class="wxBuyProductAction" method="buyProduct">
+		</action>
+		<action name="*/user/showOrder" class="wxBuyAction">
+			<result name="success" type="tiles">showOrder</result>
+			<result name="outtime" type="tiles">order_outtime</result>
+		</action>
+		<action name="*/user/confirmOrder" class="wxBuyAction" method="confirmOrder">
+			<result name="success" type="redirect">/${oname}/user/payOrder.action?payOrderid=${payOrderid}</result>
+		</action>
+		<action name="*/user/payOrder" class="wxBuyAction" method="payOrder">
+			<result name="success" type="tiles">payOrder</result>
+			<result name="jf" type="tiles">payJfOrder</result>
+		</action>
+		<action name="*/user/payjf" class="wxBuyAction" method="payMoney"></action>
+		<action name="*/user/wxpayCallBack" class="wxBuyProductAction" method="wxpayCallBack">
+			<result name="success" type="redirect">
+				<param name="location">${redirectUrl}</param>
+			</result>
+		</action>
+		<action name="*/user/ownerPayBanlance" class="ownerBalanceAction">
+			<result name="success" type="tiles">ownerPayBanlance</result>
+		</action>
+		<action name="*/user/payBalance" class="ownerBalanceAction" method="payBalance">
+		</action>
+		
+		<action name="*/user/callBack" class="wxBuyProductAction" method="callBack">
+			<result name="success" type="redirect">
+				<param name="location">${redirectUrl}</param>
+			</result>
+		</action>
+		<action name="*/user/payHome" class="wxBuyProductAction" method="payHome">
+			<result name="success" type="redirect">
+				<param name="location">${redirectUrl}</param>
+			</result>
+		</action>
+		<action name="*/user/payJfHome" class="wxBuyProductAction" method="payJfHome">
+			<result name="success" type="redirect">
+				<param name="location">${redirectUrl}</param>
+			</result>
+		</action>
+		<action name="*/user/payJfUser" class="wxBuyProductAction" method="payJfUser">
+			<result name="success" type="redirect">
+				<param name="location">${redirectUrl}</param>
+			</result>
+		</action>
+		<action name="*/user/payProductList" class="wxBuyProductAction" method="payProductList">
+			<result name="success" type="redirect">
+				<param name="location">${redirectUrl}</param>
+			</result>
+		</action>
+		<action name="*/user/payJfProductList" class="wxBuyProductAction" method="payJfProductList">
+			<result name="success" type="redirect">
+				<param name="location">${redirectUrl}</param>
+			</result>
+		</action>
+		<action name="*/user/showAddress" class="wxBuyProductAction" method="showAddress">
+			<result name="success" type="tiles">payAddress</result>
+		</action>
+		<action name="*/user/addPayAddress" class="wxBuyProductAction" method="addPayAddress">
+			<result name="success" type="tiles">addPayAddress</result>
+		</action>
+		<action name="*/user/savePayAddress" class="wxBuyProductAction" method="savePayAddress">
+		</action>
+		<action name="*/user/editPayAddress" class="wxBuyProductAction" method="editPayAddress">
+			<result name="success" type="tiles">editPayAddress</result>
+		</action>
+		<action name="*/user/updatePayAddress" class="wxBuyProductAction" method="updatePayAddress">
+		</action>
+		<action name="*/user/delPayAddress" class="wxBuyProductAction" method="delPayAddress">
+		</action>
+		<action name="*/user/myAddress" class="wxBuyProductAction" method="showAddress">
+			<result name="success" type="tiles">myAddress</result>
+		</action>
+		<action name="*/user/ajax_get_city" class="wxBuyProductAction" method="ajax_get_city">
+		</action>
+		<action name="*/user/wkq_*" class="weiKaQuanAction" method="{2}">
+		</action>
+		<action name="*/user/addShoppingCart" class="wxBuyProductAction" method="addShoppingCart">
+		</action>
+		<action name="*/user/showShoppingCart" class="wxBuyProductAction" method="showShoppingCart">
+			<result name="success" type="tiles">shoppingCart</result>
+		</action>
+		<action name="*/user/showJfShoppingCart" class="wxBuyProductAction" method="showJfShoppingCart">
+			<result name="success" type="tiles">shoppingJfCart</result>
+		</action>
+		<action name="*/user/showCartNum" class="wxBuyProductAction" method="findShoppingCartNum">
+		</action>
+		<action name="*/user/updateQuantity" class="wxBuyProductAction" method="updateQuantity">
+		</action>
+		<action name="*/user/confirmCartOrder" class="wxBuyProductAction" method="confirmCartOrder">
+		</action>
+		<action name="*/user/showOrderList" class="wxBuyProductAction" method="showOrderList">
+			<result name="success" type="tiles">orderList</result>
+		</action>
+		<action name="*/user/ajaxShowOrderList" class="wxBuyProductAction" method="ajaxShowOrderList">
+		</action>
+		<action name="*/user/showJfOrderList" class="wxBuyProductAction" method="showJfOrderList">
+			<result name="success" type="tiles">jfOrderList</result>
+		</action>
+		<action name="*/user/ajaxShowJfOrderList" class="wxBuyProductAction" method="ajaxShowJfOrderList">
+		</action>
+		<action name="*/user/checkused" class="wxBuyProductAction" method="checkused">
+		</action>
+		
+		<action name="*/user/showKqOrderList" class="wxBuyProductAction" method="showKqOrderList">
+			<result name="success" type="tiles">kqOrderList</result>
+		</action>
+		<action name="*/user/ajaxShowKqOrderList" class="wxBuyProductAction" method="ajaxShowKqOrderList">
+		</action>
+		<action name="*/user/showJfKQOrderList" class="wxBuyProductAction" method="showJfKQOrderList">
+			<result name="success" type="tiles">kqOrderList</result>
+		</action>
+		<action name="*/user/ajaxShowJfKQOrderList" class="wxBuyProductAction" method="ajaxShowJfKQOrderList">
+		</action>
+		<action name="*/user/showKQList" class="wxBuyProductAction" method="showKQList">
+			<result name="success" >/WEB-INF/bdpage/kqlist.jsp</result>
+		</action>
+		<action name="*/user/ajaxShowKQList" class="wxBuyProductAction" method="ajaxShowKQList">
+		</action>
+		<action name="*/user/showPayOrder" class="wxBuyProductAction" method="showPayOrder">
+			<result name="success" type="tiles">orderShow</result>
+		</action>
+		<action name="*/user/delPayOrder" class="wxBuyProductAction" method="delPayOrder">
+		</action>
+		<action name="*/user/cancelPayOrder" class="wxBuyProductAction" method="cancelPayOrder">
+		</action>
+		<action name="*/user/showOrderUrl" class="weiKaQuanAction" method="findwkq">
+		</action>
+		<action name="*/user/delShopCartProduct" class="wxBuyProductAction" method="delShopCartProduct">
+		</action>
+		<action name="*/user/search" class="siteSearchAction">
+			<result name="success">${url}</result>
+		</action>
+		<action name="*/user/search_result" class="siteSearchAction" method="result"></action>
+		<action name="*/user/search_result_page" class="siteSearchAction" method="resultPage">
+			<result name="success" type="redirect">${url}</result>
+		</action>
+		<action name="*/user/loadcontent" class="contentCategoryAction" method="usercontent"></action>
+		<action name="*/user/checking" class="offCheckAction" method="checking">
+			<result name="success" type="redirect">${refurl}</result>
+			<result name="hyerr">/WEB-INF/interactpage/offcheck/err.jsp</result>
+		</action>
+		<action name="*/user/yuYueFrom" class="yuyueFormAction">
+		</action>
+		<action name="*/user/findCatelog" class="yuyueFormAction" method="findCatelog">
+		</action>
+		<action name="*/user/findYuYueCatalogById" class="yuyueFormAction" method="findYuYueCatalogById">
+		</action>
+		<action name="*/user/findYuYueServicerListBycatid" class="yuyueFormAction" method="findYuYueServicerListBycatid">
+		</action>
+		<action name="*/user/findYuYueService" class="yuyueFormAction" method="findYuYueService">
+		</action>
+		<action name="*/user/findYuYueServicerById" class="yuyueFormAction" method="findYuYueServicerById">
+		</action>
+		<action name="*/user/findServicerListByService" class="yuyueFormAction" method="findServicerListByService">
+		</action>
+		<action name="*/user/findServiceListBySerid" class="yuyueFormAction" method="findServiceListBySerid">
+		</action>
+		<action name="*/user/saveYuYueRecord" class="yuyueRecordAction">
+		</action>
+		<action name="*/user/findYuYueServiceById" class="yuyueFormAction" method="findYuYueServiceById">
+		</action>
+		<action name="*/user/catlist" class="contentCategoryAction" method="getCategoryList"></action>
+		<action name="*/user/adWayGGShow" class="adWagGGAction"></action>
+		<action name="*/user/yuyueRecord" class="yuyueAction" >
+			<result name="success">/WEB-INF/interactpage/yuyue/yuyueRecordShow.jsp</result>
+		</action>
+		<action name="*/user/yuyueRecordShow" class="yuyueAction" method="yuyueRecordShow">
+		</action>
+		<action name="*/user/yyRecord" class="yuyueAction" method="yyRecord">
+		</action>
+		<action name="*/user/yuyue_apt_record" class="yuyueAction" method="aptDetailEdit">
+			<result type="tiles" name="success">yuyue_apt_record</result>
+		</action>
+		<action name="*/user/updateAptRecord" class="yuyueAction" method="updateAptRecord">
+		</action>
+		<action name="*/user/yuyueRecordShowByNow" class="yuyueAction" method="yuyueRecordShowByNow">
+		</action>
+		<action name="*/user/findYuYueRecordById" class="yuyueAction" method="findYuYueRecordById">
+		</action>
+		<action name="*/user/dz_add" class="settingDzAction" method="addDz"></action>
+		<action name="*/user/dz_qx" class="settingDzAction" method="dzqx"></action>
+		<action name="*/user/dz_edit" class="settingDzAction" method="editDz"></action>
+		<action name="*/user/dz_source" class="offCheckAction" method="dzsource"></action>
+		<action name="*/user/dz_way" class="offCheckAction" method="dzway"></action>
+		<action name="*/user/dt_checking" class="offCheckAction" method="dtchecking"></action>
+		<action name="*/user/pj_hub" class="servicerpjAction" method="pjHub"></action>
+		<action name="*/user/pj_add" class="servicerpjAction" method="pjAdd"></action>
+		<action name="*/user/pj_detail" class="servicerpjAction" method="pjDetail"></action>
+		<action name="*/user/pj_reply" class="servicerpjAction" method="pjReply"></action>
+		<action name="*/user/pj_servicers" class="servicerpjAction" method="pjServicers"></action>
+		<action name="*/user/pj_contents" class="servicerpjAction" method="pjContents"></action>
+		<action name="*/user/vip_info" class="userVipAction" method="vipInfo">
+			<result name="success">/WEB-INF/interactpage/jifen/vip_info.jsp</result>		
+		</action>
+		<action name="*/user/vipInfoAjax" class="userVipAction" method="vipInfoAjax">
+		</action>
+		<action name="*/user/vip_info_sub"  class="userVipAction" method="submit">
+		</action>
+		<action name="*/user/grCenter" class="grCenterAction"></action>
+		<action name="*/user/findMyBalanceByHyUid" class="grCenterAction" method="findMyBalanceByHyUid"></action>
+		<action name="*/user/saveBalancePay" class="grCenterAction" method="saveBalancePay">
+			<result name="success" type="redirect">
+				<param name="location">/${oname}/user/findBalanceRuleById.action</param>
+				<param name="payid">${payid}</param>
+				<param name="ruleid">${ruleid}</param>
+			</result>
+		</action>
+		<action name="*/user/findBalanceRuleById" class="grCenterAction" method="findBalanceRuleById">
+			<result name="success">/WEB-INF/bdpage/payBalance.jsp</result>
+		</action>
+		<action name="*/user/payBalanceCallBack" class="grCenterAction" method="payBalanceCallBack">
+			<result name="success" type="redirect">
+				<param name="location">${url}</param>
+			</result>
+		</action>
+		<action name="*/user/findBalancePayById" class="grCenterAction" method="findBalancePayById">
+		</action>
+		<action name="*/user/updateSession" class="grCenterAction" method="updateSession">
+		</action>
+		<action name="*/user/updateLevelBycheckCode" class="grCenterAction" method="updateLevelBycheckCode">
+		</action>
+		<action name="*/user/memberConfirm" class="grCenterAction" method="memberConfirm">
+		</action>
+		<action name="*/user/vipRmbRecord" class="userVipAction" method="vipRmbRecord">
+			<result name="success">/WEB-INF/interactpage/jifen/vip_zhangben.jsp</result>
+		</action>
+		<action name="*/user/uway" class="cashierAction" method="uway">
+		</action>
+		<action name="*/user/sm" class="cashierAction" method="sm">
+		</action>
+		<action name="*/user/checkuwayused" class="cashierAction" method="checkuwayused">
+		</action>
+		<action name="*/user/cashierlogin" class="hyCashierAction" method="login">
+			<result name="success">/WEB-INF/cashier/login.jsp</result>
+			<result type="redirect" name="goscan">/${oname}/user/scan.action</result>
+		</action>
+		<action name="*/user/cashierdologin" class="hyCashierAction" method="dologin">
+		</action>
+		<action name="*/user/cashierexit" class="hyCashierAction" method="exit">
+		</action>
+		<action name="*/user/scan" class="hyCashierAction" method="scan">
+			<result name="success">/WEB-INF/cashier/scan.jsp</result>
+			<result type="redirect" name="fail">/${oname}/user/cashierlogin.action</result>
+		</action>
+		
+		<action name="*/user/findUserWay" class="hyCashierAction" method="findUserWay">
+		</action>
+		<action name="*/user/showUserWay" class="hyCashierAction" method="showUserWay">
+			<result name="success">/WEB-INF/cashier/finish.jsp</result>
+		</action>
+		<action name="*/user/showzkrmb" class="cashierAction" method="showzkrmb">
+		</action>
+		
+		<action name="*/user/showOrderGoods" class="hyCashierAction" method="showOrderGoods">
+			<result name="success">/WEB-INF/cashier/finish2.jsp</result>
+		</action>
+		<action name="*/user/findXfDescList" class="settingUserAction" method="findXfDescList"></action>
+		
+		<action name="*/user/userBill" class="hyCashierAction" method="userBill">
+			<result name="success">/WEB-INF/cashier/bill.jsp</result>
+		</action>
+		<action name="*/user/userBillRecord" class="jfUserAction" method="userBillRecord">
+		</action>
+		
+		<action name="*/user/userSolrDetail" class="jfUserAction" method="userSolrDetail"></action>
+		<action name="*/user/cbUserCenter" class="cbUserCenterAction"></action>
+		<action name="*/user/senderSequence" class="cbUserCenterAction" method="senderSequence"></action>
+		<action name="*/user/cbtixian" class="cbUserCenterAction" method="cbtixian"></action>
+		<action name="*/user/tixianRecord" class="cbUserCenterAction" method="tixianRecord"></action>
+		<action name="*/user/mySender" class="cbUserCenterAction" method="mySender"></action>
+		<action name="*/user/cbSenderAptRecord" class="cbSenderAction" method="cbSenderAptRecord"></action>
+		<action name="*/user/findSender" class="cbSenderAction" method="findSender"></action>
+		
+		<action name="*/user/myHuobi" class="cbUserCenterAction" method="myHuobi"></action>
+		
+		<action name="*/user/cb_activities" class="cbActivityAction"></action>
+		<action name="*/user/cb_activity" class="cbActivityAction" method="activity">
+			<result name="success">/WEB-INF/interactpage/cb/cb_activity.jsp</result>
+		</action>
+		<action name="*/user/cb_buddy_invite" class="cbUserCenterAction" method="inviteBuddy">
+			<result name="success">/WEB-INF/interactpage/cb/cb_buddy_invite.jsp</result>
+		</action>
+		<!-- user end -->
+		
+		<action name="*/user/xuantu/collection" class="xuantuAction"></action>
+		<action name="*/user/xuantu/check" class="xuantuAction" method="check"></action>
+		<action name="*/user/xuantu/mine" class="xuantuAction" method="mine"></action>
+		<action name="*/user/xuantu/total" class="xuantuAction" method="total"></action>
+		<action name="*/user/xuantu/remove" class="xuantuAction" method="remove"></action>
+		<action name="*/user/xuantu/want" class="xuantuAction" method="want"></action>
+		<action name="*/user/xuantu/mywant" class="xuantuAction" method="mywant"></action>
+		<action name="*/user/xuantu/nowant" class="xuantuAction" method="nowant"></action>
+		<action name="*/user/xuantu/submit" class="xuantuAction" method="submit"></action>
+	</package>
+</struts>

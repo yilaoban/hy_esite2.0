@@ -1,0 +1,121 @@
+/* CSS Document */
+
+.main_160229_top {width:100%; float:left; background:#fff; border-bottom:1px #dfdfdf solid; padding-bottom:10px;}
+.main_160229_top img{max-width: 100%;height: auto;width: auto\9; width: 40%;float: left; margin:10px; border:1px #dfdfdf solid;}
+.main_160229_top span{ width:50%; float:left;font-family: "Microsoft Yahei", Arial;font-size: 1em;  line-height:26px; margin-top:10px;}
+.main_160229_top span a{ color:#000; text-decoration:none;}
+.main_160229_top p{ width:50%; float:left;font-family: "Microsoft Yahei", Arial;font-size:.8em;  line-height:20px;0}
+
+
+/*预约*/
+.yuyue_box{width:90%; margin:0 auto; font-family: "Microsoft Yahei", Arial; font-size:.9em; margin-top:20px; line-height:24px;color:#666666; }
+.yuyue_input{ width:100%; float:left; background:#fff; border:1px #dfdfdf solid; height:35px; line-height:35px; text-indent:5px;}
+.yuyue_box tr{ margin-top:5px; width:100%; float:left;}
+.yuyue_box td{width:100%; float:left;}
+.yuyue_bd_160229{width:100%; float:left; margin-top:20px;}
+.yuyue_bd_160229 li{width:50%; float:left;}
+.yuyue_bd_160229 li a{ width:60%;float:left; text-align:center; line-height:30px;border-radius:5px; background:#40bff5; margin:0 40px;font-family: "Microsoft Yahei", Arial; font-size:1em; color:#fff; text-decoration:none;}
+
+/*预约详情*/
+.yuyue_f{width:100%; float:left; background:#fff; border-bottom:1px #dfdfdf solid; padding-bottom:10px;}
+.yuyue_f span{ width:90%; float:left; margin-left:5%;font-family: "Microsoft Yahei", Arial; font-size:1em; line-height:40px; font-weight:bold;}
+.yuyue_f p{ width:90%; float:left; margin-left:5%;font-family: "Microsoft Yahei", Arial; font-size:.9em; line-height:24px;}
+.yy_xg{width: 55px; float:right; margin-right:5%; text-align:right;font-family: "Microsoft Yahei", Arial; font-size:.9em; line-height:20px; color:#40bff5;}
+.yy_xg img{max-width: 100%;height: auto;width: auto\9; width:20px; float:left;}
+.yy_xg a{color:#40bff5; text-decoration:none;}
+
+
+.searchtime{ width:90%; margin:0 auto; border:1px #e1e1e1 solid; height:40px; background:#fff; margin-top:10px;border-radius:5px; margin-bottom:10px;}
+.qz_search{ width:70%; float:left; height:30px; margin-top:5px; border:none; color:#a5a5a5;font-family: "Microsoft Yahei", Arial; font-size:.9em; padding-left:5px;}
+.searchtime span{ width:15%; float:right; border-left:1px #a5a5a5 solid; text-align:center; margin-top:10px;}
+.searchtime span img{max-width: 100%;height: auto;width: auto\9; width:20px;}
+
+
+
+.group::after, .tabBlock-tabs::after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+
+
+@media screen and (min-width: 700px) {
+  body {
+    font-size: 137.5%;
+  }
+}
+.tabBlock-pane p{border-bottom:1px #e6e6e6 solid;}
+.yy_con{font-family: "Microsoft Yahei", Arial; font-size:.8em; line-height:40px; text-align:center;}
+.yy_con td{ border:1px solid #c9c9c9;}
+
+
+.unstyledList, .tabBlock-tabs {
+  list-style: none;
+  margin: 0;
+  padding: 0; width:100%;border-bottom:1px #e6e6e6 solid;
+}
+
+.tabBlock {
+  margin-top: 0;
+float: left;width:100%;
+}
+
+.tabBlock-tab {
+
+  cursor: pointer;
+  display: inline-block;
+
+  float: left;
+  position: relative;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+  width:33.3%; text-align:center; line-height:35px;font-family: "Microsoft Yahei", Arial; font-size:1em;
+}
+.tabBlock-tab:last-of-type {
+  border-right-style: solid;
+}
+.tabBlock-tab::before, .tabBlock-tab::after {
+  content: "";
+  display: block;
+
+  position: absolute;
+  -webkit-transition: 0.1s ease-in-out;
+  transition: 0.1s ease-in-out;
+}
+.tabBlock-tab::before {
+  left: -2px;
+  right: -2px;
+  top: -2px;
+}
+.tabBlock-tab::after {
+  background-color: transparent;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+}
+@media screen and (min-width: 700px) {
+  .tabBlock-tab {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
+.tabBlock-tab.is-active {
+  position: relative;
+  color: #0099ff;
+  z-index: 1;
+  background: #fff;
+}
+.tabBlock-tab.is-active::before {
+  background-color: #975997;
+}
+.tabBlock-tab.is-active::after {
+  background-color: white;
+}
+
+.tabBlock-content { background:#fff;
+}
+
+.tabBlock-pane > :last-child {
+  margin-bottom: 0;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="cbAction" class="com.huiyee.interact.cb.action.InteractCbAction" parent="interactModelAction" scope="prototype">
+		<property name="interactCbMgr" ref="interactCbMgrImpl"></property>
+		<property name="interactAptManager" ref="interactAptManagerImpl"></property>
+	</bean>
+	<bean id="cbManageAction" class="com.huiyee.interact.cb.action.CbManageAction" parent="abstractAction" scope="prototype">
+		<property name="cbDataMgr" ref="cbDataMgrImpl"></property>
+	</bean>
+	<bean id="abstractCbUserAction" class="com.huiyee.interact.cb.action.AbstractCbUserAction" parent="abstractAction" abstract="true">
+		<property name="cbDataMgr" ref="cbDataMgrImpl"></property>
+		<property name="interactCbMgr" ref="interactCbMgrImpl"></property>
+	</bean>
+	<bean id="cbActivityJlRecordAction" class="com.huiyee.interact.cb.action.CbActivityJlRecordAction" parent="abstractCbUserAction" scope="prototype">
+		<property name="cbActivityJlMgr" ref="cbActivityJlMgrImpl"></property>
+	</bean>
+	<bean id="activityMatterAction" class="com.huiyee.interact.cb.action.ActivityMatterAction" parent="abstractCbUserAction" scope="prototype">
+		<property name="activityMatterMgr" ref="activityMatterMgrImpl"></property>
+	</bean>
+	<bean id="hdRecordAction" class="com.huiyee.interact.cb.action.HbRecordAction" parent="abstractCbUserAction" scope="prototype">
+		<property name="hbRecordMgr" ref="hbRecordMgrImpl"></property>
+	</bean>
+	<bean id="cbAptAction" class="com.huiyee.interact.cb.action.CbAptAction" parent="abstractAction" scope="prototype">
+		<property name="interactCbMgr" ref="interactCbMgrImpl"></property>
+		<property name="activityMatterMgr" ref="activityMatterMgrImpl"></property>
+	</bean>
+
+	<bean id="cbActivityAction" class="com.huiyee.interact.cb.action.CbActivityAction" parent="abstractCbUserAction" scope="prototype">
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+		<property name="cbActivityMgr" ref="cbActivityMgr"></property>
+		<property name="contentManager" ref="contentManagerImpl"></property>
+	</bean>
+	<bean id="cbUserCenterAction" class="com.huiyee.interact.cb.action.CbUserCenterAction" parent="abstractCbUserAction" scope="prototype">
+		<property name="cbUserCenterMgr" ref="cbUserCenterMgrImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	<bean id="cbSenderAction" class="com.huiyee.interact.cb.action.CbSenderAction" parent="abstractAction" scope="prototype">
+		<property name="cbUserCenterMgr" ref="cbUserCenterMgrImpl"></property>
+		<property name="cbDataMgr" ref="cbDataMgrImpl"></property>
+	</bean>
+</beans>

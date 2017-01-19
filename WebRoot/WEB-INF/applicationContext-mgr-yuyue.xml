@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="yuYueMgrImpl" class="com.huiyee.interact.yuyue.mgr.YuYueMgrImpl" parent="abstractMgr">
+		<property name="yuYueDao" ref="yuYueDaoImpl"></property>
+		<property name="interactAptDao" ref="interactAptDaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+	</bean>
+	<bean id="yuYueFormMgrImpl" class="com.huiyee.interact.yuyue.mgr.YuYueFormMgrImpl">
+		<property name="yuYueDao" ref="yuYueDaoImpl"></property>
+		<property name="yuYueFormDao" ref="yuYueFormDaoImpl"></property>
+	</bean>
+	
+	<bean id="yuYueRecordMgrImpl" class="com.huiyee.interact.yuyue.mgr.YuYueRecordMgrImpl" parent="abstractMgr">
+		<property name="yuYueDao" ref="yuYueDaoImpl"></property>
+		<property name="hyUserDzDao" ref="hyUserDzDao"></property>
+		<property name="yuYueFormDao" ref="yuYueFormDaoImpl"></property>
+		<property name="yuYueRecordDao" ref="yuYueRecordDaoImpl"></property>
+	</bean>
+	
+</beans>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="cd-loginAction" class="project.caidan.action.LoginAction" parent="abstractAction" scope="prototype">
+		<property name="accountManager" ref="cd-accountManagerImpl"></property>
+	</bean>
+	<bean id="cd-adminAction" class="project.caidan.action.AdminAction" parent="abstractAction" scope="prototype">
+		<property name="accountManager" ref="cd-accountManagerImpl"></property>
+	</bean>
+
+	<bean id="cd-taskAction" class="project.caidan.action.TaskAction" parent="abstractAction" scope="prototype">
+		<property name="taskMgr" ref="cd-taskMgr"></property>
+	</bean>
+	
+	<bean id="cd-kqAction" class="project.caidan.action.CaiDanKqAction" parent="abstractAction" scope="prototype">
+		<property name="kqMgr" ref="cd-kqMgr"></property>
+		<property name="payShopOwnerMgr" ref="payShopOwnerMgr"></property>
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+	
+	<bean id="cd-adAction" class="project.caidan.action.CaiDanWayAction" parent="abstractAction" scope="prototype">
+		<property name="adMgr" ref="adMgrImpl"></property>
+		<property name="adMediaMgr" ref="adMediaMgrImpl"></property>
+		<property name="cdMediaMgr" ref="cd-mediaMgr"></property>
+	</bean>
+	<bean id="cd-mediaAction" class="project.caidan.action.CaiDanMediaAction" parent="abstractAction" scope="prototype">
+		<property name="adMediaMgr" ref="adMediaMgrImpl"></property>
+	</bean>
+	<bean id="cd-ggAction" class="project.caidan.action.CaiDanGGAction" parent="abstractAction" scope="prototype">
+		<property name="adGGMgr" ref="adGGMgrImpl"></property>
+		<property name="cdGGMgr" ref="cd-ggMgrImpl"></property>
+	</bean>
+	<bean id="cd-lotteryAction" class="project.caidan.action.CaiDanLotteryAction" parent="interactModelAction" scope="prototype">
+		<property name="cdLotteryMgr" ref="cd-lotteryMgr"></property>
+		<property name="lotteryMgr" ref="lotteryMgr"></property>
+		<property name="lotteryUserDateMgr" ref="lotteryUserDateMgr"></property>
+	</bean>
+	
+	<bean id="cd-lotteryDataAction" class="project.caidan.action.CaiDanLotteryDataAction" parent="interactModelAction" scope="prototype">
+		<property name="lotteryUserMgr" ref="lotteryUserMgr"></property>
+		<property name="lotteryPrizeMgr" ref="lotteryPrizeMgr"></property>
+	</bean>
+	<bean id="cd-newsAction" class="project.caidan.action.CDNewsAction" parent="abstractAction" scope="prototype">
+		<property name="newsMgr" ref="cd-newsMgr"></property>
+	</bean>
+	<bean id="cd-tagsAction" class="project.caidan.action.CaiDanTagsAction" parent="abstractAction" scope="prototype">
+		<property name="userTagMgr" ref="userTagMgrImpl"></property>
+	</bean>
+	<bean id="cd-couponAction" class="project.caidan.action.CouponAction" parent="abstractAction" scope="prototype">
+		<property name="couponMgr" ref="cd-couponMgrImpl"></property>
+	</bean>
+	<bean id="cd-prizeAction" class="project.caidan.action.CaiDanPrizeAction" parent="interactModelAction" scope="prototype">
+		<property name="lotteryprizeMgr" ref="lotteryPrizeMgr"></property>
+	</bean>
+	<bean id="cd-newsForPage" class="project.caidan.action.NewsForPageAction" parent="abstractAction" scope="prototype">
+		<property name="newsMgr" ref="cd-newsMgr"></property>
+		<property name="accountManager" ref="cd-accountManagerImpl"></property>
+	</bean>
+	
+	<bean id="cd-rmbAction" class="project.caidan.action.CaiDanRmbAction" parent="abstractAction" scope="prototype">
+		<property name="cdRmbMgr" ref="cd-rmbMgr"></property>
+	</bean>
+	
+	<bean id="cd-wayAction" class="project.caidan.action.WayAction" parent="abstractAction" scope="prototype">
+		<property name="wayMgr" ref="cd-wayMgr"></property>
+	</bean>
+	
+	<bean id="cd-productAction" class="project.caidan.action.CaiDanProductAction" parent="abstractAction" scope="prototype">
+		<property name="cdProductMgr" ref="cd-productMgr"></property>
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+	
+	<bean id="cd-userAction" class="project.caidan.action.CaiDanUserAction" parent="abstractAction" scope="prototype">
+		<property name="cdUserMgr" ref="cd-userMgr"></property>
+		<property name="hyJfSolrServer" ref="hyJfSolrServer"></property>
+	</bean>
+	<bean id="cd-lotteryStation" class="project.caidan.action.LotteryStationAction" parent="abstractAction" scope="prototype">
+		<property name="rmbRecordMgr" ref="cd-rmbRecordMgr"></property>
+		<property name="couponMgr" ref="cd-couponMgrImpl"></property>
+	</bean>
+	<bean id="cd-teamAction" class="project.caidan.action.CaiDanTeamAction" parent="abstractAction" scope="prototype">
+		<property name="cdTeamMgr" ref="cd-teamMgr"></property>
+	</bean>
+	<bean id="cd-accountAction" class="project.caidan.action.CreateAccountAction" parent="abstractAction" scope="prototype">
+		<property name="accountManager" ref="cd-accountManagerImpl"></property>
+	</bean>
+	<bean id="cd-reportAction" class="project.caidan.action.CaiDanReportAction" parent="abstractAction" scope="prototype">
+		<property name="caiDanReportMgr" ref="cd-report"></property>
+		<property name="couponMgr" ref="cd-couponMgrImpl"></property>
+		<property name="hyJfSolrServer" ref="hyJfSolrServer"></property>
+	</bean>
+</beans>

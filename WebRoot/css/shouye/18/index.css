@@ -1,0 +1,41 @@
+/* CSS Document */
+
+.mainmenu_20150206_2{
+width:100%; 
+margin:0 auto;
+font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;
+margin: 0 auto;
+position: absolute;
+left: 0;
+right: 0;
+bottom: 0;}
+.mainmenu_20150206_2>a {
+width: 33%;
+float: left;
+text-align: center;
+overflow: hidden;
+margin-bottom: 15px;
+}
+.mainmenu_20150206_2>a .mainmenu_20150206_2_btn {
+margin: 0 auto;
+width: 95px;
+height: 95px;
+display: block;
+overflow: hidden;
+}
+.mainmenu_20150206_2_btn p {
+padding:0;
+}
+.mainmenu_20150206_2_btn img{
+margin-top: 15px;
+width: 45px;
+height: 45px;
+border-radius: 0;}
+
+.mainmenu_20150206_2_ttle{
+font-size: 0.8em;
+margin: 3px 0 5px 0;
+overflow: hidden;
+text-overflow: ellipsis;
+white-space: nowrap;
+}

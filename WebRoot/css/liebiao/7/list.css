@@ -1,0 +1,15 @@
+/* CSS Document */
+
+
+
+/*图文列表-文章列表7*/
+.liebiao_1023_3{margin:0 auto; width:100%; height:100%;}
+
+.wdy_top2{ margin:0 auto;text-align:center;}
+.liebiao_1023_3_box {margin: 0 auto;}
+.liebiao_1023_3_box ul {width: 100%;margin-left:7px;}
+.liebiao_1023_3_box li {height: 120px;float: left;margin-top: 5px;background: #fff;margin: 10px 0 0 2%;width: 30%;}
+.liebiao_1023_3_box li a {display: block;padding: 4px;height: 112px;text-decoration: none;text-align: center;}
+.liebiao_1023_3_box li img{width: 88px; height:90px; border:0px;}
+.liebiao_1023_3_box li .icon11 {display: block;height: 90px;background-size:100% 90px;}
+.liebiao_1023_3_box li .title {display: block;color: #565555;font-size: 12px;padding: 6px 0 0;white-space: nowrap;overflow: hidden;font-size: 12px;}

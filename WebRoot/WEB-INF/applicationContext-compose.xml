@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean class="com.huiyee.esite.compose.PageComposeImpl"
+		id="pageCompose" scope="singleton">
+		<property name="siteManager" ref="siteManagerImpl"></property>
+		<property name="hyUserMgr" ref="hyUserMgr"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="contentManager" ref="contentManagerImpl"></property>
+		<property name="pageManager" ref="pageManagerImpl"></property>
+		<property name="featureManager" ref="featureManagerImpl"></property>
+		<property name="sinaTokenMgr" ref="sinaTokenMgrImpl"></property>
+		<property name="userMgr" ref="userMgrImpl"></property>
+		<property name="siteActionManager" ref="siteActionManagerImpl"></property>
+		<property name="visitMgr" ref="visitMgrImpl"></property>
+		<property name="pageCacheManager" ref="pageCacheManagerImpl"></property>
+		<property name="accountManager" ref="accountManagerImpl"></property>
+		<property name="userUploadManager" ref="uploadManagerImpl"></property>
+		<property name="wsManager" ref="wsManagerImpl"></property>
+		<property name="sinaUserManager" ref="sinaUserManagerImpl"></property>
+		<property name="sinaShareRecordManager" ref="sinaShareRecordManagerImpl2"></property>
+		<property name="sinaShareManager" ref="sinaShareManagerImpl2"></property>
+		<property name="activityManager" ref="activityManagerImpl"></property>
+		<property name="visitReportManager" ref="visitReportManagerImpl"></property>
+		<property name="fansAnalyseManager" ref="fansAnalyseManagerImpl"></property>
+		<property name="hdRecordManager" ref="hdRecordManagerImpl"></property>
+		<property name="materialManager" ref="materialManagerImpl"></property>
+		<property name="contentFormMgr" ref="contentFormMgrImpl"></property>
+		<property name="managers" ref="managers"></property>
+		<property name="hdManagers">
+			<map>
+				<entry key="103"><ref bean="hd103ManagerImpl"/></entry>
+				<entry key="106"><ref bean="hd106ManagerImpl"/></entry>
+				<entry key="111"><ref bean="hd111ManagerImpl"/></entry>
+				<entry key="113"><ref bean="hd113ManagerImpl"/></entry>
+				<entry key="117"><ref bean="hd117ManagerImpl"/></entry>
+				<entry key="120"><ref bean="hd120ManagerImpl"/></entry>
+				<entry key="121"><ref bean="hd121ManagerImpl"/></entry>
+				<entry key="130"><ref bean="hd130ManagerImpl"/></entry>
+				<entry key="137"><ref bean="hd137ManagerImpl"/></entry>
+				<entry key="139"><ref bean="hd139ManagerImpl"/></entry>
+				<entry key="141"><ref bean="hd141ManagerImpl"/></entry>
+				<entry key="131"><ref bean="hd131ManagerImpl"/></entry>
+				<entry key="133"><ref bean="hd133ManagerImpl"/></entry>
+				<entry key="135"><ref bean="hd135ManagerImpl"/></entry>
+				<entry key="127"><ref bean="hd127ManagerImpl"/></entry>
+				<entry key="128"><ref bean="hd128ManagerImpl"/></entry>
+				<entry key="129"><ref bean="hd129ManagerImpl"/></entry>
+			</map>
+		</property>
+		<property name="sinaForwardManager" ref="sinaForwardManagerImpl"></property>
+		<property name="emotionsManager" ref="emotionManagerImpl"></property>
+		<property name="interactModelManager" ref="interactModelManagerImpl"></property>
+		<property name="sinaCommentManager" ref="sinaCommentManagerImpl"></property>
+		<property name="templateManager" ref="templateManagerImpl"></property>
+		<property name="friendsShipsMgr" ref="friendsShipsMgrImpl"></property>
+		<property name="solrServerMgr" ref="solrServerMgr"></property>
+		<property name="checkinMgr" ref="checkinMgr"></property>
+		<property name="areaMgr" ref="areaMgrImpl"></property>
+		<property name="bbsMgr" ref="bbsMgrImpl"></property>
+		<property name="hdUserDataMgr" ref="hdUserDataMgr"></property>
+		<property name="marketActivityMgr" ref="marketActivityMgrImpl"></property>
+		<property name="pageShowMaterialManager" ref="pageShowMaterialManagerImpl"></property>
+		<property name="contentRecordMgr" ref="contentRecordMgrImpl"></property>
+		<property name="mbMgr" ref="mbMgrImpl"></property>
+		<property name="siteSourceManager" ref="siteSourceManagerImpl"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+		<property name="examManager" ref="examMgrImpl"></property>
+		<property name="xcMgr" ref="xcMgr"></property>
+		<property name="userTagMgr" ref="userTagMgrImpl"></property>
+		<property name="appManager" ref="appManagerImpl"></property>
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+	<bean class="com.huiyee.esite.compose.FeatureComposeImpl"
+		id="featureCompose" scope="singleton">
+		<property name="managers" ref="managers"></property>
+		<property name="hdManagers">
+			<map>
+				<entry key="103"><ref bean="hd103ManagerImpl"/></entry>
+				<entry key="106"><ref bean="hd106ManagerImpl"/></entry>
+				<entry key="111"><ref bean="hd111ManagerImpl"/></entry>
+				<entry key="113"><ref bean="hd113ManagerImpl"/></entry>
+				<entry key="117"><ref bean="hd117ManagerImpl"/></entry>
+				<entry key="120"><ref bean="hd120ManagerImpl"/></entry>
+				<entry key="121"><ref bean="hd121ManagerImpl"/></entry>
+				<entry key="130"><ref bean="hd130ManagerImpl"/></entry>
+				<entry key="137"><ref bean="hd137ManagerImpl"/></entry>
+				<entry key="139"><ref bean="hd139ManagerImpl"/></entry>
+				<entry key="141"><ref bean="hd141ManagerImpl"/></entry>
+				<entry key="131"><ref bean="hd131ManagerImpl"/></entry>
+				<entry key="133"><ref bean="hd133ManagerImpl"/></entry>
+				<entry key="135"><ref bean="hd135ManagerImpl"/></entry>
+				<entry key="127"><ref bean="hd127ManagerImpl"/></entry>
+				<entry key="128"><ref bean="hd128ManagerImpl"/></entry>
+				<entry key="129"><ref bean="hd129ManagerImpl"/></entry>
+			</map>
+		</property>
+		<property name="hdRecordManager" ref="hdRecordManagerImpl"></property>
+		<property name="activityManager" ref="activityManagerImpl"></property>
+		<property name="siteManager" ref="siteManagerImpl"></property>
+		<property name="pageManager" ref="pageManagerImpl"></property>
+		<property name="pageCacheManager" ref="pageCacheManagerImpl"></property>
+		<property name="contentManager" ref="contentManagerImpl"></property>
+	</bean>
+	
+	<bean id="managers" class="org.springframework.beans.factory.config.MapFactoryBean">  
+	  <property name="sourceMap">  
+	      <map>  
+				<entry key="101"><ref bean="videoManagerImpl"/></entry>
+				<entry key="102"><ref bean="prolistProductManagerImpl"/></entry>
+				<entry key="103"><ref bean="productZanManagerImpl"/></entry>
+				<entry key="104"><ref bean="noticeManagerImpl"/></entry>
+				<entry key="105"><ref bean="userUploadManagerImpl"/></entry>
+				<entry key="106"><ref bean="userUploadManagerImpl"/></entry>
+				<entry key="107"><ref bean="userUploadCheckManagerImpl"/></entry>
+				<entry key="108"><ref bean="featureUploadRecommentManagerImpl"/></entry>
+				<entry key="109"><ref bean="pictureManagerImpl"/></entry>
+				<entry key="110"><ref bean="newsManagerImpl"/></entry>
+				<entry key="112"><ref bean="sinaShareManagerImpl"/></entry>
+				<entry key="113"><ref bean="sinaShareManagerImpl"/></entry>
+				<entry key="114"><ref bean="sinaCheckManagerImpl"/></entry>
+				<entry key="115"><ref bean="sinaNoCheckManagerImpl"/></entry>
+				<entry key="116"><ref bean="Feature116ManagerImpl"/> </entry>
+				<entry key="118"><ref bean="Feature118ManagerImpl"/></entry>
+				<entry key="119"><ref bean="emailContractManagerImpl"/></entry>
+				<entry key="122"><ref bean="feature122ManagerImpl"/></entry>
+				<entry key="123"><ref bean="feature123ManagerImpl"/></entry>
+				<entry key="124"><ref bean="feature124ManagerImpl"/></entry>
+				<entry key="125"><ref bean="feature125ManagerImpl"/></entry>
+				<entry key="126"><ref bean="feature126ManagerImpl"/></entry>
+				<entry key="136"><ref bean="feature125ManagerImpl"/></entry>
+				<entry key="138"><ref bean="feature125ManagerImpl"/></entry>
+				<entry key="134"><ref bean="feature134ManagerImpl"/></entry>
+				<entry key="140"><ref bean="feature140ManagerImpl"/></entry>
+				<entry key="142"><ref bean="feature142ManagerImpl"/></entry>
+				<entry key="143"><ref bean="feature125ManagerImpl"/></entry>
+				<entry key="144"><ref bean="feature144ManagerImpl"/></entry>
+				<entry key="145"><ref bean="feature145ManagerImpl"/></entry>
+				<entry key="146"><ref bean="feature146ManagerImpl"/></entry>
+				<entry key="147"><ref bean="feature147ManagerImpl"/></entry>
+				<entry key="148"><ref bean="feature148ManagerImpl"/></entry>
+				<entry key="149"><ref bean="feature149ManagerImpl"/></entry>
+				<entry key="150"><ref bean="feature150ManagerImpl"/></entry>
+				<entry key="151"><ref bean="feature151ManagerImpl"/></entry>
+				<entry key="152"><ref bean="feature152ManagerImpl"/></entry>
+				<entry key="153"><ref bean="feature153ManagerImpl"/></entry>
+				<entry key="154"><ref bean="feature154ManagerImpl"/></entry>
+				<entry key="155"><ref bean="feature155ManagerImpl"/></entry>
+				<entry key="156"><ref bean="feature156ManagerImpl"/></entry>
+				<entry key="157"><ref bean="feature157ManagerImpl"/></entry>
+				<entry key="158"><ref bean="feature158ManagerImpl"/></entry>
+				<entry key="159"><ref bean="feature159ManagerImpl"/></entry>
+				<entry key="160"><ref bean="feature160ManagerImpl"/></entry>
+				<entry key="161"><ref bean="feature161ManagerImpl"/></entry>
+	      </map>  
+	  </property>  
+	</bean> 
+</beans>

@@ -1,0 +1,10 @@
+##图片
+
+#set( $i = $!bdradius+'px')
+<div  hydata="$pcbid" hyct="Y" status="0" class="hyzj $!ctname" style='$!hyct;background:rgba($!col,$!tm);border:$!b1 $!b2 $!b3;border-radius:$!i;'>
+	#if($!link != "")
+	<a href="$!link"><img class="hyimage" hyvar="img" style="width:100%;height:100%;border-radius:$!i;" src="$img"></a>
+	#else
+	<img class="hyimage" hyvar="img" style="width:100%;height:100%;border-radius:$!i;" src="$img">
+	#end
+</div>

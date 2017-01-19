@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="spreadAction" class="com.huiyee.interact.spread.action.SpreadAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="spreadMgr" ref="spreadMgrImpl"></property>
+	</bean>	
+	<bean id="spreadOptionAction" class="com.huiyee.interact.spread.action.SpreadOptionAction" 
+		parent="interactModelAction" scope="prototype">
+		<property name="spreadOptionMgr" ref="spreadOptionMgrImpl"></property>
+	</bean>	
+	<bean id="spreadRecordAction" class="com.huiyee.interact.spread.action.SpreadRecordAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="spreadRecordManager" ref="spreadRecordMgrImpl"></property>
+	</bean>
+	<bean id="spreadPreviewAction" class="com.huiyee.interact.spread.action.SpreadPreviewAction"
+		parent="interactModelAction" scope="prototype">
+		<property name="spreadManager" ref="spreadMgrImpl"></property>
+	</bean>
+	<bean id="spreadSubmitAction" class="com.huiyee.interact.spread.action.SpreadSubmitAction"
+		parent="interactModelAction" scope="prototype">	
+		<property name="spreadManager" ref="spreadMgrImpl"></property>
+	</bean>
+	<bean id="baShareAction" class="com.huiyee.interact.spread.action.BAShareAction"
+		parent="interactModelAction" scope="prototype">	
+		<property name="baShareManager" ref="baShareMgrImpl"></property>
+	</bean>
+</beans>
+
+

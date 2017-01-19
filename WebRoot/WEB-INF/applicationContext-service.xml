@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd 
+	http://www.springframework.org/schema/tx 
+	http://www.springframework.org/schema/tx/spring-tx.xsd 
+	http://www.springframework.org/schema/aop 
+	http://www.springframework.org/schema/aop/spring-aop.xsd">
+	
+	<bean class="com.huiyee.esite.service.MemCachedAround"
+		id="memCachedAround">
+	</bean>
+	<aop:config>
+		<aop:aspect ref="memCachedAround" id="memcached">
+			<!-- 设置拦截对象  -->
+			<aop:pointcut
+				expression="execution(* com.huiyee.esite.dao.imp.*.find*(..)) || execution(* com.huiyee.esite.dao.imp.*.get*(..)) || execution(* com.huiyee.interact.*.dao.*.get*(..)) || execution(* com.huiyee.interact.*.dao.*.find*(..))"
+				id="allDaoMethod" />
+			<aop:around pointcut-ref="allDaoMethod" method="memcached" />
+		</aop:aspect>
+	</aop:config>
+	<bean class="com.huiyee.esite.solr.SolrServerMgr" id="solrServerMgr" init-method="init">
+		<property name="zkHost"><value>${zkHost}</value></property>
+	</bean>
+	<bean class="com.huiyee.esite.solr.HylogSolrServer" id="hylogSolrServer" init-method="init">
+	<property name="zkHost"><value>${zkHost}</value></property>
+	<property name="defaultCollection"><value>${hylogCollection}</value></property>
+	</bean>
+	
+	<bean class="com.huiyee.esite.solr.HyJfSolrServer" id="hyJfSolrServer" init-method="init">
+	<property name="zkHost"><value>${zkHost}</value></property>
+	<property name="defaultCollection"><value>${hyjfCollection}</value></property>
+	</bean>
+	
+	<bean id="velocityEngine" class="org.springframework.ui.velocity.VelocityEngineFactoryBean">
+		<property name="configLocation"><value>/WEB-INF/velocity.properties</value></property>
+		<property name="resourceLoaderPath"><value>/</value></property>
+	</bean>
+	
+	<bean id="pageReader" class="com.huiyee.esite.util.PageReader" init-method="init"></bean>
+</beans>

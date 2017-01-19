@@ -1,0 +1,41 @@
+##菜单
+<div hydata="$!pcbid" hyct="Y" status="0" class="menuvm carousel slide hyzj $!ctname" style='$!hyct;'>
+  <ul id="menu$!pcbid">
+    #set($i =0)
+  	#foreach ($item in $list)
+	  	#if($i==0)
+	    	<li style="background:rgba(${item.col},${item.tm});float:left;"><a style="color:${item.fontcol}" href="${item.link}">${item.title}</a></li>
+	    #else
+	    	<li style="background:rgba(${item.col},${item.tm});float:left;"><a style="color:${item.fontcol}" href="${item.link}">${item.title}</a></li>
+	    #end
+	    #set($i=$i+1)
+    #end
+  </ul>
+</div>
+
+<script>
+	var d = document.getElementById("menu$!pcbid").getElementsByTagName("li");
+	var  len =d.length;
+	var width =100/len;
+	for(var i=0;i<len;i++)
+    {
+		 d[i].style.width=width+"%";
+    }
+</script>
+
+<style type="text/css">
+	.menuvm ul li{
+		float: left;
+		text-align: center;
+		height:35px;
+		overflow:hidden;
+		line-height: 35px;
+		font-family: "Microsoft Yahei", Arial;
+		color: #cfcfcf;
+		font-size: .9em;
+	}
+	
+	.menuvm a{
+		text-decoration:none;
+	}
+</style>

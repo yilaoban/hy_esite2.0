@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="adDaoImpl" class="com.huiyee.interact.ad.dao.impl.AdDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="adwdDaoImpl" class="com.huiyee.interact.ad.dao.impl.AdwdDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="areaProvinceDaoImpl" class="com.huiyee.interact.ad.dao.impl.AreaProvinceDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="adWayDaoImpl" class="com.huiyee.interact.ad.dao.impl.AdWayDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="adGGDaoImpl" class="com.huiyee.interact.ad.dao.impl.AdggDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="adWayggDaoImpl" class="com.huiyee.interact.ad.dao.impl.AdWayggDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="adMediaDaoImpl" class="com.huiyee.interact.ad.dao.impl.AdMediaDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

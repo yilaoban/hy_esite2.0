@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="wxPageShowMgr" class="com.huiyee.weixin.mgr.impl.WxPageShowMgrImpl">
+		<property name="wxPageShowDao" ref="wxPageShowDao"></property>
+	</bean>
+	<bean id="payShopOwnerMgr" class="com.huiyee.weixin.mgr.impl.PayShopOwnerMgr" parent="abstractMgr">
+		<property name="payShopOwnerDao" ref="payShopOwnerDao"></property>
+	</bean>
+
+	<bean id="wxAppMgr" class="com.huiyee.weixin.mgr.impl.WxAppMgrImpl">
+		<property name="wxAppDao" ref="wxAppDao"></property>
+	</bean>
+
+	<bean id="wxMpMgr" class="com.huiyee.weixin.mgr.impl.WxMpMgrImpl">
+		<property name="wxMpDao" ref="wxMpDao"></property>
+	</bean>
+
+	<bean id="wxBuyProductMgrImpl" class="com.huiyee.weixin.mgr.impl.WxBuyProductMgrImpl" parent="abstractMgr">
+		<property name="contentProductDao" ref="contentProductDaoImpl"></property>
+		<property name="wxBuyProductDao" ref="wxBuyProductDaoImpl"></property>
+		<property name="payShopOwnerDao" ref="payShopOwnerDao"></property>
+	</bean>
+
+</beans>

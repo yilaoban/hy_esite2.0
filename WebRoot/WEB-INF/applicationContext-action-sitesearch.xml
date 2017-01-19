@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="siteSearchAction" class="com.huiyee.interact.sitesearch.action.SiteSearchAction" parent="abstractAction" scope="prototype">
+		<property name="sitesearchSolrServer" ref="sitesearchSolrServer"></property>
+		<property name="siteSearchMgr" ref="siteSearchMgr"></property>
+		<property name="siteSearchIndexMgr" ref="siteSearchIndexMgr"></property>
+		<property name="siteGroupMgr" ref="siteGroupMgr"></property>
+	</bean>
+
+</beans>

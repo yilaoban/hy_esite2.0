@@ -1,0 +1,30 @@
+
+.outercont {
+	position: relative;
+}
+.outer-cont {
+	position: relative;
+	width: 100%;
+	margin-bottom: 30px;
+	overflow:hidden;
+}
+.inner-cont {
+	position: absolute;
+	width: 100%;
+	top: 72px;
+}
+.outer {
+	margin: 0 auto;
+}
+.inner {
+	width : 112px;
+	max-width: 112px;
+	height: 142px;
+	margin: 0 auto;
+	cursor: pointer;
+}
+.outer img, .inner img {
+	display: block;
+	margin: 0 auto;
+	outline:none;
+}

@@ -1,0 +1,12 @@
+body{width:100%;}
+.hide{ display:none;}
+.page{width:100%;height:100vh;position:absolute;}
+.page a {text-decoration:none;}
+.page .wrap{height:100%;}
+.page-current{z-index:1;}
+
+.float-menu {position:fixed;bottom:10px;width:96%;left:2%;margin-left:-10px;}
+.float-menu li {float:left;}
+.float-menu li a {display:block;background:#000;opacity:0.8;margin-left:10px;padding:10px 0;text-align:center;border-radius:8px;font-size:20px;color:#fff;text-decoration:none;}
+#share_tips_wrap {display:none;position:fixed;top:0;left:0;width:100%;height:100%;z-index:1000;	background:rgba(0,0,0,0.9)  no-repeat 100% 10px;background-size:165px 114px;}
+#share_tips_wrap .cancelShare {border:2px solid #fff;background:none;font-size:20px;color:#fff;padding:8px 15px;border-radius:10px;position:fixed;bottom:40px;left:50%;margin-left:-60px;}

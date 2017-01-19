@@ -1,0 +1,19 @@
+##二维码
+<script type="text/javascript">
+	#parse("/js/qrcode.js")
+</script>
+
+#if($!link=="")
+	<div  hydata="$!pcbid" hyct="Y" status="0" class="carousel slide hyzj $!ctname" style='$!hyct;'>
+		<img style="width:100%;height:100%;" src="/images/zujian/encode.png">
+	</div>
+#else
+	<div id="qrcode$!pcbid"  hydata="$!pcbid" hyct="Y" status="0" class="carousel slide hyzj $!ctname" style='$!hyct;'></div>
+	<script type="text/javascript">
+		var qrcode = new QRCode(document.getElementById("qrcode$!pcbid"), {
+			width : 120,
+			height : 120
+		});
+		qrcode.makeCode("$!link");
+	</script>
+#end

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="propertyConfigurer"
+		class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations">
+			<list>
+				<value>WEB-INF/huiyee.properties</value>
+			</list>
+		</property>
+	</bean>
+	<bean id="hyConfig" class="com.huiyee.esite.util.HyConfig">
+		<property name="unifyloginurl">
+			<value>${passport.unfiyloginurl}</value>
+		</property>
+		<property name="cloudDomain">
+			<value>${cloudDomain}</value>
+		</property>
+		<property name="yiboDomain">
+			<value>${yiboDomain}</value>
+		</property>
+		<property name="clearUrl">
+			<value>${clearUrl}</value>
+		</property>
+		<property name="allowClearIp">
+			<value>${allowClearIp}</value>
+		</property>
+		<property name="yiyouDomain">
+			<value>${yiyouDomain}</value>
+		</property>
+		<property name="imgDomain">
+			<value>${imgDomain}</value>
+		</property>
+		<property name="rootPath">
+			<value>${pic.rootPath}</value>
+		</property>
+		<property name="run">
+			<value>${isRun}</value>
+		</property>
+		<property name="memcachedServer">
+			<value>${site.memcached.server}</value>
+		</property>
+		<property name="yuming">
+			<value>${esite.yuming}</value>
+		</property>
+		<property name="pageyuming">
+			<value>${page.yuming}</value>
+		</property>
+		<property name="hypageyuming">
+			<value>${hypage.yuming}</value>
+		</property>
+		<property name="showPagePath">
+			<value>${showpage.path}</value>
+		</property>
+		<property name="root">
+			<value>${root.path}</value>
+		</property>
+		<property name="tmp">
+			<value>${tmp}</value>
+		</property>
+		<property name="adminowner">
+			<value>${adminowner}</value>
+		</property>
+		<property name="mcrmDomain">
+			<value>${mcrmDomain}</value>
+		</property>
+		<property name="crmDomain">
+			<value>${crmDomain}</value>
+		</property>
+	</bean>
+    <bean id="threadPool"
+		class="com.huiyee.esite.util.ThreadPool" scope="prototype">
+	</bean>
+</beans>

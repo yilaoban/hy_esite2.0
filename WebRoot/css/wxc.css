@@ -1,0 +1,195 @@
+#canvas-container {
+	position: absolute;
+	left: 0;
+	right:0;
+	top: 0;
+	bottom:0;
+	z-index: 2;
+	display:none;
+}
+canvas {
+	cursor: crosshair;
+	display: block;
+	position: relative;
+	z-index: 3;
+}
+
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;} 
+body {width:1280px;height:720px;}
+.fixed-menu-bg {position:fixed;bottom:0;width:100%;background:#000;opacity:0.6;height:60px;}
+.fixed-menu {position:fixed;bottom:0;width:100%;}
+.fixed-menu ul {width:1000px;margin:0 auto;width:1000px;}
+.fixed-menu ul li {float:left;list-style:none;}
+.fixed-menu ul li a {height:60px;line-height:60px;padding:0 20px;display:block;font-size:18px;color:#fff;text-decoration:none;}
+#signDiv {width:700px;margin:0 auto;position:absolute;top:150px;left:50%;margin-left:-350px;}
+#signCon {padding:0 20px;position:relative;}
+#qrcorder1, #qrcorder2 {position:absolute;top:100px;}
+#qrcorder1 {left:-200px;}
+#qrcorder2 {right:-200px;}
+#qrcorder1 img, #qrcorder2 img {border:10px solid #fff;}
+#qrcorder1 p, #qrcorder2 p, #ewm p {color:#dd1359;font-size:20px;padding-top:10px;text-align:center;}
+#signPost {padding:7 25px 0;}
+.singleSign {width:100px;float:left;margin:0 10px 20px 10px;position:absolute;left:45px;top:7px;}
+.singleSign img {width:100%;border-radius:50%;}
+.singleSign span {display:block;margin-top:10px;font-weight:bold;color:#fff;background:#00A0E9;padding:5px;border-radius:10px;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;text-align:center;}
+.singlePrize {width:100px;float:left;margin:0 10px 20px 10px;}
+.singlePrize img {width:100%;border-radius:50%;}
+.singlePrize span {display:block;margin-top:10px;font-weight:bold;color:#fff;background:#00A0E9;padding:5px;border-radius:10px;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;text-align:center;}
+
+#commentDiv {width:700px;position:absolute;top:150px;margin-left:-350px;left:50%;}
+#commentCon {padding:0 20px;position:relative;}
+#commentPost {height:535px;overflow:hidden;}
+#postGroup {overflow:hidden;padding:0 25px;}
+.singlePost {height:90px;margin-bottom:15px;}
+.postpic {float:left;}
+.postpic img {border-radius:35px;}
+.postname {margin-top:5px;font-size:16px;font-weight:bold;color:#dd1359;text-align:center;white-space: nowrap;overflow: hidden;text-overflow:ellipsis;}
+.postcontent {color:#fff;margin:10px 0 0 80px;font-size:24px;line-height:34px;height:70px;background-image:url(/res/lenovo/daping/images/dialog-b.png);background-repeat:no-repeat;background-size:100% 100%;padding:10px 10px 10px 30px;}
+#winnerDiv {margin-left:400px;}
+#winnerDiv ul li {background-image:url(/res/lenovo/daping/images/namebg.png);background-repeat:no-repeat;background-size:100% 100%;padding:20px;margin-bottom:20px;}
+#winnerDiv ul li img {width:60px;border-radius:30px;margin-left:20px;float:left;}
+#winnerDiv ul li p {line-height:60px;font-size:32px;color:#00A0E9;margin-left:120px;}
+#ddbg {width: 700px;height: 450px;margin-left: -350px;left:50%;background:url(/res/lenovo/daping/images/daojishi-b.png);background-size:100% 100%;position:absolute;top:150px;}
+#ddstart {width: 400px;margin-left: -200px;left:50%;position:absolute;top:150px;}
+#ddstart img {width:100%;}
+#dd {font-size: 300px;color: #fff;font-family: fantasy;text-align: center;line-height: 450px;}
+
+#pre1 {background:url(/res/lenovo/daping/images/status1.png);}
+#pre2 {background:url(/res/lenovo/daping/images/status2.png);}
+#pre3 {background:url(/res/lenovo/daping/images/status3.png);}
+#pre4 {background:url(/res/lenovo/daping/images/status4.png);}
+#pre5 {background:url(/res/lenovo/daping/images/status5.png);}
+#pre6 {background:url(/res/lenovo/daping/images/status6.png);}
+#pre7 {background:url(/res/lenovo/daping/images/status7.png);}
+#pre8 {background:url(/res/lenovo/daping/images/status8.png);}
+
+.scan {
+	-webkit-animation: 1s scan infinite;
+   	animation: 1s scan infinite;
+   	background-size:100% 100%;
+   	}
+@-webkit-keyframes scan {
+  0% {
+    background-image:url(/res/lenovo/daping/images/status1.png);
+  }
+  12% {
+  	background-image:url(/res/lenovo/daping/images/status2.png);
+  }
+  25% {
+  	background-image:url(/res/lenovo/daping/images/status3.png);
+  }
+  37% {
+  	background-image:url(/res/lenovo/daping/images/status4.png);
+  }
+  50% {
+  	background-image:url(/res/lenovo/daping/images/status5.png);
+  }
+  62% {
+  	background-image:url(/res/lenovo/daping/images/status6.png);
+  }
+  75% {
+  	background-image:url(/res/lenovo/daping/images/status7.png);
+  }
+  87% {
+  	background-image:url(/res/lenovo/daping/images/status8.png);
+  }
+  100% {
+  	background-image:url(/res/lenovo/daping/images/status1.png);
+  }
+}
+
+@keyframes scan {
+  0% {
+    background-image:url(/res/lenovo/daping/images/status1.png);
+  }
+  12% {
+  	background-image:url(/res/lenovo/daping/images/status2.png);
+  }
+  25% {
+  	background-image:url(/res/lenovo/daping/images/status3.png);
+  }
+  37% {
+  	background-image:url(/res/lenovo/daping/images/status4.png);
+  }
+  50% {
+  	background-image:url(/res/lenovo/daping/images/status5.png);
+  }
+  62% {
+  	background-image:url(/res/lenovo/daping/images/status6.png);
+  }
+  75% {
+  	background-image:url(/res/lenovo/daping/images/status7.png);
+  }
+  87% {
+  	background-image:url(/res/lenovo/daping/images/status8.png);
+  }
+  100% {
+  	background-image:url(/res/lenovo/daping/images/status1.png);
+  }
+}
+@-webkit-keyframes fadeIn {
+  0% {
+  	opacity:0;
+  }
+  40% {
+  	opacity:1;
+  	width:300px;
+  	left:200px;
+  	top:100px;
+  }
+  100% {
+    width:100px;
+    left:45px;
+    top:7px;
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+  	opacity:0;
+  }
+  40% {
+  	opacity:1;
+  	width:300px;
+  	left:200px;
+  	top:100px;
+  }
+  100% {
+    width:100px;
+    left:45px;
+    top:7px;
+  }
+}
+
+.fadeIn {
+  -webkit-animation: 2s fadeIn;
+  animation:2s fadeIn;
+}
+
+
+@-webkit-keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn2 {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.fadeIn2 {
+  -webkit-animation: 2s fadeIn2;
+  animation:2s fadeIn2;
+}
+
+

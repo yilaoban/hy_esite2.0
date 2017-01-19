@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="abstractFeatureManager" class="com.huiyee.esite.fmgr.imp.AbstractFeatureManager" abstract="true">
+		<property name="pageFeatureDao" ref="pageFeatureDaoImpl"></property>
+		<property name="dynamicActionRecordDao" ref="dynamicActionRecordDaoImpl"></property>
+		<property name="pageRelationDao" ref="pageRelationDaoImpl"></property>
+	</bean>
+	<bean id="noticeManagerImpl" class="com.huiyee.esite.fmgr.imp.NoticeManagerImpl" parent="abstractFeatureManager">
+		<property name="noticeDao" ref="noticeDaoImpl"></property>
+	</bean>
+	<bean id="prolistProductManagerImpl" class="com.huiyee.esite.fmgr.imp.ProListProductManagerImpl"  parent="abstractFeatureManager">
+		<property name="prolistproductDao" ref="prolistproductDaoImpl"></property>
+		<property name="prolistDao" ref="prolistDaoImpl"></property>
+		<property name="prolistListDao" ref="prolistListDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+	</bean>
+	<bean id="videoManagerImpl" class="com.huiyee.esite.fmgr.imp.VideoManagerImpl" parent="abstractFeatureManager">
+		<property name="videoDao" ref="videoDaoImpl"></property>
+	</bean>
+	<bean id="productZanManagerImpl" class="com.huiyee.esite.fmgr.imp.ProductZanManagerImpl" parent="abstractFeatureManager">
+		<property name="proListProductDao" ref="prolistproductDaoImpl"></property>
+	</bean>
+	<bean id="userUploadCheckManagerImpl" class="com.huiyee.esite.fmgr.imp.UserUploadCheckManager" parent="abstractFeatureManager">
+		<property name="userUploadRecordDao" ref="userUploadRecordDaoImpl"></property>
+		<property name="userUploadCheckListDao" ref="userUploadCheckListDaoImpl"></property>
+	</bean>
+	<bean id="userUploadManagerImpl" class="com.huiyee.esite.fmgr.imp.UserUploadManagerImpl" parent="abstractFeatureManager">
+		<property name="userUploadDao" ref="userUploadDaoImpl"></property>
+		<property name="userUploadRecordDao" ref="userUploadRecordDaoImpl"></property>
+	</bean>
+	<bean id="featureUploadRecommentManagerImpl" class="com.huiyee.esite.fmgr.imp.FeatureUploadRecommentManagerImpl" parent="abstractFeatureManager">
+		<property name="userUploadRecommentListDao" ref="userUploadRecommentListDaoImpl"></property>
+	</bean>
+	<bean id="newsManagerImpl" class="com.huiyee.esite.fmgr.imp.NewsManagerImpl" parent="abstractFeatureManager">
+		<property name="newsListDao" ref="newsListDaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+	</bean>
+	<bean id="pictureManagerImpl" class="com.huiyee.esite.fmgr.imp.PictureManagerImpl" parent="abstractFeatureManager">
+		<property name="pictureDao" ref="pictureDaoImpl"></property>
+	</bean>
+	<bean id="sinaCheckManagerImpl" class="com.huiyee.esite.fmgr.imp.SinaCheckManagerImpl" parent="abstractFeatureManager">
+		<property name="sinaShareListCheckDao" ref="sinaShareListCheckDaoImpl"></property>
+		<property name="sinaShareListRecordDao" ref="sinaShareListRecordDaoImpl"></property>
+		<property name="sinaShareDao" ref="sinaShareDaoImpl"></property>
+	</bean>
+	<bean id="sinaNoCheckManagerImpl" class="com.huiyee.esite.fmgr.imp.SinaNoCheckManagerImpl" parent="abstractFeatureManager">
+		<property name="sinaShareListNoCheckDao" ref="sinaShareListNoCheckDaoImpl"></property>
+		<property name="sinaShareListRecordDao" ref="sinaShareListRecordDaoImpl"></property>
+		<property name="sinaShareDao" ref="sinaShareDaoImpl"></property>
+	</bean>
+	<bean id="sinaShareManagerImpl" class="com.huiyee.esite.fmgr.imp.SinaShareManagerImpl" parent="abstractFeatureManager">
+		<property name="sinaShareDao" ref="sinaShareDaoImpl"></property>
+		<property name="sinaShareRecordDao" ref="sinaShareRecordDaoImpl2"></property>
+	</bean>
+	<bean id="Feature116ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature116ManagerImpl" parent="abstractFeatureManager">
+		<property name="checkListDao" ref="sinaShareRecordCheckListDaoImpl"></property>
+	</bean>
+	<bean id="hd103ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd103ManagerImpl">
+		<property name="hd103Dao" ref="hd103DaoImpl"></property>
+	</bean>
+	<bean id="hd106ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd106ManagerImpl">
+		<property name="hd106Dao" ref="hd106DaoImpl"></property>
+	</bean>
+	<bean id="hd111ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd111ManagerImpl">
+		<property name="hd111Dao" ref="hd111DaoImpl"></property>
+	</bean>
+	<bean id="hd113ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd113ManagerImpl">
+		<property name="hd113Dao" ref="hd113DaoImpl"></property>
+	</bean>
+	<bean id="hd117ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd117ManagerImpl">
+		<property name="hd117Dao" ref="hd117DaoImpl"></property>
+	</bean>
+	<bean id="hd131ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd131ManagerImpl">
+		<property name="hd131Dao" ref="hd131DaoImpl"></property>
+	</bean>
+	<bean id="hd133ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd133ManagerImpl">
+		<property name="hd133Dao" ref="hd133DaoImpl"></property>
+	</bean>
+	<bean id="hd135ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd135ManagerImpl">
+		<property name="hd135Dao" ref="hd135DaoImpl"></property>
+	</bean>
+	<bean id="Feature118ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature118ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd118Dao" ref="hd118DaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+	<bean id="emailContractManagerImpl" class="com.huiyee.esite.fmgr.imp.EmailContractManagerImpl" parent="abstractFeatureManager">
+		<property name="emailContractDao" ref="emailContractDaoImpl"></property>
+	</bean>
+	<bean id="hd121ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd121ManagerImpl">
+		<property name="hd121Dao" ref="hd121DaoImpl"></property>
+	</bean>
+	<bean id="hd120ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd120ManagerImpl">
+		<property name="hd120Dao" ref="hd120DaoImpl"></property>
+	</bean>
+	<bean id="feature122ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature122ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd122Dao" ref="hd122DaoImpl"></property>
+	</bean>
+	<bean id="feature123ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature123ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd123Dao" ref="hd123DaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+	<bean id="feature124ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature124ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd124Dao" ref="hd124DaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+	<bean id="feature125ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature125ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd125Dao" ref="hd125DaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+	</bean>
+	<bean id="feature133ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature133ManagerImpl" parent="abstractFeatureManager">
+	</bean>
+	<bean id="feature126ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature126ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd126Dao" ref="hd126DaoImpl"></property>
+	</bean>
+	<bean id="feature134ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature134ManagerImpl" parent="abstractFeatureManager">
+		<property name="interactSpreadDao" ref="interactSpreadDaoImpl"></property>
+	</bean>
+	<bean id="feature140ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature140ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd140Dao" ref="hd140DaoImpl"></property>
+	</bean>
+	<bean id="feature142ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature142ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd142Dao" ref="hd142DaoImpl"></property>
+	</bean>
+	<bean id="feature144ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature144ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd144Dao" ref="hd144DaoImpl"></property>
+	</bean>
+	<bean id="feature145ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature145ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd145Dao" ref="hd145DaoImpl"></property>
+	</bean>
+	<bean id="feature146ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature146ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd146Dao" ref="hd146DaoImpl"></property>
+	</bean>
+	<bean id="feature147ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature147ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd147Dao" ref="hd147DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+	</bean>
+	<bean id="feature148ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature148ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd148Dao" ref="hd148DaoImpl"></property>
+	</bean>
+	<bean id="feature149ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature149ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd149Dao" ref="hd149DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="userTagMgr" ref="userTagMgrImpl"></property>
+	</bean>
+	<bean id="feature150ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature150ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd150Dao" ref="hd150DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+	</bean>
+	<bean id="feature151ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature151ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd151Dao" ref="hd151DaoImpl"></property>
+	</bean>
+	<bean id="feature152ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature152ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd152Dao" ref="hd152DaoImpl"></property>
+	</bean>
+	<bean id="feature153ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature153ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd153Dao" ref="hd153DaoImpl"></property>
+		<property name="siteDao" ref="siteDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+	</bean>
+	<bean id="feature154ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature154ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd154Dao" ref="hd154DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="feature155ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature155ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd154Dao" ref="hd154DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="feature156ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature156ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd154Dao" ref="hd154DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="feature157ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature157ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd154Dao" ref="hd154DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="feature158ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature158ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd154Dao" ref="hd154DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="feature159ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature159ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd159Dao" ref="hd159DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="feature160ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature160ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd160Dao" ref="hd160DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="contentCategoryDao" ref="contentCategoryDaoImpl"></property>
+	</bean>
+	<bean id="feature161ManagerImpl" class="com.huiyee.esite.fmgr.imp.Feature161ManagerImpl" parent="abstractFeatureManager">
+		<property name="hd125Dao" ref="hd125DaoImpl"></property>
+		<property name="hd161Dao" ref="hd161DaoImpl"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="lotteryDao" ref="lotteryDao"></property>
+		<property name="lotteryPrizeDao" ref="lotteryPrizeDao"></property>
+	</bean>
+	<bean id="hd130ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd130ManagerImpl">
+		<property name="hd130Dao" ref="hd130DaoImpl"></property>
+	</bean>
+	<bean id="hd137ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd137ManagerImpl">
+		<property name="hd137Dao" ref="hd137DaoImpl"></property>
+	</bean>
+	<bean id="hd139ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd139ManagerImpl">
+		<property name="hd139Dao" ref="hd139DaoImpl"></property>
+	</bean>
+	<bean id="hd141ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd141ManagerImpl">
+		<property name="hd141Dao" ref="hd141DaoImpl"></property>
+	</bean>
+	<bean id="hd127ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd127ManagerImpl">
+		<property name="hd127Dao" ref="hd127DaoImpl"></property>
+	</bean>
+	<bean id="hd128ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd128ManagerImpl">
+		<property name="hd128Dao" ref="hd128DaoImpl"></property>
+	</bean>
+	<bean id="hd129ManagerImpl" class="com.huiyee.esite.fmgr.imp.Hd129ManagerImpl">
+		<property name="hd129Dao" ref="hd129DaoImpl"></property>
+	</bean>
+</beans>

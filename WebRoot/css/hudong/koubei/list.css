@@ -1,0 +1,31 @@
+/* CSS Document */
+
+/*万民征集德古拉Slogan!*/
+
+.dgl_1106_box{ width:100%; margin:0 auto;}
+
+.dgl_1106_b_top{ width:100%; margin:0 auto; text-align:center;}
+.dgl_1106_b_top img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+.dgl_1106_b_top img:not([src*="/"]) { display: none; }
+
+.biaodan_tj_dgl_1106{ width:95%; margin:0 auto; height:70px; margin-top:10px;}
+
+
+.dgl_1106_anniu{ margin:0 auto; text-align:center;margin-top: 60px;}
+.dgl_1106_anniu img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+.dgl_1106_anniu img:not([src*="/"]) { display: none; }
+
+
+.dgl_1106_dzp_hdsm{ width:95%;margin:0 auto; }
+.dgl_1106_dzp_hdsm span{font-family:Microsoft YaHei;padding:10px 0;line-height:30px; color:#838383}
+
+.dgl_1106_zdp_jp{width:90%;font-family:Microsoft YaHei; margin-top:50px;padding:20px;line-height:40px;}
+.dgl_1106_zdp_jp strong{font-size:1.3em;}
+.dgl_1106_dzp_hdsm_2{ width:95%;margin:0 auto;  margin-top:40px;}
+
+
+.dgl1031_pc_c_haoyou{ width:95%; margin:0 auto;}
+.dgl1031_pc_c_haoyou ul{ list-style:none; float:left; width:99%;}
+.dgl1031_pc_c_haoyou li{height:35px; float:left; width:30%;background:url(/images/hudong/koubei/at.png) no-repeat left center; margin-left:12px;}
+
+

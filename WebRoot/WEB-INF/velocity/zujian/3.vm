@@ -1,0 +1,32 @@
+##图集
+
+     <div id="myCarousel${pcbid}"   hydata="$!pcbid" hyct="Y" status="0" class="carousel slide hyzj $!ctname" style='$!hyct;'>
+   <ol class="carousel-indicators">
+   	  #set ($i=0)
+      #foreach ($item in $list)
+      	 #if($i==0)
+      	 	<li data-target="#myCarousel${pcbid}" data-slide-to="$i"  class="active"></li>
+      	 #else
+      	 	<li data-target="#myCarousel${pcbid}" data-slide-to="$i"></li>
+      	 #end
+      	 #set ($i=$i+1)
+      #end
+   </ol>   
+   
+   <div class="carousel-inner" style="width:100%;height:100%">
+   		#set ($ii=0)
+      #foreach ($item in $list)
+      	 #if($ii==0)
+      	 	<div class="item active" style="background:rgba($!item.col,$!item.tm);border:$!item.b1 $!item.b2 $!item.b3;border-radius:$!bdr;"><a href="$!item.link"><img style="width:100%;height:100%" src="$!item.img"></a></div>
+      	 #else
+      	 	<div class="item" style="background:rgba($!item.col,$!item.tm);border:$!item.b1 $!item.b2 $!item.b3;border-radius:$!bdr;"><a href="$!item.link"><img style="width:100%;height:100%" src="$!item.img"></a></div>
+      	 #end
+      	 #set ($ii=$ii+1)
+      #end
+   </div>
+</div> 
+<script>
+   $(document).ready(function(){
+         jQuery("#myCarousel${pcbid}").carousel('cycle');
+	   });
+</script>

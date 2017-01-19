@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="lotteryDrawService" class="com.huiyee.interact.lottery.service.LotteryDrawService">
+		<property name="templateManager" ref="templateManagerImpl"></property>
+		<property name="lotteryPrizeCodeMgr" ref="lotteryPrizeCodeMgr"></property>
+		<property name="lotteryPrizeMgr" ref="lotteryPrizeMgr"></property>
+		<property name="lotteryUserDateMgr" ref="lotteryUserDateMgr"></property>
+		<property name="lotteryUserMgr" ref="lotteryUserMgr"></property>
+		<property name="lotteryUserRecordMgr" ref="lotteryUserRecordMgr"></property>
+		<property name="wxHongbaoMgr" ref="wxHongbaoMgrImpl"></property>
+		<property name="lotteryAsignUserMgr" ref="lotteryAsignUserMgr"></property>
+		<property name="gzEventMgr" ref="gzEventMgr"></property>
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+</beans>

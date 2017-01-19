@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="abstractBBSAction" class="com.huiyee.interact.bbs.action.AbstractBBSAction" parent="abstractAction" abstract="true">
+		<property name="bbsMgr" ref="bbsMgr"></property>
+		<property name="bbsUserMgr" ref="bbsUserMgrImpl"></property>
+		<property name="hyUserMgr" ref="hyUserMgr"></property>
+	</bean>
+	<bean id="abstractBBSUserAction" class="com.huiyee.interact.bbs.action.AbstractBBSUserAction" parent="abstractBBSAction" abstract="true">
+	</bean>
+	
+	<bean id="bbsCategoryAction" class="com.huiyee.interact.bbs.action.BBSCategoryAction" parent="abstractBBSAction" scope="prototype">
+		<property name="bbsForumMgr" ref="bbsForumMgr"></property>
+		<property name="bbsTopicMgr" ref="bbsTopicMgr"></property>
+	</bean>
+	<bean id="bbsForumAction" class="com.huiyee.interact.bbs.action.BBSForumAction" parent="abstractBBSAction" scope="prototype">
+		<property name="bbsForumMgr" ref="bbsForumMgr"></property>
+		<property name="bbsTopicMgr" ref="bbsTopicMgr"></property>
+	</bean>
+	<bean id="bbsForumUserAction" class="com.huiyee.interact.bbs.action.BBSForumUserAction" parent="abstractBBSAction" scope="prototype">
+		<property name="bbsTopicMgr" ref="bbsTopicMgr"></property>
+	</bean>
+	<bean id="bbsTopicAction" class="com.huiyee.interact.bbs.action.BBSTopicAction" parent="abstractBBSAction" scope="prototype">
+		<property name="bbsTopicMgr" ref="bbsTopicMgr"></property>
+		<property name="bbsCommentMgr" ref="bbsCommentMgr"></property>
+		<property name="contentManager" ref="contentManagerImpl"></property>
+		<property name="bbsForumMgr" ref="bbsForumMgr"></property>
+	</bean>
+	<bean id="bbsTopicUserAction" class="com.huiyee.interact.bbs.action.BBSTopicUserAction" parent="abstractBBSUserAction" scope="prototype">
+		<property name="bbsTopicMgr" ref="bbsTopicMgr"></property>
+		<property name="bbsCommentMgr" ref="bbsCommentMgr"></property>
+		<property name="bbsLikeMgr" ref="bbsLikeMgr"></property>
+	</bean>
+	
+	<bean id="bbsUserAction" class="com.huiyee.interact.bbs.action.BBSUserAction" parent="abstractBBSUserAction" scope="prototype">
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+
+	<bean id="bbsUserCenterAction" class="com.huiyee.interact.bbs.action.BBSUserCenterAction" parent="abstractBBSAction" scope="prototype">
+		<property name="bbsUserCenterMgr" ref="bbsUserCenterMgrImpl"></property>
+	</bean>
+	<bean id="bbsProductAction" class="com.huiyee.interact.bbs.action.BBSProductAction" scope="prototype">
+		<property name="bbsMgr" ref="bbsMgr"></property>
+	</bean>
+	
+</beans>

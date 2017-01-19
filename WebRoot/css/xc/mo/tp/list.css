@@ -1,0 +1,15 @@
+/* CSS Document */
+
+
+.hudong_141111_tp{width:100%; margin:0 auto;}
+
+.wdy_top2_cp{ margin:0 auto;text-align:center;}
+.hudong_141111_tp_box{ width:96%; margin:0 auto;}
+.hudong_141111_tp_box ul{ width:100%; float:left;}
+.hudong_141111_tp_box li{ width:48%; float:left; margin-left:4px; margin-top:10px; background:#fff;}
+.hudong_141111_tp_box li a{ text-decoration:none; color:#000;}
+.hudong_141111_tp_box li img{ float:left;}
+.hudong_141111_tp_box li p{ width:100%; float:left;font-size:0.6em;font-family: "Microsoft Yahei", Arial; margin-top:10px; line-height:20px;}
+.hudong_141111_tp_box li span{ width:90%; height:30px; background:#fff2cf; float:left; line-height:30px;font-family: "Microsoft Yahei", Arial;font-size:0.6em; padding:0 5%; }
+.hudong_141111_tp_box li span strong{ color:#d71837;font-size:0.6em; text-align:right; float:right;}
+.hudong_141111_tp_box li span b{font-size:0.6em; text-align:center;}

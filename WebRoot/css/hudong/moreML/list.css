@@ -1,0 +1,4 @@
+/* CSS Document */
+
+.more,.more ul{width:100%;overflow:hidden;height:auto;}
+.more ul li{text-align:center;width:20%;line-height:20px;float:left;}

@@ -1,0 +1,71 @@
+@charset "utf-8";
+/* CSS Document */
+*{margin:0;padding:0;}
+ul, ol{list-style: none; }
+a{text-decoration:none;color:#333;}
+i,em{font-style:normal;}
+a,img{border:0;}
+textarea{resize:none;}
+input,button,select,textarea{outline:none}
+body{font-family:"Microsoft Yahei",Tahoma,Arial,Helvetica,STHeiti;width:100%;color:#646464;font-size:13px;background:#FFF;}
+/****************my orders*******************/
+.top{height:44px;width:100%;background:#353535;text-align:center;font-size:17px;color:#FFF;line-height:44px;display:inline-block;z-index:1000;position:fixed;top:0;}
+.top a.left{float:left;display:inline-block;height:44px;font-size:14px;color:#FFF;margin-left:3%;}
+.top a.left img{height:16px;width:10px;vertical-align:-3px;}
+.top a.right{float:right;display:inline-block;height:44px;color:#FFF;margin-right:3%;}
+.top a.right img{width:25px;vertical-align:4px;}
+.nav{width:100%;background:#FAFAFA;position:fixed;top:44px;left:0;z-index:1000;}
+.nav ul{height:40px;line-height:40px;border-bottom:1px solid #D9DADD;}
+.nav ul li{display:inline-block;text-align:center;height:20px;line-height:20px;font-size:14px;border-right:1px solid #D6D7DC;padding:0 14px 0 11px;color:#323232;}
+.nav ul li.last{border:none;}
+.nav ul li.red{color:#E71162;font-size:15px;}
+.main{width:100%;}
+.main ul{width:100%;}
+.main ul li{margin-top:10px;width:100%;padding:10px 0;background:#FFFDFD;}
+/*******************my orders2***************************************/
+.main ul li.zanwu{width:100%;background:#FFFFFF;margin-top:0px;}
+.main ul li.zanwu p.third,.main ul li.zanwu p.fourth,.main ul li.zanwu p.fifth,.main ul li.zanwu p.sixth{width:100%;text-align:center;}
+.main ul li.zanwu p.third{margin-top:11vh;}
+.main ul li.zanwu p.third img{width:45%;}
+.main ul li.zanwu p.fourth{font-size:16px;color:#727272;margin-top:6vh;}
+.main ul li.zanwu p.fifth{color:#A5A3A3;line-height:20px;font-size:12px;}
+.main ul li.zanwu p.sixth a{line-height:33px;font-size:16px;color:#E71162;border:1px solid #E71162;padding:5px 60px;border-radius:5px;}
+.main ul li.zanwu p.sixth{margin-top:4vh;}
+/*******************my orders2 end***************************************/
+/*********************address**********************************************/
+.add{width:100%;}
+.add ul{width:100%;}
+.add ul li{width:94%;border-bottom:1px solid #D6D7DC;padding:0 3%;}
+.add ul li input{border:none;line-height:20px;width:98%;padding-left:2%;color:#898989;margin:10px 0;font-size:13px;}
+.add ul li input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{color:#D6D7DC}
+.add ul li input:-moz-placeholder,textarea:-moz-placeholder{color:#D6D7DC;} 
+.btn-select{position:relative;display:inline-block;width:98%;height:40px;text-align:left;padding-left:2%;}
+.btn-select .cur-select{display:block;width:100%;height:40px;line-height:40px;color:#7E7E7E;}
+.cur1{background:url(/images/shop/right.png) no-repeat right;background-size:16px 16px;}
+.cur2{background:url(/images/shop/down.png) no-repeat right;background-size:16px 16px;}
+.btn-select select{position:absolute;top:0;left:0;width:100%;height:40px;opacity:0;filter:alpha(opacity:0);}
+.add ul li textarea{height:60px;width:96%;padding:10px 2% 10px 2%;color:#898989;line-height:20px;border:none;font-size:13px;}
+
+.bottom{position:fixed;bottom:0;width:100%;height:50px;background:#E71162;}
+.bottom a{display:block;height:50px;line-height:50px;text-align:center;color:#FFF;font-size:17px;}
+.bottom a.save{font-size:14px;}
+.bottom a.zengjia{font-size:16px;}
+.bottom a.zengjia i{font-size:28px;vertical-align:-3px;} 
+#increase{width:60%;height:50px;line-height:50px;background:#363636;color:#FFF;position:fixed;top:40vh;left:20%;font-size:16px;border-radius:5px;z-index:1001;
+           -moz-opacity:0.9;opacity:.90;filter:alpha(opacity=90);text-align:center;display:none;}
+.white_overlay{display:none;position:fixed;top:0;left:0;width:100%;height:100%;background-color:white;z-index:1901;-moz-opacity:0.0;opacity:.00;filter:alpha(opacity=00);}
+/*********************address end**********************************************/
+/*********************address2**********************************************/
+.btn-selectn{position:relative;display:inline-block;width:98%;height:40px;text-align:left;padding-left:2%;}
+.btn-selectn .cur-selectn{display:block;width:100%;height:40px;line-height:40px;color:#7E7E7E;background:url(/images/shop/right.png) no-repeat right;background-size:16px 16px;}
+.btn-selectn select{position:absolute;top:0;left:0;width:100%;height:40px;opacity:0;filter:alpha(opacity:0);}
+
+
+
+/*********************address2 end**********************************************/
+
+.add ul li span.tip1{line-height:30px;display:inline-block;height:25px;}
+.add ul li em.tip2{line-height:20px;color:#9D9FA1;font-size:12px;display:inline-block;height:25px;}
+.choi{background:url(/images/shop/choice.png) no-repeat;background-size:22px 22px;width:22px;height:22px;display:inline-block;float:right;margin-right:4%;margin-top:15px;border-radius:10px;}
+.add ul li b.border{width:20px;height:20px;display:inline-block;margin-right:4%;margin-top:15px;border-radius:50%;border:1px solid #999999;float:right;background:none;}
+.add ul li b input{display:none;}

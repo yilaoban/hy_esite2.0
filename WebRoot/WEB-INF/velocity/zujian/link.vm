@@ -1,0 +1,24 @@
+<div  hydata="$pcbid" hyct="Y" status="0" class="hyzj $!ctname" style='$!hyct;'>
+#if($isRun)
+	<img style="width:100%;height:100%;" src="/images/zujian/link.png">
+#else
+#set($time = "$time.1")
+<div class="jumplink" style="-webkit-animation: zoomIn ${time}s both ease-in;animation: zoomIn ${time}s both ease-in;"></div>
+<script>
+   $(".jumplink").bind("webkitAnimationEnd", function() {
+   		var lk = '$link';
+   		if(lk !=""){
+	   		if(lk.indexOf("http://") == -1){
+		   		if(lk.indexOf("/")==0){
+					window.location.href = '$link';   			
+		   		}else{
+				   window.location.href = 'http://$link';
+		   		}
+	   		}else {
+	   			window.location.href = '$link';
+	   		}
+   		}
+	});
+</script>
+#end
+</div>

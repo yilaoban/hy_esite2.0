@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="wxPublishAction" class="com.huiyee.weixin.action.PublishAction" parent="abstractAction" scope="prototype">
+		<property name="pageManager" ref="pageManagerImpl"></property>
+		<property name="wxPageShowMgr" ref="wxPageShowMgr"></property>
+		<property name="siteManager" ref="siteManagerImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	<bean id="wxMediaAction" class="com.huiyee.weixin.action.WeixinMediaAction" parent="abstractAction" scope="prototype">
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+	</bean>
+	<bean id="wxPageAction" class="com.huiyee.weixin.action.WeixinPageAction" parent="abstractAction" scope="prototype">
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="wxPageShowMgr" ref="wxPageShowMgr"></property>
+	</bean>
+	<bean id="weiKaQuanAction" class="com.huiyee.weixin.action.WeiKaQuanAction" parent="abstractAction" scope="prototype">
+		<property name="payShopOwnerMgr" ref="payShopOwnerMgr"></property>
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+
+	<bean id="weixinEventLogAction" class="com.huiyee.weixin.action.WeixinEventLogAction" parent="abstractAction" scope="prototype">
+	</bean>
+
+	<bean id="wxPayAction" class="com.huiyee.weixin.action.WeixinPayAction" parent="abstractAction" scope="prototype">
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+	<bean id="wxBalancePayAction" class="com.huiyee.weixin.action.WeixinBalancePayAction" parent="abstractAction" scope="prototype">
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="grCenterMgr" ref="grCenterMgrImpl"></property>
+	</bean>
+	
+	<bean id="wxBuyProductAction" class="com.huiyee.weixin.action.WeiXinBuyProductAction" parent="abstractAction" scope="prototype">
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="areaMgr" ref="areaMgrImpl"></property>
+	</bean>
+	<bean id="pingTuAction" class="com.huiyee.weixin.action.PingTuAction" parent="abstractAction" scope="prototype">
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+	</bean>
+	
+
+	<bean id="wxBuyAction" class="com.huiyee.weixin.action.WxBuyAction" parent="abstractAction" scope="prototype">
+		<property name="wxBuyProductMgr" ref="wxBuyProductMgrImpl"></property>
+		<property name="weiXinMgr" ref="weiXinMgr"></property>
+		<property name="areaMgr" ref="areaMgrImpl"></property>
+	</bean>
+</beans>

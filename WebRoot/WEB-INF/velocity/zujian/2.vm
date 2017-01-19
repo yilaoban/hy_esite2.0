@@ -1,0 +1,14 @@
+##文本
+<style>
+	a{text-decoration:none;}
+</style>
+
+<div  hydata="$pcbid" hyct="Y" status="0" class="hyzj $!ctname" style='background:rgba($!col,$!tm);border:$!b1 $!b2 $!b3;border-radius:$!{bdradius}px;$hyct;'>
+	#if($!link != "")
+	<a href="$!link"><span>${content}</span></a>
+	#else
+	<span>${content}</span>
+	#end
+</div>
+
+

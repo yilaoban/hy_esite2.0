@@ -1,0 +1,59 @@
+.slick-slide {
+	border: 2px solid #bebebe;
+	border-radius: 8px;
+	overflow: hidden;
+}
+
+.slick-title {
+	width: 100%;
+	border-radius: 0 0 8px 8px;
+	text-align: center;
+	color: #fff;
+	background: #000;
+	padding: 0 0 3px 0;
+}
+
+.slick-selected {
+	border: 2px solid #609BCD;
+	box-shadow: 0 2px 10px #609BCD;
+}
+
+.print {
+	font-family: "Microsoft YaHei";
+	font-size: 13px;
+}
+
+.print .logo {
+	float: none !important;
+	width: 90%;
+	margin: auto;
+	width: 90%;
+	max-height: 100px;
+}
+
+.print table {
+	width: 100%;
+	text-align: left;
+	font-size: 13px;
+}
+
+.print th {
+	white-space: nowrap;
+}
+
+.print td {
+	padding: 20px 0;
+}
+
+.print .qrcode {
+	display: block;
+	margin: 10px 0;
+}
+
+.print58 {
+	width: 175px;
+}
+
+.print80 {
+	width: 276px;
+}

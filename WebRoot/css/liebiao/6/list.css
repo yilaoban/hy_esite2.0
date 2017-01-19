@@ -1,0 +1,30 @@
+/* CSS Document */
+
+
+
+/*图文列表-文章列表6*/
+
+.liebiao_1023_2{margin:0 auto; width:100%; height:100%;}
+.liebiao_1023_2_msg_page {padding: 15px 0;font-size: 14px;}
+.msg_list {margin-bottom: 5px;margin-left: 5px;margin-right: 5px;}
+.msg_list_bd {margin-left: auto;margin-right: auto;background-color: #fff;padding: 10px 20px;border: 1px solid #cacbcb;box-shadow: 0 1px 2px #ddd;-moz-box-shadow: 0 1px 2px #ddd;-webkit-box-shadow: 0 1px 2px #ddd;}
+.text_box, .voice_box, .images_box, .news_box {margin-left: 0;}
+.msg_inner_wrapper {display: inline-block;width: 100%;color: #000;text-decoration: none;}
+.msg_wrapper {font-size: 14px;}
+.msg_item.multi_news {padding-left: 0;padding-right: 0;}
+.msg_item {padding: 0;display: block;text-decoration: none;color: #000;}
+.sub_msg_list {padding-top: 10px;}
+.msg_item {color: #000;}
+.sub_msg_item {overflow: hidden;padding: 10px 0 10px 0;border-top: 1px solid #e5e5e5;display: block;text-decoration: none;}
+a:-webkit-any-link:active {color: -webkit-activelink;}
+.thumb {float: right;padding: 1px 1px 1px 1px;border: 1px solid #e5e5e5;font-size: 0;}
+.thumb img {width:70px;}
+.thumb {font-size: 0;}
+.msg_item.multi_news .sub_msg_item .msg_title {margin-right: 62px;}
+.msg_title {font-size: 16px;font-weight: 700;color: #000;word-wrap: break-word;word-break: break-all;}
+.custom64{float: left;height: 30px;width: 100%;padding-top: 8px;overflow: hidden;}
+.custom-paginations {float: left;margin-left: 5px;-webkit-border-radius: 4px;-moz-border-radius: 4px;border-radius: 4px;-webkit-box-shadow: 0 1px 2px rgba(0,0,0,0.05);-moz-box-shadow: 0 1px 2px rgba(0,0,0,0.05);box-shadow: 0 1px 2px rgba(0,0,0,0.05);width: 310px;box-sizing: border-box;border: 1px solid #ddd;background: #fff;}
+.custom-paginations .custom-paginations-next, .custom-paginations .custom-paginations-prev {width: 129px;}
+.custom-paginations .disabled {display: block;color: #555;background-color: rgba(0,0,0,0);}
+.custom-paginations a {display: block;padding: 4px 12px;line-height: 20px;text-decoration: none;float: left;text-align: center;border-right: 1px solid #ddd;color: #555;}
+.custom-paginations .custom-paginations-next {border-right-width: 0;}

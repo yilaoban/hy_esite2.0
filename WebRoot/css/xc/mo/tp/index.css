@@ -1,0 +1,19 @@
+#voteCon {}
+.voteData li {float:left;height:350px;position:relative;}
+span.span1 {display:block;font-size:20px;text-align:center;}
+.toupiao_150327_prize {position:absolute;top:360px;width:100%;}
+.toupiao_150327_prize img {width: 50%;margin: 0 25%;border-radius: 50%;margin-top:10px;}
+.toupiao_150327_fenzi {position:absolute;bottom:0;width:50%;margin:0 25%;}
+.toupiao_150327_fenzi span.span2 {color: #fff;font-size:24px;margin-top:20px;display:block;text-align:center;}
+.toupiao_150327_btn {width: 50px;height: 65px;float: right;text-align: center;color: #fff;border-radius: 5px;position: relative;}
+.toupiao_150327_btn span {position: absolute;top: 50%;margin-top: -10px;left: 10px;}
+.style1 {background: #E67E22;}
+.style2 {background: #3498DB;}
+.style3 {background: #2C3E50;}
+.style4 {background: #5A68A5;}
+.style5 {background: #2ECC71;}
+.fstyle1 {color: #E67E22;}
+.fstyle2 {color: #3498DB;}
+.fstyle3 {color: #2C3E50;}
+.fstyle4 {color: #5A68A5;}
+.fstyle5 {color: #2ECC71;}

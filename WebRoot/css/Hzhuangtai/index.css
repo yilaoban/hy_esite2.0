@@ -1,0 +1,11 @@
+/* CSS Document */
+
+.ztbanner{ width:100%; float:left;}
+.ztbanner img{max-width: 100%;height: auto;width: auto\9;}
+.ztcontent{width:100%;font-family: "Microsoft Yahei", Arial; font-size:15px; top:160px;}
+.Hztbutton{width:40%; float:left;background:#0099ff; line-height:30px; color:#fff; margin-top:30px;border-radius:5px; border:none; margin-left:30%;font-family: "Microsoft Yahei", Arial; font-size:14px;}
+.ztcontent1{padding:50px 0;text-align:center;line-height:28px;display:none;}
+.ztcontent2{text-align:center;line-height:28px;display:none;}
+.ztcontent3{padding:50px 0;text-align:center;display:none;}
+.ztcontent4{text-align:center;line-height:28px;display:none;}
+.ztcontent5{padding:50px 0;text-align:center;line-height:28px;display:none;}

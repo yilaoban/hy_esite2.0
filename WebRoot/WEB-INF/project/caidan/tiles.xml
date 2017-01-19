@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC "-//Apache Software Foundation//DTD Tiles Configuration 2.0//EN" "http://tiles.apache.org/dtds/tiles-config_2_0.dtd">
+
+<tiles-definitions>
+	<definition name="notallow" template="/WEB-INF/project/caidan/page/admin/notallow.jsp" />
+	<definition name="outdate" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/page/owner_out_date.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/page/outdate.jsp" />
+	</definition>
+	
+	<definition name="admin" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/page/_blank.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/admin/admin.jsp" />
+	</definition>
+
+	<definition name="cd_task" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/task/task_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/task/task.jsp" />
+	</definition>
+	<definition name="cd_task_download" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/task/task_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/task/task_download.jsp" />
+	</definition>
+	<definition name="cd_task_qa" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/task/task_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/task/task_qa.jsp" />
+	</definition>
+	<definition name="cd_task_record" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/task/task_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/task/task_record.jsp" />
+	</definition>
+	<definition name="cd_news" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/news/cd_news_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/news/cd_news.jsp" />
+	</definition>
+	<definition name="add_cd_news" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/news/cd_news_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/news/add_cd_news.jsp" />
+	</definition>
+	<definition name="edit_cd_news" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/news/cd_news_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/news/edit_cd_news.jsp" />
+	</definition>
+	
+	<definition name="cd_qr_list" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/media/media-tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/media/cd_way_list.jsp" />
+	</definition>
+	<definition name="cd_open" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/page/_blank.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/media/cd_open.jsp" />
+	</definition>
+	
+	<definition name="cd_showAdWay" template="/WEB-INF/pagechip/iframe_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/iframe_header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/project/caidan/page/media/cd_showAdWay.jsp" />
+	</definition>
+	<definition name="cd_way_gg" template="/WEB-INF/pagechip/iframe_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/iframe_header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/project/caidan/page/media/cd_way_gg.jsp" />
+	</definition>
+	<definition name="cd_media_list" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/media/media-tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/media/cd_media_list.jsp" />
+	</definition>
+	
+	<definition name="cd_add_media" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/media/media-tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/media/cd_add_media.jsp" />
+	</definition>
+	
+	<definition name="cd_edit_media" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/media/media-tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/media/cd_edit_media.jsp" />
+	</definition>
+	
+	<definition name="cd_mediaWayList" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/media/media-tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/media/cd_mediaWayList.jsp" />
+	</definition>
+	<definition name="cd_showMediaWay" template="/WEB-INF/pagechip/iframe_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/iframe_header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/project/caidan/page/media/cd_showMediaWay.jsp" />
+	</definition>
+	
+	<definition name="cd_gg_list" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/guanggao/cd_guanggao_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/guanggao/cd_gg_list.jsp" />
+	</definition>
+	
+	<definition name="cd_add_gg" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/guanggao/cd_guanggao_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/guanggao/cd_add_gg.jsp" />
+	</definition>
+	<definition name="cd_edit_gg" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/guanggao/cd_guanggao_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/guanggao/cd_edit_gg.jsp" />
+	</definition>
+	<definition name="cd_tf_ggList" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/guanggao/cd_guanggao_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/guanggao/cd_tf_ggList.jsp" />
+	</definition>
+	<definition name="cd_coupon" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/coupon/cd_coupon_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/coupon/cd_coupon.jsp" />
+	</definition>
+	<definition name="add_cd_coupon" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/coupon/cd_coupon_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/coupon/add_cd_coupon.jsp" />
+	</definition>
+	<definition name="edit_cd_coupon" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/coupon/cd_coupon_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/coupon/edit_cd_coupon.jsp" />
+	</definition>
+	<definition name="cd_add_code" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/coupon/cd_coupon_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/coupon/cd_add_code.jsp" />
+	</definition>
+	<definition name="product_code_list" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/coupon/cd_coupon_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/coupon/product_code_list.jsp" />
+	</definition>
+	<definition name="cd_lottery" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_lottery.jsp" />
+	</definition>
+	
+	<definition name="cd_yao_yao" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_yao_yao.jsp" />
+	</definition>
+	<definition name="cd_add_yyy" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_add_yyy.jsp" />
+	</definition>
+	<definition name="cd_update_yyy" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_update_yyy.jsp" />
+	</definition>
+	<definition name="cd_za_dan" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_za_dan.jsp" />
+	</definition>
+	<definition name="cd_add_lhj" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_add_lhj.jsp" />
+	</definition>
+	<definition name="cd_update_lhj" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_update_lhj.jsp" />
+	</definition>
+	<definition name="cd_hong_bao" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_hong_bao.jsp" />
+	</definition>
+	<definition name="cd_add_hongbao" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_add_hongbao.jsp" />
+	</definition>
+	<definition name="cd_update_hongbao" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_update_hongbao.jsp" />
+	</definition>
+	<definition name="cd_prize_list" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_prize_list.jsp" />
+	</definition>
+	
+	<definition name="cd_lottery_user" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_user.jsp" />
+	</definition>
+	<definition name="cd_lottery_winner" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_winner.jsp" />
+	</definition>
+	<definition name="cd_add_prize_code_pre" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/lottery/cd_lottery_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_add_prize_code_pre.jsp" />
+	</definition>
+	
+	<definition name="cd_find_prize_code_pre" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/page/interact_module_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/lottery/cd_add_prize_code_pre.jsp" />
+	</definition>
+	
+	<definition name="rmb_get_index" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/rmb/cd_rmb_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/rmb/rmb_get_index.jsp" />
+	</definition>
+	
+	<definition name="cd_way_catalog" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/way/cd_way_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/way/cd_way_catalog.jsp" />
+	</definition>
+	<definition name="add_way_catalog" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/way/cd_way_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/way/add_way_catalog.jsp" />
+	</definition>
+	<definition name="edit_way_catalog" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/way/cd_way_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/way/edit_way_catalog.jsp" />
+	</definition>
+	<definition name="cd_way" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/way/cd_way_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/way/cd_way.jsp" />
+	</definition>
+	<definition name="add_cd_way" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/way/cd_way_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/way/add_cd_way.jsp" />
+	</definition>
+	<definition name="edit_cd_way" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/way/cd_way_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/way/edit_cd_way.jsp" />
+	</definition>
+	<definition name="cd_accounts" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/account/cd_account_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/account/cd_account_index.jsp" />
+	</definition>
+	<definition name="add_account" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/account/cd_account_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/account/cd_add_account.jsp" />
+	</definition>
+	<definition name="cd_edit_account" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/account/cd_account_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/account/cd_edit_account.jsp" />
+	</definition>
+	<definition name="cd_user" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/user/user_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/user/user.jsp" />
+	</definition>
+	<definition name="cd_user_balance" template="/WEB-INF/pagechip/iframe_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/iframe_header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/project/caidan/page/user/user_balance.jsp" />
+	</definition>
+	<definition name="cd_user_order" template="/WEB-INF/pagechip/iframe_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/iframe_header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/project/caidan/page/user/user_order.jsp" />
+	</definition>
+	<definition name="cd_way_report" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/report/cd_report_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/report/cd_way_report.jsp" />
+	</definition>
+	<definition name="cd_way_money" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/report/cd_report_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/report/cd_way_money.jsp" />
+	</definition>
+	<definition name="cd_jf" template="/WEB-INF/pagechip/template_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/project/caidan/pagechip/header.jsp" />
+		<put-attribute name="footer" value="/WEB-INF/project/caidan/pagechip/footer.jsp" />
+		<put-attribute name="leftMenu" value="/WEB-INF/project/caidan/pagechip/leftpage.jsp" />
+		<put-attribute name="rightTool" value="/WEB-INF/project/caidan/page/report/cd_report_tool.jsp" />
+		<put-attribute name="rightWorkSpace" value="/WEB-INF/project/caidan/page/report/cd_jf.jsp" />
+	</definition>
+	<definition name="cd_cpz_index" template="/WEB-INF/pagechip/iframe_main.jsp">
+		<put-attribute name="header" value="/WEB-INF/pagechip/iframe_header.jsp" />
+		<put-attribute name="body" value="/WEB-INF/project/caidan/page/report/cd_cpz_index.jsp" />
+	</definition>
+
+</tiles-definitions>

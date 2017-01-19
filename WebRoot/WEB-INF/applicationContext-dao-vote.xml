@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="voteDaoImpl" class="com.huiyee.interact.vote.dao.VoteDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="cacheTime" value="60000"></property>
+	</bean>
+	<bean id="voteOptionDaoImpl" class="com.huiyee.interact.vote.dao.VoteOptionDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

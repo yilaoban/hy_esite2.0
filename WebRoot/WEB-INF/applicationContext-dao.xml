@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	<bean id="siteDaoImpl" class="com.huiyee.esite.dao.imp.SiteDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hyUtilDao" class="com.huiyee.esite.dao.imp.HyUtilDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="cacheTime" value="6000000"></property>
+	</bean>
+	<bean id="hyUtilDao2" class="com.huiyee.esite.dao.imp.HyUtilDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="cacheTime" value="1"></property>
+	</bean>
+	<bean id="hyUserDao" class="com.huiyee.esite.dao.imp.HyUserDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="weiXinDao" class="com.huiyee.esite.dao.imp.WeiXinDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="crmDao" class="com.huiyee.esite.dao.imp.CrmDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="visitLogDao" class="com.huiyee.esite.dao.imp.VisitLogDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="ownerBalanceSetDao" class="com.huiyee.esite.dao.imp.OwnerBalanceSetDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="ownerLotteryUserDao" class="com.huiyee.esite.dao.imp.OwnerLotteryUserDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="ownerBalanceDao" class="com.huiyee.esite.dao.imp.OwnerBalanceDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="ownerBalanceRecordDao" class="com.huiyee.esite.dao.imp.OwnerBalanceRecordDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="visitDaoImpl" class="com.huiyee.esite.dao.imp.VisitDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userDaoImpl" class="com.huiyee.esite.dao.imp.UserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaTokenDaoImpl" class="com.huiyee.esite.dao.imp.SinaTokenDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="contentCategoryDaoImpl" class="com.huiyee.esite.dao.imp.ContentCategoryDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="contentProductDaoImpl" class="com.huiyee.esite.dao.imp.ContentProductDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="contentFormDaoImpl" class="com.huiyee.esite.dao.imp.ContentFormDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="pageDaoImpl" class="com.huiyee.esite.dao.imp.PageDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="featureDaoImpl" class="com.huiyee.esite.dao.imp.FeatureDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="contentPictureDaoImpl" class="com.huiyee.esite.dao.imp.ContentPictureDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="contentNewDaoImpl" class="com.huiyee.esite.dao.imp.ContentNewDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="contentVideoDaoImpl" class="com.huiyee.esite.dao.imp.ContentVideoDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="pageFeatureDaoImpl" class="com.huiyee.esite.dao.imp.PageFeatureDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="pageRelationDaoImpl" class="com.huiyee.esite.dao.imp.PageRelationDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="siteActionDaoImpl" class="com.huiyee.esite.dao.imp.SiteActionDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="pageCacheDaoImpl" class="com.huiyee.esite.dao.imp.PageCacheDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="accountDaoImpl" class="com.huiyee.esite.dao.imp.AccountDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaUserDaoImpl" class="com.huiyee.esite.dao.imp.SinaUserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+		<property name="cacheTime" value="0"></property>
+	</bean>
+	<bean id="sinaShareDaoImpl2" class="com.huiyee.esite.dao.imp.SinaShareDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaShareRecordDaoImpl2" class="com.huiyee.esite.dao.imp.SinaShareRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaUserAppDaoImpl2" class="com.huiyee.esite.dao.imp.SinaUserAppDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="activityDaoImpl" class="com.huiyee.esite.dao.imp.ActivityDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="hdRecordDaoImpl" class="com.huiyee.esite.dao.imp.HdRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="dynamicActionRecordDaoImpl" class="com.huiyee.esite.dao.imp.DynamicActionRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="fansAnalyseDaoImpl" class="com.huiyee.esite.dao.imp.FansAnalyseDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaForwardDaoImpl" class="com.huiyee.esite.dao.imp.SinaForwardDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="emotionDaoImpl" class="com.huiyee.esite.dao.imp.EmotionsDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="interactModelDaoImpl" class="com.huiyee.esite.dao.imp.InteractModelDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="sinaCommentDaoImpl" class="com.huiyee.esite.dao.imp.SinaCommentDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="templateDaoImpl" class="com.huiyee.esite.dao.imp.TemplateDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="materialDaoImpl" class="com.huiyee.esite.dao.imp.MaterialDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="friendsShipsDaoImpl" class="com.huiyee.esite.dao.imp.FriendsShipsDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userChanceRecordDaoImpl" class="com.huiyee.esite.dao.imp.LotteryUserChanceRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="areaDaoImpl" class="com.huiyee.esite.dao.imp.AreaDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsDaoImpl" class="com.huiyee.esite.dao.imp.BBSDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsUTopicDaoImpl" class="com.huiyee.esite.dao.imp.BBSTopicDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="communityUserDaoImpl" class="com.huiyee.esite.dao.imp.CommunityUserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bdlbsDao" class="com.huiyee.bdmap.dao.BDLBSDao">
+	</bean>
+	<bean id="accountHideDaoImpl" class="com.huiyee.esite.dao.imp.AccountHideDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="marketActivityDaoImpl" class="com.huiyee.esite.dao.imp.MarketActivityDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="pageShowMaterialDaoImpl" class="com.huiyee.esite.dao.imp.PageShowMaterialDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="baseAppDaoImpl" class="com.huiyee.esite.dao.imp.BaseAppDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="contentRecordDaoImpl" class="com.huiyee.esite.dao.imp.ContentRecordDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="mbDaoImpl" class="com.huiyee.esite.dao.imp.MbDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="siteSourceDaoImpl" class="com.huiyee.esite.dao.imp.SiteSourceDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="moveToGroupDaoImpl" class="com.huiyee.esite.dao.imp.MoveToGroupDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="jfDesignDaoImpl" class="com.huiyee.esite.dao.imp.JfDesignDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="jfUserDaoImpl" class="com.huiyee.esite.dao.imp.JfUserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="rmbRuleDaoImpl" class="com.huiyee.esite.dao.imp.RmbRuleDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="wxUserDaoImpl" class="com.huiyee.esite.dao.imp.WxUserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="ebproductDaoImpl" class="com.huiyee.esite.dao.imp.EbproductDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="userTagDaoImpl" class="com.huiyee.esite.dao.imp.UserTagDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="wkqDaoImpl" class="com.huiyee.esite.dao.imp.WeiKaQuanDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="gzEventDaoImpl" class="com.huiyee.esite.dao.GzEventDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="grCenterDaoImpl" class="com.huiyee.esite.dao.imp.GrCenterDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<!-- ############################################################################### -->
+	
+	<bean id="longWS" class="com.huiyee.esite.ws.imp.WeiBoServiceImpl">
+		<property name="weiBoService" ref="weiBoService"></property>
+		<property name="cacheTime" value="3600000"></property>
+	</bean>
+	<bean id="shortWS" class="com.huiyee.esite.ws.imp.WeiBoServiceImpl">
+		<property name="weiBoService" ref="weiBoService"></property>
+		<property name="cacheTime" value="60000"></property>
+	</bean>
+	<bean id="mustShortWS" class="com.huiyee.esite.ws.imp.WeiBoServiceImpl">
+		<property name="weiBoService" ref="weiBoService"></property>
+		<property name="cacheTime" value="2000"></property>
+	</bean>
+	<bean id="justWS" class="com.huiyee.esite.ws.imp.WeiBoServiceImpl">
+		<property name="weiBoService" ref="weiBoService"></property>
+		<property name="cacheTime" value="0"></property>
+	</bean>	
+	<bean id="hdUserDataDao" class="com.huiyee.esite.dao.imp.HdUserDataDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<!-- ############################################################################### -->
+</beans>

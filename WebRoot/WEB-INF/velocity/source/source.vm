@@ -1,0 +1,18 @@
+#if($position !="")
+	#set($p = $position)
+#else
+	#set($p = "absolute");
+#end
+#if($top =="" && $bottom != "")
+	#set($y = "bottom:"+$bottom)
+#else
+	#set($y = "top:"+$top)
+#end
+#if($left =="" && $right != "")
+	#set($x = "right:"+$right)
+#else
+	#set($x = "left:"+$left)
+#end
+<div style="position:$p;width:100%;$x;$y;z-index:1000">
+	#parse("$path")
+</div>

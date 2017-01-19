@@ -1,0 +1,80 @@
+/* CSS Reset 
+/*-----------------------------------------------------------------------------------*/
+
+
+/* box_swipe */
+.box_swipe{overflow:hidden;position:relative;}
+.box_swipe img{max-width: 100%;height: auto;width: auto\9;}
+.box_swipe ul{-webkit-padding-start:0px;}
+.box_swipe>ol{height:20px;position:absolute;z-index:10; top:63%; left:45%;}
+.box_swipe>ol>li{display:inline-block;margin:5px 0;width:8px;height:8px;background-color:#757575;border-radius:8px;}
+.box_swipe>ol>li.on{background-color:#ffffff;}
+
+/* Navigation*/
+.bottom_nav_20150204{ position:fixed; bottom:0px; left:0px; background:url("/images/shouye/13_n/nav_bg.png")/*tpa=http://famousthemes.com/my-mobile-page-v3/main-theme/images/nav_bg.png*/ repeat-x top;height:auto; width:640px; font-family: Microsoft YaHei,Helvitica,Verdana,Tohoma,Arial,san-serif;}
+
+
+/* Flex images slider*/
+.flex-container a:active,
+.icons_nav_20150204 a:active {outline: none;}
+.slides,
+.flex-control-nav,
+.flex-direction-nav {margin: 0; padding: 0; list-style: none;} 
+
+.icons_nav_20150204 {padding:0; width:100%; margin: 0;}
+.icons_nav_20150204 .slides li a{ float:left; margin:0 0 0 5%;padding:5% 0 0 0; font-size:15px; color:#FFFFFF; text-align:center; line-height:35px; width:19.5%;}
+.icons_nav_20150204 .paginated_20150204 {padding:0 0 0 4%; width:94%; margin: 0;}
+.icons_nav_20150204 .paginated_20150204 .slides li a{ float:left; margin:0 0 0 4%;padding:5% 0 0 0; font-size:15px; color:#FFFFFF; text-align:center; line-height:35px; width:18.5%;}
+.icons_nav_20150204 .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.icons_nav_20150204 .slides img {max-width: 100%; display: block;}
+.flex-pauseplay span {text-transform: capitalize;}
+
+.panels_slider {width: 100%; height:100%; margin: 0; padding: 0;}
+.panels_slider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.panels_slider .slides img {max-width: 100%; display: block;}
+
+.images_slider_container{max-width:96%; display: block;-moz-border-radius:5px;-webkit-border-radius:5px;border-radius:5px; background-color:#ececec; border:1px #d7d7d7 solid; padding:1.5%; margin:0 0 20px 0;}
+.images_slider {width: 100%; margin:0; padding: 0; position:relative;}
+.images_slider .slides > li {display: none;} /* Hide the slides before the JS is loaded. Avoids image jumping */
+.images_slider .slides img {max-width: 100%; display: block;}
+
+.slides:after {content: "."; display: block; clear: both; visibility: hidden; line-height: 0; height: 0;} 
+html[xmlns] .slides {display: block;} 
+* html .slides {height: 1%;}
+
+.no-js .slides > li:first-child {display: block;}
+
+.icons_nav_20150204 { position: relative;zoom: 1;}
+.icons_nav_20150204 .slides {zoom: 1;}
+.icons_nav_20150204 .slides > li {position: relative; }
+.flex-container {zoom: 1; position: relative;}
+
+.panels_slider ol.flex-control-nav {width: 100%; position: absolute; bottom:30%; text-align: center;}
+.images_slider ol.flex-control-nav {width: 100%; position: absolute; bottom:0%; text-align: center; background:url("/images/shouye/13_n/nav_bg.png")/*tpa=http://famousthemes.com/my-mobile-page-v3/main-theme/images/nav_bg.png*/ repeat-x top; padding:15px 0 15px 0;}
+.icons_nav_20150204 ol.flex-control-nav {width: 100%; position: absolute; top:5%; text-align: center; padding:0;}
+.flex-control-nav li {margin: 0 0 0 5px; display: inline-block; zoom: 1; *display: inline;}
+.flex-control-nav li:first-child {margin: 0;}
+.flex-control-nav li a {width: 13px; height: 13px; display: block; background: url("/images/shouye/13_n/bg_control_nav.png")/*tpa=http://famousthemes.com/my-mobile-page-v3/main-theme/images/bg_control_nav.png*/ no-repeat 0 0; cursor: pointer; text-indent: -9999px;}
+.flex-control-nav li a:hover {background-position: 0 -13px;}
+.flex-control-nav li a.active {background-position: 0 -26px; cursor: default;}
+
+.icons_nav_20150204 ul.flex-direction-nav a.prev{ position:absolute; bottom:40%; left:10px; text-indent:-200px; overflow:hidden; background:url("/images/shouye/13_n/prev.png")/*tpa=http://famousthemes.com/my-mobile-page-v3/main-theme/images/prev.png*/ no-repeat center; width:11px; height:21px;}
+.icons_nav_20150204 ul.flex-direction-nav a.next{ position:absolute; bottom:40%; right:10px;text-indent:-200px; overflow:hidden; background:url("/images/shouye/13_n/next.png")/*tpa=http://famousthemes.com/my-mobile-page-v3/main-theme/images/next.png*/ no-repeat center; width:11px; height:21px;}
+
+.icons_nav_nojs {padding:0; width:100%; margin: 0;}
+.icons_nav_nojs ul li a{ float:left; margin:0 0 0 5%;padding:5% 0 0 0; font-size:15px; color:#FFFFFF; text-align:center; line-height:35px; width:19.5%;}
+.icons_nav_nojs ul img {max-width: 100%; display: block;}
+/* CSS Media Queries
+/*-----------------------------------------------------------------------------------*/
+@media screen and (max-width: 640px) {
+
+.bottom_nav_20150204{ width:100%;}
+.icons_nav_20150204 { padding:0 0 0 0; width:100%;}
+.icons_nav_20150204 .slides li a{ float:left; margin:0 0 0 4.8%;padding:5% 0 0 0; font-size:12px; color:#FFFFFF; text-align:center; line-height:20px; width:19.2%;}
+.icons_nav_20150204 .paginated_20150204{ padding:0 0 0 6%; width:94%;}
+.icons_nav_20150204 .paginated_20150204 .slides li a{ float:left; margin:0 0 0 3.6%;padding:5% 0 0 0; font-size:0.8em; color:#FFFFFF; text-align:center;width:17.5%; text-decoration:none;}
+}
+
+.shouye_20150204_2_img{border-radius:50px; border:0;}
+
+

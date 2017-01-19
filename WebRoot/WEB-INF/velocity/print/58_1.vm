@@ -1,0 +1,41 @@
+<div id="58_1" class="print print58">
+	<img class="logo" src="$!logo"/>
+	<div>$!No</div>
+	<div>$!time</div>
+	<p>****************************</p>
+	<table>
+		<thead>
+			<th>商品</th>
+			<th>价格</th>
+		</thead>
+		<tbody>
+			#foreach($xf in $list)
+			<tr>
+				<td>$!xf.name</td>
+				<td>$!xf.price</td>
+			</tr>
+			#end
+		</tbody>
+	</table>
+	<p>****************************</p>
+	<div id="qr_58_1" class="qrcode"></div>
+	
+	#if($showTitle)
+		<p class="slick-title">58mm模板1</p>
+	#end
+</div>
+
+<script type="text/javascript" src="/js/qrcode.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	var url = "$!url";
+	if(url != ""){
+		var qrcode = new QRCode(document.getElementById("qr_58_1"),{
+			width:150,
+			height:150
+		});
+		qrcode.clear();
+		qrcode.makeCode(url);
+	}
+});
+</script>

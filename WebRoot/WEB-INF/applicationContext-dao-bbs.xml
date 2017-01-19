@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="bbsTopicDao" class="com.huiyee.interact.bbs.dao.BBSTopicDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsForumDao" class="com.huiyee.interact.bbs.dao.BBSForumDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsCommentDao" class="com.huiyee.interact.bbs.dao.BBSCommentDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsLikeDao" class="com.huiyee.interact.bbs.dao.BBSLikeDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	
+	<bean id="bbsUserDaoImpl" class="com.huiyee.interact.bbs.dao.BBSUserDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsUserLoginDao" class="com.huiyee.interact.bbs.dao.BbsUserLoginDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsUserCenterDaoImpl" class="com.huiyee.interact.bbs.dao.BBSUserCenterDaoImpl">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+	<bean id="bbsDao" class="com.huiyee.interact.bbs.dao.BBSDao">
+		<property name="jdbcTemplate" ref="jdbcTemplate"></property>
+	</bean>
+</beans>

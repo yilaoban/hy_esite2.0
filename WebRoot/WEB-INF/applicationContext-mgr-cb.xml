@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+
+	<bean id="interactCbMgrImpl" class="com.huiyee.interact.cb.mgr.impl.InteractCbMgrImpl">
+		<property name="interactCbDao" ref="interactCbDaoImpl"></property>
+		<property name="interactAptDao" ref="interactAptDaoImpl"></property>
+		<property name="cbSenderDao" ref="cbSenderDaoImpl"></property>
+	</bean>
+	<bean id="cbDataMgrImpl" class="com.huiyee.interact.cb.mgr.impl.CbDataMgrImpl">
+		<property name="interactCbDao" ref="interactCbDaoImpl"></property>
+		<property name="cbSenderDao" ref="cbSenderDaoImpl"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="interactAptDao" ref="interactAptDaoImpl"></property>
+		<property name="cbJiDao" ref="cbJiDaoImpl"></property>
+		<property name="marketActivityDao" ref="marketActivityDaoImpl"></property>
+		<property name="cbActivityMatterDao" ref="cbActivityMatterDaoImpl"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+		<property name="wxHongbaoDao" ref="wxHongbaoDaoImpl"></property>
+		<property name="hbRecordDao" ref="hbRecordDaoImpl"></property>
+		<property name="pageShowMaterialDao" ref="pageShowMaterialDaoImpl"></property>
+	</bean>
+	<bean id="cbActivityJlMgrImpl" class="com.huiyee.interact.cb.mgr.impl.CbActivityJlMgrImpl">
+		<property name="cbActivityJlDao" ref="cbActivityJlDaoImpl"></property>
+	</bean>
+	<bean id="activityMatterMgrImpl" class="com.huiyee.interact.cb.mgr.impl.ActivityMatterMgrImpl">
+		<property name="activityMatterDao" ref="activityMatterDaoImpl"></property>
+		<property name="cbSenderDao" ref="cbSenderDaoImpl"></property>
+		<property name="hylogSolrServer" ref="hylogSolrServer"></property>
+		<property name="pageDao" ref="pageDaoImpl"></property>
+		<property name="contentNewDao" ref="contentNewDaoImpl"></property>
+
+	</bean>
+	<bean id="hbRecordMgrImpl" class="com.huiyee.interact.cb.mgr.impl.HbRecordMgrImpl">
+		<property name="hbRecordDao" ref="hbRecordDaoImpl"></property>
+		<property name="cbSenderDao" ref="cbSenderDaoImpl"></property>
+	</bean>
+
+	<bean id="cbActivityMgr" class="com.huiyee.interact.cb.mgr.impl.CbActivityMgrImpl">
+		<property name="cbActivityDao" ref="cbActivityDao"></property>
+	</bean>
+	<bean id="cbUserCenterMgrImpl" class="com.huiyee.interact.cb.mgr.impl.CbUserCenterMgrImpl" parent="abstractMgr">
+		<property name="cbUserCenterDao" ref="cbUserCenterDaoImpl"></property>
+	</bean>
+</beans>

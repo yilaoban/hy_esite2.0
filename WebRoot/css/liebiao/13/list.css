@@ -1,0 +1,17 @@
+/* CSS Document */
+
+
+.liebiao_1023_9{ margin:0 auto; width:100%; height:100%;}
+.liebiao_1023_9_box { width:100%;height:100%;min-width:320px; max-width:640px;margin:0 auto; background:url(../../../images/mod/mod06/bgd.jpg) no-repeat; background-size:100% 100%;-webkit-box-sizing: border-box; -moz-box-sizing:border-box; position:relative;font-family:"\5FAE\8F6F\96C5\9ED1","\5b8b\4f53", Arial, Helvetica, sans-serif; font-size: 62.5%; line-height: 1.231;}
+.liebiao_1023_9_box_modbgd {display:block; position:absolute; bottom:10%;width:64%; max-width:420px;margin:0 18%; -moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px; border-radius:10px; padding:0%; }
+.liebiao_1023_9_box_menu {display:block; width:98%;max-width:627px;position:relative;  line-height:1.6; background:rgba(255,255,255,0.27);-moz-border-radius:10px;-webkit-border-radius:10px;-o-border-radius:10px; border-radius:10px; margin-bottom:5%;}
+
+.liebiao_1023_9_box_icon {float:left; display:block;line-height:1.6; padding-top:2%;padding-bottom:2%; padding-left:12%;}
+.liebiao_1023_9_box_icon img{float:left;display:block; width:50%;}
+.liebiao_1023_9_box_tle { display:block; float:left;line-height:2.0; font-size:2em; color:#fff;margin-left:20px;}
+
+
+.liebiao_1023_9_box_clr:after {content:""; display:block; height:0; clear:both; visibility:hidden;}
+.liebiao_1023_9_box_clr {*zoom:1;}
+
+

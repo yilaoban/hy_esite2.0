@@ -1,0 +1,20 @@
+
+.tw_150309_page3_logo {
+	position: absolute;
+	  left: 12px;
+	  top: 21px;
+	  width: 111px;
+	  height: 53px;
+}
+.tw_150309_page3_logo img, .tw_150309_page3_zt img {
+	max-width: 100%;
+	height: auto;
+	width: auto\9;
+}
+.tw_150309_page3_zt {
+	position: absolute;
+	left: 22px;
+	top: 148px;
+	width: 270px;
+	height: 179px;
+}

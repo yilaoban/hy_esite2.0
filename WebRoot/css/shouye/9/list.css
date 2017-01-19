@@ -1,0 +1,21 @@
+/* CSS Document */
+
+
+
+/*图文列表-微首页—模板9*/
+
+.shouye_1022_2{width:100%;min-height: 100%;overflow: hidden;display: block;/*background:-webkit-gradient(linear, 0 0, 0 100%, from(#416e8b), to(#4f96b1));background: -moz-linear-gradient( top,#416e8b,#4f96b1);filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0, startColorstr=#416e8b, endColorstr=#4f96b1);background: -o-linear-gradient(top,#416e8b, #4f96b1);*/}
+.list_ul{float:left;width: 98%;padding:0px;margin-left: 1%;margin-bottom: 0px;overflow:hidden;}
+.list_ul li {padding:8px;width:50%;float:left;-webkit-box-sizing:border-box;-ms-box-sizing:border-box;box-sizing:border-box;-moz-box-sizing:border-box;overflow:hidden; display:inline;}
+.list_ul li a {display: block;height: 70px;background: #5491ac;border-radius: 3px;}
+.list_ul li a:hover{background-color:#579bb5;}
+.tbox {width: 100%;height: 100%;margin: 0;overflow: hidden;}
+.list_ul li a dd {height:70px;vertical-align: middle;}
+.tbox > * {height: 100%;display: table-cell;vertical-align: top;}
+.list_ul li a dd>span {float: left;display: block;width: 45px;height: 45px;border: 2px solid #fff;border-radius: 60px;margin: auto 6px;line-height: 45px;text-align: center;font-size: 2em;background: -webkit-gradient(linear, 0 0, 100% 0, from(#49b5de), to(#26a2c1), color-stop(.5, #49b5de), color-stop(.5, #26a3c2));margin-top: 10px;}
+.list_ul li span img{float: left;display:block;width: 26px;height: 26px;margin-left: 10px;margin-top: 10px;}
+.list_ul li a dd>* {color: #fff;margin: 0;padding: 0;}
+.tbox > *:last-child {line-height: 70px;}
+.list_ul li a dd {float: left;height: 70px;vertical-align: middle;margin: 0;}
+.tbox p{ line-height:70px; margin:0;padding:0; float:left;}
+.tbox dd {color: #fff;}

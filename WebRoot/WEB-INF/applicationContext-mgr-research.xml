@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="researchQuestionMgrImpl" class="com.huiyee.interact.research.mgr.ResearchQuestionMgrImpl">
+		<property name="researchQuestionDao" ref="researchQuestionDaoImpl"></property>
+	</bean>
+	<bean id="researchMgrImpl" class="com.huiyee.interact.research.mgr.ResearchManagerImpl" parent="abstractMgr">
+		<property name="researchDao" ref="researchDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+	</bean>
+	<bean id="researchQuestionOptionMgrImpl" class="com.huiyee.interact.research.mgr.ResearchQuestionOptionMgrImpl">
+		<property name="researchQuestionOptionDao" ref="researchQuestionOptionDaoImpl"></property>
+	</bean>
+</beans>

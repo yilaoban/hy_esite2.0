@@ -1,0 +1,29 @@
+* {margin: 0;padding: 0;}
+body {background:#fff;width: 100%;font-family:微软雅黑;}
+a {color:#2b2b2b;text-decoration:none;outline:none;}
+img {border:0;}
+.clearfix:after {content: ".";display: block;height: 0;clear: both;visibility: hidden;} 
+.left {float:left;}
+.right {float:right;}
+.mt2 {margin-top:2px;}
+.mr2 {margin-right:2px;}
+.ilb {display:inline-block;float:left;position:relative;cursor:pointer;}
+ul li {list-style:none;}
+
+.imgblock {margin: 0 auto;width: 940px;}
+
+.form {background:url(/images/wyx/form_bg.png) repeat;margin:0 auto;width:368px;padding:20px 30px;}
+label {display:block;line-height:30px;}
+label.slct, label.slct span {padding-left:15px;cursor:pointer;}
+label.ipt {margin-bottom:10px;}
+label.opt {display:inline;cursor:pointer;margin-left:5px;}
+input[type='text'] {width:360px;height:30px;padding:3px;line-height:24px;border:1px solid #D6D6D6;font-size:16px;}
+input.sbm {padding:10px 15px;font-size:16px;border:none;background:#AE3119;color:#fff;border-radius:10px;}
+
+.successform {position:absolute;top:1700px;left:0;right:0;z-index:999;}
+.fixform {position:absolute;top:900px;left:0;right:0;z-index:999;}
+.modal {background:#000;position:fixed;top:0;bottom:0;left:0;right:0;opacity:0.4;z-index:998;cursor:pointer;}
+
+.yes {margin:0 auto;width:240px;padding:20px 93px;background:url(/images/wyx/form_bg.png) repeat;margin:0 auto;}
+.left {float:left;padding:10px 15px;}
+.right {font-size:30px;font-weight:bold;color:#999;padding:10px 0;}

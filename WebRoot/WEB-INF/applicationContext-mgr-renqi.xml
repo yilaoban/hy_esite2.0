@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="renQiMgr" class="com.huiyee.interact.renqi.mgr.RenQiMgr">
+		<property name="renQiDao" ref="renQiDao"></property>
+		<property name="lotteryDao" ref="lotteryDao"></property>
+	</bean>
+	<bean id="renQiRecordMgr" class="com.huiyee.interact.renqi.mgr.RenQiRecordMgr">
+		<property name="renQiRecordDao" ref="renQiRecordDao"></property>
+	</bean>
+	<bean id="renQiDataMgrImpl" class="com.huiyee.interact.renqi.mgr.RenQiDataMgrImpl">
+		<property name="renQiRecordDao" ref="renQiRecordDao"></property>
+		<property name="weiXinDao" ref="weiXinDao"></property>
+		<property name="sinaUserDao" ref="sinaUserDaoImpl"></property>
+		<property name="lotteryUserRecordDao" ref="lotteryUserRecordDao"></property>
+	</bean>
+</beans>

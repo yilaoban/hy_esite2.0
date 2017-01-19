@@ -1,0 +1,27 @@
+/* CSS Document */
+
+
+
+
+.wdy_top2{ margin:0 auto;text-align:center;}
+#cate2{background-color: #151515;overflow: hidden;width: 100%;}
+#cate2 .mainmenu2{float: left;padding: 0 0 8px 2.5%;display: block;margin: 0 auto;overflow: hidden;width:97.5%}
+#cate2 .mainmenu2 li {width: 33.3%;float: left;display: block;}
+#cate2 .mainmenu2 li .menubtn2{display: block;overflow: hidden;text-decoration: none;color: #000;background-color: #333333;margin: 8px 8px 0 0;border-radius: 5px;box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.25);}
+#cate2 .mainmenu2 li a{display: block;padding: 0px;font-size: 14px;color: #000000;text-decoration: none;-moz-user-select: none;-webkit-user-select: none;-ms-user-select: none;}
+#cate2 .mainmenu2 li .menubtn2 .menumesg2{padding: 0;}
+#cate2 .mainmenu2 li .menubtn2 .menuimg2{overflow: hidden;width: 100%;}
+#cate2 .mainmenu2 li div img {border: 0;width: 70%;height: 60px;margin-left: 15%;margin-top: 8px;border-radius: 100px;}
+#cate2 .mainmenu2 li .menutitle2{text-align: center;line-height: 25px;text-decoration: none;color: #ACACAC;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.25);}
+
+#cate2 .mainmenu2 li div img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+#cate2 .mainmenu2 li div img:not([src*="/"]) { display: none; }
+
+.wdy_top2{
+	position: absolute;
+}
+
+.f2201505072648{
+	position: absolute;
+	top:133px;
+}

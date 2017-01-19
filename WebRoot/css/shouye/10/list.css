@@ -1,0 +1,17 @@
+/* CSS Document */
+
+.telnav {display:block; width:95%; margin:20% auto 0;}
+.telbtn1, .telbtn2, .telbtn3, .telbtn4 {position:absolute;display:block; width:28%; text-align:center; font-size:1.6em; color:#231815; background-color:rgba(255,255,255,0.9);filter:alpha(opacity=80);-moz-opacity:0.8; opacity:0.8;}
+.telbtn1 {left:20%;top:170px;}
+.telbtn2 {right:20%;top:170px;}
+.telbtn3 {left:20%;top:300px;}
+.telbtn4 {right:20%;top:300px;}
+.menuimg{ padding-top:10px;}
+.menuimg img { -ms-interpolation-mode: bicubic; vertical-align: middle; border: 0 none;max-width: 100%;height: auto;width: auto\9; /* ie8 */}
+.menuimg img:not([src*="/"]) { display: none; }
+.menutitle{ line-height:40px;}
+.telbtn a{ text-decoration:none; color:#5b5b5b;}
+.telbtn1 a, .telbtn2 a, .telbtn3 a, .telbtn4 a {color:#231815;text-decoration:none;font-size:16px;}
+
+
+

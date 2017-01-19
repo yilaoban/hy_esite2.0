@@ -1,0 +1,20 @@
+/* CSS Document */
+
+
+
+.tw_150304_page1{ width:100%; margin:0 auto;background:rgba(0,0,0,0.5); position:absolute; bottom:15%;}
+.tw_150304_page1_img{ width:100px;height:100px; position:absolute;top:300px;left:7px;}
+.tw_150304_page1_img img{ width:100px;max-width: 100%;height: auto;width: auto\9;border-radius: 100%;}
+.tw_150304_page1_title{ width:60%; float:left;margin-top: 10px;}
+.zxf_addspan1{position:absolute;left:114px;top:290px;width:200px;color:#ffb30d;font-family: "Microsoft Yahei", Arial;font-size:1em;line-height:30px;height:30px;border-bottom:1px #e7e7e7 solid;float:left;}
+.zxf_addspan2{left:114px;top:320px; width:200px;font-family: "Microsoft Yahei", Arial;font-size:.8em;color:#fff;line-height:24px; float:left;padding-bottom: 5px;position:absolute;}
+
+.tw_150304_page1{
+	opacity: 0;
+    -webkit-animation: 1s move3 forwards;
+    animation: 1s move3 forwards;
+    -webkit-animation-delay: 0s ;
+    animation-delay: 0s;
+	}
+
+

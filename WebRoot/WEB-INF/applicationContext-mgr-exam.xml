@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+	xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-2.5.xsd">
+	
+	<bean id="examQuestionMgrImpl" class="com.huiyee.interact.exam.mgr.ExamQuestionMgrImpl">
+		<property name="examQuestionDao" ref="examQuestionDaoImpl"></property>
+	</bean>
+	<bean id="examMgrImpl" class="com.huiyee.interact.exam.mgr.ExamManagerImpl" parent="abstractMgr">
+		<property name="examDao" ref="examDaoImpl"></property>
+		<property name="templateDao" ref="templateDaoImpl"></property>
+		<property name="examQuestionDao" ref="examQuestionDaoImpl"></property>
+		<property name="examQuestionOptionDao" ref="examQuestionOptionDaoImpl"></property>
+	</bean>
+	<bean id="examQuestionOptionMgrImpl" class="com.huiyee.interact.exam.mgr.ExamQuestionOptionMgrImpl">
+		<property name="examQuestionOptionDao" ref="examQuestionOptionDaoImpl"></property>
+	</bean>
+</beans>

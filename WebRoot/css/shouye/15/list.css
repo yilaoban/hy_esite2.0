@@ -1,0 +1,32 @@
+/* CSS Document */
+.shouye_1105_2 {display:block;min-width: 320px; margin:0 auto; max-width:640px; width: 100%;}
+
+.shouye_1105_2_banner { display: block; width: 100%;}
+.shouye_1105_2_cont-box { display: block; border-bottom:1px solid #b0b5ac;}
+.shouye_1105_2_lfbox {display:block; width:50%; float:left; padding:3% 0; color:#000;}
+.shouye_1105_2_rtbox {display:block; float:right; width:49.5%; border-left:1px solid #b0b5ac; padding:3% 0; color:#000;}
+.shouye_1105_2_clr:after {content:""; display:block; height:0; clear:both; visibility:hidden;}
+.shouye_1105_2_clr {*zoom:1;}
+
+.telphone {display:block; position:fixed; right:2%; bottom:15%; z-index:100; cursor:pointer;}
+.telphone img {width:44px; height:44px;}
+
+.shouye_1105_2 .icon01 {display:block; width:40%; margin:0 30%;
+}
+.shouye_1105_2 .icon02 {display:block; width:40%; margin:0 30%;
+}
+.shouye_1105_2 .icon03 {display:block; width:40%; margin:0 30%;
+}
+.shouye_1105_2 .icon04 {display:block; width:40%; margin:0 30%;
+}
+.shouye_1105_2 .icon05 {display:block; width:40%; margin:0 30%;
+}
+.shouye_1105_2 .icon06 {display:block; width:40%; margin:0 30%;
+}
+.shouye_1105_2_arrow {display:block; float:left; width:10%; padding-top:28%;}
+.shouye_1105_2 p {display:block; float:left; width:100%; padding-left:13%; font-size:0.9em; font-weight:600; line-height:2;color:gray;}
+.shouye_1105_2_lf {display:block; float:left; width:90%;}
+.shouye_1105_2_lf img {width:90%;}
+
+footer {display:block; width:100%; line-height:2.5; background:#333; color:#fff; font-size:0.9em; text-align:center;}
+

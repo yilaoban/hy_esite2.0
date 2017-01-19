@@ -1,0 +1,51 @@
+#if($!style.backgroundColor)
+	#set($bgcolor = $!style.backgroundColor )
+#else
+	#set($bgcolor = '#FFF')
+#end
+#if($!style.fontColor)
+	#set($fontColor = $!style.fontColor )
+#else
+	#set($fontColor = '#888')
+#end
+<script src="/plug-in/daohang2/js/iscroll.js"></script>
+<script src="/plug-in/daohang2/js/jquery.drawer.min.js"></script>
+<link href="/plug-in/daohang2/css/drawer.min.css" rel="stylesheet">
+<style type="text/css">
+.drawer-hamberger span, .drawer-hamberger span:before, .drawer-hamberger span:after {background-color:$bgcolor;height:4px}
+.drawer-default .drawer-nav-list li a {color:$fontColor}
+.drawer-hamberger {top:0;width:30px;height:30px}
+</style>
+<div class="nav drawer drawer-right"> 
+      <div class="nav_right"> 
+        <!-- 代码 开始 -->  
+        <div class="drawer-toggle drawer-hamberger">
+          <span></span>
+        </div>  
+        <div class="drawer-main drawer-default" style="z-index: 88888;"> 
+          <nav class="drawer-nav" role="navigation"> 
+            <ul class="drawer-nav-list"> 
+              #foreach($arr in $json)
+				<li>
+					<a href="$arr.link">$arr.name</a>
+				</li>
+			#end
+            </ul> 
+          </nav> 
+        </div>  
+<script>
+ $(document).ready(function(){
+	 $('.drawer').drawer();
+	 $('.js-trigger').click(function(){
+	   $('.drawer').drawer("open");
+	 });
+	 if($("#pagelist").length > 0){
+	 	//编辑状态
+	 	$(".drawer-toggle ,.drawer-main").css("position","absolute");
+	 }
+ });
+</script>  
+        <!-- 代码 结束 --> 
+      </div> 
+    </div>  
+    <div style="width:100%; float:left; height:40px;"></div>  
