@@ -1,10 +1,17 @@
 package com.huiyee.esite.action;
 
+import java.awt.Color;
+import java.awt.Graphics;
+import java.awt.Image;
+import java.awt.image.BufferedImage;
+import java.awt.image.ConvolveOp;
+import java.awt.image.Kernel;
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.PrintWriter;
 import java.util.HashMap;
@@ -12,6 +19,7 @@ import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletResponse;
+import javax.swing.ImageIcon;
 
 import org.apache.commons.compress.archivers.zip.ZipArchiveEntry;
 import org.apache.commons.compress.archivers.zip.ZipArchiveInputStream;
@@ -34,6 +42,9 @@ import com.huiyee.esite.util.PageFileUtil;
 import com.huiyee.esite.util.PageReader;
 import com.huiyee.weixin.model.ShoppingCartRecord;
 import com.opensymphony.xwork2.ActionContext;
+import com.sun.image.codec.jpeg.JPEGCodec;
+import com.sun.image.codec.jpeg.JPEGEncodeParam;
+import com.sun.image.codec.jpeg.JPEGImageEncoder;
 
 import net.sf.json.JSONObject;
 
@@ -275,7 +286,10 @@ public class XuantuAction extends AbstractAction{
 		    		String imgfilePath = FileUploadService.getFilePath(IPageConstants.TYPE_CONTENT, account.getOwner().getId(), IPageConstants.CONTENT_PRODUCT_FILEFATH);
 	    			String simgfileName = FileUploadService.createFileName(fileName);
 	    			String result1 = FileUploadService.saveFile(files[i], imgfilePath, simgfileName);
-	    			product.setSimgurl(result1);
+	    			resize(files[i], files[i],1,(float)0.3);
+	    			String simgfileName2 = FileUploadService.createFileName(fileName);
+	    			String result2 = FileUploadService.saveFile(files[i], imgfilePath, simgfileName2);
+	    			product.setSimgurl(result2);
 	    			product.setBimgurl(result1);
 		    		long productid = pageCompose.saveProduct(product, tagJson);
 		        }
@@ -301,6 +315,42 @@ public class XuantuAction extends AbstractAction{
 		result = "Y";
 		return SUCCESS;
 	}
+	
+	public static void resize(File originalFile, File resizedFile,double scale, float quality) throws IOException {  
+        ImageIcon ii = new ImageIcon(originalFile.getCanonicalPath());  
+        Image i = ii.getImage();  
+        int iWidth = (int) (i.getWidth(null)*scale);  
+        int iHeight = (int) (i.getHeight(null)*scale); 
+        //在这你可以自定义 返回图片的大小 iWidth iHeight
+        Image resizedImage = i.getScaledInstance(iWidth,iHeight, Image.SCALE_SMOOTH);  
+        // 获取图片中的所有像素
+        Image temp = new ImageIcon(resizedImage).getImage();  
+        // 创建缓冲
+        BufferedImage bufferedImage = new BufferedImage(temp.getWidth(null),  
+                temp.getHeight(null), BufferedImage.TYPE_INT_RGB);  
+        // 复制图片到缓冲流中
+        Graphics g = bufferedImage.createGraphics();  
+        // 清除背景并开始画图
+        g.setColor(Color.white);  
+        g.fillRect(0, 0, temp.getWidth(null), temp.getHeight(null));  
+        g.drawImage(temp, 0, 0, null);  
+        g.dispose();
+        // 柔和图片.  
+        float softenFactor =0.05f;  
+        float[] softenArray = { 0, softenFactor, 0, softenFactor,  
+                1 - (softenFactor * 4), softenFactor, 0, softenFactor, 0 };  
+        Kernel kernel = new Kernel(3, 3, softenArray);  
+        ConvolveOp cOp = new ConvolveOp(kernel, ConvolveOp.EDGE_NO_OP, null);  
+        bufferedImage = cOp.filter(bufferedImage, null);  
+        FileOutputStream out = new FileOutputStream(resizedFile);  
+        JPEGImageEncoder encoder = JPEGCodec.createJPEGEncoder(out);  
+        JPEGEncodeParam param = encoder.getDefaultJPEGEncodeParam(bufferedImage);  
+        param.setQuality(quality, true);  
+        encoder.setJPEGEncodeParam(param);  
+        encoder.encode(bufferedImage);
+        bufferedImage.flush();
+        out.close();
+    } 
 	
 	private void unzip(InputStream is, String outdir) throws Exception {
 		ZipArchiveInputStream in = new ZipArchiveInputStream(new BufferedInputStream(is), "GBK", true);
@@ -523,7 +573,6 @@ public class XuantuAction extends AbstractAction{
 	{
 		this.errmsg = errmsg;
 	}
-	
 	
 
 }
