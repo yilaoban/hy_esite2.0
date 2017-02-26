@@ -57,6 +57,8 @@ public class ContentAction extends AbstractAction
 	private long typeid;
 	private List<OwnerContentType> subList;
 	private String subtype;
+	private String password;
+
 	private int isuse;
 
 	private String entityName;
@@ -83,6 +85,19 @@ public class ContentAction extends AbstractAction
 	private Map<String, ContentTab> tabs;
 	private String tabid="f1";
 	private ContentTab tab;
+	
+
+	public String getPassword()
+	{
+		return password;
+	}
+
+	
+	public void setPassword(String password)
+	{
+		this.password = password;
+	}
+
 
 	public JSONObject getTagJson()
 	{
@@ -433,6 +448,7 @@ public class ContentAction extends AbstractAction
 		cc.setTypeid(typeid);
 		cc.setDesc(ccdesc);
 		cc.setPic(ccpic);
+		cc.setPassword(password);
 		if (StringUtils.isNotEmpty(subtype))
 			cc.setSubtype(subtype);
 		int result = pageCompose.addCategory(account.getOwner().getId(), cc);
@@ -453,6 +469,7 @@ public class ContentAction extends AbstractAction
 		cc.setName(ccname);
 		cc.setDesc(ccdesc);
 		cc.setPic(ccpic);
+		cc.setPassword(password);
 		int result = pageCompose.updateCategoryName(ccid, cc);
 		Gson gson = new Gson();
 		out.print(gson.toJson(result));
