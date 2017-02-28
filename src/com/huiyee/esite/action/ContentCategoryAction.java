@@ -7,6 +7,7 @@ import java.util.List;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import org.apache.commons.lang3.StringUtils;
 import org.apache.struts2.ServletActionContext;
 
 import com.google.gson.Gson;
@@ -15,6 +16,7 @@ import com.huiyee.esite.dto.ChooseContentDto;
 import com.huiyee.esite.dto.ContentDto;
 import com.huiyee.esite.model.Account;
 import com.huiyee.esite.model.ContentCategory;
+import com.huiyee.esite.model.VisitUser;
 import com.opensymphony.xwork2.ActionContext;
 
 public class ContentCategoryAction extends AbstractAction
@@ -27,7 +29,18 @@ public class ContentCategoryAction extends AbstractAction
 	private long ccid;
 	private int pageId=1;
 	private String inputid;
+	private String password;
 	private int size;
+	
+	public String getPassword()
+	{
+		return password;
+	}
+
+	public void setPassword(String password)
+	{
+		this.password = password;
+	}
 	
 	public int getSize()
 	{
@@ -122,8 +135,36 @@ public class ContentCategoryAction extends AbstractAction
 		List<ContentCategory> list = null;
 		if (ccid != 0) {
 			list = pageCompose.findCategoryByFatherCcid(ccid, this.getOwner());
+			if(list != null && list.size() >0){
+				for(int i = 0;i<list.size();i++){
+					String password = list.get(i).getPassword();
+					if(StringUtils.isNotBlank(password)){
+						list.get(i).setPassword("Y");
+					}
+				}
+			}
 		}
 		out.print(new Gson().toJson(list));
+		out.flush();
+		out.close();
+		return null;
+	}
+	
+	public String check_cat_password() throws Exception {
+		HttpServletRequest request = ServletActionContext.getRequest();
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=utf-8");
+		response.setHeader("Cache-Control", "no-cache");
+		PrintWriter out = response.getWriter();
+		boolean result = false;
+		ContentDto dto = (ContentDto) pageCompose.findContentByCcid(ccid, 0,0,0);
+		ContentCategory cc = dto.getCurrent();
+		if(cc != null && password.equalsIgnoreCase(cc.getPassword())){
+			result = true;
+			VisitUser vu = (VisitUser) ServletActionContext.getRequest().getSession().getAttribute("visitUser");
+			request.getSession().setAttribute("check_"+vu.getUid(), true);
+		}
+		out.print(new Gson().toJson(result));
 		out.flush();
 		out.close();
 		return null;

@@ -511,6 +511,7 @@
 		<action name="*/user/findYuYueServiceById" class="yuyueFormAction" method="findYuYueServiceById">
 		</action>
 		<action name="*/user/catlist" class="contentCategoryAction" method="getCategoryList"></action>
+		<action name="*/user/check_cat_password" class="contentCategoryAction" method="check_cat_password"></action>
 		<action name="*/user/adWayGGShow" class="adWagGGAction"></action>
 		<action name="*/user/yuyueRecord" class="yuyueAction" >
 			<result name="success">/WEB-INF/interactpage/yuyue/yuyueRecordShow.jsp</result>
