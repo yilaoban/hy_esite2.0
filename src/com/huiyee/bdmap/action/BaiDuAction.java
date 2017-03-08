@@ -20,7 +20,6 @@ public class BaiDuAction extends AbstractAction
 {
 
 	/**
-<<<<<<< HEAD
 	 * 百度地图 通过关键字搜索地址列表.测试github2,111
 	 * 百度地图 通过关键字搜索地址列表,,,ppp
 	 */
