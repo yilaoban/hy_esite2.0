@@ -20,7 +20,7 @@ public class BaiDuAction extends AbstractAction
 {
 
 	/**
-	 * 百度地图 通过关键字搜索地址列表.测试github2
+	 * 百度地图 通过关键字搜索地址列表.测试github2,111
 	 */
 	private static final long serialVersionUID = 3887688790629684079L;
 	private String q = "";
