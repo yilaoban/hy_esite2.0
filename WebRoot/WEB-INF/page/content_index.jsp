@@ -348,7 +348,7 @@
 			  	<ul class="dropdown-menu">
 			    	<li><a href="javascript:void(0);" id="contentMove">复制/移动</a></li>
 			    	<li><a href="javascript:void(0)" id="batchDel">批量删除</a></li>
-			    	<s:if test='dto.current.type=="T" && oname=="xujie"'>
+			    	<s:if test='dto.current.type=="T" && (oname=="xujie"||oname="xuantu")'>
 			    	<li><a href="javascript:void(0)" id="batchUpload">批量上传</a></li>
 			    	</s:if>
 				</ul>
