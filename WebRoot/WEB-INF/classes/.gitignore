@@ -1,7 +1,7 @@
 /com/
-/log4j.dtd
-/log4j.xml
 /project/
 /struts.xml
-/struts4esite.xml
 /struts4page.xml
+/struts4esite.xml
+/log4j.xml
+/log4j.dtd
