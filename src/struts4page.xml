@@ -153,6 +153,7 @@
 		<action name="*/user/spread_page_sub" class="spreadSubmitAction" method="pageSub"></action>
 		<action name="*/user/lottery_draw" class="lotteryDrawAction"></action>
 		<action name="*/user/kj" class="lotteryDrawAction" method="kj"></action>
+		<action name="*/user/jj" class="lotteryDrawAction" method="jj"></action>
 		<action name="*/user/lotteryJoin" class="lotteryDrawAction" method="getJoinDetail"></action>
 		<action name="*/user/lotteryRemain" class="lotteryDrawAction" method="remainDraw"></action>
 		<action name="*/user/rqdraw" class="renQiDrawAction"></action>

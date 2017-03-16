@@ -9,6 +9,7 @@ import com.google.gson.Gson;
 import com.huiyee.esite.action.InteractModelAction;
 import com.huiyee.esite.constants.IInteractConstants;
 import com.huiyee.esite.dto.HdRsDto;
+import com.huiyee.esite.model.ContentProduct;
 import com.huiyee.esite.model.VisitUser;
 import com.huiyee.esite.util.HttpRequestDeviceUtils;
 import com.huiyee.esite.util.HyConfig;
@@ -167,6 +168,25 @@ public class LotteryDrawAction extends InteractModelAction
 		response.setHeader("Cache-Control", "no-cache");
 		PrintWriter out = response.getWriter();
 		out.print(YinPiaoHttp.kj(st));
+		out.flush();
+		out.close();
+		return null;
+	}
+	
+	/**
+	 * ¿ç½ç¸èÍõ
+	 * @return
+	 * @throws Exception
+	 */
+	public String jj() throws Exception
+	{
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=utf-8");
+		response.setHeader("Cache-Control", "no-cache");
+		PrintWriter out = response.getWriter();
+		ContentProduct cp = lotteryMgr.findProductById(lid);
+		Gson gson = new Gson();
+		out.print(gson.toJson(cp));
 		out.flush();
 		out.close();
 		return null;

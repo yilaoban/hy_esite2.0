@@ -2,6 +2,7 @@ package com.huiyee.interact.lottery.mgr;
 
 import java.util.List;
 
+import com.huiyee.esite.model.ContentProduct;
 import com.huiyee.esite.model.VisitUser;
 import com.huiyee.interact.lottery.dto.IDto;
 import com.huiyee.interact.lottery.dto.LotteryJoin;
@@ -38,5 +39,7 @@ public interface ILotteryMgr
 	public long addLottery(long ownerid,String type,String title);
 
 	public List<LotteryUserRecord> findRecordByUser(long lid, VisitUser vu);
+	
+	public ContentProduct findProductById(long contentId);
 	
 }
