@@ -155,7 +155,7 @@ public class YinPiaoHttp
 	public static String kj(String str){
 		JSONObject jo=new JSONObject();
 	    jo.put("TerminalIds", str);
-	    JSONObject s=YinPiaoHttp.doPost("http://36.110.5.131:9080/ips/queryHeartRateKJ.do?_t=json", jo,null);
+	    JSONObject s=YinPiaoHttp.doPost("https://ips.lakala.com:9080/ht/ips/queryHeartRateKJ.do?_t=json", jo,null);
 	    return s.toString();
 	}
 	   public static void main(String[] args) throws Exception {
