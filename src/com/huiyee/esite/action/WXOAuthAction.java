@@ -49,7 +49,7 @@ public class WXOAuthAction extends AbstractAction
 		}
 		if (code == null)
 		{
-			System.out.println("code为：null");
+			//System.out.println("code为：null");
 			refurl = HyConfig.getPageyuming(this.getOwner()) + this.getOnameUrl() + "/user/wxshow/" + pageid + "/" + source + ".html";
 			if(StringUtils.isNotBlank(kv))
 			{
@@ -72,7 +72,7 @@ public class WXOAuthAction extends AbstractAction
 		}
 		if (wx == null||wx.getWxMp()==null||this.getOwner()==0)
 		{
-			System.out.println("返回按钮！关闭浏览窗口！");
+			//System.out.println("返回按钮！关闭浏览窗口！");
 			return "errclose";
 		}
 		WxUser wu = WeixinOauth.wxOauth(wx.getWxMp(), code);
@@ -124,8 +124,8 @@ public class WXOAuthAction extends AbstractAction
 
 		} else
 		{
-			System.out.println(new Date()+"==="+ServletActionContext.getRequest().getRequestURL()+ServletActionContext.getRequest().getQueryString());
-			System.out.println("第三方应用过期时间："+new Date(wx.getWxMp().getThird_expires_in())+"授权过期时间："+new Date(wx.getWxMp().getAu_expires_in())+"==清除缓存==="+wx.getWxMp().getOwner()+"=="+this.getOwner()+"=="+code+"==="+wx.getWxMp().getAu_access_token());
+			//System.out.println(new Date()+"==="+ServletActionContext.getRequest().getRequestURL()+ServletActionContext.getRequest().getQueryString());
+			//System.out.println("第三方应用过期时间："+new Date(wx.getWxMp().getThird_expires_in())+"授权过期时间："+new Date(wx.getWxMp().getAu_expires_in())+"==清除缓存==="+wx.getWxMp().getOwner()+"=="+this.getOwner()+"=="+code+"==="+wx.getWxMp().getAu_access_token());
 			CacheUtil.wxmpso.remove(wx.getWxMp().getOwner());
 			CacheUtil.wxmps.remove(wx.getWxMp().getId());
 			refurl = HyConfig.getPageyuming(this.getOwner()) + this.getOnameUrl() + "/user/wxshow/" + pageid + "/" + source + ".html";
