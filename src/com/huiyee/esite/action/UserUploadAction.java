@@ -465,7 +465,8 @@ public class UserUploadAction extends AbstractAction {
 		out.print("{\"status\":1,\"picUrl\":\""+picUrl+"\"}");
 		out.flush();
 		out.close();
-		decode(imageData, HyConfig.getRootPath()+path+"/"+name);
+		String rp=HyConfig.getRootPath()+path+"/"+name;
+		decode(imageData, rp);
 	}
 	
 	 public static void decode(String s,String path){  
