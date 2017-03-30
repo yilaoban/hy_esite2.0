@@ -69,6 +69,7 @@ $(document).ready(function() {
     				}else{
     					sb = "恭喜您<br>获得"+data.lotteryPrize.name+"<br>券号："+data.lotteryPrizeCode.code+"<br>密码："+data.lotteryPrizeCode.password;
     				}
+    				hyurl="https://mall.lakala.com/";
     				common(sb);
     			}else if(status==3){
     				lurid=data.lotteryUserRecordid;
