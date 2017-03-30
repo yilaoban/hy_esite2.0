@@ -74,7 +74,7 @@ $(document).ready(function() {
     				lurid=data.lotteryUserRecordid;
     				var html = $(".dialog_form").html();
 					$(".dialog_form").empty();
-					$.alert2("恭喜您中了"+data.lotteryPrize.name,"",function(){
+					$.alert("恭喜您中了"+data.lotteryPrize.name,"",function(){
 						$.modal({
 						  title:"",
 						  text: html,
