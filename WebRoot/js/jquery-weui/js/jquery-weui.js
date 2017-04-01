@@ -635,6 +635,21 @@
       }]
     });
   }
+  $.alert3 = function(text, title, callback,btntext,classn) {
+	    if (typeof title === 'function') {
+	      callback = arguments[1];
+	      title = undefined;
+	    }
+	    return $.modal({
+	      text: text,
+	      title: title,
+	      buttons: [{
+	        text: btntext?btntext:defaults.buttonOK,
+	        className: classn?classn:"primary",
+	        onClick: callback
+	      }]
+	    });
+	  }
 
  $.alert2 = function(text, title, callback) {
     if (typeof title === 'function') {
