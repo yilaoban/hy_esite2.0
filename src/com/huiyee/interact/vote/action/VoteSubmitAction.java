@@ -60,7 +60,7 @@ public class VoteSubmitAction extends InteractModelAction
 				VisitUser visit = (VisitUser) ActionContext.getContext().getSession().get("visitUser");
 				if(visit.getWxUser()==null)
 				{
-					rs.setHydesc("投票失败，严重问题！");
+					rs.setHydesc("请在微信环境打开！");
 					rs.setStatus(-11000);
 					out.print(new Gson().toJson(rs));
 					out.flush();
