@@ -4118,7 +4118,6 @@ public class PageComposeImpl implements IPageCompose {
 	public void setXq(CardDto dto){
 		//卡片详情页
 		VisitUser visit = (VisitUser) ServletActionContext.getRequest().getSession().getAttribute("visitUser");
-		System.out.println(visit.getSkey());
 		if(visit!=null && StringUtils.isNotEmpty(visit.getSkey())){
 			if ("n".equalsIgnoreCase(visit.getSkey()))
 			{	//n-id 新闻详情页
