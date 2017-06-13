@@ -634,7 +634,7 @@
 		<action name="*/user/cb_buddy_invite" class="cbUserCenterAction" method="inviteBuddy">
 			<result name="success">/WEB-INF/interactpage/cb/cb_buddy_invite.jsp</result>
 		</action>
-		<!-- user end -->
+		<!-- user end ttttt-->
 		
 		<action name="*/user/xuantu/collection" class="xuantuAction"></action>
 		<action name="*/user/xuantu/check" class="xuantuAction" method="check"></action>
