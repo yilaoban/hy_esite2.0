@@ -516,11 +516,11 @@ public class VoteDaoImpl extends AbstractDao implements IVoteDao,IMemCacheAble {
 	    		option.setId(rs.getLong("id"));
 	    		option.setVoteid(rs.getLong("voteid"));
 	    		option.setPic(rs.getString("pic"));
-//	    		option.setVediourl(rs.getString("vediourl"));
+	    		option.setVediourl(rs.getString("vediourl"));
 	    		option.setCreatetime(rs.getTimestamp("createtime"));
-//	    		option.setContent(rs.getString("content"));
+	    		option.setContent(rs.getString("content"));
 	            option.setCount(rs.getInt("count"));
-//	            option.setDescription(rs.getString("description"));
+	            option.setDescription(rs.getString("description"));
 	            option.setLinked(rs.getString("linked"));
 	            option.setLinkurl(rs.getString("linkurl"));
 	    		return option;

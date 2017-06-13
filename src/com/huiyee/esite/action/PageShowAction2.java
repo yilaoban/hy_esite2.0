@@ -99,7 +99,6 @@ public class PageShowAction2 extends AbstractAction
 	// 查看
 	public String show() throws Exception
 	{
-		System.out.println("kv1"+kv);
 		if (HyConfig.isRun()){
 			return preview();
 		}
@@ -122,14 +121,13 @@ public class PageShowAction2 extends AbstractAction
 			jspname = "delpage.jsp";
 			return SUCCESS;
 		}
-		VisitUser vu = (VisitUser) ActionContext.getContext().getSession().get("visitUser");
+		//VisitUser vu = (VisitUser) ActionContext.getContext().getSession().get("visitUser");
 //		if (vu != null)
 //		{
 //			source = vu.getSource();
 //			cd = vu.getCd();
 //			kv=vu.getKv();
 //		}
-		System.out.println("kv2"+kv);
 		if (page.getType().equals("C"))
 		{//卡片类型
 			dto = CacheUtil.pgds.get(pageid);

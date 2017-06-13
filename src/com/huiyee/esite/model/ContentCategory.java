@@ -22,7 +22,22 @@ public class ContentCategory implements Comparable<ContentCategory>, Serializabl
 	private String content;
 	private String bread;
 	private String subtype="N";//若type为产品 subtype可以用来区分是微商城的还是微积分的
+	private String password;
 	
+	
+	public String getPassword()
+	{
+		return password;
+	}
+
+
+	
+	public void setPassword(String password)
+	{
+		this.password = password;
+	}
+
+
 	public String getBread()
 	{
 		return bread;

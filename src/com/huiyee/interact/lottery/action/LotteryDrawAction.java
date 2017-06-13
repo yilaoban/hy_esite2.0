@@ -9,9 +9,11 @@ import com.google.gson.Gson;
 import com.huiyee.esite.action.InteractModelAction;
 import com.huiyee.esite.constants.IInteractConstants;
 import com.huiyee.esite.dto.HdRsDto;
+import com.huiyee.esite.model.ContentProduct;
 import com.huiyee.esite.model.VisitUser;
 import com.huiyee.esite.util.HttpRequestDeviceUtils;
 import com.huiyee.esite.util.HyConfig;
+import com.huiyee.esite.util.YinPiaoHttp;
 import com.huiyee.esite.util.ClientUserIp;
 import com.huiyee.interact.lottery.dto.LotteryJoin;
 import com.huiyee.interact.lottery.mgr.ILotteryMgr;
@@ -34,8 +36,12 @@ public class LotteryDrawAction extends InteractModelAction
 
 	private ILotteryDrawService lotteryDrawService;
 	private ILotteryMgr lotteryMgr;
+	private String st;
 	
-
+	public void setSt(String st)
+	{
+		this.st = st;
+	}
 
 	public String execute() throws Exception
 	{
@@ -146,6 +152,41 @@ public class LotteryDrawAction extends InteractModelAction
 		}
 		Gson gson = new Gson();
 		out.print(gson.toJson(record));
+		out.flush();
+		out.close();
+		return null;
+	}
+	/**
+	 * 跨界歌王
+	 * @return
+	 * @throws Exception
+	 */
+	public String kj() throws Exception
+	{
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=utf-8");
+		response.setHeader("Cache-Control", "no-cache");
+		PrintWriter out = response.getWriter();
+		out.print(YinPiaoHttp.kj(st));
+		out.flush();
+		out.close();
+		return null;
+	}
+	
+	/**
+	 * 跨界歌王
+	 * @return
+	 * @throws Exception
+	 */
+	public String jj() throws Exception
+	{
+		HttpServletResponse response = ServletActionContext.getResponse();
+		response.setContentType("application/json;charset=utf-8");
+		response.setHeader("Cache-Control", "no-cache");
+		PrintWriter out = response.getWriter();
+		ContentProduct cp = lotteryMgr.findProductById(lid);
+		Gson gson = new Gson();
+		out.print(gson.toJson(cp));
 		out.flush();
 		out.close();
 		return null;

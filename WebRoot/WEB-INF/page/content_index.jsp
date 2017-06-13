@@ -348,7 +348,7 @@
 			  	<ul class="dropdown-menu">
 			    	<li><a href="javascript:void(0);" id="contentMove">复制/移动</a></li>
 			    	<li><a href="javascript:void(0)" id="batchDel">批量删除</a></li>
-			    	<s:if test='dto.current.type=="T" && oname=="xujie"'>
+			    	<s:if test='dto.current.type=="T" && (oname=="xujie"||oname="xuantu")'>
 			    	<li><a href="javascript:void(0)" id="batchUpload">批量上传</a></li>
 			    	</s:if>
 				</ul>
@@ -466,8 +466,11 @@
 	<script type="text/javascript" src="/diyUpload/js/webuploader.js"></script>
 	<script type="text/javascript" src="/diyUpload/js/diyUpload.js"></script>
 	<div id="addHtml" style="display: none">
-		<p>新目录名称：<input type="text" id="ccname" class="text-medium"/></p>
+		<p>新目录名称1：<input type="text" id="ccname" class="text-medium"/></p>
 		<p>目录描述：<textarea id="ccdesc"></textarea></p>
+		<p>密码：
+			<input type="text" class="text-medium" id="ccpassword"/>
+		</p>
 		<p>目录图片：
 			<input type="hidden" id="ccpic"/>
 			<div id="as"></div>
@@ -515,6 +518,9 @@
 			<input type="hidden" id="editid" value="${dto.current.id }"/>
 		</p>
 		<p>目录描述：<textarea id="editdesc">${dto.current.desc }</textarea></p>
+		<p>密码：
+			<input type="text" class="text-medium" id="editpassword" value="${dto.current.password }"/>
+		</p>
 		<p>
 			原图片：
 				<s:if test='dto.current.pic != null&&dto.current.pic!="" '><img src="${imgDomain }${dto.current.pic }" height="40" width="40"></s:if><s:else><img src="/images/nopic.png" height="40" width="40"></s:else>
@@ -524,6 +530,7 @@
 			<div id="as2"></div>
 			<div id="picker2">选择图片</div>
 		</p>
+		
 		
 		<script type="text/javascript">
 		

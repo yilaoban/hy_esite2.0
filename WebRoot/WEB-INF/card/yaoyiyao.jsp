@@ -69,12 +69,14 @@ $(document).ready(function() {
     				}else{
     					sb = "恭喜您<br>获得"+data.lotteryPrize.name+"<br>券号："+data.lotteryPrizeCode.code+"<br>密码："+data.lotteryPrizeCode.password;
     				}
-    				common(sb);
+    				sb=sb+"<br><p  style='color:red'>请先长按复制券号！</p>"
+    				hyurl="https://mall.lakala.com/";
+    				common2(sb);
     			}else if(status==3){
     				lurid=data.lotteryUserRecordid;
     				var html = $(".dialog_form").html();
 					$(".dialog_form").empty();
-					$.alert2("恭喜您中了"+data.lotteryPrize.name,"",function(){
+					$.alert("恭喜您中了"+data.lotteryPrize.name,"",function(){
 						$.modal({
 						  title:"",
 						  text: html,
@@ -107,6 +109,14 @@ $(document).ready(function() {
 				window.location.href=hyurl;
 		}});
     }
+    function common2(desc){
+    	$.alert3(desc,"",function(){
+			isyyy = true;
+			if(hyurl != null && hyurl != "" && hyurl != 0){
+				window.location.href=hyurl;
+		}},"去领取","");
+    }
+    
     
     function userCheck(html){  //实物保存
 		var username = $("#username").val();

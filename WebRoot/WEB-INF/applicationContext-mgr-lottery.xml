@@ -8,6 +8,7 @@
 		<property name="lotteryDao" ref="lotteryDao"></property>
 		<property name="lotteryPrizeInfoDao" ref="lotteryPrizeInfoDao"></property>
 		<property name="signinDao" ref="signinDao"></property>
+		<property name="contentProductDao" ref="contentProductDaoImpl"></property>
 	</bean>
 	<bean id="sinaGroupMgr" class="com.huiyee.interact.lottery.mgr.SinaGroupMgr">
 		<property name="sinaGroupDao" ref="sinaGroupDao"></property>

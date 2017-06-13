@@ -2,7 +2,8 @@
 <classpath>
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/org.eclipse.jst.server.tomcat.runtimeTarget/Apache Tomcat v8.0"/>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/jre7"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
+	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.springsource.sts.ide.tomcat.runtimeTarget/Pivotal tc Server Developer Edition (Runtime) v3.2"/>
 	<classpathentry kind="output" path="WebRoot/WEB-INF/classes"/>
 </classpath>

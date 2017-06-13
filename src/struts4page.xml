@@ -152,6 +152,8 @@
 		<action name="*/user/spread" class="spreadSubmitAction"></action>
 		<action name="*/user/spread_page_sub" class="spreadSubmitAction" method="pageSub"></action>
 		<action name="*/user/lottery_draw" class="lotteryDrawAction"></action>
+		<action name="*/user/kj" class="lotteryDrawAction" method="kj"></action>
+		<action name="*/user/jj" class="lotteryDrawAction" method="jj"></action>
 		<action name="*/user/lotteryJoin" class="lotteryDrawAction" method="getJoinDetail"></action>
 		<action name="*/user/lotteryRemain" class="lotteryDrawAction" method="remainDraw"></action>
 		<action name="*/user/rqdraw" class="renQiDrawAction"></action>
@@ -511,6 +513,7 @@
 		<action name="*/user/findYuYueServiceById" class="yuyueFormAction" method="findYuYueServiceById">
 		</action>
 		<action name="*/user/catlist" class="contentCategoryAction" method="getCategoryList"></action>
+		<action name="*/user/check_cat_password" class="contentCategoryAction" method="check_cat_password"></action>
 		<action name="*/user/adWayGGShow" class="adWagGGAction"></action>
 		<action name="*/user/yuyueRecord" class="yuyueAction" >
 			<result name="success">/WEB-INF/interactpage/yuyue/yuyueRecordShow.jsp</result>
@@ -631,7 +634,7 @@
 		<action name="*/user/cb_buddy_invite" class="cbUserCenterAction" method="inviteBuddy">
 			<result name="success">/WEB-INF/interactpage/cb/cb_buddy_invite.jsp</result>
 		</action>
-		<!-- user end -->
+		<!-- user end ttttt-->
 		
 		<action name="*/user/xuantu/collection" class="xuantuAction"></action>
 		<action name="*/user/xuantu/check" class="xuantuAction" method="check"></action>

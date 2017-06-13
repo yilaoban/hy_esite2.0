@@ -66,6 +66,7 @@ public class ContentCategoryDaoImpl extends AbstractDao implements IContentCateg
 			cc.setBread(rs.getString("bread"));
 			cc.setPageid(rs.getLong("pageid"));
 			cc.setSubtype(rs.getString("subtype"));
+			cc.setPassword(rs.getString("password"));
 			return cc;
 		}
 	}
@@ -108,7 +109,7 @@ public class ContentCategoryDaoImpl extends AbstractDao implements IContentCateg
 		return getJdbcTemplate().update(DEL_CATEGORY, new Object[] { ccid });
 	}
 
-	private static final String ADD_CATEGORY = "insert into es_content_category (ownerid,name,type,fartherCatId,idx,typeid,content,pic,subtype) values (?,?,?,?,?,?,?,?,?)";
+	private static final String ADD_CATEGORY = "insert into es_content_category (ownerid,name,type,fartherCatId,idx,typeid,content,pic,subtype,password) values (?,?,?,?,?,?,?,?,?,?)";
 
 	public long addCategory(final long owner, final ContentCategory cc) {
 
@@ -127,6 +128,7 @@ public class ContentCategoryDaoImpl extends AbstractDao implements IContentCateg
 				ps.setString(i++, cc.getDesc());
 				ps.setString(i++, cc.getPic());
 				ps.setString(i++, cc.getSubtype());
+				ps.setString(i++, cc.getPassword());
 				return ps;
 			}
 		}, keyHolder);
@@ -189,8 +191,8 @@ public class ContentCategoryDaoImpl extends AbstractDao implements IContentCateg
 
 	@Override
 	public int updateCategoryName(long id, ContentCategory cc) {
-		String sql = "update es_content_category set name=?,content=?,pic=? where id=?";
-		return getJdbcTemplate().update(sql, new Object[] { cc.getName(), cc.getDesc(), cc.getPic(), id });
+		String sql = "update es_content_category set name=?,content=?,pic=?,password=? where id=?";
+		return getJdbcTemplate().update(sql, new Object[] { cc.getName(), cc.getDesc(), cc.getPic(),cc.getPassword(), id });
 	}
 
 	@Override

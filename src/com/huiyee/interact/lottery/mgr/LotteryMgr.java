@@ -8,6 +8,8 @@ import org.apache.commons.lang.StringUtils;
 
 import com.google.gson.Gson;
 import com.huiyee.esite.constants.IInteractConstants;
+import com.huiyee.esite.dao.IContentProductDao;
+import com.huiyee.esite.model.ContentProduct;
 import com.huiyee.esite.model.SinaUser;
 import com.huiyee.esite.model.VisitUser;
 import com.huiyee.esite.model.WxUser;
@@ -33,6 +35,13 @@ public class LotteryMgr implements ILotteryMgr
 	private IlotteryDao lotteryDao;
 	private IlotteryPrizeInfoDao lotteryPrizeInfoDao;
 	private ISigninDao signinDao;
+	private IContentProductDao contentProductDao;
+	
+	
+	public void setContentProductDao(IContentProductDao contentProductDao)
+	{
+		this.contentProductDao = contentProductDao;
+	}
 
 	public void setSigninDao(ISigninDao signinDao)
 	{
@@ -237,6 +246,12 @@ public class LotteryMgr implements ILotteryMgr
 		List<LotteryPrizeCode> list = lotteryPrizeInfoDao.findPrizeWinnnerInformation(lid, type, pageid,start,size);
 		dto.setLotteryPrizeList(list);
 		return dto;
+	}
+
+	@Override
+	public ContentProduct findProductById(long contentId)
+	{
+		return contentProductDao.findProductById(contentId);
 	}
 
 }

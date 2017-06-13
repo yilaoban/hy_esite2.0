@@ -5,7 +5,7 @@
 	   	<s:iterator value="record.maps" var="m" status="st">
 			<tr align="center">
 				<s:if test='#m.stype=="I"'>
-					<td>${m.name}</td><td><img src="${record.values[st.index] }" height="100px"/></td>
+					<td>${m.name}</td><td><img src="http://img.huiyee.com/site${record.values[st.index] }" height="100px"/></td>
 				</s:if>
 				<s:else>
 					<td>${m.name}</td><td>${record.values[st.index] }</td>

@@ -136,7 +136,7 @@ public class ResearchManagerImpl extends AbstractMgr implements IResearchManager
 	public HdRsDto saveResearchReocrd(ResearchSubDto dto,long pageid,VisitUser visit, String ip, String terminal,long relationid, ResearchModel research){
 	        HdRsDto rs=new HdRsDto();
 	        rs.setStatus(1);
-	        rs.setHydesc("调研成功！");
+	        rs.setHydesc("提交成功！");
 			long entityid=visit.getUid();
 			int type=visit.getCd();
 			long recordid = researchDao.saveResearchReocrd(pageid, entityid, research.getId(), ip, terminal, visit.getSource(),type);

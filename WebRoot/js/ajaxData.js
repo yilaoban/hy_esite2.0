@@ -246,10 +246,12 @@ function addcategory(id,type,typeid){
 			var ccdesc=$("#ccdesc").val();
 			var ccpic=$("#ccpic").val();
 			var subtype=$("#subtype").val();
+			var password=$("#ccpassword").val();
+			alert(password);
 			if(subtype==null){
 				subtype="N";
 			}
-			$.post("add_category.action",{inajax:1,ccid:ccid,"ccname":ccname,"ccdesc":ccdesc,"ccpic":ccpic,"ccindex":ccindex,"cctype":type,"typeid":typeid,"subtype":subtype},function(data){
+			$.post("add_category.action",{inajax:1,ccid:ccid,"ccname":ccname,"ccdesc":ccdesc,"ccpic":ccpic,"ccindex":ccindex,"cctype":type,"typeid":typeid,"subtype":subtype,"password":password},function(data){
 				if(data==1){
 					layer.msg('新增中！请稍等……', {icon: 6, time: 1500}, function(){
 						window.parent.location.reload();
@@ -292,7 +294,8 @@ function updateCategoryName(id,name){
 			var id=$("#editid").val();
 			var ccdesc=$("#editdesc").val();
 			var ccpic=$("#editpic").val();
-			$.post("updateCategoryName.action",{inajax:1,"ccid":id,"ccname":ccname,"ccdesc":ccdesc,"ccpic":ccpic},function(data){
+			var password=$("#editpassword").val();
+			$.post("updateCategoryName.action",{inajax:1,"ccid":id,"ccname":ccname,"ccdesc":ccdesc,"ccpic":ccpic,"password":password},function(data){
 				if(data==1){
 					layer.msg('修改中！请稍等……', {icon: 6, time: 1500}, function(){
 						window.parent.location.reload();

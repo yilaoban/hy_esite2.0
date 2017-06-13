@@ -4118,7 +4118,6 @@ public class PageComposeImpl implements IPageCompose {
 	public void setXq(CardDto dto){
 		//卡片详情页
 		VisitUser visit = (VisitUser) ServletActionContext.getRequest().getSession().getAttribute("visitUser");
-		System.out.println(visit.getSkey());
 		if(visit!=null && StringUtils.isNotEmpty(visit.getSkey())){
 			if ("n".equalsIgnoreCase(visit.getSkey()))
 			{	//n-id 新闻详情页
@@ -6633,7 +6632,15 @@ public class PageComposeImpl implements IPageCompose {
 		ContentDto dto = new ContentDto();
 		ContentCategory ct = contentManager.findContentCategoryById(ccid);
 		String type = ct.getType();
-		if (!StringUtils.isEmpty(type) && ccid > 0) {
+		dto.setCurrent(ct);
+		if(StringUtils.isNotBlank(ct.getPassword())){
+			VisitUser vu = (VisitUser) ServletActionContext.getRequest().getSession().getAttribute("visitUser");
+			Boolean result = (Boolean) ServletActionContext.getRequest().getSession().getAttribute("check_"+vu.getUid());
+			if(result == null ){
+				return dto;
+			}
+		}
+		if (!StringUtils.isEmpty(type) && ccid > 0 && size >0) {
 			if ("T".equals(type)) {
 				dto.setProduct(contentManager.findProductByCcid(ccid, owner, (pageId - 1) * size, size, null));
 			} else if ("P".equals(type)) {
@@ -6644,7 +6651,6 @@ public class PageComposeImpl implements IPageCompose {
 				dto.setVideoList(contentManager.findVideoByCcid(ccid, owner, (pageId - 1) * size, size, null));
 			}
 		}
-		dto.setCurrent(ct);
 		return dto;
 	}
 	
