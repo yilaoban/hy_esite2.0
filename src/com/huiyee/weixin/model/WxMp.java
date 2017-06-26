@@ -37,6 +37,8 @@ public class WxMp {
 	private String au_refresh_token;//授权后获得的刷新token
 	private long au_expires_in;//openauth的过期时间
 	
+	 
+	
 	public boolean isWork()
 	{
 		if(access_token!=null&&expires_in>System.currentTimeMillis())
